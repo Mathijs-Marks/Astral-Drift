@@ -45,9 +45,12 @@ public class Bullet : MonoBehaviour
     }
 
     // Collide with player.
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        // TODO player collision (currently there is no player).
+        if (collision.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<DummyPlayer>().GetHit(damage);
+        }
     }
 
     // Disable the bullet after x amount of time.
