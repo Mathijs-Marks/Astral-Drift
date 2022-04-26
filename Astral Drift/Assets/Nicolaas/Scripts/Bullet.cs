@@ -5,8 +5,10 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Vector2 direction;
-    public float speed;
+    [HideInInspector] public float speed;
     private int damage;
+
+    private IEnumerator removeCoroutine;
 
     // Set the bullet active with given values.
     public Bullet(Vector2 position, Vector2 direction, int speed, int damage, float lifespan)
@@ -14,8 +16,14 @@ public class Bullet : MonoBehaviour
         SetActive(position, direction, speed, damage, lifespan);
     }
 
+    // Move.
+    private void FixedUpdate()
+    {
+        transform.Translate(direction * speed * Time.deltaTime);
+    }
+
     // Set the bullet active with given values.
-    public void SetActive(Vector2 position, Vector2 direction, int speed, int damage, float lifeSpan)
+    public void SetActive(Vector2 position, Vector2 direction, int speed, int damage, float lifespan)
     {
         gameObject.SetActive(true);
         transform.position = position;
@@ -26,31 +34,27 @@ public class Bullet : MonoBehaviour
         this.speed = speed;
         this.damage = damage;
 
-        StartCoroutine(Remove(lifeSpan));
+        StartRemoveTimer(lifespan);
     }
 
     // Reuse the same bullet.
-    public void ResetBullet(Vector2 position, float lifeSpan)
+    public void ResetBullet(Vector2 position, float lifespan)
     {
         gameObject.SetActive(true);
         transform.position = position;
 
-        StartCoroutine(Remove(lifeSpan));
+        StartRemoveTimer(lifespan);
     }
 
-    // Move.
-    private void FixedUpdate()
+    private void StartRemoveTimer(float lifespan)
     {
-        transform.Translate(direction * speed * Time.deltaTime);
-    }
-
-    // Collide with player.
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        if (removeCoroutine != null)
         {
-            collision.gameObject.GetComponent<DummyPlayer>().GetHit(damage);
+            StopCoroutine(removeCoroutine);
         }
+        removeCoroutine = Remove(lifespan);
+
+        StartCoroutine(removeCoroutine);
     }
 
     // Disable the bullet after x amount of time.
@@ -60,5 +64,14 @@ public class Bullet : MonoBehaviour
 
         // Disable bullet
         gameObject.SetActive(false);
+    }
+
+    // Collide with player.
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<DummyPlayer>().GetHit(damage);
+        }
     }
 }

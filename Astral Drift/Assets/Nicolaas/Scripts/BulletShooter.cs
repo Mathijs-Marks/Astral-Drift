@@ -6,7 +6,7 @@ using UnityEngine;
 public class BulletShooter : MonoBehaviour
 {
     [SerializeField] private Bullet bullet;
-    private float timer = 4;
+    private float timer = 2;
 
     // Shoot a bullet.
     private void Start()
