@@ -7,7 +7,9 @@ public class Player : MonoBehaviour
     [SerializeField] private Bullet bullet;
 
     [SerializeField] private float playerSpeed;
-    
+    [SerializeField] private int maxHitpoints;
+    private int currentHitpoints;
+
     private Vector3 targetPosition;
     private Vector3 direction;
 
@@ -21,11 +23,14 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        currentHitpoints = maxHitpoints;
+
         shootingTimer = 0;
 
         bullet.SetActive("Enemy", transform.position, bulletDirection, bulletSpeed, bulletDamage, bulletLifespan);
     }
 
+    // Controls
     private void Update()
     {
         targetPosition = Input.mousePosition;
@@ -33,7 +38,7 @@ public class Player : MonoBehaviour
         targetPosition.z = 0;
     }
 
-    // Controls
+    // Moving and shooting
     private void FixedUpdate()
     {
         // Moving
@@ -60,6 +65,18 @@ public class Player : MonoBehaviour
     // Testing if you got hit
     public void GetHit(int damage)
     {
-        Debug.Log("Player got hit. Reduce hitpoints. Hit for " + damage + " damage.");
+        currentHitpoints -= damage;
+
+        if (currentHitpoints <= 0)
+        {
+            KillPlayer();
+        }
+    }
+
+    private void KillPlayer()
+    {
+        gameObject.SetActive(false);
+
+        // TODO: Game over code
     }
 }
