@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    private string collisionTag;
+
     private Vector2 direction;
     [HideInInspector] public float speed;
     private int damage;
@@ -11,9 +13,9 @@ public class Bullet : MonoBehaviour
     private IEnumerator removeCoroutine;
 
     // Set the bullet active with given values.
-    public Bullet(Vector2 position, Vector2 direction, int speed, int damage, float lifespan)
+    public Bullet(string collisionTag, Vector2 position, Vector2 direction, int speed, int damage, float lifespan)
     {
-        SetActive(position, direction, speed, damage, lifespan);
+        SetActive(collisionTag, position, direction, speed, damage, lifespan);
     }
 
     // Move.
@@ -23,11 +25,12 @@ public class Bullet : MonoBehaviour
     }
 
     // Set the bullet active with given values.
-    public void SetActive(Vector2 position, Vector2 direction, int speed, int damage, float lifespan)
+    public void SetActive(string collisionTag, Vector2 position, Vector2 direction, int speed, int damage, float lifespan)
     {
         gameObject.SetActive(true);
         transform.position = position;
 
+        this.collisionTag = collisionTag;
         this.direction = direction;
         this.direction.Normalize();
 
@@ -69,9 +72,9 @@ public class Bullet : MonoBehaviour
     // Collide with player.
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag(collisionTag))
         {
-            collision.gameObject.GetComponent<DummyPlayer>().GetHit(damage);
+            collision.gameObject.GetComponent<Player>().GetHit(damage);
         }
     }
 }

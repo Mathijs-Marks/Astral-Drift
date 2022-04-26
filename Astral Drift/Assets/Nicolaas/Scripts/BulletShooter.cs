@@ -11,7 +11,7 @@ public class BulletShooter : MonoBehaviour
     // Shoot a bullet.
     private void Start()
     {
-        bullet.SetActive(transform.position, new Vector2(0, -1), 2, 1, 3);
+        bullet.SetActive("Player", transform.position, new Vector2(0, -1), 2, 1, 3);
     }
 
     // After x amount of time, shoot a bullet.
