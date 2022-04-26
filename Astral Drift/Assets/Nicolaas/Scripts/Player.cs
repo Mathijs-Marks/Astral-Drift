@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     private void Start()
     {
         shootingTimer = 0;
+
+        bullet.SetActive("Enemy", transform.position, bulletDirection, bulletSpeed, bulletDamage, bulletLifespan);
     }
 
     private void Update()
@@ -51,7 +53,7 @@ public class Player : MonoBehaviour
         {
             shootingTimer = 0;
 
-            //bullet.ResetBullet(transform.position, 4);
+            bullet.ResetBullet(transform.position, 4);
         }
     }
 
