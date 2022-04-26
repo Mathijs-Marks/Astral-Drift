@@ -50,6 +50,10 @@ public class Player : MonoBehaviour
             direction.Normalize();
             transform.Translate(direction * playerSpeed * Time.deltaTime);
         }
+        else
+        {
+            transform.position = targetPosition;
+        }
 
         // Shooting
         shootingTimer += Time.deltaTime;
