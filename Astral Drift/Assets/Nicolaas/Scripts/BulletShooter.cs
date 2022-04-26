@@ -18,12 +18,14 @@ public class BulletShooter : MonoBehaviour
     void FixedUpdate()
     {
         timer -= Time.deltaTime;
+        bullet.speed += Time.deltaTime;
 
         if (timer < 0)
         {
             timer = 4;
 
             bullet.ResetBullet(transform.position, 3);
+            bullet.speed = 2;
         }
     }
 }

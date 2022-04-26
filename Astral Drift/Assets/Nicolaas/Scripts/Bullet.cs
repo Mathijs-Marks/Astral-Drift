@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Vector2 direction;
-    private int speed;
+    public float speed;
     private int damage;
 
     // Set the bullet active with given values.
