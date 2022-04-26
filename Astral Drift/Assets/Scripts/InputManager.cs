@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     private Vector2 objectPosition;
     private float width;
     private float height;
+    private GameObject particle;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,20 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        foreach (Touch touch in Input.touches)
+        {
+            if (touch.phase == TouchPhase.Began)
+            {
+                // Construct a ray from current touch coordinate.
+                Ray ray = Camera.main.ScreenPointToRay(touch.position);
+                if (Physics.Raycast(ray))
+                {
+                    // Create a particle if hit.
+                    Instantiate(particle, transform.position, transform.rotation);
+                }
+            }
+        }
+
         // If the touchCount is greater than zero, that means we are touching the screen.
         if (Input.touchCount > 0)
         {
