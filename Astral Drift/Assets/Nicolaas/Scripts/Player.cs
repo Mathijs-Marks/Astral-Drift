@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     // Controls
     private void Update()
     {
-        targetPosition = Input.mousePosition;
+        targetPosition = new Vector3(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height), 0);
         targetPosition = Camera.main.ScreenToWorldPoint(targetPosition);
         targetPosition.z = 0;
     }
