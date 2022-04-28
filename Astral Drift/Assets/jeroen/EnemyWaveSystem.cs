@@ -1,22 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class EnemyTypes
-{
-    GameObject enemyPrefab;
-    Vector3 enemyPosition;
-}
-
 
 public class EnemyWaveSystem : MonoBehaviour
 {
-    EnemyTypes[] enemyList;
+    [SerializeField] private EnemyTypes[] circlingEnemies;
+    [SerializeField] private EnemyTypes[] strafingEnemies;
     private void Start()
     {
-        enemyList = new EnemyTypes[enemyList.Length];
+        circlingEnemies = new EnemyTypes[circlingEnemies.Length];
 
         //Spawn all enemies that we want
+        for (int i = 0; i < circlingEnemies.Length; i++)
+        {
+            circlingEnemies[i].SpawnEnemy();
+        }
 
+        strafingEnemies = new EnemyTypes[strafingEnemies.Length];
+
+        //Spawn all enemies that we want
+        for (int i = 0; i < strafingEnemies.Length; i++)
+        {
+            strafingEnemies[i].SpawnEnemy();
+        }
     }
 }
