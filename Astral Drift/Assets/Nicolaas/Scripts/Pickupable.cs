@@ -12,9 +12,8 @@ public class Pickupable : MonoBehaviour
         }
     }
 
-    private void PickUp()
+    protected virtual void PickUp()
     {
-        UI.instance.AddScore(1);
         gameObject.SetActive(false);
     }
 }
