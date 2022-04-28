@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Bullet bullet;
 
     [SerializeField] private float playerSpeed;
-    [SerializeField] private int maxHitpoints;
+    [SerializeField] public int maxHitpoints;
     private int currentHitpoints;
 
     private Vector3 targetPosition;
@@ -70,6 +70,7 @@ public class Player : MonoBehaviour
     public void GetHit(int damage)
     {
         currentHitpoints -= damage;
+        UI.instance.UpdateHitpoints(currentHitpoints);
 
         if (currentHitpoints <= 0)
         {
