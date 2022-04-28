@@ -35,8 +35,8 @@ public class GunBarrel : MonoBehaviour
     {
         //Spawn a projectile
         spawnedProjectile = (GameObject)Instantiate(projectilePrefab, Object.transform);
-        spawnedProjectile.GetComponent<Projectile>().creator = this.gameObject;
-        spawnedProjectile.GetComponent<Projectile>().speedMultiplier = projectileMovementMultiplier;
+        spawnedProjectile.GetComponent<Bullet>().ActivateBullet("Player", gunMuzzle.transform.position, new Vector3(0, 0, 1), projectileMovementMultiplier, 1, 10);
+        //spawnedProjectile.GetComponent<Bullet>().speedMultiplier = projectileMovementMultiplier;
         spawnedProjectile.transform.localScale = projectileSize;
     }
 

@@ -99,7 +99,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a23096e1d1290664d81fff7855e00f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  bullet: {fileID: 0}
+  playerSpeed: 20
+  maxHitpoints: 3
+  shootingRate: 4
+  bulletDirection: {x: 0, y: 0}
+  bulletSpeed: 0
+  bulletDamage: 0
+  bulletLifespan: 0
 --- !u!61 &7102300387541548474
 BoxCollider2D:
   m_ObjectHideFlags: 0
