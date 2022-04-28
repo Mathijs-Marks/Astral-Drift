@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private GunBarrel[] weapons = new GunBarrel[2];
+
     [SerializeField] private float playerSpeed;
     [SerializeField] public int maxHitpoints;
     private int currentHitpoints;
@@ -59,5 +61,13 @@ public class Player : MonoBehaviour
         gameObject.SetActive(false);
 
         // TODO: Game over code
+    }
+
+    public void InscreaseShootingSpeed(float amount)
+    {
+        for (int i = 0; i < weapons.Length; i++)
+        {
+            weapons[i].IncreaseShootingSpeed(amount);
+        }
     }
 }

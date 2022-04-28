@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class ScorePickupable : Pickupable
 {
+    [SerializeField] private int scoreIncrease = 1;
+
     protected override void PickUp()
     {
         base.PickUp();
 
-        UI.instance.AddScore(1);
+        UI.instance.AddScore(scoreIncrease);
     }
 }

@@ -8,7 +8,10 @@ public class UI : MonoBehaviour
     static public UI instance; 
 
     [SerializeField] private Player player;
-    public int scoreValue;
+    [SerializeField] private int maxUpgrade;
+    private int currentUpgrade;
+
+    [HideInInspector] public int scoreValue;
 
     public TextMeshProUGUI hitpoints;
     public TextMeshProUGUI score;
@@ -18,10 +21,11 @@ public class UI : MonoBehaviour
     {
         instance = this;
         scoreValue = 0;
+        currentUpgrade = 0;
 
         UpdateHitpoints(player.maxHitpoints);
         score.text = "Score: 0";
-        shootingRate.text = "Fire Rate: 0/X";
+        shootingRate.text = "Fire Rate: 0/" + maxUpgrade;
     }
 
     public void UpdateHitpoints(int hitpoints)
@@ -33,5 +37,17 @@ public class UI : MonoBehaviour
     {
         scoreValue += score;
         this.score.text = "Score: " + scoreValue;
+    }
+
+    public void ShootingSpeedUpgrade(float amount)
+    {
+        if (currentUpgrade < maxUpgrade)
+        {
+            currentUpgrade++;
+
+            player.InscreaseShootingSpeed(amount);
+
+            shootingRate.text = "Fire Rate: " + currentUpgrade + "/" + maxUpgrade;
+        }
     }
 }
