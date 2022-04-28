@@ -74,9 +74,12 @@ public class Bullet : MonoBehaviour
     {
         if (collision.CompareTag(collisionTag))
         {
-            collision.gameObject.GetComponent<Player>().GetHit(damage);
+            if (collisionTag == "Player")
+            {
+                collision.gameObject.GetComponent<Player>().GetHit(damage);
 
-            StopCoroutine(removeCoroutine);
+                StopCoroutine(removeCoroutine);
+            }
             gameObject.SetActive(false);
         }
     }
