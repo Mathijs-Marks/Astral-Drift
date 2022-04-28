@@ -4,60 +4,31 @@ using UnityEngine;
 
 public class AIMovementBehaviours : MonoBehaviour
 {
-    public static AIMovementBehaviours instance;
-    private void Start()
+    public virtual void MoveRight(Transform movingObject, Vector3 startPosition, float speed)
     {
-        if (instance == null)
-            instance = this;
-        else if (instance != this)
-            Destroy(gameObject);
+        movingObject.position += new Vector3(Mathf.Sin(Time.deltaTime) * speed, 0, 0);
     }
-    public void MoveObject(enums.MovementBehaviour behaviour, GameObject movingObject)
+    public virtual void MoveLeft(Transform movingObject, Vector3 startPosition, float speed)
     {
-        switch (behaviour)
-        {
-            case enums.MovementBehaviour.RightToLeft:
-                StartCoroutine(RightToLeft(movingObject));
-                break;
-            case enums.MovementBehaviour.LeftToRight:
-                StartCoroutine(LeftToRight(movingObject));
-                break;
-            case enums.MovementBehaviour.Circle:
-                StartCoroutine(Circle(movingObject));
-                break;
-            case enums.MovementBehaviour.ZigZag:
-                StartCoroutine(ZigZag(movingObject));
-                break;
-        }
+        movingObject.position -= new Vector3(Mathf.Sin(Time.deltaTime) * speed, 0, 0);
     }
-    IEnumerator RightToLeft(GameObject movingObject)
+    public virtual void CircleAround(Transform movingObject, Vector3 startPosition, float angle, float speed, float radius)
     {
-        //Do movement code
-        yield return null;
-
-        //When one iteration is complete start moving left to right again;
-        StartCoroutine(LeftToRight(movingObject));
-    }
-    IEnumerator LeftToRight(GameObject movingObject)
-    {
-        //Do movement code
-        yield return null;
-
-        //When one iteration is complete start moving left to right again;
-        StartCoroutine(LeftToRight(movingObject));
-    }
-    IEnumerator Circle(GameObject movingObject)
-    {
-        //Do movement code
-        yield return null;
-
-        //When one full circle is completed start circling again
-        StartCoroutine(Circle(movingObject));
+        angle += speed * Time.deltaTime;
+        movingObject.position -= new Vector3(Mathf.Cos(angle) * radius, 0, Mathf.Sin(angle) * radius);
     }
     IEnumerator ZigZag(GameObject movingObject)
     {
-        //Do movement code
-        yield return null;
+        Vector3 startPosition = transform.position;
+        float elapsed = 0;
+        float duration = 0.2f;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            transform.position = Vector3.Lerp(transform.position, startPosition, elapsed / duration);
+            yield return null;
+        }
+        transform.position = startPosition;
 
         //When one zigzag is completed start zigzagging again
         StartCoroutine(ZigZag(movingObject));
