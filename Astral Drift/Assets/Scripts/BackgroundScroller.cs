@@ -27,11 +27,10 @@ public class BackgroundScroller : MonoBehaviour
 
     private int lowestActiveTileInList;
     float lowerBound;
-    float upperBound;
 
     public float moveSpeed = 1;
     public static Vector2 viewerPosition;
-    // Start is called before the first frame update
+
     void Start()
     {
         scrolledTiles = tileList.Length-1;
@@ -48,7 +47,6 @@ public class BackgroundScroller : MonoBehaviour
         }
     }
   
-    // Update is called once per frame
     void FixedUpdate()
     {
         viewerPosition = new Vector2(viewer.position.x, viewer.position.z);
@@ -58,18 +56,6 @@ public class BackgroundScroller : MonoBehaviour
 
     private void UpdateVisibleTiles()
     {
-        /*if scrolltype == cameramovement
-         * {
-         * if(lowestTileInList.upperBorder < lowerBound)
-         * {
-         * find the lowest tile that is still active in the list (possibly by checking every active tile in the list?)
-         * check which tile is the lowest
-         * lowestTileInList.Setactive(false);
-         * new lowest tile is the one above the previous tile
-         * InstantiateTile() to instantiate a new tile at the proper height.
-         * }
-         * }
-        */
         if (cameraMovement)
         {
             if(backgroundTileList[lowestActiveTileInList].transform.position.y +tileSize < viewer.transform.position.y + lowerBound)
@@ -78,20 +64,11 @@ public class BackgroundScroller : MonoBehaviour
                 lowestActiveTileInList++;
                 InstantiateTile();
             }
-                //(lowestActiveTileInList).
         }
         else
         {
             ScrollBackground();
         }
-         /*if scrolltype == backgroundmovement
-         * {
-         * if(lowestTileInList.upperBorder < lowerBound)
-         * {
-         * RepositionTile();
-         * }
-         * }
-         */
     }
 
     private void InstantiateTile()
@@ -103,7 +80,6 @@ public class BackgroundScroller : MonoBehaviour
         tile.transform.parent = parent;
         backgroundTileList.Add(tile);
         generatedTiles++;
-        Debug.Log("tile added");
     }
 
     private void ScrollBackground()
