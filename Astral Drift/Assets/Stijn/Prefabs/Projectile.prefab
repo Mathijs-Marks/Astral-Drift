@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5052377283910805260}
   - component: {fileID: 7172361627336562802}
   - component: {fileID: 2093513827391347409}
-  - component: {fileID: 5179317276810292057}
+  - component: {fileID: -4467040996404806504}
   - component: {fileID: 2508600751063984407}
   m_Layer: 0
   m_Name: Projectile
@@ -85,19 +85,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5179317276810292057
-SphereCollider:
+--- !u!58 &-4467040996404806504
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5852864802511956268}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2508600751063984407
 MonoBehaviour:
   m_ObjectHideFlags: 0
