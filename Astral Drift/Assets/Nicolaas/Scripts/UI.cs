@@ -8,8 +8,8 @@ public class UI : MonoBehaviour
     static public UI instance; 
 
     [SerializeField] private Player player;
-    [SerializeField] private int maxUpgrade;
-    private int currentUpgrade;
+    public int maxUpgrade;
+    [HideInInspector] public int currentUpgrade;
 
     [HideInInspector] public int scoreValue;
 
@@ -39,15 +39,10 @@ public class UI : MonoBehaviour
         this.score.text = "Score: " + scoreValue;
     }
 
-    public void ShootingSpeedUpgrade(float amount)
+    public void ShootingSpeedUpgrade()
     {
-        if (currentUpgrade < maxUpgrade)
-        {
-            currentUpgrade++;
+        currentUpgrade++;
 
-            player.InscreaseShootingSpeed(amount);
-
-            shootingRate.text = "Fire Rate: " + currentUpgrade + "/" + maxUpgrade;
-        }
+        shootingRate.text = "Fire Rate: " + currentUpgrade + "/" + maxUpgrade;
     }
 }

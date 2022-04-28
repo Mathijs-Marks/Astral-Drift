@@ -6,11 +6,16 @@ public class ShootingSpeedPickupable : Pickupable
 {
     [SerializeField] private float shootingSpeedUpgradeAmount;
 
-    protected override void PickUp()
+    protected override void PickUp(Collider2D collision)
     {
-        base.PickUp();
+        base.PickUp(collision);
 
-        UI.instance.ShootingSpeedUpgrade(shootingSpeedUpgradeAmount);
+        if (UI.instance.currentUpgrade < UI.instance.maxUpgrade)
+        {
+            UI.instance.ShootingSpeedUpgrade();
+
+            collision.GetComponent<Player>().InscreaseShootingSpeed(shootingSpeedUpgradeAmount);
+        }
     }
 }
 
