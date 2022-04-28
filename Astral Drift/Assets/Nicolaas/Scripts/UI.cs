@@ -8,6 +8,7 @@ public class UI : MonoBehaviour
     static public UI instance; 
 
     [SerializeField] private Player player;
+    public int scoreValue;
 
     public TextMeshProUGUI hitpoints;
     public TextMeshProUGUI score;
@@ -16,6 +17,7 @@ public class UI : MonoBehaviour
     private void Start()
     {
         instance = this;
+        scoreValue = 0;
 
         UpdateHitpoints(player.maxHitpoints);
         score.text = "Score: 0";
@@ -25,5 +27,11 @@ public class UI : MonoBehaviour
     public void UpdateHitpoints(int hitpoints)
     {
         this.hitpoints.text = "HP: " + hitpoints + "/" + player.maxHitpoints;
+    }
+
+    public void AddScore(int score)
+    {
+        scoreValue += score;
+        this.score.text = "Score: " + scoreValue;
     }
 }
