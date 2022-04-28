@@ -242,6 +242,10 @@ PrefabInstance:
       propertyPath: collisionTag
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: projectileMovementMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3137198962006310131, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Name
       value: GunBarrel
@@ -323,6 +327,10 @@ PrefabInstance:
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: collisionTag
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: projectileMovementMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3137198962006310131, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Name
