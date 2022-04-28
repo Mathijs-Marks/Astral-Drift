@@ -41,6 +41,7 @@ Reviewing a Pull request goes as follows:
   else if lineRange.length > 1
 ```
 (Tip: at the readme, click on the hamburger menu and choose 'view raw' to actually see how to get this code block!)
+
 7. You can mark the file as 'Viewed' once you've viewed the file.
 8. When you're done, click 'Start a review'. If you have already started a review, you can click 'Add review comment'.
 9. Before you submit your review, your line comments are pending and only visible to you. You can edit pending comments anytime before you submit your review. To cancel a pending review, including all of its pending comments, scroll down to the end of the timeline on the Conversation tab, then click Cancel review.
