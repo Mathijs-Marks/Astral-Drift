@@ -6,14 +6,14 @@ public class Bullet : MonoBehaviour
 {
     private string collisionTag;
 
-    private Vector2 direction;
+    private Vector3 direction;
     [HideInInspector] public float speed;
     private int damage;
 
     private IEnumerator removeCoroutine;
 
     // Set the bullet active with given values.
-    public Bullet(string collisionTag, Vector2 position, Vector2 direction, int speed, int damage, float lifespan)
+    public Bullet(string collisionTag, Vector3 position, Vector3 direction, float speed, int damage, float lifespan)
     {
         ActivateBullet(collisionTag, position, direction, speed, damage, lifespan);
     }
@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
     }
 
     // Set the bullet active with given values.
-    public void ActivateBullet(string collisionTag, Vector2 position, Vector2 direction, int speed, int damage, float lifespan)
+    public void ActivateBullet(string collisionTag, Vector3 position, Vector3 direction, float speed, int damage, float lifespan)
     {
         gameObject.SetActive(true);
         transform.position = position;
@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
     }
 
     // Reuse the same bullet.
-    public void ResetBullet(Vector2 position, float lifespan)
+    public void ResetBullet(Vector3 position, float lifespan)
     {
         gameObject.SetActive(true);
         transform.position = position;
@@ -74,9 +74,12 @@ public class Bullet : MonoBehaviour
     {
         if (collision.CompareTag(collisionTag))
         {
-            collision.gameObject.GetComponent<Player>().GetHit(damage);
+            if (collisionTag == "Player")
+            {
+                collision.gameObject.GetComponent<Player>().GetHit(damage);
 
-            StopCoroutine(removeCoroutine);
+                StopCoroutine(removeCoroutine);
+            }
             gameObject.SetActive(false);
         }
     }
