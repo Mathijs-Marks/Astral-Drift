@@ -5,10 +5,10 @@ using UnityEngine;
 public class StationaryEnemy : MonoBehaviour
 {
 
-    [SerializeField]
-    public float movementSpeed = 0.1f;
-    [SerializeField]
-    private bool isStationary;
+    [SerializeField] public float movementSpeed = 0.1f;
+    [SerializeField] private bool isStationary;
+    [SerializeField] public int maxHitpoints = 2;
+    private int currentHitpoints;
 
     private Vector3 ownerLocation;
     private Vector3 startLocation;
@@ -23,6 +23,9 @@ public class StationaryEnemy : MonoBehaviour
 
         startLocation = new Vector3(this.transform.position.x, screenBounds.y * 1.2f, this.transform.position.z);
         ownerLocation = startLocation;
+
+        //Set start health
+        currentHitpoints = maxHitpoints;
     }
 
     // Update is called once per frame
@@ -55,5 +58,17 @@ public class StationaryEnemy : MonoBehaviour
             }
         }
     }
-  
+
+    //Enemy gets hit got hit
+    public void GetHit(int damage)
+    {
+        currentHitpoints -= damage;
+
+        if (currentHitpoints <= 0)
+        {
+            //TO DO: Enemy dies
+            gameObject.SetActive(false);
+        }
+    }
+
 }
