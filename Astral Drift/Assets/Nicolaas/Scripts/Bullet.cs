@@ -82,5 +82,15 @@ public class Bullet : MonoBehaviour
             }
             gameObject.SetActive(false);
         }
+        if (collision.CompareTag(collisionTag))
+        {
+            if (collisionTag == "Enemy")
+            {
+                collision.gameObject.GetComponent<StationaryEnemy>().GetHit(damage);
+
+                StopCoroutine(removeCoroutine);
+            }
+            gameObject.SetActive(false);
+        }
     }
 }
