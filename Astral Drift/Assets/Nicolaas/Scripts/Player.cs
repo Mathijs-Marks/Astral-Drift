@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Bullet bullet;
-
     [SerializeField] private float playerSpeed;
     [SerializeField] public int maxHitpoints;
     private int currentHitpoints;
@@ -13,21 +11,9 @@ public class Player : MonoBehaviour
     private Vector3 targetPosition;
     private Vector3 direction;
 
-    [SerializeField] private float shootingRate;
-    private float shootingTimer;
-
-    [SerializeField] private Vector2 bulletDirection;
-    [SerializeField] private int bulletSpeed;
-    [SerializeField] private int bulletDamage;
-    [SerializeField] private int bulletLifespan;
-
     private void Start()
     {
         currentHitpoints = maxHitpoints;
-
-        shootingTimer = 0;
-
-        bullet.ActivateBullet("Enemy", transform.position, bulletDirection, bulletSpeed, bulletDamage, bulletLifespan);
     }
 
     // Controls
@@ -53,16 +39,6 @@ public class Player : MonoBehaviour
         else
         {
             transform.position = targetPosition;
-        }
-
-        // Shooting
-        shootingTimer += Time.deltaTime;
-
-        if (shootingTimer > shootingRate)
-        {
-            shootingTimer = 0;
-
-            bullet.ResetBullet(transform.position, 4);
         }
     }
 

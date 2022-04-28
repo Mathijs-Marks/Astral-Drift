@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class GunBarrel : MonoBehaviour
 {
-    //Get Owner variables
-    public GameObject ownerRef;
-    private StationaryEnemy enemyRef;
-    [HideInInspector]
-    public float movementSpeed;
+    [SerializeField] private string collisionTag;
 
     [SerializeField]
     private GameObject projectilePrefab;
@@ -21,22 +17,19 @@ public class GunBarrel : MonoBehaviour
     [SerializeField]
     private float secondsBeforeFiringAgain = 1;
     [SerializeField]
-    private Vector3 projectileSize;
+    private Vector3 projectileSize = new Vector3(1, 1, 1);
 
     // Start is called before the first frame update
     void Start()
     {
-        enemyRef = ownerRef.GetComponent<StationaryEnemy>();
-        movementSpeed = enemyRef.movementSpeed;
         StartCoroutine(SpawnObject());
     }
 
     void SpawnProjectile(GameObject Object)
     {
         //Spawn a projectile
-        spawnedProjectile = (GameObject)Instantiate(projectilePrefab, Object.transform);
-        spawnedProjectile.GetComponent<Bullet>().ActivateBullet("Player", gunMuzzle.transform.position, new Vector3(0, 0, 1), projectileMovementMultiplier, 1, 10);
-        //spawnedProjectile.GetComponent<Bullet>().speedMultiplier = projectileMovementMultiplier;
+        spawnedProjectile = (GameObject)Instantiate(projectilePrefab, Object.transform.position, Quaternion.identity);
+        spawnedProjectile.GetComponent<Bullet>().ActivateBullet(collisionTag, gunMuzzle.transform.position, new Vector3(0, -1, 0), projectileMovementMultiplier, 1, 10);
         spawnedProjectile.transform.localScale = projectileSize;
     }
 

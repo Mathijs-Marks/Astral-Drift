@@ -32,7 +32,7 @@ public class Projectile : MonoBehaviour
     {
         if (barrelRef != null)
         { 
-            location.y -= barrelRef.movementSpeed * speedMultiplier * Time.fixedDeltaTime;
+            location.y -= speedMultiplier * Time.fixedDeltaTime;
             this.transform.position = location;
         }
 

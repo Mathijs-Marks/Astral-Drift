@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 5428553020699001176}
   - component: {fileID: 5428553020699001190}
   - component: {fileID: 5428553020699001191}
-  - component: {fileID: 3125310021329258403}
-  - component: {fileID: -4315045458436732262}
+  - component: {fileID: -2482817498873657230}
+  - component: {fileID: 2270755023285327916}
   - component: {fileID: -4743896594341981394}
   m_Layer: 0
   m_Name: StationaryEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,35 +89,53 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &3125310021329258403
-Rigidbody:
+--- !u!61 &-2482817498873657230
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5428553020699001188}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &-4315045458436732262
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5428553020699001188}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &2270755023285327916
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5428553020699001188}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &-4743896594341981394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +165,10 @@ PrefabInstance:
       propertyPath: ownerRef
       value: 
       objectReference: {fileID: 5428553020699001188}
+    - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.x
       value: 2
@@ -242,6 +264,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5428553020699001188}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.x
       value: 1
       objectReference: {fileID: 0}
@@ -335,6 +361,10 @@ PrefabInstance:
       propertyPath: ownerRef
       value: 
       objectReference: {fileID: 5428553020699001188}
+    - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.x
       value: 1
