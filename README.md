@@ -51,6 +51,12 @@ Reviewing a Pull request goes as follows:
 13. Click 'Submit review'.
 14. You're done reviewing! If you've left an Approve review, you can now start completing the Pull request. This is done by clicking 'Merge pull request'.
 
+For more information on Pull requests, see one of these pages:
+- [Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
+- [Requesting a pull request review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review)
+- [Reviewing proposed changes in a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)
+- [About pull request reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)
+
 ### Releasing
 When a sufficient amount of features or bugfixes have been tested and are ready to be released, a Pull request is created to merge back to Release.
 Two team members will review all of the work that is being merged back to Release to ensure that any merge conflicts are fixed.
