@@ -8,12 +8,14 @@ Any team members contributing to the project, take heed of the following GIT wor
 ### Development
 #### Start working on a feature/bug
 When developing on a feature, bug, etc. One should create a branch off of the Development Branch.
-When giving the branch a name, prefix your branch name with either feature or bug, depending on what you're working on, followed with the name of your branch.
-There the team member can work on the feature/bug until it is finished.
+This branch will have the name of the team member working in it.
+If any wishes to keep features within their own branch, one can do so by branching off of their respective team member branch.
+When giving that branch a name, prefix your branch name with either feature or bug, depending on what you're working on, followed with the name of your branch.
+There the team member can work on the feature/bug until it is finished (don't forget to merge the finished feature back to the team member branch!).
 
 #### Merging back to Development
 When the feature/bug is finished, notify your team members so that they can Peer review your work.
-This is done by creating a Pull Request so that another team member can do the Peer review.
+This is done by creating a Pull Request to the branch Develop so that another team member can do the Peer review.
 As soon as your work is reviewed, the reviewer will merge your work back to Development.
 
 ### Releasing
