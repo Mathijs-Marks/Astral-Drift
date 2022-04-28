@@ -21,11 +21,12 @@ public class BackgroundScroller : MonoBehaviour
 
     public GameObject[] tileList;
     public GameObject[] backgroundTiles = new GameObject[3];
+    private List<GameObject> backgroundTileList;
 
     private int generatedTiles = 0;
     private int scrolledTiles;
 
-    private int lowestTileInList;
+    private int lowestActiveTileInList;
     float lowerBound;
     float upperBound;
 
@@ -37,6 +38,8 @@ public class BackgroundScroller : MonoBehaviour
         scrolledTiles = tileList.Length-1;
         float width = Screen.width;
         float height = Screen.height;
+
+        lowestActiveTileInList = 0;
 
         lowerBound = mainCam.transform.position.y - height / 2;
         upperBound = mainCam.transform.position.y + height / 2;
@@ -66,10 +69,13 @@ public class BackgroundScroller : MonoBehaviour
         */
         if (cameraMovement)
         {
-            for(int i = 0;i< backgroundTiles.Length - 1; i++)
+            if(backgroundTileList[lowestActiveTileInList].transform.position.x < viewerPosition.x-lowerBound)
             {
-
+                backgroundTileList[lowestActiveTileInList].SetActive(false);
+                lowestActiveTileInList++;
+                InstantiateTile();
             }
+                //(lowestActiveTileInList).
         }
         else
         {
@@ -100,7 +106,7 @@ public class BackgroundScroller : MonoBehaviour
         {
          currentTile = tileList[i];
             currentTile.transform.position = currentTile.transform.position - new Vector3(-moveSpeed, 0, 0);
-            if(currentTile.transform.position.x< lowerBound)
+            if(currentTile.transform.position.x< viewerPosition.x-lowerBound)
             {
                 currentTile.transform.position = topSpawnLocation.position;
             }
