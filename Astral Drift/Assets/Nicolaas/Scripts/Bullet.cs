@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
     // Set the bullet active with given values.
     public Bullet(string collisionTag, Vector2 position, Vector2 direction, int speed, int damage, float lifespan)
     {
-        SetActive(collisionTag, position, direction, speed, damage, lifespan);
+        ActivateBullet(collisionTag, position, direction, speed, damage, lifespan);
     }
 
     // Move.
@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
     }
 
     // Set the bullet active with given values.
-    public void SetActive(string collisionTag, Vector2 position, Vector2 direction, int speed, int damage, float lifespan)
+    public void ActivateBullet(string collisionTag, Vector2 position, Vector2 direction, int speed, int damage, float lifespan)
     {
         gameObject.SetActive(true);
         transform.position = position;

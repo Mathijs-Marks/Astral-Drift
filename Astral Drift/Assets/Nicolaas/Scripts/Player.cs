@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 
         shootingTimer = 0;
 
-        bullet.SetActive("Enemy", transform.position, bulletDirection, bulletSpeed, bulletDamage, bulletLifespan);
+        bullet.ActivateBullet("Enemy", transform.position, bulletDirection, bulletSpeed, bulletDamage, bulletLifespan);
     }
 
     // Controls
