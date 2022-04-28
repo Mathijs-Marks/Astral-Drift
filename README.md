@@ -61,3 +61,8 @@ For more information on Pull requests, see one of these pages:
 When a sufficient amount of features or bugfixes have been tested and are ready to be released, a Pull request is created to merge back to Release.
 Two team members will review all of the work that is being merged back to Release to ensure that any merge conflicts are fixed.
 Then, the work can be merged. After merging, the reviewers should test the release product and fix any after-merge errors.
+
+
+#### Branches
+Created branch Release
+Created branch Develop
