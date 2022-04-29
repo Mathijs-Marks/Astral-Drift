@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HumanPickupable : Pickupable
 {
+    // A model is needed to not get issues with the collider.
+    [SerializeField] private GameObject model;
+
     [SerializeField] private int scoreIncrease = 10;
     [SerializeField] private float pickupTime;
     private float timer;
@@ -15,6 +18,7 @@ public class HumanPickupable : Pickupable
         if (beingPickedUp)
         {
             timer += Time.deltaTime;
+            model.transform.localScale = Vector3.one * (1 - timer / pickupTime);
 
             if (timer > pickupTime)
             {
@@ -33,6 +37,8 @@ public class HumanPickupable : Pickupable
     private void OnTriggerExit2D(Collider2D collision)
     {
         beingPickedUp = false;
+        timer = 0;
+        model.transform.localScale = Vector3.one;
     }
 
     // Actual pickup
