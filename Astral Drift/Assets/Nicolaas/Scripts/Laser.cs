@@ -20,7 +20,7 @@ public class Laser : MonoBehaviour
         Instantiate(collisionTag, originPosition, direction, laserLength, damage, lifespan, laserWidth);
     }
 
-    // Move.
+    // Check if the laser hits
     private void FixedUpdate()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.rotation * direction, laserLength);
@@ -35,6 +35,7 @@ public class Laser : MonoBehaviour
     public void Instantiate(string collisionTag, Vector3 originPosition, Vector3 direction, float laserLength, int damage, float lifespan, float laserWidth)
     {
         laserRenderer.SetPosition(1, direction * laserLength);
+        laserRenderer.startWidth = laserWidth;
 
         gameObject.SetActive(true);
         transform.position = originPosition;
@@ -45,8 +46,6 @@ public class Laser : MonoBehaviour
 
         this.laserLength = laserLength;
         this.damage = damage;
-
-        laserRenderer.startWidth = laserWidth;
 
         StartRemoveTimer(lifespan);
     }
