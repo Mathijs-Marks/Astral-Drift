@@ -27,26 +27,36 @@ public class HomingBullet : Bullet
     //Override fixedupdate to change the direction of the projectile
     protected override void FixedUpdate()
     {
-        if (target.activeSelf && target != null)
-        {
-            directionToTarget = target.transform.position - this.transform.position;
-
-            lookRotation = Quaternion.LookRotation(directionToTarget);
-
-            if (lerpTime < 1)
-            {
-                transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, lerpTime);
-                transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
-                lerpTime += Time.deltaTime * rotatingSpeed;
-            }
-            else
-            {
-                lerpTime = 0;
-            }
-        }
+        RotateToTarget();
 
         //Move the projectile forward
         base.FixedUpdate();
+    }
+
+    //Rotate the projectile towards the target
+    private void RotateToTarget()
+    {
+        if (target != null)
+        {
+            if (target.activeSelf)
+            {
+                directionToTarget = target.transform.position - this.transform.position;
+
+                lookRotation = Quaternion.LookRotation(directionToTarget);
+
+                //Lerp from current rotation to lookrotation
+                if (lerpTime < 1)
+                {
+                    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, lerpTime);
+                    transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
+                    lerpTime += Time.deltaTime * rotatingSpeed;
+                }
+                else
+                {
+                    lerpTime = 0;
+                }
+            }
+        }
     }
 
 }
