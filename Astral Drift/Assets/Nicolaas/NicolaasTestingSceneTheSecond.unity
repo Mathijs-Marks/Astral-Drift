@@ -1091,6 +1091,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7030399337930416811, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
+      propertyPath: pickupTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7030399337930416819, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
       propertyPath: m_Name
       value: Human Pickupable
