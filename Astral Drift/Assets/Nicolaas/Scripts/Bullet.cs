@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private string collisionTag;
+    protected string collisionTag;
 
-    private Vector3 direction;
+    protected Vector3 direction;
     [HideInInspector] public float speed;
     private int damage;
 
@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
     }
 
     // Move.
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         transform.Translate(direction * speed * Time.deltaTime);
     }
