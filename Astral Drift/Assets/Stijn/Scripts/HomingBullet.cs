@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HomingBullet : Bullet
 {
-    [SerializeField]private GameObject target;
+    private GameObject target;
     private Vector3 directionToTarget;
 
     [SerializeField] private float rotatingSpeed = 1;
@@ -27,9 +27,12 @@ public class HomingBullet : Bullet
         target = GameObject.FindGameObjectWithTag(collisionTag);
         direction = transform.up;
         homingStartTime = 0.5f;
-        stopHomingDistance = 0.5f;
         lerpTime = 0;
         shouldBeHoming = true;
+
+        //The distance at which the projectile will stop homing
+        stopHomingDistance = 1f;
+
     }
 
     //Override fixedupdate to change the direction of the projectile
