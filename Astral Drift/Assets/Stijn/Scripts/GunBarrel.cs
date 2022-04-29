@@ -38,8 +38,8 @@ public class GunBarrel : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(secondsBeforeFiringAgain);
             SpawnProjectile(gunMuzzle);
+            yield return new WaitForSeconds(secondsBeforeFiringAgain);
         }
 
     }
