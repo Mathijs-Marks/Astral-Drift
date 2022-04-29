@@ -129,7 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionTag: Player
+  laserLifespan: 2
   laserPrefab: {fileID: 7858639703514785719, guid: 1bf19cb995c3a764c99d0ab9c438a0f1, type: 3}
   gunMuzzle: {fileID: 837063946097492612}
-  secondsBeforeFiringAgain: 15
+  secondsBeforeFiringAgain: 4
   laserWidth: 0.1

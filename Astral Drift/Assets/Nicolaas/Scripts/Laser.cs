@@ -10,34 +10,32 @@ public class Laser : MonoBehaviour
 
     private Vector3 direction = new Vector3(0, 0, 1);
     private int damage;
-    private bool isActive;
     [SerializeField] private float laserLength = 20;
 
     private IEnumerator removeCoroutine;
 
     // Set the laser active with given values.
-    public Laser(string collisionTag, Vector3 originPosition, Vector3 direction, int damage, float lifespan)
+    public Laser(string collisionTag, Vector3 originPosition, Vector3 direction, float laserLength, int damage, float lifespan, float laserWidth)
     {
-        Instantiate(collisionTag, originPosition, direction, damage, lifespan);
+        Instantiate(collisionTag, originPosition, direction, laserLength, damage, lifespan, laserWidth);
     }
 
     // Move.
     private void FixedUpdate()
     {
-        direction = new Vector3(0, 0, 1);
-        laserRenderer.SetPosition(1, direction * laserLength);
-
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.rotation * direction, laserLength);
 
         if (hit.collider != null && hit.collider.tag == "Player")
         {
-            Debug.Log("hellow world");
+            CollideWithTag(hit.collider);
         }
     }
 
     // Set the laser active with given values.
-    public void Instantiate(string collisionTag, Vector3 originPosition, Vector3 direction, int damage, float lifespan)
+    public void Instantiate(string collisionTag, Vector3 originPosition, Vector3 direction, float laserLength, int damage, float lifespan, float laserWidth)
     {
+        laserRenderer.SetPosition(1, direction * laserLength);
+
         gameObject.SetActive(true);
         transform.position = originPosition;
 
@@ -45,7 +43,10 @@ public class Laser : MonoBehaviour
         this.direction = direction;
         this.direction.Normalize();
 
+        this.laserLength = laserLength;
         this.damage = damage;
+
+        laserRenderer.startWidth = laserWidth;
 
         StartRemoveTimer(lifespan);
     }
@@ -80,27 +81,15 @@ public class Laser : MonoBehaviour
     }
 
     // Collide with player.
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void CollideWithTag(Collider2D collision)
     {
-        if (collision.CompareTag(collisionTag))
+        if (collisionTag == "Player")
         {
-            if (collisionTag == "Player")
-            {
-                collision.gameObject.GetComponent<Player>().GetHit(damage);
-
-                StopCoroutine(removeCoroutine);
-            }
-            gameObject.SetActive(false);
+            collision.gameObject.GetComponent<Player>().GetHit(damage);
         }
-        if (collision.CompareTag(collisionTag))
+        if (collisionTag == "Enemy")
         {
-            if (collisionTag == "Enemy")
-            {
-                collision.gameObject.GetComponent<StationaryEnemy>().GetHit(damage);
-
-                StopCoroutine(removeCoroutine);
-            }
-            gameObject.SetActive(false);
+            collision.gameObject.GetComponent<StationaryEnemy>().GetHit(damage);
         }
     }
 }

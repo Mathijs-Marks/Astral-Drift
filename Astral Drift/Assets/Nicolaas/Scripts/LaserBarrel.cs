@@ -5,7 +5,8 @@ using UnityEngine;
 public class LaserBarrel : MonoBehaviour
 {
     [SerializeField] private string collisionTag;
-    [SerializeField] private float bulletLifespan;
+    [SerializeField] private float laserLifespan;
+    [SerializeField] private float laserLength;
 
     [SerializeField]
     private GameObject laserPrefab;
@@ -24,11 +25,16 @@ public class LaserBarrel : MonoBehaviour
         StartCoroutine(SpawnObject());
     }
 
+    private void FixedUpdate()
+    {
+        transform.Rotate(new Vector3(0, 1, 0));
+    }
+
     void SpawnProjectile(GameObject Object)
     {
         //Spawn a projectile
-        spawnedProjectile = (GameObject)Instantiate(laserPrefab, gunMuzzle.transform.position, gunMuzzle.transform.rotation);
-        spawnedProjectile.GetComponent<Laser>().Instantiate(collisionTag, gunMuzzle.transform.position, new Vector3(0, 0, 1), 1, bulletLifespan);
+        spawnedProjectile = (GameObject)Instantiate(laserPrefab, gunMuzzle.transform);
+        spawnedProjectile.GetComponent<Laser>().Instantiate(collisionTag, gunMuzzle.transform.position, new Vector3(0, 0, 1), laserLength, 1, laserLifespan, laserWidth);
     }
 
     IEnumerator SpawnObject()
