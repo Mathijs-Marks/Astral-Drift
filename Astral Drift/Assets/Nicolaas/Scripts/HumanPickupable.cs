@@ -9,8 +9,18 @@ public class HumanPickupable : Pickupable
 
     [SerializeField] private int scoreIncrease = 10;
     [SerializeField] private float pickupTime;
+    [SerializeField] [Range(0, 1)] private float scaleWhenCollected; // This is a percentage value, thus ranging from 0 to 1
+
+    private Vector3 originalScale;
     private float timer;
     private bool beingPickedUp;
+
+    private void Start()
+    {
+        // This causes it to do less math for fixed update. Not done the other way around to make serialize field easier to understand.
+        scaleWhenCollected = 1 - scaleWhenCollected;
+        originalScale = model.transform.localScale;
+    }
 
     // Timers
     private void FixedUpdate()
@@ -18,7 +28,7 @@ public class HumanPickupable : Pickupable
         if (beingPickedUp)
         {
             timer += Time.deltaTime;
-            model.transform.localScale = Vector3.one * (1 - timer / pickupTime);
+            model.transform.localScale = originalScale * (1 - (timer * scaleWhenCollected) / pickupTime);
 
             if (timer > pickupTime)
             {
@@ -36,9 +46,10 @@ public class HumanPickupable : Pickupable
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        // Reset timer and scale.
         beingPickedUp = false;
         timer = 0;
-        model.transform.localScale = Vector3.one;
+        model.transform.localScale = originalScale;
     }
 
     // Actual pickup

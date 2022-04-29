@@ -158,3 +158,4 @@ MonoBehaviour:
   model: {fileID: 4875200569406490376}
   scoreIncrease: 10
   pickupTime: 3
+  scaleWhenCollected: 0.4
