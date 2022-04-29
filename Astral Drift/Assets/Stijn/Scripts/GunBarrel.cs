@@ -42,4 +42,9 @@ public class GunBarrel : MonoBehaviour
         }
 
     }
+
+    public void IncreaseShootingSpeed(float amount)
+    {
+        secondsBeforeFiringAgain -= amount;
+    }
 }
