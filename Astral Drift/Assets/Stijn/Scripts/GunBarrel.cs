@@ -18,6 +18,7 @@ public class GunBarrel : MonoBehaviour
     private float secondsBeforeFiringAgain = 1;
     [SerializeField]
     private Vector3 projectileSize = new Vector3(1, 1, 1);
+    [SerializeField] float bulletLifespan = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class GunBarrel : MonoBehaviour
     {
         //Spawn a projectile
         spawnedProjectile = (GameObject)Instantiate(projectilePrefab, Object.transform.position, Object.transform.rotation);
-        spawnedProjectile.GetComponent<Bullet>().ActivateBullet(collisionTag, gunMuzzle.transform.position, new Vector3(0, 0, 1), projectileMovementMultiplier, 1, 10);
+        spawnedProjectile.GetComponent<Bullet>().ActivateBullet(collisionTag, gunMuzzle.transform.position, new Vector3(0, 0, 1), projectileMovementMultiplier, 1, bulletLifespan);
         spawnedProjectile.transform.localScale = projectileSize;
     }
 
@@ -37,8 +38,8 @@ public class GunBarrel : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(secondsBeforeFiringAgain);
             SpawnProjectile(gunMuzzle);
+            yield return new WaitForSeconds(secondsBeforeFiringAgain);
         }
 
     }
