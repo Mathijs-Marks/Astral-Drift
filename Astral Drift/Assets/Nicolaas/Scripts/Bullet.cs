@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private string collisionTag;
+    protected string collisionTag;
 
-    private Vector3 direction;
+    protected Vector3 direction;
     [HideInInspector] public float speed;
     private int damage;
 
@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
     }
 
     // Move.
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         transform.Translate(direction * speed * Time.deltaTime);
     }
@@ -77,6 +77,16 @@ public class Bullet : MonoBehaviour
             if (collisionTag == "Player")
             {
                 collision.gameObject.GetComponent<Player>().GetHit(damage);
+
+                StopCoroutine(removeCoroutine);
+            }
+            gameObject.SetActive(false);
+        }
+        if (collision.CompareTag(collisionTag))
+        {
+            if (collisionTag == "Enemy")
+            {
+                collision.gameObject.GetComponent<StationaryEnemy>().GetHit(damage);
 
                 StopCoroutine(removeCoroutine);
             }
