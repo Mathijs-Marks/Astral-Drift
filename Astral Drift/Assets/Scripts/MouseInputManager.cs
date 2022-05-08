@@ -10,17 +10,16 @@ public class MouseInputManager : MonoBehaviour
     private float depth = 10.0f;
     private Vector2 mousePosition;
     private Vector3 wantedPosition;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    private bool mousePointer;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
+        // Get current pointer position of the mouse.
+        mousePointer = EventSystem.current.IsPointerOverGameObject();
+
+        // If there's a mouse click and if the cursor is not hovering over a game object, then move the player towards the cursor position.
+        if (Input.GetMouseButton(0) && !mousePointer)
         {
             mousePosition = Input.mousePosition;
             wantedPosition = Camera.main.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, depth));
