@@ -17,7 +17,7 @@ public class HumanPickupable : Pickupable
 
     private void Start()
     {
-        // This causes it to do less math for fixed update. Not done the other way around to make serialize field easier to understand.
+        // Invert scaleWhenCollected to make it work properly in FixedUpdate.
         scaleWhenCollected = 1 - scaleWhenCollected;
         originalScale = model.transform.localScale;
     }
