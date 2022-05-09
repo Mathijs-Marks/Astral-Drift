@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     {
         mousePointer = EventSystem.current.IsPointerOverGameObject();
 
-        if (Input.GetMouseButton(0) && !mousePointer)
+        if (Input.GetMouseButton(0))
         {
             targetPosition = new Vector3(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height), 0);
             targetPosition = Camera.main.ScreenToWorldPoint(targetPosition);

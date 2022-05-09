@@ -293,6 +293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8fd0409b4d2da44cb46009c7ef53ca2, type: 3}
+--- !u!4 &923913955 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8604941382570098747, guid: e7227dbed1c226a46b3666dab23d8418, type: 3}
+  m_PrefabInstance: {fileID: 8604941381977740511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &968781953
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,7 +635,7 @@ PrefabInstance:
     - target: {fileID: 8604941382570098746, guid: e7227dbed1c226a46b3666dab23d8418, type: 3}
       propertyPath: parent
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 923913955}
     - target: {fileID: 8604941382570098746, guid: e7227dbed1c226a46b3666dab23d8418, type: 3}
       propertyPath: viewer
       value: 
@@ -639,6 +644,10 @@ PrefabInstance:
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 291504722}
+    - target: {fileID: 8604941382570098746, guid: e7227dbed1c226a46b3666dab23d8418, type: 3}
+      propertyPath: cameraMovement
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8604941382570098746, guid: e7227dbed1c226a46b3666dab23d8418, type: 3}
       propertyPath: topSpawnLocation
       value: 
