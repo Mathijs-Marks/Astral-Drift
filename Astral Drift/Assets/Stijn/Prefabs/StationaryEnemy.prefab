@@ -208,15 +208,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.x
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.y
-      value: 0.05
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.z
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: secondsBeforeFiringAgain
@@ -318,15 +318,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.x
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.y
-      value: 0.05
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.z
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: secondsBeforeFiringAgain
@@ -432,15 +432,15 @@ PrefabInstance:
       objectReference: {fileID: 5852864802511956268, guid: 5a5ef802d86948f4abf5ee6996414cf5, type: 3}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.x
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.y
-      value: 0.05
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.z
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: secondsBeforeFiringAgain

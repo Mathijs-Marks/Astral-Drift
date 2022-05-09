@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StationaryEnemy : MonoBehaviour
+public class StationaryEnemy : AIMovementBehaviours
 {
 
     [SerializeField] public float movementSpeed = 0.1f;
