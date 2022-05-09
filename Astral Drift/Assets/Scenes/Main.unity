@@ -153,26 +153,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - enemyPrefab: {fileID: 116116237454405833, guid: 0841c777da70a204a9f055f3e27b0508, type: 3}
-    enemyPosition: {x: 0, y: 0, z: 0}
-    formationType: 0
+  - enemyPrefab: {fileID: 5428553020699001188, guid: 96e1447ce0657244d954e4c26eedcb13, type: 3}
+    enemyPosition: {x: 0, y: 10}
+    formationType: 1
     amount: 9
-  - enemyPrefab: {fileID: 116116237454405833, guid: 0841c777da70a204a9f055f3e27b0508, type: 3}
-    enemyPosition: {x: -2, y: 0, z: 0}
+  - enemyPrefab: {fileID: 5428553020699001188, guid: 96e1447ce0657244d954e4c26eedcb13, type: 3}
+    enemyPosition: {x: -6, y: -2}
+    formationType: 0
+    amount: 3
+  - enemyPrefab: {fileID: 5428553020699001188, guid: 96e1447ce0657244d954e4c26eedcb13, type: 3}
+    enemyPosition: {x: -3, y: 0}
     formationType: 2
     amount: 5
-  - enemyPrefab: {fileID: 116116237454405833, guid: 0841c777da70a204a9f055f3e27b0508, type: 3}
-    enemyPosition: {x: 0, y: 0, z: 0}
-    formationType: 1
-    amount: 6
-  - enemyPrefab: {fileID: 116116237454405833, guid: 0841c777da70a204a9f055f3e27b0508, type: 3}
-    enemyPosition: {x: 0, y: 0, z: 0}
-    formationType: 4
-    amount: 4
-  - enemyPrefab: {fileID: 116116237454405833, guid: 0841c777da70a204a9f055f3e27b0508, type: 3}
-    enemyPosition: {x: 0, y: 0, z: 3}
+  - enemyPrefab: {fileID: 5428553020699001188, guid: 96e1447ce0657244d954e4c26eedcb13, type: 3}
+    enemyPosition: {x: 7, y: 0}
     formationType: 3
-    amount: 4
+    amount: 5
+  - enemyPrefab: {fileID: 5428553020699001188, guid: 96e1447ce0657244d954e4c26eedcb13, type: 3}
+    enemyPosition: {x: 9, y: 2}
+    formationType: 4
+    amount: 5
 --- !u!4 &61724561
 Transform:
   m_ObjectHideFlags: 0
