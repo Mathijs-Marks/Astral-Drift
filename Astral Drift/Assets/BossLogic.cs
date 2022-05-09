@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossLogic : MonoBehaviour
+public class BossLogic : AIMovementBehaviours
 {
     [SerializeField] private GameObject[] bossParts;
     int currentInactiveParts = 0;
 
+    private Vector3 startpos;
+    [SerializeField] private float speed = 2, movingTime = 4;
+    private bool movingRight;
+    private float passedTime;
     void FixedUpdate()
     {
         currentInactiveParts = 0;
@@ -20,6 +24,18 @@ public class BossLogic : MonoBehaviour
         if(currentInactiveParts == bossParts.Length)
         {
             this.gameObject.SetActive(false);
+        }
+
+        if (movingRight)
+            MoveRight(transform, startpos, speed);
+        else
+            MoveLeft(transform, startpos, speed);
+
+        passedTime += Time.deltaTime;
+        if (passedTime > movingTime)
+        {
+            movingRight = !movingRight;
+            passedTime = 0;
         }
     }
 }
