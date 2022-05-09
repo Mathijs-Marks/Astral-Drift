@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
@@ -13,17 +14,25 @@ public class Player : MonoBehaviour
     private Vector3 targetPosition;
     private Vector3 direction;
 
+    private bool mousePointer;
+
     private void Start()
     {
         currentHitpoints = maxHitpoints;
+        targetPosition = transform.position;
     }
 
     // Controls
     private void Update()
     {
-        targetPosition = new Vector3(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height), 0);
-        targetPosition = Camera.main.ScreenToWorldPoint(targetPosition);
-        targetPosition.z = 0;
+        mousePointer = EventSystem.current.IsPointerOverGameObject();
+
+        if (Input.GetMouseButton(0) && !mousePointer)
+        {
+            targetPosition = new Vector3(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height), 0);
+            targetPosition = Camera.main.ScreenToWorldPoint(targetPosition);
+            targetPosition.z = 0;
+        }
     }
 
     // Moving and shooting
