@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnableEnemyFormation
 {
     [SerializeField] private GameObject enemyPrefab;
-    [SerializeField] private Vector3 enemyPosition;
+    [SerializeField] private Vector2 enemyPosition;
     [SerializeField] private Enums.enemyFormationTypes formationType;
     [SerializeField] private int amount;
 
@@ -14,7 +14,7 @@ public class SpawnableEnemyFormation
     {
         return amount;
     }
-    public Vector3 getPos()
+    public Vector2 getPos()
     {
         return enemyPosition;
     }

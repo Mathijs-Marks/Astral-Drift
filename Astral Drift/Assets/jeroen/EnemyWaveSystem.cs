@@ -18,32 +18,32 @@ public class EnemyWaveSystem : MonoBehaviour
                 case Enums.enemyFormationTypes.HorizontalLine:
                     for(int n = 0; n < enemies[i].getAmount(); n++)
                     {
-                        Instantiate(enemies[i].getPrefab(), enemies[i].getPos() - new Vector3(halfAmount + n, 0, 0), Quaternion.identity);
+                        Instantiate(enemies[i].getPrefab(), enemies[i].getPos() - new Vector2(halfAmount + n, 0), Quaternion.identity);
                     }
                     break;
                 case Enums.enemyFormationTypes.VerticalLine:
                     for (int n = 0; n < enemies[i].getAmount(); n++)
                     {
-                        Instantiate(enemies[i].getPrefab(), enemies[i].getPos() - new Vector3(0, 0, halfAmount + n), Quaternion.identity);
+                        Instantiate(enemies[i].getPrefab(), enemies[i].getPos() - new Vector2(0, halfAmount + n), Quaternion.identity);
                     }
                     break;
                 case Enums.enemyFormationTypes.RightDiagonal:
                     for (int n = 0; n < enemies[i].getAmount(); n++)
                     {
-                        Instantiate(enemies[i].getPrefab(),enemies[i].getPos() - new Vector3(halfAmount + n, 0, halfAmount + n), Quaternion.identity);
+                        Instantiate(enemies[i].getPrefab(),enemies[i].getPos() - new Vector2(halfAmount + n, halfAmount + n), Quaternion.identity);
                     }
                     break;
                 case Enums.enemyFormationTypes.LeftDiagonal:
                     for (int n = 0; n < enemies[i].getAmount(); n++)
                     {
-                        Instantiate(enemies[i].getPrefab(), enemies[i].getPos() - new Vector3(halfAmount + n, 0, halfAmount - n), Quaternion.identity);
+                        Instantiate(enemies[i].getPrefab(), enemies[i].getPos() - new Vector2(halfAmount + n, halfAmount - n), Quaternion.identity);
                     }
                     break;
                 case Enums.enemyFormationTypes.VFormation:
 
                     for (int n = -halfAmount; n < halfAmount + 1; n++)
                     {
-                        Instantiate(enemies[i].getPrefab(), enemies[i].getPos() + new Vector3(halfAmount + n, 0, Mathf.Pow(n, 2)), Quaternion.identity);
+                        Instantiate(enemies[i].getPrefab(), enemies[i].getPos() + new Vector2(halfAmount + n, Mathf.Pow(n, 2)), Quaternion.identity);
                     }
                     break;
             }
