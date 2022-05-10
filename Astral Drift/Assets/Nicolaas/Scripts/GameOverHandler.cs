@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverHandler : MonoBehaviour
 {
@@ -23,5 +24,13 @@ public class GameOverHandler : MonoBehaviour
     {
         gameOverScreen.SetActive(true);
         gameLost = true;
+
+        Time.timeScale = 0;
+        PauseMenu.GamePaused = true;
+    }
+
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
