@@ -18,6 +18,10 @@ public class HomingBullet : Bullet
     [SerializeField] private float stopHomingDistance = 1f;
     private bool shouldBeHoming;
 
+    private float currentFollowTime;
+    [SerializeField] private float maxFollowTime = .6f;
+
+
     public HomingBullet(string collisionTag, Vector3 position, Vector3 direction, float speed, int damage, float lifespan) : base(collisionTag, position, direction, speed, damage, lifespan)
     {
         ActivateBullet(collisionTag, position, direction, speed, damage, lifespan);
@@ -59,19 +63,31 @@ public class HomingBullet : Bullet
 
                 lookRotation = Quaternion.LookRotation(directionToTarget);
 
-                //Stop rotating once the missile has been close once
-                if (directionToTarget.magnitude >= stopHomingDistance && shouldBeHoming)
+                //When following for more than maxfollowtime, sotp followinng
+                if (currentFollowTime < maxFollowTime && shouldBeHoming)
                 {
-                    //Lerp from current rotation to lookrotation
-                    if (lerpTime < 1)
+                    //Stop rotating once the missile has been close once
+                    if (directionToTarget.magnitude >= stopHomingDistance)
                     {
+                        currentFollowTime += 0.01f;
+                        Debug.Log(currentFollowTime);
+
+                        //Lerp from current rotation to lookrotation
+                        if (lerpTime < 1)
+                        {
                             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, lerpTime);
                             transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
                             lerpTime += Time.deltaTime * rotatingLerpSpeedMultiplier;
+                        }
+                        else
+                        {
+                            lerpTime = 0;
+                        }
+
                     }
                     else
                     {
-                         lerpTime = 0;
+                        shouldBeHoming = false;
                     }
                 }
                 else
