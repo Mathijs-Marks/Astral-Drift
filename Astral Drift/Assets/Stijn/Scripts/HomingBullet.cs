@@ -7,13 +7,15 @@ public class HomingBullet : Bullet
     private GameObject target;
     private Vector3 directionToTarget;
 
-    [SerializeField] private float rotatingSpeed = 1;
+    [SerializeField] private float rotatingLerpSpeedMultiplier = 1;
     private Quaternion lookRotation;
     private float lerpTime;
 
     private float currentHomingStartTimer;
-    private float homingStartTime;
-    private float stopHomingDistance;
+    //For this duration the bullet will travel forwards, afterwards it will start homing
+    [SerializeField] private float homingStartTime = 0.5f;
+    //The distance at which the projectile will stop homing
+    [SerializeField] private float stopHomingDistance = 1f;
     private bool shouldBeHoming;
 
     public HomingBullet(string collisionTag, Vector3 position, Vector3 direction, float speed, int damage, float lifespan) : base(collisionTag, position, direction, speed, damage, lifespan)
@@ -26,13 +28,8 @@ public class HomingBullet : Bullet
     {
         target = GameObject.FindGameObjectWithTag(collisionTag);
         direction = transform.up;
-        homingStartTime = 0.5f;
         lerpTime = 0;
         shouldBeHoming = true;
-
-        //The distance at which the projectile will stop homing
-        stopHomingDistance = 1f;
-
     }
 
     //Override fixedupdate to change the direction of the projectile
@@ -70,7 +67,7 @@ public class HomingBullet : Bullet
                     {
                             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, lerpTime);
                             transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
-                            lerpTime += Time.deltaTime * rotatingSpeed;
+                            lerpTime += Time.deltaTime * rotatingLerpSpeedMultiplier;
                     }
                     else
                     {
