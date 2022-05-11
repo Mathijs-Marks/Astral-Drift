@@ -18,13 +18,16 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonUp(0) && !GamePaused)
+        if (!GameOverHandler.instance.gameLost)
         {
-            Pause();
-        }
-        else if (Input.GetMouseButtonDown(0) && GamePaused)
-        {
-            Resume();
+            if (Input.GetMouseButtonUp(0) && !GamePaused)
+            {
+                Pause();
+            }
+            else if (Input.GetMouseButtonDown(0) && GamePaused)
+            {
+                Resume();
+            }
         }
     }
 

@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
     {
         gameObject.SetActive(false);
 
-        // TODO: Game over code
+        GameOverHandler.instance.GameOver();
     }
 
     public void InscreaseShootingSpeed(float amount)
