@@ -91,7 +91,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5748960617362510639, guid: 2e08c0cfa5cf4f4459fc18e644af7ede, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5748960617362510639, guid: 2e08c0cfa5cf4f4459fc18e644af7ede, type: 3}
       propertyPath: m_LocalRotation.w
@@ -133,39 +133,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5748960617362509011, guid: 2e08c0cfa5cf4f4459fc18e644af7ede, type: 3}
   m_PrefabInstance: {fileID: 5632488795549367336}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5632488795028446481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135943133493735675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99bd50ddf658fa646bbad6cd4eb65c24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedMultiplier: 1
-  creator: {fileID: 0}
---- !u!114 &5632488795028446482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135943133493735675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ff802c779e23d143a209a7058aa56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionTag: 
-  projectilePrefab: {fileID: 0}
-  gunMuzzle: {fileID: 0}
-  projectileMovementMultiplier: 1
-  secondsBeforeFiringAgain: 1
-  projectileSize: {x: 1, y: 1, z: 1}
-  bulletLifespan: 10
 --- !u!1001 &5632488795680748930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -203,7 +170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5748960617362510639, guid: 2e08c0cfa5cf4f4459fc18e644af7ede, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5748960617362510639, guid: 2e08c0cfa5cf4f4459fc18e644af7ede, type: 3}
       propertyPath: m_LocalRotation.w
@@ -245,39 +212,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5748960617362509011, guid: 2e08c0cfa5cf4f4459fc18e644af7ede, type: 3}
   m_PrefabInstance: {fileID: 5632488795680748930}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5632488795139013452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135943133575870801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99bd50ddf658fa646bbad6cd4eb65c24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedMultiplier: 1
-  creator: {fileID: 0}
---- !u!114 &5632488795139013459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135943133575870801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ff802c779e23d143a209a7058aa56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionTag: 
-  projectilePrefab: {fileID: 0}
-  gunMuzzle: {fileID: 0}
-  projectileMovementMultiplier: 1
-  secondsBeforeFiringAgain: 1
-  projectileSize: {x: 1, y: 1, z: 1}
-  bulletLifespan: 10
 --- !u!1001 &5632488796314163865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -285,6 +219,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 135943133493735175}
     m_Modifications:
+    - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.x
       value: 0.2
@@ -400,7 +338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8149391494706168084, guid: d8b41af49623a6f47820abcd16ab38b0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.75
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 8149391494706168084, guid: d8b41af49623a6f47820abcd16ab38b0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -444,6 +382,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 135943133575866029}
     m_Modifications:
+    - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.x
       value: 0.2
@@ -559,7 +501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5748960617362510639, guid: 2e08c0cfa5cf4f4459fc18e644af7ede, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5748960617362510639, guid: 2e08c0cfa5cf4f4459fc18e644af7ede, type: 3}
       propertyPath: m_LocalRotation.w
@@ -601,20 +543,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5748960617362509011, guid: 2e08c0cfa5cf4f4459fc18e644af7ede, type: 3}
   m_PrefabInstance: {fileID: 5632488797016488472}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5632488797016488478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135943132764354251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8700e2c5f95a22946b0662fe4d20f286, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  rotatingSpeed: 0
 --- !u!1001 &5632488797051899892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -622,6 +550,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 135943132764350775}
     m_Modifications:
+    - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: collisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 5852864802511956268, guid: 5a5ef802d86948f4abf5ee6996414cf5, type: 3}
     - target: {fileID: -5500701115091936238, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.x
       value: 0.2
