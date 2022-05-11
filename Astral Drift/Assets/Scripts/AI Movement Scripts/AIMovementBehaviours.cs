@@ -6,21 +6,10 @@ public class AIMovementBehaviours : MonoBehaviour
 {
     protected int currentHitpoints;
 
-    public virtual void MoveRight(Transform movingObject, float speed)
+    public virtual void MoveDirection(Transform movingObject, Vector3 direction, float speed)
     {
-        movingObject.position += new Vector3(1 * speed, 0, 0);
-    }
-    public virtual void MoveLeft(Transform movingObject, float speed)
-    {
-        movingObject.position -= new Vector3(1 * speed, 0, 0);
-    }
-    public virtual void MoveForward(Transform movingObject, float speed)
-    {
-        movingObject.position -= new Vector3(0, 1 * speed, 0);
-    }
-    public virtual void MoveBackwards(Transform movingObject, float speed)
-    {
-        movingObject.position += new Vector3(0, 1 * speed, 0);
+        direction.Normalize();
+        movingObject.position += direction * speed;
     }
     public virtual void CircleAround(Transform movingObject, Vector3 startPosition, float angle, float speed, float radius, float passedTime)
     {

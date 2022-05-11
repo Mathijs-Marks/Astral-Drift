@@ -13,9 +13,9 @@ public class AIStrafeEnemy : AIMovementBehaviours
     void FixedUpdate()
     {
         if (movingRight)
-            MoveRight(transform, speed);
+            MoveDirection(transform, Vector3.right, speed);
         else
-            MoveLeft(transform, speed);
+            MoveDirection(transform, Vector3.left, speed);
 
         passedTime += Time.deltaTime;
         if (passedTime > movingTime)

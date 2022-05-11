@@ -8,6 +8,6 @@ public class AIForwardEnemy : AIMovementBehaviours
     
     void FixedUpdate()
     {
-        MoveForward(transform, speed);
+        MoveDirection(transform, Vector3.down, speed);
     }
 }
