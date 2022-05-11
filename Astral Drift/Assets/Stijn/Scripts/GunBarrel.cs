@@ -10,7 +10,6 @@ public class GunBarrel : MonoBehaviour
     private GameObject projectilePrefab;
     [SerializeField]
     private GameObject gunMuzzle;
-    private GameObject spawnedProjectile;
 
     [SerializeField]
     public float projectileMovementMultiplier = 1f;
@@ -19,29 +18,30 @@ public class GunBarrel : MonoBehaviour
     [SerializeField]
     private Vector3 projectileSize = new Vector3(1, 1, 1);
     [SerializeField] float bulletLifespan = 10f;
+    [SerializeField] private bool shootOnStart = false;
+    public bool allowedToShoot = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnObject());
+        if(shootOnStart)
+            StartCoroutine(SpawnObject());
     }
 
     void SpawnProjectile(GameObject Object)
     {
         //Spawn a projectile
-        spawnedProjectile = (GameObject)Instantiate(projectilePrefab, Object.transform.position, Object.transform.rotation);
-        spawnedProjectile.GetComponent<Bullet>().ActivateBullet(collisionTag, gunMuzzle.transform.position, new Vector3(0, 0, 1), projectileMovementMultiplier, 1, bulletLifespan);
+        GameObject spawnedProjectile = Instantiate(projectilePrefab, Object.transform.position, Object.transform.rotation);
+        spawnedProjectile.GetComponent<Bullet>().ActivateBullet(collisionTag, gunMuzzle.transform.position, new Vector3(0, 1, 0), projectileMovementMultiplier, 1, bulletLifespan);
         spawnedProjectile.transform.localScale = projectileSize;
     }
 
-    IEnumerator SpawnObject()
+    public IEnumerator SpawnObject()
     {
-        while (true)
-        {
-            SpawnProjectile(gunMuzzle);
-            yield return new WaitForSeconds(secondsBeforeFiringAgain);
-        }
-
+        SpawnProjectile(gunMuzzle);
+        yield return new WaitForSeconds(secondsBeforeFiringAgain);
+        if (allowedToShoot)
+            StartCoroutine(SpawnObject());
     }
 
     public void IncreaseShootingSpeed(float amount)

@@ -5,7 +5,7 @@ using UnityEngine;
 public class AICircleEnemy : AIMovementBehaviours
 {
     private Vector3 startpos;
-    [SerializeField] private float angle = 1, speed = 0.1f, radius = 3;
+    [SerializeField] private float angle = 1, speed = 3, radius = 1;
     private float passedTime = 0;
     private void Start()
     {

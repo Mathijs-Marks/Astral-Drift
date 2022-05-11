@@ -86,7 +86,7 @@ public class Bullet : MonoBehaviour
         {
             if (collisionTag == "Enemy")
             {
-                collision.gameObject.GetComponent<StationaryEnemy>().GetHit(damage);
+                collision.gameObject.GetComponent<AIMovementBehaviours>().GetHit(damage);
 
                 StopCoroutine(removeCoroutine);
             }
