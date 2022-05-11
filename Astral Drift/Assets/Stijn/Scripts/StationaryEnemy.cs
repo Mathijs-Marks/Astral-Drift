@@ -8,7 +8,6 @@ public class StationaryEnemy : AIMovementBehaviours
     [SerializeField] public float movementSpeed = 0.1f;
     [SerializeField] private bool isStationary;
     [SerializeField] public int maxHitpoints = 2;
-    private int currentHitpoints;
 
     private Vector3 ownerLocation;
     private Vector3 startLocation;
@@ -58,17 +57,4 @@ public class StationaryEnemy : AIMovementBehaviours
             }
         }
     }
-
-    //Enemy gets hit got hit
-    public void GetHit(int damage)
-    {
-        currentHitpoints -= damage;
-
-        if (currentHitpoints <= 0)
-        {
-            //TO DO: Enemy dies
-            gameObject.SetActive(false);
-        }
-    }
-
 }
