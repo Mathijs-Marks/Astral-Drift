@@ -5,6 +5,7 @@ using UnityEngine;
 public class AIMovementBehaviours : MonoBehaviour
 {
     protected int currentHitpoints;
+    [SerializeField] public int maxHitpoints = 2;
 
     public virtual void MoveDirection(Transform movingObject, Vector3 direction, float speed)
     {
