@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1461207885494000140}
   - component: {fileID: 1461207885494000141}
   - component: {fileID: 5378681599378103910}
+  - component: {fileID: 6652864645261908079}
   m_Layer: 0
   m_Name: Shotgun Enemy
   m_TagString: Untagged
@@ -115,6 +116,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.02139147, y: 0.02}
   m_EdgeRadius: 0
+--- !u!114 &6652864645261908079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461207885494000143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990ce4713afeea547be1c673783e5f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  movingTime: 4
 --- !u!1001 &356210316864295676
 PrefabInstance:
   m_ObjectHideFlags: 0
