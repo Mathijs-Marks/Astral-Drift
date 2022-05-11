@@ -25,7 +25,6 @@ public class HomingBullet : Bullet
     void Start()
     {
         target = GameObject.FindGameObjectWithTag(collisionTag);
-        direction = transform.up;
         homingStartTime = 0.5f;
         lerpTime = 0;
         shouldBeHoming = true;
@@ -38,17 +37,17 @@ public class HomingBullet : Bullet
     //Override fixedupdate to change the direction of the projectile
     protected override void FixedUpdate()
     {
-            if (currentHomingStartTimer < homingStartTime)
-            {
-                currentHomingStartTimer += 0.01f;
-            }
-            else
-            {
-                RotateToTarget();
-            }
+        if (currentHomingStartTimer < homingStartTime)
+        {
+            currentHomingStartTimer += 0.01f;
+        }
+        else
+        {
+            RotateToTarget();
+        }
 
-            //Move the projectile forward
-            base.FixedUpdate();
+        //Move the projectile forward
+        base.FixedUpdate();
     }
 
     //Rotate the projectile towards the target
@@ -60,7 +59,7 @@ public class HomingBullet : Bullet
             {
                 directionToTarget = target.transform.position - this.transform.position;
 
-                lookRotation = Quaternion.LookRotation(directionToTarget);
+                lookRotation = Quaternion.LookRotation(Vector3.forward, directionToTarget);
 
                 //Stop rotating once the missile has been close once
                 if (directionToTarget.magnitude >= stopHomingDistance && shouldBeHoming)
@@ -68,9 +67,9 @@ public class HomingBullet : Bullet
                     //Lerp from current rotation to lookrotation
                     if (lerpTime < 1)
                     {
-                            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, lerpTime);
-                            transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
-                            lerpTime += Time.deltaTime * rotatingSpeed;
+                        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, lerpTime);
+                        transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
+                        lerpTime += Time.deltaTime * rotatingSpeed;
                     }
                     else
                     {
