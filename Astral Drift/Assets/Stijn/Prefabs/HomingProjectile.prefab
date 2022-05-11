@@ -118,7 +118,7 @@ MonoBehaviour:
   rotatingLerpSpeedMultiplier: 0.15
   homingStartTime: 0.15
   stopHomingDistance: 1.4
-  maxFollowTime: 1
+  maxFollowTime: 1.5
 --- !u!50 &-5445399731536977472
 Rigidbody2D:
   serializedVersion: 4

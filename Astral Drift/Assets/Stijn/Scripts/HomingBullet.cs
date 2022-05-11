@@ -68,7 +68,6 @@ public class HomingBullet : Bullet
                     //Stop rotating once the missile has been close once
                     if (directionToTarget.magnitude >= stopHomingDistance)
                     {
-                        Debug.Log(directionToTarget.magnitude + "AND "+stopHomingDistance);
                         currentFollowTime += 0.01f;
 
                         //Lerp from current rotation to lookrotation
