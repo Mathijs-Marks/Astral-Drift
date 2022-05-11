@@ -15,11 +15,11 @@ public class HomingBullet : Bullet
     //For this duration the bullet will travel forwards, afterwards it will start homing
     [SerializeField] private float homingStartTime = 0.5f;
     //The distance at which the projectile will stop homing
-    [SerializeField] private float stopHomingDistance = 1f;
+    [SerializeField] private float stopHomingDistance = 1.8f;
     private bool shouldBeHoming;
 
     private float currentFollowTime;
-    [SerializeField] private float maxFollowTime = .6f;
+    [SerializeField] private float maxFollowTime = 2f;
 
 
     public HomingBullet(string collisionTag, Vector3 position, Vector3 direction, float speed, int damage, float lifespan) : base(collisionTag, position, direction, speed, damage, lifespan)
@@ -31,8 +31,6 @@ public class HomingBullet : Bullet
     void Start()
     {
         target = GameObject.FindGameObjectWithTag(collisionTag);
-        direction = transform.up;
-        homingStartTime = 0.5f;
         lerpTime = 0;
         shouldBeHoming = true;
     }
@@ -70,8 +68,8 @@ public class HomingBullet : Bullet
                     //Stop rotating once the missile has been close once
                     if (directionToTarget.magnitude >= stopHomingDistance)
                     {
+                        Debug.Log(directionToTarget.magnitude + "AND "+stopHomingDistance);
                         currentFollowTime += 0.01f;
-                        Debug.Log(currentFollowTime);
 
                         //Lerp from current rotation to lookrotation
                         if (lerpTime < 1)
@@ -85,18 +83,17 @@ public class HomingBullet : Bullet
                             lerpTime = 0;
                         }
 
-                        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, lerpTime);
-                        transform.position = new Vector3(transform.position.x, transform.position.y, 0f); // The z position is being reset here.
-                        lerpTime += Time.deltaTime * rotatingSpeed;
                     }
                     else
                     {
                         shouldBeHoming = false;
+                        Debug.Log("stop homing");
                     }
                 }
                 else
                 {
                     shouldBeHoming = false;
+                   // Debug.Log("stop homing");
                 }
             }
         }
