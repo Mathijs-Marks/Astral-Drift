@@ -68,7 +68,7 @@ public class HomingBullet : Bullet
                     if (lerpTime < 1)
                     {
                         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, lerpTime);
-                        transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
+                        transform.position = new Vector3(transform.position.x, transform.position.y, 0f); // The z position is being reset here.
                         lerpTime += Time.deltaTime * rotatingSpeed;
                     }
                     else
