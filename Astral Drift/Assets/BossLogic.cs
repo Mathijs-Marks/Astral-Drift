@@ -27,9 +27,9 @@ public class BossLogic : AIMovementBehaviours
         }
 
         if (movingRight)
-            MoveRight(transform, startpos, speed);
+            MoveDirection(transform, Vector3.right, speed);
         else
-            MoveLeft(transform, startpos, speed);
+            MoveDirection(transform, Vector3.left, speed);
 
         passedTime += Time.deltaTime;
         if (passedTime > movingTime)

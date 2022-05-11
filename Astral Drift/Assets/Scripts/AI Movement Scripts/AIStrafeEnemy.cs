@@ -6,22 +6,16 @@ public class AIStrafeEnemy : AIMovementBehaviours
 {
     //THIS IS A TEMP ENEMY SCRIPT TO SHO HOW TO USE THE MOVEMENT BEHAVIOURS
 
-    private Vector3 startpos;
-    [SerializeField] private float speed = 2, movingTime = 4;
+    [SerializeField] private float speed = 0.1f, movingTime = 2;
     private bool movingRight;
     private float passedTime;
-
-    private void Start()
-    {
-        startpos = transform.position;
-    }
 
     void FixedUpdate()
     {
         if (movingRight)
-            MoveRight(transform, startpos, speed);
+            MoveDirection(transform, Vector3.right, speed);
         else
-            MoveLeft(transform, startpos, speed);
+            MoveDirection(transform, Vector3.left, speed);
 
         passedTime += Time.deltaTime;
         if (passedTime > movingTime)
