@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: -2482817498873657230}
   - component: {fileID: 2270755023285327916}
   - component: {fileID: -4743896594341981394}
+  - component: {fileID: 6668380670429341075}
   m_Layer: 0
   m_Name: StationaryEnemy
   m_TagString: Enemy
@@ -180,9 +181,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4107b0b07cf3c95459128c2fa2f8e77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHitpoints: 2
   movementSpeed: 0.05
   isStationary: 1
+--- !u!114 &6668380670429341075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5428553020699001188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458d168a4f0c79047b02c8a6ea8b7d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   maxHitpoints: 2
+  speed: 0.02
 --- !u!1001 &808502060755167214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -247,6 +262,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: bulletLifespan
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.x
       value: 0.1
       objectReference: {fileID: 0}
@@ -257,6 +276,14 @@ PrefabInstance:
     - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: secondsBeforeFiringAgain
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: projectileMovementMultiplier
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
@@ -282,7 +309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -329,6 +356,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: bulletLifespan
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 5852864802511956268, guid: 5a5ef802d86948f4abf5ee6996414cf5, type: 3}
@@ -343,6 +374,14 @@ PrefabInstance:
     - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: secondsBeforeFiringAgain
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: projectileMovementMultiplier
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
@@ -368,7 +407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -415,6 +454,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: bulletLifespan
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.x
       value: 0.1
       objectReference: {fileID: 0}
@@ -425,6 +468,14 @@ PrefabInstance:
     - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileSize.z
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: secondsBeforeFiringAgain
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: projectileMovementMultiplier
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}

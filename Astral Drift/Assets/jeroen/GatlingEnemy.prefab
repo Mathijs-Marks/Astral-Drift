@@ -99,10 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c445fa55956d79a408c5c8e3af2ea668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 2
+  maxHitpoints: 4
   shootCooldown: 2
   shootForTime: 1.5
-  speed: 0.01
+  speed: -0.02
   lookatTarget: {fileID: 0}
   barrelHolder: {fileID: 5338237896842008803}
   gunBarrelScripts: []
@@ -269,6 +269,10 @@ PrefabInstance:
       propertyPath: secondsBeforeFiringAgain
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: projectileMovementMultiplier
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
 --- !u!4 &8596546639495940291 stripped
@@ -358,6 +362,10 @@ PrefabInstance:
     - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: secondsBeforeFiringAgain
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319716167718238275, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: projectileMovementMultiplier
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
