@@ -7,7 +7,6 @@ public class StationaryEnemy : AIMovementBehaviours
 
     [SerializeField] public float movementSpeed = 0.1f;
     [SerializeField] private bool isStationary;
-    [SerializeField] public int maxHitpoints = 2;
 
     private Vector3 ownerLocation;
     private Vector3 startLocation;

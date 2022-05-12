@@ -15,6 +15,8 @@ public class GatlingEnemy : AIMovementBehaviours
         foreach (Transform child in barrelHolder)
             gunBarrelScripts.Add(child.GetComponentInChildren<GunBarrel>());
 
+        lookatTarget = GameObject.FindGameObjectWithTag("Player");
+
         /*for (int i = 0; i < gunBarrelScripts.Count; i++)
         {
             Vector3 direction = Input.mousePosition - transform.position;
