@@ -86,7 +86,6 @@ public class HomingBullet : Bullet
                     else
                     {
                         shouldBeHoming = false;
-                        Debug.Log("stop homing");
                     }
                 }
                 else

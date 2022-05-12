@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GatlingEnemy : AIMovementBehaviours
 {
-    [SerializeField] private float shootCooldown, shootForTime, speed;
+    [SerializeField] private float shootCooldown, shootForTime;
     [SerializeField] private GameObject lookatTarget;
     [SerializeField] private Transform barrelHolder;
     [SerializeField] private List<GunBarrel> gunBarrelScripts = new List<GunBarrel>();
@@ -16,16 +16,10 @@ public class GatlingEnemy : AIMovementBehaviours
             gunBarrelScripts.Add(child.GetComponentInChildren<GunBarrel>());
 
         lookatTarget = GameObject.FindGameObjectWithTag("Player");
-
-        /*for (int i = 0; i < gunBarrelScripts.Count; i++)
-        {
-            Vector3 direction = Input.mousePosition - transform.position;
-            StartCoroutine(RotateAndShoot(direction, i));
-        }*/
     }
     void FixedUpdate()
     {
-        MoveDirection(transform, Vector3.up, speed);
+        transform.position += new Vector3(0, 1, 0) * speed * Time.deltaTime;
         elapsedTime += Time.deltaTime;
         if (elapsedTime > shootCooldown)
         {

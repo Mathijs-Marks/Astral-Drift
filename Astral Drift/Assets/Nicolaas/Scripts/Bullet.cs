@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
 
     protected Vector3 direction;
     [HideInInspector] public float speed;
-    private int damage;
+    public int damage;
 
     private IEnumerator removeCoroutine;
 
@@ -67,30 +67,5 @@ public class Bullet : MonoBehaviour
 
         // Disable bullet
         gameObject.SetActive(false);
-    }
-
-    // Collide with player.
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag(collisionTag))
-        {
-            if (collisionTag == "Player")
-            {
-                collision.gameObject.GetComponent<Player>().GetHit(damage);
-
-                StopCoroutine(removeCoroutine);
-            }
-            gameObject.SetActive(false);
-        }
-        if (collision.CompareTag(collisionTag))
-        {
-            if (collisionTag == "Enemy")
-            {
-                collision.gameObject.GetComponent<AIMovementBehaviours>().GetHit(damage);
-
-                StopCoroutine(removeCoroutine);
-            }
-            gameObject.SetActive(false);
-        }
     }
 }

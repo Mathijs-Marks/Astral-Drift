@@ -88,7 +88,7 @@ public class Laser : MonoBehaviour
         }
         if (collisionTag == "Enemy")
         {
-            collision.gameObject.GetComponent<StationaryEnemy>().GetHit(damage);
+            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         }
     }
 }
