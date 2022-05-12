@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 2270755023285327916}
   - component: {fileID: -4743896594341981394}
   - component: {fileID: 5244057508167056393}
+  - component: {fileID: 8913554443317121577}
   m_Layer: 0
   m_Name: RotatingEnemy
   m_TagString: Enemy
@@ -200,6 +201,20 @@ MonoBehaviour:
   RotatingSpeed: 30
   degreesToRotate: 0
   moveClockwise: 1
+--- !u!114 &8913554443317121577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5428553020699001188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458d168a4f0c79047b02c8a6ea8b7d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHitpoints: 2
+  speed: 0.02
 --- !u!1001 &808502060755167214
 PrefabInstance:
   m_ObjectHideFlags: 0
