@@ -201,6 +201,14 @@ MonoBehaviour:
     enemyPosition: {x: 0, y: 142}
     formationType: 0
     amount: 1
+  - enemyPrefab: {fileID: 5428553020699001188, guid: e9017424f4e803a418898dd57942605c, type: 3}
+    enemyPosition: {x: -3, y: 160}
+    formationType: 2
+    amount: 1
+  - enemyPrefab: {fileID: 5428553020699001188, guid: e9017424f4e803a418898dd57942605c, type: 3}
+    enemyPosition: {x: 3, y: 160}
+    formationType: 2
+    amount: 1
 --- !u!4 &61724561
 Transform:
   m_ObjectHideFlags: 0
