@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotatingComponent : MonoBehaviour
+public class RotatingComponent : AIMovementBehaviours
 {
-    [SerializeField] private float RotatingSpeed;
     [SerializeField] private float degreesToRotate;
     [SerializeField] private bool moveClockwise;
 
@@ -25,10 +24,10 @@ public class RotatingComponent : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (RotatingSpeed > 0)
+        if (speed > 0)
         {
             //Rotate the object
-            transform.Rotate(targetRotation * RotatingSpeed * Time.fixedDeltaTime, Space.Self);
+            transform.Rotate(targetRotation * speed * Time.fixedDeltaTime, Space.Self);
 
             //Here we check if the object should be able to rotate backwards depending on the degreesToRotate
             if (degreesToRotate > 0)
