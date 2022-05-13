@@ -4,9 +4,10 @@ using UnityEngine;
 [System.Serializable]
 public class SpawnableEnemyFormation
 {
+    
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private Vector2 enemyPosition;
-    [SerializeField] private Enums.enemyFormationTypes formationType;
+    [SerializeField] private Enumerators.EnemyFormationTypes formationType;
     [SerializeField] private int amount;
 
 
@@ -22,7 +23,7 @@ public class SpawnableEnemyFormation
     {
         return enemyPrefab;
     }
-    public Enums.enemyFormationTypes getFormation()
+    public Enumerators.EnemyFormationTypes getFormation()
     {
         return formationType;
     }
