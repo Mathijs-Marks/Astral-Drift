@@ -11,13 +11,13 @@ public class Projectile : MonoBehaviour
     public float speedMultiplier = 1;
     [HideInInspector]
     public GameObject creator;
-    private GunBarrel barrelRef;
+    private BaseGunBarrel barrelRef;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        barrelRef = creator.GetComponent<GunBarrel>();
+        barrelRef = creator.GetComponent<BaseGunBarrel>();
         location = this.transform.position;
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }

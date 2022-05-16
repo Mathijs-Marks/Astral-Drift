@@ -33,6 +33,6 @@ public class Health : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        TakeDamage(GetComponent<Bullet>().damage);
+        TakeDamage(GetComponent<BaseBullet>().readDamage);
     }
 }
