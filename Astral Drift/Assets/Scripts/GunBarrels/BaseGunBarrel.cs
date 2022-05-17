@@ -1,35 +1,28 @@
-using System.Collections;
 using UnityEngine;
 
 public class BaseGunBarrel : MonoBehaviour
 {
-    [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] private GameObject gunMuzzle;
+    [SerializeField] protected GameObject projectilePrefab;
+    [SerializeField] protected GameObject gunMuzzle;
 
-    [SerializeField] private bool shootOnStart = false;
-    [SerializeField] private float shootingRate = 1;
+    [SerializeField] protected bool shootOnStart = false;
+    [SerializeField] protected float shootingRate = 1;
+    protected float elapsedTime;
 
-    public bool allowedToShoot = true;
+    [HideInInspector] public bool allowedToShoot = true;
 
-    private float elapsed;
-
-    void SpawnProjectile(GameObject Object)
+    protected void SpawnProjectile(GameObject Object)
     {
         //Spawn a projectile
         Instantiate(projectilePrefab, Object.transform.position, Object.transform.rotation);
     }
 
-    protected virtual void FixedUpdate()
+    protected void Shoot()
     {
         if (allowedToShoot)
         {
-            if (elapsed > shootingRate)
-            {
-                SpawnProjectile(gunMuzzle);
-                elapsed = 0;
-            }
+            SpawnProjectile(gunMuzzle);
         }
-        elapsed += Time.deltaTime;
     }
 
     public void IncreaseShootingSpeed(float amount)

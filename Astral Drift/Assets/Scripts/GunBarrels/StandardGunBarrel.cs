@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class StandardGunBarrel : BaseGunBarrel
 {
-    // Start is called before the first frame update
-    void Start()
+    void FixedUpdate()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (elapsedTime > shootingRate)
+        {
+            Shoot();
+            elapsedTime = 0;
+        }
+        elapsedTime += Time.deltaTime;
     }
 }
