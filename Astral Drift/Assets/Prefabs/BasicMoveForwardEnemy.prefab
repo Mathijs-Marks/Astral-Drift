@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 6866067656519768485}
   - component: {fileID: 5301993166386794672}
   - component: {fileID: 836653288199848174}
-  - component: {fileID: 836653288199848175}
   m_Layer: 0
   m_Name: BasicMoveForwardEnemy
   m_TagString: Enemy
@@ -167,20 +166,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &836653288199848175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6866067656519768486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 458d168a4f0c79047b02c8a6ea8b7d48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHitpoints: 2
-  speed: 0.02
 --- !u!1001 &1370602470427416301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -190,7 +175,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3137198962006310131, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Name
-      value: GunBarrel (1)
+      value: StandardGunBarrel
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_RootOrder
@@ -284,7 +269,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3137198962006310131, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Name
-      value: GunBarrel
+      value: StandardGunBarrel
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_RootOrder

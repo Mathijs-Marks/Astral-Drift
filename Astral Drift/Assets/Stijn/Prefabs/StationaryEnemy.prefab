@@ -47,8 +47,7 @@ GameObject:
   - component: {fileID: 5428553020699001191}
   - component: {fileID: -2482817498873657230}
   - component: {fileID: 2270755023285327916}
-  - component: {fileID: -4743896594341981394}
-  - component: {fileID: 6668380670429341075}
+  - component: {fileID: 3125558816580876463}
   m_Layer: 0
   m_Name: StationaryEnemy
   m_TagString: Enemy
@@ -169,7 +168,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4743896594341981394
+--- !u!114 &3125558816580876463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,26 +177,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5428553020699001188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4107b0b07cf3c95459128c2fa2f8e77c, type: 3}
+  m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 2
-  movementSpeed: 0.05
-  isStationary: 1
---- !u!114 &6668380670429341075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5428553020699001188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 458d168a4f0c79047b02c8a6ea8b7d48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHitpoints: 2
-  speed: 0.02
+  maxHitpoints: 3
 --- !u!1001 &808502060755167214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -207,7 +190,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3137198962006310131, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Name
-      value: GunBarrel (2)
+      value: StandardGunBarrel
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_RootOrder
@@ -301,7 +284,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3137198962006310131, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Name
-      value: GunBarrel (1)
+      value: StandardGunBarrel
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_RootOrder
@@ -399,7 +382,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3137198962006310131, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Name
-      value: GunBarrel
+      value: StandardGunBarrel
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_RootOrder

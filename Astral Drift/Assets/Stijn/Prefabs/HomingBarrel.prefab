@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b209d90d8f1cb4592b382f426bce96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotatingSpeed: 30
+  speed: 0.1
   degreesToRotate: 180
   moveClockwise: 1
 --- !u!1 &4784329419576115075
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 6740703080104766225}
   - component: {fileID: 4204475673531390070}
   - component: {fileID: 5249506735900629689}
-  - component: {fileID: 8319716167718238275}
+  - component: {fileID: 3776389216210499009}
   m_Layer: 0
   m_Name: GunBarrel
   m_TagString: Untagged
@@ -133,7 +133,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8319716167718238275
+--- !u!114 &3776389216210499009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,17 +142,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4784329419576115075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ff802c779e23d143a209a7058aa56f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 19a46aa0fc9a21d4aac7a0ce1a9fe670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionTag: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 5a5ef802d86948f4abf5ee6996414cf5, type: 3}
   gunMuzzle: {fileID: 6828227476333938969}
-  projectileMovementMultiplier: 1
-  secondsBeforeFiringAgain: 1
-  projectileSize: {x: 1, y: 1, z: 1}
-  bulletLifespan: 10
-  shootOnStart: 0
+  shootOnStart: 1
+  shootingRate: 1
   allowedToShoot: 1
 --- !u!1 &6828227476333938969
 GameObject:

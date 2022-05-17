@@ -27,7 +27,7 @@ public class RotatingComponent : AIMovementBehaviours
         if (speed > 0)
         {
             //Rotate the object
-            transform.Rotate(targetRotation * speed * Time.fixedDeltaTime, Space.Self);
+            transform.Rotate(targetRotation * speed * Time.deltaTime, Space.Self);
 
             //Here we check if the object should be able to rotate backwards depending on the degreesToRotate
             if (degreesToRotate > 0)

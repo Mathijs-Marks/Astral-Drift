@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5338237895189720297}
   - component: {fileID: 5338237895189720310}
   - component: {fileID: 5338237895189720311}
-  - component: {fileID: 5338237895189720309}
   - component: {fileID: 6606661004631572079}
   - component: {fileID: 1822727514886692657}
   m_Layer: 0
@@ -87,25 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5338237895189720309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5338237895189720306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c445fa55956d79a408c5c8e3af2ea668, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHitpoints: 4
-  shootCooldown: 2
-  shootForTime: 1.5
-  speed: -0.02
-  lookatTarget: {fileID: 0}
-  barrelHolder: {fileID: 5338237896842008803}
-  gunBarrelScripts: []
 --- !u!61 &6606661004631572079
 BoxCollider2D:
   m_ObjectHideFlags: 0
