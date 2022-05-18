@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7172361627336562802}
   - component: {fileID: 2093513827391347409}
   - component: {fileID: -4467040996404806504}
-  - component: {fileID: 3579596992162535395}
-  m_Layer: 8
-  m_Name: HomingProjectile
+  - component: {fileID: 2196139161076828233}
+  m_Layer: 9
+  m_Name: PlayerProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5852864802511956268}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cd3f32e940d58e4479b81ea88e78a0c3, type: 2}
+  - {fileID: 2100000, guid: e61c27d520db396488bde668d6a6ca5f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101,7 +101,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3579596992162535395
+--- !u!114 &2196139161076828233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,13 +110,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5852864802511956268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8700e2c5f95a22946b0662fe4d20f286, type: 3}
+  m_Script: {fileID: 11500000, guid: 33e8ea9d6cf343748827f7cf799b1f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   damage: 1
-  playerGameObject: {fileID: 0}
-  rotatingLerpSpeedMultiplier: 0.15
-  homingStartTime: 0.15
-  stopHomingDistance: 1.4
-  maxFollowTime: 1.5

@@ -8,7 +8,7 @@ public class UI : MonoBehaviour
 {
     static public UI instance; 
 
-    [SerializeField] private Player player;
+    [SerializeField] private Health playerHealth;
     public int maxUpgrade;
     [HideInInspector] public int currentUpgrade;
 
@@ -24,14 +24,14 @@ public class UI : MonoBehaviour
         scoreValue = 0;
         currentUpgrade = 0;
 
-        UpdateHitpoints(player.maxHitpoints);
+        UpdateHitpoints(playerHealth.maxHitpoints);
         score.text = "Score: 0";
         shootingRate.text = "Fire Rate: 0/" + maxUpgrade;
     }
 
     public void UpdateHitpoints(int hitpoints)
     {
-        this.hitpoints.text = "HP: " + hitpoints + "/" + player.maxHitpoints;
+        this.hitpoints.text = "HP: " + hitpoints + "/" + playerHealth.maxHitpoints;
     }
 
     public void AddScore(int score)
