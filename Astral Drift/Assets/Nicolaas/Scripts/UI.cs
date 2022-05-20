@@ -18,6 +18,11 @@ public class UI : MonoBehaviour
     public TextMeshProUGUI score;
     public TextMeshProUGUI shootingRate;
 
+    private void Awake()
+    {
+        GlobalReferenceManager.UIMenu = this;
+    }
+
     private void Start()
     {
         instance = this;
