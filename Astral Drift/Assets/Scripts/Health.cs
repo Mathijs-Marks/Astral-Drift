@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
@@ -30,22 +28,28 @@ public class Health : MonoBehaviour
             currentHitpoints = maxHitpoints;
         }
     }
-    private void BulletCollision(int damage, GameObject bullet)
+    protected void BulletCollision(int damage, GameObject bullet)
     {
         TakeDamage(damage);
         bullet.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out StandardBullet standardBullet)) //Bullet
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet")) //Bullet
         {
-            BulletCollision(standardBullet.readDamage, collision.gameObject);
-        } else if(collision.gameObject.TryGetComponent(out HomingBullet homingBullet))
+            if (collision.gameObject.TryGetComponent(out StandardBullet standardBullet))
+                BulletCollision(standardBullet.readDamage, collision.gameObject);
+            else if (collision.gameObject.TryGetComponent(out HomingBullet homingBullet))
+                BulletCollision(homingBullet.readDamage, collision.gameObject);
+        }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerBullet"))
         {
-            BulletCollision(homingBullet.readDamage, collision.gameObject);
-        } else if (collision.gameObject.TryGetComponent(out ScorePickupable scorePickupable))
+            if (collision.gameObject.TryGetComponent(out StandardBullet standardBullet))
+                BulletCollision(standardBullet.readDamage, collision.gameObject);
+        }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Pickup"))
         {
-            //Do pickup code
+            //get/do pickup stuff
         }
     }
 }
