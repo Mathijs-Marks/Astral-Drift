@@ -10,6 +10,11 @@ public class GameOverHandler : MonoBehaviour
     [HideInInspector] public bool gameLost;
     [SerializeField] private GameObject gameOverScreen;
 
+    private void Awake()
+    {
+        GlobalReferenceManager.GameOverMenu = this;
+    }
+
     private void Start()
     {
         instance = this;
@@ -26,7 +31,7 @@ public class GameOverHandler : MonoBehaviour
         gameLost = true;
 
         Time.timeScale = 0;
-        PauseMenu.GamePaused = true;
+        GlobalReferenceManager.PauseMenu.GamePaused = true;
     }
 
     public void ResetScene()

@@ -14,6 +14,12 @@ public class Player : MonoBehaviour
 
     private bool mousePointer;
 
+    private void Awake()
+    {
+        GlobalReferenceManager.PlayerScript = this;
+        GlobalReferenceManager.PlayerPosition = transform;
+    }
+
     private void Start()
     {
         targetPosition = transform.position;
