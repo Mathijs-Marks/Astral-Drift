@@ -6,6 +6,8 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] protected int currentHitpoints;
+    public int CurrentHitpoints { get { return currentHitpoints; } }
+
     public int maxHitpoints;
     private void Start()
     {
@@ -14,7 +16,6 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHitpoints -= damage;
-        Debug.Log(currentHitpoints);
         if (currentHitpoints <= 0)
         {
             gameObject.SetActive(false);

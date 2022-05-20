@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHitpoints: 0
-  maxHitpoints: 10
+  maxHitpoints: 3
 --- !u!1001 &1370602470427416301
 PrefabInstance:
   m_ObjectHideFlags: 0
