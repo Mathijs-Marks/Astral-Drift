@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
     {
         currentHitpoints = maxHitpoints;
     }
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         currentHitpoints -= damage;
         if (currentHitpoints <= 0)
@@ -35,9 +35,9 @@ public class Health : MonoBehaviour
         TakeDamage(damage);
         bullet.SetActive(false);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out StandardBullet standardBullet))
+        if (collision.gameObject.TryGetComponent(out StandardBullet standardBullet)) //Bullet
         {
             BulletCollision(standardBullet.readDamage, collision.gameObject);
         } else if(collision.gameObject.TryGetComponent(out HomingBullet homingBullet))
