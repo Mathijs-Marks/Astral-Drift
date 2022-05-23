@@ -4,23 +4,23 @@ using UnityEngine.Events;
 public class PlayerHitEvent : MonoBehaviour
 {
     private UnityEvent playerHit;
-    private Health playerHealth;
+    private PlayerHealth playerHealth;
     void Start()
     {
         if (playerHit == null)
             playerHit = new UnityEvent();
 
-        playerHealth = GetComponent<Health>();
+        playerHealth = GetComponent<PlayerHealth>();
         playerHit.AddListener(PlayerGotHit);
     }
     private void PlayerGotHit()
     {
         if (playerHealth.CurrentHitpoints <= 0)
         {
-            UI.instance.UpdateHitpoints(playerHealth.CurrentHitpoints);
+            UI.instance.UpdateHitpoints();
             GameOverHandler.instance.GameOver();
         }
         else
-            UI.instance.UpdateHitpoints(playerHealth.CurrentHitpoints);
+            UI.instance.UpdateHitpoints();
     }
 }
