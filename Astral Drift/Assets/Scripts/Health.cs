@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
@@ -34,6 +35,11 @@ public class Health : MonoBehaviour
         bullet.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        DoCollision(collision);
+    }
+
+    protected virtual void DoCollision(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet")) //Bullet
         {

@@ -1,11 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameOverHandler : MonoBehaviour
 {
+    public UnityEvent DeathEvent
+    {
+        get { return deathEvent; }
+        set { deathEvent = value; }
+    }
+
     public static GameOverHandler instance;
+    private UnityEvent deathEvent;
 
     [HideInInspector] public bool gameLost;
     [SerializeField] private GameObject gameOverScreen;
@@ -13,10 +21,13 @@ public class GameOverHandler : MonoBehaviour
     private void Awake()
     {
         GlobalReferenceManager.GameOverMenu = this;
+        deathEvent = new UnityEvent();
     }
 
     private void Start()
     {
+        deathEvent.AddListener(GameOver);
+
         instance = this;
 
         // Disable the game over screen

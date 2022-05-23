@@ -7,7 +7,6 @@ public enum scrollType
 }
 public class BackgroundScroller : MonoBehaviour
 {
-    
     [SerializeField] private GameObject backgroundTile;
     [SerializeField] private Transform parent;
     [SerializeField] private Camera mainCam;
