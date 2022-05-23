@@ -8,7 +8,7 @@ public class UI : MonoBehaviour
 {
     static public UI instance; 
 
-    [SerializeField] private Health playerHealth;
+    [SerializeField] private PlayerHealth playerHealth;
     public int maxUpgrade;
     [HideInInspector] public int currentUpgrade;
 
