@@ -4,42 +4,48 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
+public class UnityEventGameObject : UnityEvent<GameObject>
+{
+
+}
+
 public class GameOverHandler : MonoBehaviour
 {
-    public UnityEvent DeathEvent
+    public UnityEventGameObject ScreenEvent
     {
-        get { return deathEvent; }
-        set { deathEvent = value; }
+        get { return screenEvent; }
+        set { screenEvent = value; }
     }
 
     public static GameOverHandler instance;
-    private UnityEvent deathEvent;
+    private UnityEventGameObject screenEvent;
 
-    [HideInInspector] public bool gameLost;
-    [SerializeField] private GameObject gameOverScreen;
+    [HideInInspector] public bool gameEnd;
+    public GameObject gameOverScreen;
+    public GameObject victoryScreen;
 
     private void Awake()
     {
         GlobalReferenceManager.GameOverMenu = this;
-        deathEvent = new UnityEvent();
+        screenEvent = new UnityEventGameObject();
     }
 
     private void Start()
     {
-        deathEvent.AddListener(GameOver);
+        screenEvent.AddListener(EndGame);
 
         instance = this;
 
         // Disable the game over screen
         gameOverScreen.SetActive(false);
-        gameLost = false;
+        gameEnd = false;
     }
 
     // Enable the game over screen
-    public void GameOver()
+    public void EndGame(GameObject screen)
     {
-        gameOverScreen.SetActive(true);
-        gameLost = true;
+        screen.SetActive(true);
+        gameEnd = true;
 
         Time.timeScale = 0;
         GlobalReferenceManager.PauseMenu.GamePaused = true;
