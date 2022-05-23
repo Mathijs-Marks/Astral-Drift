@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5338237895189720310}
   - component: {fileID: 5338237895189720311}
   - component: {fileID: 6606661004631572079}
-  - component: {fileID: 1822727514886692657}
   - component: {fileID: 2737166061992028246}
+  - component: {fileID: -3844059841312552047}
   m_Layer: 7
   m_Name: GatlingEnemy
   m_TagString: Enemy
@@ -113,7 +113,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &1822727514886692657
+--- !u!114 &2737166061992028246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338237895189720306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHitpoints: 0
+  maxHitpoints: 2
+--- !u!50 &-3844059841312552047
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -134,20 +148,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2737166061992028246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5338237895189720306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHitpoints: 0
-  maxHitpoints: 2
 --- !u!1 &5338237896842008800
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,20 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Health : MonoBehaviour
 {
     [SerializeField] protected int currentHitpoints;
+    public int CurrentHitpoints { get { return currentHitpoints; } }
+
     public int maxHitpoints;
     private void Start()
     {
         currentHitpoints = maxHitpoints;
     }
-    public void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         currentHitpoints -= damage;
-        Debug.Log(currentHitpoints);
         if (currentHitpoints <= 0)
         {
             gameObject.SetActive(false);
@@ -29,22 +29,33 @@ public class Health : MonoBehaviour
             currentHitpoints = maxHitpoints;
         }
     }
-    private void BulletCollision(int damage, GameObject bullet)
+    protected void BulletCollision(int damage, GameObject bullet)
     {
         TakeDamage(damage);
         bullet.SetActive(false);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out StandardBullet standardBullet))
+        DoCollision(collision);
+    }
+
+    protected virtual void DoCollision(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet")) //Bullet
         {
-            BulletCollision(standardBullet.readDamage, collision.gameObject);
-        } else if(collision.gameObject.TryGetComponent(out HomingBullet homingBullet))
+            if (collision.gameObject.TryGetComponent(out StandardBullet standardBullet))
+                BulletCollision(standardBullet.readDamage, collision.gameObject);
+            else if (collision.gameObject.TryGetComponent(out HomingBullet homingBullet))
+                BulletCollision(homingBullet.readDamage, collision.gameObject);
+        }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerBullet"))
         {
-            BulletCollision(homingBullet.readDamage, collision.gameObject);
-        } else if (collision.gameObject.TryGetComponent(out ScorePickupable scorePickupable))
+            if (collision.gameObject.TryGetComponent(out StandardBullet standardBullet))
+                BulletCollision(standardBullet.readDamage, collision.gameObject);
+        }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Pickup"))
         {
-            //Do pickup code
+            //get/do pickup stuff
         }
     }
 }

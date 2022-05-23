@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5378681599378103910}
   - component: {fileID: 6652864645261908079}
   - component: {fileID: 5178932034692603499}
-  - component: {fileID: -6357710797601344623}
+  - component: {fileID: -267299282408737107}
   m_Layer: 0
   m_Name: Shotgun Enemy
   m_TagString: Enemy
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHitpoints: 0
   maxHitpoints: 2
---- !u!50 &-6357710797601344623
+--- !u!50 &-267299282408737107
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

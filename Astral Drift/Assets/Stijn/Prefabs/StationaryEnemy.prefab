@@ -46,8 +46,8 @@ GameObject:
   - component: {fileID: 5428553020699001190}
   - component: {fileID: 5428553020699001191}
   - component: {fileID: -2482817498873657230}
-  - component: {fileID: 2270755023285327916}
   - component: {fileID: 3125558816580876463}
+  - component: {fileID: -2890457278510274600}
   m_Layer: 7
   m_Name: StationaryEnemy
   m_TagString: Enemy
@@ -147,7 +147,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &2270755023285327916
+--- !u!114 &3125558816580876463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5428553020699001188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHitpoints: 0
+  maxHitpoints: 2
+--- !u!50 &-2890457278510274600
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -168,20 +182,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3125558816580876463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5428553020699001188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHitpoints: 0
-  maxHitpoints: 2
 --- !u!1001 &808502060755167214
 PrefabInstance:
   m_ObjectHideFlags: 0
