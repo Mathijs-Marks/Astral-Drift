@@ -326,17 +326,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &314285940 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7102300387541548479, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
-  m_PrefabInstance: {fileID: 2118697451}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a23096e1d1290664d81fff7855e00f2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &781432682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,37 +1201,8 @@ PrefabInstance:
       value: Gameplay UI
       objectReference: {fileID: 0}
     - target: {fileID: 1548219102140828382, guid: 69a9088e927d2d54c864898143f10829, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 314285940}
-    - target: {fileID: 1548219102140828382, guid: 69a9088e927d2d54c864898143f10829, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 2118697456}
-    - target: {fileID: 4622097763947568595, guid: 69a9088e927d2d54c864898143f10829, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7947075586732557424, guid: 69a9088e927d2d54c864898143f10829, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8273889924756461834, guid: 69a9088e927d2d54c864898143f10829, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8273889925914334243, guid: 69a9088e927d2d54c864898143f10829, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8273889925914334243, guid: 69a9088e927d2d54c864898143f10829, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResetScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 8273889925914334243, guid: 69a9088e927d2d54c864898143f10829, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameOverHandler, Assembly-CSharp
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5136182352020693580, guid: 69a9088e927d2d54c864898143f10829, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a9088e927d2d54c864898143f10829, type: 3}
