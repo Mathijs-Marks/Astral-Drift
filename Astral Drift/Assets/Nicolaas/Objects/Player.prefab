@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fd4aa408bf1604d9afd7bbddcf71b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHitpoints: 0
+  currentHitpoints: 6
   maxHitpoints: 6
 --- !u!1 &7155849291191307323
 GameObject:

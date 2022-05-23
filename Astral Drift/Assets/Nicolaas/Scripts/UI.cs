@@ -2,11 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
-//
 public class UI : MonoBehaviour
 {
-    static public UI instance; 
+    public UnityEvent UpdateDamage
+    {
+        get { return updateDamage; }
+        set { updateDamage = value; }
+    }
+
+    static public UI instance;
+
+    private UnityEvent updateDamage;
 
     [SerializeField] private PlayerHealth playerHealth;
     public int maxUpgrade;
@@ -28,15 +36,17 @@ public class UI : MonoBehaviour
         instance = this;
         scoreValue = 0;
         currentUpgrade = 0;
+        updateDamage = new UnityEvent();
+        updateDamage.AddListener(UpdateHitpoints);
 
-        UpdateHitpoints(playerHealth.maxHitpoints);
+        UpdateHitpoints();
         score.text = "Score: 0";
         shootingRate.text = "Fire Rate: 0/" + maxUpgrade;
-    }
+    } 
 
-    public void UpdateHitpoints(int hitpoints)
+    public void UpdateHitpoints()
     {
-        this.hitpoints.text = "HP: " + hitpoints + "/" + playerHealth.maxHitpoints;
+        this.hitpoints.text = "HP: " + GlobalReferenceManager.PlayerHealthScript.CurrentHitpoints + "/" + GlobalReferenceManager.PlayerHealthScript.maxHitpoints;
     }
 
     public void AddScore(int score)

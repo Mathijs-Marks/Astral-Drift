@@ -6,9 +6,15 @@ using UnityEngine.Events;
 
 public class PlayerHealth : Health
 {
+    private void Awake()
+    {
+        GlobalReferenceManager.PlayerHealthScript = this;
+    }
+
     public override void TakeDamage(int damage)
     {
         currentHitpoints -= damage;
+        GlobalReferenceManager.UIMenu.UpdateDamage.Invoke();
 
         // If hit points equals 0, invoke death.
         if (currentHitpoints <= 0)
