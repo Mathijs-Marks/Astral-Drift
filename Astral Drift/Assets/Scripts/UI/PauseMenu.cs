@@ -6,11 +6,18 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool GamePaused;
+    public bool GamePaused
+    {
+        get { return gamePaused;}
+        set { gamePaused = value; }
+    }
+
+    public static bool gamePaused;
     public GameObject pauseMenuUI;
 
     void Awake()
     {
+        GlobalReferenceManager.PauseMenu = this;
         GamePaused = true;
         Pause();
     }
@@ -18,7 +25,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameOverHandler.instance.gameLost)
+        if (!GlobalReferenceManager.GameOverMenu.gameLost)
         {
             if (Input.GetMouseButtonUp(0) && !GamePaused)
             {

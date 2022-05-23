@@ -4,28 +4,22 @@ using UnityEngine;
 
 public class GatlingEnemy : AIMovementBehaviours
 {
-    [SerializeField] private float shootCooldown, shootForTime, speed;
+    [SerializeField] private float shootCooldown, shootForTime;
     [SerializeField] private GameObject lookatTarget;
     [SerializeField] private Transform barrelHolder;
-    [SerializeField] private List<GunBarrel> gunBarrelScripts = new List<GunBarrel>();
+    [SerializeField] private List<BaseGunBarrel> gunBarrelScripts = new List<BaseGunBarrel>();
     private float elapsedTime;
     private bool hasFired;
     void Start()
     {
         foreach (Transform child in barrelHolder)
-            gunBarrelScripts.Add(child.GetComponentInChildren<GunBarrel>());
+            gunBarrelScripts.Add(child.GetComponentInChildren<BaseGunBarrel>());
 
         lookatTarget = GameObject.FindGameObjectWithTag("Player");
-
-        /*for (int i = 0; i < gunBarrelScripts.Count; i++)
-        {
-            Vector3 direction = Input.mousePosition - transform.position;
-            StartCoroutine(RotateAndShoot(direction, i));
-        }*/
     }
     void FixedUpdate()
     {
-        MoveDirection(transform, Vector3.up, speed);
+        transform.position += new Vector3(0, 1, 0) * speed * Time.deltaTime;
         elapsedTime += Time.deltaTime;
         if (elapsedTime > shootCooldown)
         {
@@ -44,7 +38,7 @@ public class GatlingEnemy : AIMovementBehaviours
         {
             for (int i = 0; i < gunBarrelScripts.Count; i++)
             {
-                gunBarrelScripts[i].StopCoroutine(gunBarrelScripts[i].SpawnObject());
+                //gunBarrelScripts[i].StopCoroutine(gunBarrelScripts[i].SpawnObject());
                 gunBarrelScripts[i].allowedToShoot = false;
             }
 
@@ -76,6 +70,6 @@ public class GatlingEnemy : AIMovementBehaviours
             yield return null;
         }
         //shoot at player
-        gunBarrelScripts[barrel].StartCoroutine(gunBarrelScripts[barrel].SpawnObject());
+        //gunBarrelScripts[barrel].StartCoroutine(gunBarrelScripts[barrel].SpawnObject());
     }
 }

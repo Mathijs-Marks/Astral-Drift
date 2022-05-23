@@ -21,9 +21,6 @@ public class StationaryEnemy : AIMovementBehaviours
 
         startLocation = new Vector3(this.transform.position.x, screenBounds.y * 1.2f, this.transform.position.z);
         ownerLocation = startLocation;
-
-        //Set start health
-        currentHitpoints = maxHitpoints;
     }
 
     // Update is called once per frame

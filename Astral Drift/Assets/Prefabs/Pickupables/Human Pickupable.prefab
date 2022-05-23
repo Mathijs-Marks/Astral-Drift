@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2984000713721403067}
   - component: {fileID: 6107705661262612903}
   - component: {fileID: 4566563211936951765}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7030399337930416808}
   - component: {fileID: 7030399337930416821}
   - component: {fileID: 7030399337930416811}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Human Pickupable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -8,7 +8,7 @@ public class BossLogic : AIMovementBehaviours
     int currentInactiveParts = 0;
 
     private Vector3 startpos;
-    [SerializeField] private float speed = 2, movingTime = 4;
+    [SerializeField] private float movingTime = 4;
     private bool movingRight;
     private float passedTime;
     void FixedUpdate()
@@ -27,9 +27,9 @@ public class BossLogic : AIMovementBehaviours
         }
 
         if (movingRight)
-            MoveDirection(transform, Vector3.right, speed);
+            transform.position += new Vector3(1, 0, 0) * speed * Time.deltaTime;
         else
-            MoveDirection(transform, Vector3.left, speed);
+            transform.position += new Vector3(-1, 0, 0) * speed * Time.deltaTime;
 
         passedTime += Time.deltaTime;
         if (passedTime > movingTime)

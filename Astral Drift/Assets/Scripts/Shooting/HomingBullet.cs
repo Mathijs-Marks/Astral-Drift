@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HomingBullet : Bullet
+public class HomingBullet : BaseBullet
 {
     private GameObject target;
     private Vector3 directionToTarget;
+
+    [SerializeField] private GameObject playerGameObject;
 
     [SerializeField] private float rotatingLerpSpeedMultiplier = 1;
     private Quaternion lookRotation;
@@ -21,22 +23,16 @@ public class HomingBullet : Bullet
     private float currentFollowTime;
     [SerializeField] private float maxFollowTime = 2f;
 
-
-    public HomingBullet(string collisionTag, Vector3 position, Vector3 direction, float speed, int damage, float lifespan) : base(collisionTag, position, direction, speed, damage, lifespan)
-    {
-        ActivateBullet(collisionTag, position, direction, speed, damage, lifespan);
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag(collisionTag);
+        target = playerGameObject;
         lerpTime = 0;
         shouldBeHoming = true;
     }
 
     //Override fixedupdate to change the direction of the projectile
-    protected override void FixedUpdate()
+    protected void FixedUpdate()
     {
         if (currentHomingStartTimer < homingStartTime)
         {
@@ -46,9 +42,7 @@ public class HomingBullet : Bullet
         {
             RotateToTarget();
         }
-
-        //Move the projectile forward
-        base.FixedUpdate();
+        Move();
     }
 
     //Rotate the projectile towards the target
@@ -86,13 +80,11 @@ public class HomingBullet : Bullet
                     else
                     {
                         shouldBeHoming = false;
-                        Debug.Log("stop homing");
                     }
                 }
                 else
                 {
                     shouldBeHoming = false;
-                   // Debug.Log("stop homing");
                 }
             }
         }
@@ -105,5 +97,4 @@ public class HomingBullet : Bullet
         float sign = (vec2.y < vec1.y) ? -1.0f : 1.0f;
         return Vector2.Angle(Vector2.right, diference) * sign;
     }
-
 }

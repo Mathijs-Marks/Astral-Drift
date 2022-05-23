@@ -1257,7 +1257,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5338237895189720308, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+    - {fileID: 4134492281453448446, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+--- !u!1 &5338237895468982202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 608092978065640254, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+  m_PrefabInstance: {fileID: 5338237895468982201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5338237895468982203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338237895468982202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 176bc98048f6747449a0c5802690f07e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 0}
+  gunMuzzle: {fileID: 0}
+  shootOnStart: 0
+  shootingRate: 1
+  allowedToShoot: 1
 --- !u!1001 &6233368479132000416
 PrefabInstance:
   m_ObjectHideFlags: 0

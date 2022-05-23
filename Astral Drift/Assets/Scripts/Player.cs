@@ -5,20 +5,23 @@ using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private GunBarrel[] weapons = new GunBarrel[2];
+    [SerializeField] private BaseGunBarrel[] weapons = new BaseGunBarrel[2];
 
     [SerializeField] private float playerSpeed;
-    [SerializeField] public int maxHitpoints;
-    private int currentHitpoints;
 
     private Vector3 targetPosition;
     private Vector3 direction;
 
     private bool mousePointer;
 
+    private void Awake()
+    {
+        GlobalReferenceManager.PlayerScript = this;
+        GlobalReferenceManager.PlayerPosition = transform;
+    }
+
     private void Start()
     {
-        currentHitpoints = maxHitpoints;
         targetPosition = transform.position;
     }
 
@@ -51,25 +54,6 @@ public class Player : MonoBehaviour
         {
             transform.position = targetPosition;
         }
-    }
-
-    // Testing if you got hit
-    public void GetHit(int damage)
-    {
-        currentHitpoints -= damage;
-        UI.instance.UpdateHitpoints(currentHitpoints);
-
-        if (currentHitpoints <= 0)
-        {
-            KillPlayer();
-        }
-    }
-
-    private void KillPlayer()
-    {
-        gameObject.SetActive(false);
-
-        GameOverHandler.instance.GameOver();
     }
 
     public void InscreaseShootingSpeed(float amount)
