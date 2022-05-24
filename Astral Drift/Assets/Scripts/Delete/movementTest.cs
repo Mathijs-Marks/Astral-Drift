@@ -5,6 +5,13 @@ using UnityEngine;
 public class movementTest : MonoBehaviour
 {
     [SerializeField] private BackgroundScroller background;
+    private void Start()
+    {
+        if(GlobalReferenceManager.MainCamera == null)
+        {
+            GlobalReferenceManager.MainCamera = GetComponentInParent<Camera>();
+        }
+    }
     void FixedUpdate()
     {
         if (background.cameraMovement)
