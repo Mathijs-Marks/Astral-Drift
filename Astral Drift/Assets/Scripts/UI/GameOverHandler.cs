@@ -4,21 +4,16 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class UnityEventGameObject : UnityEvent<GameObject>
-{
-
-}
-
 public class GameOverHandler : MonoBehaviour
 {
-    public UnityEventGameObject ScreenEvent
+    public UnityEvent<GameObject> ScreenEvent
     {
         get { return screenEvent; }
         set { screenEvent = value; }
     }
 
     public static GameOverHandler instance;
-    private UnityEventGameObject screenEvent;
+    private UnityEvent<GameObject> screenEvent;
 
     [HideInInspector] public bool gameEnd;
     public GameObject gameOverScreen;
@@ -27,7 +22,7 @@ public class GameOverHandler : MonoBehaviour
     private void Awake()
     {
         GlobalReferenceManager.GameOverMenu = this;
-        screenEvent = new UnityEventGameObject();
+        screenEvent = new UnityEvent<GameObject>();
     }
 
     private void Start()
