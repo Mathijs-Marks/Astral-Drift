@@ -43,10 +43,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7102300387541548473}
-  - component: {fileID: 7102300387541548479}
   - component: {fileID: 7102300387541548474}
   - component: {fileID: 2431798443636024101}
-  - component: {fileID: 778477671839729485}
+  - component: {fileID: 7102300387541548479}
   - component: {fileID: 6736147908785115002}
   m_Layer: 6
   m_Name: Player
@@ -71,22 +70,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7102300387541548479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7102300387541548478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a23096e1d1290664d81fff7855e00f2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapons:
-  - {fileID: 4985254694876412075}
-  - {fileID: 84777225388008387}
-  playerSpeed: 20
 --- !u!61 &7102300387541548474
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -134,7 +117,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &778477671839729485
+--- !u!114 &7102300387541548479
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,9 +126,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7102300387541548478}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13fd4aa408bf1604d9afd7bbddcf71b4, type: 3}
+  m_Script: {fileID: 11500000, guid: a23096e1d1290664d81fff7855e00f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 4985254694876412075}
+  - {fileID: 84777225388008387}
+  playerSpeed: 20
 --- !u!114 &6736147908785115002
 MonoBehaviour:
   m_ObjectHideFlags: 0
