@@ -20,7 +20,7 @@ public class PlayerHealth : Health
         if (currentHitpoints <= 0)
         {
             gameObject.SetActive(false);
-            GlobalReferenceManager.GameOverMenu.DeathEvent.Invoke();
+            GlobalReferenceManager.GameOverMenu.ScreenEvent.Invoke(GlobalReferenceManager.GameOverMenu.gameOverScreen);
         }
     }
 }

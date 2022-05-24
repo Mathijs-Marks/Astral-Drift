@@ -18,7 +18,7 @@ public class PlayerHitEvent : MonoBehaviour
         if (playerHealth.CurrentHitpoints <= 0)
         {
             UI.instance.UpdateHitpoints();
-            GameOverHandler.instance.GameOver();
+            GameOverHandler.instance.EndGame(GlobalReferenceManager.GameOverMenu.gameOverScreen);
         }
         else
             UI.instance.UpdateHitpoints();
