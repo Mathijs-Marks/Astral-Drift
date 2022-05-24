@@ -46,8 +46,8 @@ GameObject:
   - component: {fileID: 4808059224881699250}
   - component: {fileID: 6759020873192319492}
   - component: {fileID: 8752605515146779073}
-  - component: {fileID: 1752753544756064767}
   - component: {fileID: 2249795987161666924}
+  - component: {fileID: 5761873135633851045}
   m_Layer: 0
   m_Name: WaveShotEnemy
   m_TagString: Untagged
@@ -171,23 +171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  movingTime: 0.5
---- !u!114 &1752753544756064767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650869315322498487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79b209d90d8f1cb4592b382f426bce96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 100
-  minDegreesToRotate: -90
-  maxDegreesToRotate: 90
-  moveClockwise: 0
+  xDistToMove: 3
+  yDistToMove: 0
+  direction: {x: 1, y: 0}
 --- !u!114 &2249795987161666924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +188,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHitpoints: 0
   maxHitpoints: 3
+--- !u!114 &5761873135633851045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650869315322498487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29217de3dfbf794f8307fdee59f921d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 25
+  degreesToRotate: 90
+  startingAngle: -45
 --- !u!1001 &1225146189603091056
 PrefabInstance:
   m_ObjectHideFlags: 0

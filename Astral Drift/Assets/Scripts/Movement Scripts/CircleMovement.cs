@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AICircleEnemy : AIMovementBehaviours
+public class CircleMovement : MovementBehaviours
 {
     private Vector3 startpos;
     [SerializeField] private float angle = 1, radius = 1;

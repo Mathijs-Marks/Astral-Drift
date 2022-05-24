@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIMoveDirection : AIMovementBehaviours
+public class DirectionalMovement : MovementBehaviours
 {
     [SerializeField] private Vector3 direction;
 
