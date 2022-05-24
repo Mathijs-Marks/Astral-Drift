@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotatingComponent : AIMovementBehaviours
 {
-    [SerializeField] private float degreesToRotate;
+    [SerializeField] private float minDegreesToRotate = -180, maxDegreesToRotate = 180;
     [SerializeField] private bool moveClockwise;
 
     private Vector3 targetRotation;
@@ -13,7 +13,8 @@ public class RotatingComponent : AIMovementBehaviours
     void Start()
     {
         //Clamp degrees to rotate
-        degreesToRotate = Mathf.Clamp(degreesToRotate,0f, 359f);
+        minDegreesToRotate = Mathf.Clamp(minDegreesToRotate, -180f, 0f);
+        maxDegreesToRotate = Mathf.Clamp(maxDegreesToRotate, 0f, 180f);
 
         //Set rotation direction (vector z axis)
         targetRotation = new Vector3(0, 0, -1);
@@ -30,11 +31,11 @@ public class RotatingComponent : AIMovementBehaviours
             transform.Rotate(targetRotation * speed * Time.deltaTime, Space.Self);
 
             //Here we check if the object should be able to rotate backwards depending on the degreesToRotate
-            if (degreesToRotate > 0)
+            if (minDegreesToRotate < 0)
             {
                 if (moveClockwise)
                 {
-                    if (transform.localEulerAngles.z <= 360 - degreesToRotate)
+                    if (transform.localEulerAngles.z <= minDegreesToRotate)
                     {
                         //invert rotate direction
                         targetRotation.z *= -1;
@@ -42,7 +43,7 @@ public class RotatingComponent : AIMovementBehaviours
                 }
                 else
                 {
-                    if (transform.localEulerAngles.z >= degreesToRotate)
+                    if (transform.localEulerAngles.z >= maxDegreesToRotate)
                     {
                         //invert rotate direction
                         targetRotation.z *= -1;
