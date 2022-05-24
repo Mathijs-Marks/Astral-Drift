@@ -175,7 +175,7 @@ MonoBehaviour:
     amount: 1
   - enemyPrefab: {fileID: 5428553020699001188, guid: 96e1447ce0657244d954e4c26eedcb13, type: 3}
     enemyPosition: {x: 0, y: 90}
-    formationType: 0
+    formationType: 4
     amount: 3
   - enemyPrefab: {fileID: 6866067656519768486, guid: a7ed15c6c85cd4f40b0d17ed7932ec39, type: 3}
     enemyPosition: {x: 2, y: 120}
@@ -195,7 +195,7 @@ MonoBehaviour:
     amount: 1
   - enemyPrefab: {fileID: 5428553020699001188, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
     enemyPosition: {x: 0, y: 140}
-    formationType: 0
+    formationType: 4
     amount: 3
   - enemyPrefab: {fileID: 5428553020699001188, guid: dd7d8728a8d60f141936d17000cc2d00, type: 3}
     enemyPosition: {x: 0, y: 142}

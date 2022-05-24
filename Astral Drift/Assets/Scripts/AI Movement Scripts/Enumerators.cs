@@ -7,6 +7,6 @@ public class Enumerators : MonoBehaviour
     Enumerators instance;
     public enum EnemyFormationTypes
     {
-        Circle, HorizontalLine, VerticalLine, RightDiagonal, LeftDiagonal, VFormation
+        HorizontalLine, VerticalLine, RightDiagonal, LeftDiagonal, VFormation
     }
 }
