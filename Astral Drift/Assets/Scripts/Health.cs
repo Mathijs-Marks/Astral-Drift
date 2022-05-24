@@ -16,6 +16,12 @@ public class Health : MonoBehaviour
 
         currentHitpoints = maxHitpoints;
     }
+
+    public void OnDamage(int damage)
+    {
+        TakeDamage(damage);
+    }
+
     public virtual void TakeDamage(int damage)
     {
         currentHitpoints -= damage;
@@ -41,7 +47,7 @@ public class Health : MonoBehaviour
 
     protected void BulletCollision(int damage, GameObject bullet)
     {
-        TakeDamage(damage);
+        OnDamage(damage);
         bullet.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D collision)
