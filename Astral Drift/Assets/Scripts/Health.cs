@@ -1,15 +1,19 @@
 
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(BoxCollider2D), typeof(Death))]
 public class Health : MonoBehaviour
 {
+    private Death deathScript;
+
     [SerializeField] protected int currentHitpoints;
     public int CurrentHitpoints { get { return currentHitpoints; } }
 
     public int maxHitpoints;
     private void Start()
     {
+        deathScript = GetComponent<Death>();
+
         currentHitpoints = maxHitpoints;
     }
     public virtual void TakeDamage(int damage)
@@ -17,7 +21,7 @@ public class Health : MonoBehaviour
         currentHitpoints -= damage;
         if (currentHitpoints <= 0)
         {
-            gameObject.SetActive(false);
+            OnHealthZero();
         }
     }
     public void Heal(int health)
@@ -29,6 +33,12 @@ public class Health : MonoBehaviour
             currentHitpoints = maxHitpoints;
         }
     }
+
+    private void OnHealthZero()
+    {
+        deathScript.DeathEvent.Invoke();
+    }
+
     protected void BulletCollision(int damage, GameObject bullet)
     {
         TakeDamage(damage);
