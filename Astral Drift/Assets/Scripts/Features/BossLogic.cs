@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossLogic : AIMovementBehaviours
+public class BossLogic : MovementBehaviours
 {
     [SerializeField] private GameObject[] bossParts;
     int currentInactiveParts = 0;
