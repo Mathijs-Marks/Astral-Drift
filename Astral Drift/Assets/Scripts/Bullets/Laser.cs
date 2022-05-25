@@ -82,6 +82,6 @@ public class Laser : MonoBehaviour
     // Collide with player.
     private void CollideWithTag(Collider2D collision)
     {
-        collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+        collision.gameObject.GetComponent<Health>().OnDamage(damage);
     }
 }

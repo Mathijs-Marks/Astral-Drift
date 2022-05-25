@@ -10,7 +10,6 @@ public class PlayerHealth : Health
     {
         GlobalReferenceManager.PlayerHealthScript = this;
     }
-
     public override void TakeDamage(int damage)
     {
         currentHitpoints -= damage;
