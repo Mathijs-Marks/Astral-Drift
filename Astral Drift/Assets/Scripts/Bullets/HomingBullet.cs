@@ -34,6 +34,8 @@ public class HomingBullet : BaseBullet
     {
         if (currentHomingStartTimer < homingStartTime)
         {
+            lookRotation.x = 0;
+            lookRotation.y = 0;
             currentHomingStartTimer += 0.01f;
         }
         else
