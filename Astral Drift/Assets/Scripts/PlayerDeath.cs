@@ -8,6 +8,6 @@ public class PlayerDeath : Death
     {
         base.KillObject();
 
-        GlobalReferenceManager.GameOverMenu.DeathEvent.Invoke();
+        GlobalReferenceManager.GameOverMenu.ScreenEvent.Invoke(GlobalReferenceManager.GameOverMenu.gameOverScreen);
     }
 }
