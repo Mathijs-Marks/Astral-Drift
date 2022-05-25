@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StrafeMovement : MovementBehaviours
 {
-    [SerializeField] private float xDistToMove, yDistToMove;
+    [SerializeField] private float xDistToMove = 1, yDistToMove = 0;
     [Tooltip("Choose between 1 and -1 to determine the direction")]
     [SerializeField] private Vector2 direction = new Vector2(1, 0);
     private Vector3 startingPos;

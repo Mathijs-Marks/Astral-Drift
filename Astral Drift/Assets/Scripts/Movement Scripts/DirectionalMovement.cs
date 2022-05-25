@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class DirectionalMovement : MovementBehaviours
 {
-    [SerializeField] private Vector3 direction;
+    [SerializeField] private Vector2 direction = new Vector2(1, 0);
 
     void FixedUpdate()
     {
-        transform.position += direction * speed * Time.deltaTime;
+        DoDirectionalMovement();
+    }
+    private void DoDirectionalMovement()
+    {
+        Vector2 Offset = direction * speed * Time.deltaTime;
+        transform.position += (Vector3)Offset;
     }
 }

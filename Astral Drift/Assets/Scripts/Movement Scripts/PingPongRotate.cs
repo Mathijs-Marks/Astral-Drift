@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PingPongRotate : MovementBehaviours
 {
-    [SerializeField] private float degreesToRotate;
+    [SerializeField] private float degreesToRotate = 90;
 
     [Tooltip("This is the Z rotation this object will start rotating from")]
-    [SerializeField] private float startingAngle;
+    [SerializeField] private float startingAngle = -45;
     private void FixedUpdate()
     {
         DoPingPongRotate();

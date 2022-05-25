@@ -9,10 +9,13 @@ public class CircleMovement : MovementBehaviours
 
     void FixedUpdate()
     {
+        DoCircularMovement();
+    }
+    private void DoCircularMovement()
+    {
         angle = speed * passedTime;
         Vector3 offsetPos = new Vector3(Mathf.Sin(angle), Mathf.Cos(angle), 0) * radius / radiusDivider;
         transform.position += offsetPos;
-
         passedTime += Time.deltaTime;
     }
 }
