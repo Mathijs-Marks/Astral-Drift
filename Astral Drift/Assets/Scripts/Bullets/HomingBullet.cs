@@ -88,6 +88,7 @@ public class HomingBullet : BaseBullet
                 {
                     shouldBeHoming = false;
                 }
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, transform.eulerAngles.z));
             }
         }
     }
