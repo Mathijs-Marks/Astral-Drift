@@ -7,8 +7,6 @@ public class HomingBullet : BaseBullet
     private GameObject target;
     private Vector3 directionToTarget;
 
-    [SerializeField] private GameObject playerGameObject;
-
     [SerializeField] private float rotatingLerpSpeedMultiplier = 1;
     private Quaternion lookRotation;
     private float lerpTime;
@@ -26,7 +24,7 @@ public class HomingBullet : BaseBullet
     // Start is called before the first frame update
     void Start()
     {
-        target = playerGameObject;
+        target = GlobalReferenceManager.PlayerPosition.gameObject;
         lerpTime = 0;
         shouldBeHoming = true;
     }
@@ -55,6 +53,8 @@ public class HomingBullet : BaseBullet
                 directionToTarget = target.transform.position - this.transform.position;
 
                 lookRotation = Quaternion.LookRotation(Vector3.forward, directionToTarget);
+                lookRotation.x = 0;
+                lookRotation.y = 0;
 
                 //When following for more than maxfollowtime, sotp followinng
                 if (currentFollowTime < maxFollowTime && shouldBeHoming)

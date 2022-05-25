@@ -10,7 +10,6 @@ public class PlayerHealth : Health
     {
         GlobalReferenceManager.PlayerHealthScript = this;
     }
-
     public override void TakeDamage(int damage)
     {
         currentHitpoints -= damage;
@@ -20,7 +19,7 @@ public class PlayerHealth : Health
         if (currentHitpoints <= 0)
         {
             gameObject.SetActive(false);
-            GlobalReferenceManager.GameOverMenu.DeathEvent.Invoke();
+            GlobalReferenceManager.GameOverMenu.ScreenEvent.Invoke(GlobalReferenceManager.GameOverMenu.gameOverScreen);
         }
     }
 }
