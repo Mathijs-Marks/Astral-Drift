@@ -16,7 +16,8 @@ public class StrafeMovement : MovementBehaviours
     }
     void FixedUpdate()
     {
-        transform.position += (Vector3)direction * speed * Time.deltaTime;
+        if (xDistToMove > 0 || yDistToMove > 0)
+            transform.position += (Vector3)direction * speed * Time.deltaTime;
 
         //Invert X direction
         if(xDistToMove > 0)

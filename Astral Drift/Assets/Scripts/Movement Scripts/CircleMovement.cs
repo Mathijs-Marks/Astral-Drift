@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class CircleMovement : MovementBehaviours
 {
-    private Vector3 startpos;
-    [SerializeField] private float angle = 1, radius = 1;
-    private float passedTime = 0;
-    private void Start()
-    {
-        startpos = transform.position;
-    }
+    [SerializeField] private float radius = 1;
+    private float passedTime = 0, angle, radiusDivider = 25;
+
     void FixedUpdate()
     {
-        angle += speed * passedTime;
-        Vector3 offset = startpos;
-        offset += startpos - new Vector3(Mathf.Sin(angle), Mathf.Cos(angle), 0) * radius;
-        transform.position = startpos + offset;
+        angle = speed * passedTime;
+        Vector3 offsetPos = new Vector3(Mathf.Sin(angle), Mathf.Cos(angle), 0) * radius / radiusDivider;
+        transform.position += offsetPos;
 
         passedTime += Time.deltaTime;
     }

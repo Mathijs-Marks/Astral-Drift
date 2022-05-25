@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Collider2D))]
 public class Health : MonoBehaviour
 {
     [SerializeField] protected int currentHitpoints;
