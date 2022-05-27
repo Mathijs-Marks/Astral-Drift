@@ -226,7 +226,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 4251646817684571074}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &843533081724727824
 GameObject:
@@ -328,7 +328,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 2651426639678697431}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &876683797174229733
 GameObject:
@@ -461,7 +461,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 4315263133428327368}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &1027772751269065323
 GameObject:
@@ -594,7 +594,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 17231242877443772}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &1538923615105752218
 GameObject:
@@ -696,7 +696,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 5859938333648078160}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &1549060877636403817
 GameObject:
@@ -862,7 +862,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 436093539331725450}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &1931092244572323880
 GameObject:
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 7606136294453246897}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &3392198054126262781
 GameObject:
@@ -1253,7 +1253,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 3392198054126262781}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &3802670880080596675
 GameObject:
@@ -1387,7 +1387,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 6904605648913258816}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &4207452160512719442
 GameObject:
@@ -1710,7 +1710,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 6274110264128121985}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &6274110264128121985
 GameObject:
@@ -1843,7 +1843,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 3601286649896789544}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &6388511080841939905
 GameObject:
@@ -2008,7 +2008,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 3575361530084794096}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &6855207788889807570
 GameObject:
@@ -2110,7 +2110,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 1027772751269065323}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &6904605648913258816
 GameObject:
@@ -2354,7 +2354,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 6388511080841939905}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &7606136294453246897
 GameObject:
@@ -2401,10 +2401,9 @@ GameObject:
   - component: {fileID: 9002398130288676575}
   - component: {fileID: 4403804402354669712}
   - component: {fileID: 7375867362177796314}
-  - component: {fileID: 5510310002203467174}
   m_Layer: 7
   m_Name: Bloom Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2534,22 +2533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHitpoints: 0
-  maxHitpoints: 0
---- !u!114 &5510310002203467174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7627395005229641507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0233d0fa137b0248a07577dfcab358f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.1
-  direction: {x: 0, y: 0, z: 0}
+  currentHitpoints: 3
+  maxHitpoints: 3
 --- !u!1 &7811188378410301548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2714,7 +2699,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 876683797174229733}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &8588489352905019221
 GameObject:
@@ -2816,7 +2801,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 1931092244572323880}
   shootOnStart: 1
-  shootingRate: 1
+  shootingRate: 2.5
   allowedToShoot: 1
 --- !u!1 &9174556969487466953
 GameObject:
