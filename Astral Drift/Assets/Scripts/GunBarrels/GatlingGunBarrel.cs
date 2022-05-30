@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GatlingGunBarrel : BaseGunBarrel
 {
@@ -7,6 +8,9 @@ public class GatlingGunBarrel : BaseGunBarrel
     [SerializeField] private float gatlingShootingRate = 0.1f;
 
     private int currentBulletAmount = 0;
+
+    [Header("Leave empty if this enemy needs to rotate while shooting. Otherwise, reference \"InvertIsRotating\" from \"RotateToPlayer\"")]
+    [SerializeField] private UnityEvent rotationEvent;
 
     private void Start()
     {
@@ -18,6 +22,11 @@ public class GatlingGunBarrel : BaseGunBarrel
         if (elapsedTime > shootingRate)
         {
             if (elapsedTime > shootingRate + gatlingShootingRate) {
+                if (currentBulletAmount == 0)
+                {
+                    rotationEvent.Invoke();
+                }
+                
                 Shoot();
                 elapsedTime = shootingRate;
 
@@ -26,6 +35,8 @@ public class GatlingGunBarrel : BaseGunBarrel
                 {
                     elapsedTime = 0;
                     currentBulletAmount = 0;
+
+                    rotationEvent.Invoke();
                 }
             }
         }

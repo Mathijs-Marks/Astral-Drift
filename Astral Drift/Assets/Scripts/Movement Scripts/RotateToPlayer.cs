@@ -5,7 +5,7 @@ using UnityEngine;
 public class RotateToPlayer : MovementBehaviours
 {
     private GameObject playerTarget;
-    public bool isRotating = true;
+    private bool isRotating = true;
     
     // This code may be removed later, ask SDM
     //[Header("Rotating speed: 0 means no rotation, 1 means instant rotation.")]
@@ -17,7 +17,7 @@ public class RotateToPlayer : MovementBehaviours
         speed = Mathf.Clamp01(speed);
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (isRotating)
         {
@@ -28,5 +28,10 @@ public class RotateToPlayer : MovementBehaviours
             rotation.y = transform.rotation.y;
             transform.rotation = Quaternion.Lerp(transform.rotation, rotation, speed);
         }
+    }
+
+    public void InvertIsRotating()
+    {
+        isRotating = !isRotating;
     }
 }
