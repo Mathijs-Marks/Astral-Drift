@@ -30,8 +30,8 @@ public class RotateToPlayer : MovementBehaviours
         }
     }
 
-    public void InvertIsRotating()
+    public void SetIsRotating(bool value)
     {
-        isRotating = !isRotating;
+        isRotating = value;
     }
 }

@@ -232,6 +232,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &124940833 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 706879345806673106, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+  m_PrefabInstance: {fileID: 1722019670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab59da96597fbf43a399933e44031ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &272286935
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +872,118 @@ PrefabInstance:
     - target: {fileID: 5338237895189720306, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
       propertyPath: m_Name
       value: GatlingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 124940833}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 124940833}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopShooting
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StopRotationDuringFire, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StopRotationDuringFire, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 124940833}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 124940833}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Shoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopShooting
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StopRotationDuringFire, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StopRotationDuringFire, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: isNotShootingEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
