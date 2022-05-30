@@ -2,4 +2,4 @@
 
 Welcome to Astral Drift!
 
-[Contributing guidelines for this project](contributing.md)
+[Contributing guidelines for this project](docs/contributing.md)
