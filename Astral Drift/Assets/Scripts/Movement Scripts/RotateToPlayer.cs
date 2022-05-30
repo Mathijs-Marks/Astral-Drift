@@ -7,12 +7,14 @@ public class RotateToPlayer : MovementBehaviours
     private GameObject playerTarget;
     public bool isRotating = true;
     
-    [Header("Rotating speed: 0 means no rotation, 1 means instant rotation.")]
-    [SerializeField] [Range(0, 1)] private float rotatingSpeed = 1;
+    // This code may be removed later, ask SDM
+    //[Header("Rotating speed: 0 means no rotation, 1 means instant rotation.")]
+    //[SerializeField] [Range(0, 1)] private float rotatingSpeed = 1;
 
     private void Start()
     {
         playerTarget = GlobalReferenceManager.PlayerPosition.gameObject;
+        speed = Mathf.Clamp01(speed);
     }
 
     void FixedUpdate()
@@ -24,7 +26,7 @@ public class RotateToPlayer : MovementBehaviours
             Quaternion rotation = Quaternion.LookRotation(-direction, Vector3.forward);
             rotation.x = transform.rotation.x;
             rotation.y = transform.rotation.y;
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotatingSpeed);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, speed);
         }
     }
 }
