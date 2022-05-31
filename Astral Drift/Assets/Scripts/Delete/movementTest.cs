@@ -9,14 +9,14 @@ public class movementTest : MonoBehaviour
     {
         if(GlobalReferenceManager.MainCamera == null)
         {
-            GlobalReferenceManager.MainCamera = GetComponentInParent<Camera>();
+            GlobalReferenceManager.MainCamera = GetComponent<Camera>();
         }
     }
     void FixedUpdate()
     {
         if (background.cameraMovement)
         {
-        transform.position += Vector3.up * background.moveSpeed;
+            transform.position += Vector3.up * background.moveSpeed;
         }
     }
 }
