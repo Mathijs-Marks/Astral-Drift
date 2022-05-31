@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6606661004631572079}
   - component: {fileID: 1822727514886692657}
   - component: {fileID: 2737166061992028246}
+  - component: {fileID: 1861057874883637454}
   m_Layer: 7
   m_Name: GatlingEnemy
   m_TagString: Enemy
@@ -146,8 +147,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHitpoints: 0
-  maxHitpoints: 2
+  maxHitpoints: 200
+--- !u!114 &1861057874883637454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338237895189720306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4deb963c2c2b2cb4695c1a2efa789f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5338237896842008800
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,8 +269,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6885065562934795237, guid: 3a5c5120e90fd294cb5aa43e27278da9, type: 3}
+      propertyPath: projectileSpeed
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885065562934795237, guid: 3a5c5120e90fd294cb5aa43e27278da9, type: 3}
+      propertyPath: projectileDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885065562934795237, guid: 3a5c5120e90fd294cb5aa43e27278da9, type: 3}
       propertyPath: bulletBurstAmount
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6885065562934795237, guid: 3a5c5120e90fd294cb5aa43e27278da9, type: 3}
       propertyPath: gatlingShootingRate
@@ -351,8 +371,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6885065562934795237, guid: 3a5c5120e90fd294cb5aa43e27278da9, type: 3}
+      propertyPath: projectileSpeed
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885065562934795237, guid: 3a5c5120e90fd294cb5aa43e27278da9, type: 3}
+      propertyPath: projectileDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885065562934795237, guid: 3a5c5120e90fd294cb5aa43e27278da9, type: 3}
       propertyPath: bulletBurstAmount
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6885065562934795237, guid: 3a5c5120e90fd294cb5aa43e27278da9, type: 3}
       propertyPath: gatlingShootingRate
