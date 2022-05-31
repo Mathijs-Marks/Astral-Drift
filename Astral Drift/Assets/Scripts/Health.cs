@@ -6,7 +6,7 @@ public class Health : MonoBehaviour
 {
     private Death deathScript;
 
-    [SerializeField] protected int currentHitpoints;
+    protected int currentHitpoints;
     public int CurrentHitpoints { get { return currentHitpoints; } }
 
     public int maxHitpoints;

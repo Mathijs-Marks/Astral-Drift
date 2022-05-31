@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class BaseBullet : MonoBehaviour
 {
-    [SerializeField] protected float speed;
-    [SerializeField] protected int damage;
+    protected float speed;
+    protected int damage;
     public int readDamage { get { return damage; } }
+
+    public void InitializeBullet(int tempDamage, float tempSpeed)
+    {
+        damage = tempDamage;
+        speed = tempSpeed;
+    }
 
     protected virtual void Move()
     {
