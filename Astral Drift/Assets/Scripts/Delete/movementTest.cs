@@ -5,7 +5,7 @@ using UnityEngine;
 public class movementTest : MonoBehaviour
 {
     [SerializeField] private BackgroundScroller background;
-    private void Start()
+    private void Awake()
     {
         if(GlobalReferenceManager.MainCamera == null)
         {

@@ -6,7 +6,7 @@ public class HandleCollissions : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.IsTouchingLayers(7))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             collision.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
