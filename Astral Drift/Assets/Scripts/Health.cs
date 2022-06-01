@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
         currentHitpoints -= damage;
         if (currentHitpoints <= 0)
         {
+            currentHitpoints = 0;
             OnHealthZero();
         }
     }
