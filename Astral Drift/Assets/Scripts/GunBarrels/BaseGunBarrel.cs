@@ -9,7 +9,7 @@ public class BaseGunBarrel : MonoBehaviour
     [SerializeField] protected float shootingRate = 1;
     protected float elapsedTime;
 
-    [HideInInspector] public bool allowedToShoot = true;
+    [HideInInspector] public bool allowedToShoot = false;
 
     protected void SpawnProjectile(GameObject Object)
     {
