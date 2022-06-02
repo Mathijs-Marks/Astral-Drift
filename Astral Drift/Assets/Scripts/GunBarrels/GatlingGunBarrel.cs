@@ -1,43 +1,33 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GatlingGunBarrel : BaseGunBarrel
 {
-    [SerializeField] private int bulletBurstAmount;
-    [SerializeField] private float gatlingShootingRate;
-    [SerializeField] private bool isMainTurret;
+    [SerializeField] private int bulletBurstAmount = 4;
+    [SerializeField] private float gatlingShootingRate = 0.1f;
 
     private int currentBulletAmount = 0;
-    private bool isShooting = false;
-    private GameObject lookAtTarget;
-    private Transform mainParentObject;
+
+    [Header("Leave empty if this enemy needs to rotate while shooting. Otherwise, reference \"InvertIsRotating\" from \"RotateToPlayer\"")]
+    [SerializeField] private UnityEvent isShootingEvent;
+    [SerializeField] private UnityEvent isNotShootingEvent;
 
     private void Start()
     {
         if (shootOnStart)
             elapsedTime = shootingRate;
-
-        if (isMainTurret)
-        {
-            lookAtTarget = GameObject.FindGameObjectWithTag("Player");
-            mainParentObject = transform.parent.parent.parent;
-        }
     }
     void FixedUpdate()
     {
-        if (isMainTurret && !isShooting)
-        {
-            //Rotating
-            Vector3 direction = lookAtTarget.transform.position - mainParentObject.position;
-            Quaternion rotation = Quaternion.LookRotation(-direction, Vector3.forward);
-            rotation.x = mainParentObject.rotation.x;
-            rotation.y = mainParentObject.rotation.y;
-            mainParentObject.rotation = Quaternion.Lerp(mainParentObject.rotation, rotation, elapsedTime);
-        }
         if (elapsedTime > shootingRate)
         {
-            isShooting = true;
             if (elapsedTime > shootingRate + gatlingShootingRate) {
+                if (currentBulletAmount == 0)
+                {
+                    isShootingEvent.Invoke();
+                }
+                
                 Shoot();
                 elapsedTime = shootingRate;
 
@@ -46,7 +36,8 @@ public class GatlingGunBarrel : BaseGunBarrel
                 {
                     elapsedTime = 0;
                     currentBulletAmount = 0;
-                    isShooting = false;
+
+                    isNotShootingEvent.Invoke();
                 }
             }
         }
