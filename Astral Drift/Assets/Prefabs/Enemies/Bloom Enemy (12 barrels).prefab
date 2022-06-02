@@ -79,6 +79,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 1947949542661096199}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
@@ -160,6 +162,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 4438001430224240140}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
@@ -273,6 +277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 3496405587726370383}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
@@ -481,6 +487,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 2064735977440879879}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
@@ -562,6 +570,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 707412237486006751}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
@@ -644,6 +654,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 5930741995625607878}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
@@ -988,6 +1000,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 5566895318892663029}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
@@ -1038,6 +1052,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 7910332451048461237}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
@@ -1197,6 +1213,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 4957686180664661567}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
@@ -1247,6 +1265,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 2350585168988792289}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
@@ -1360,6 +1380,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 8655293613410350027}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
@@ -1517,6 +1539,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 5586613820284242668}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
