@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 8537031343049824650}
   - component: {fileID: 2249795987161666924}
   - component: {fileID: 5761873135633851045}
-  - component: {fileID: 5225324656847370249}
   - component: {fileID: 118243576082937440}
   m_Layer: 7
   m_Name: WaveShotEnemy
@@ -130,8 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHitpoints: 0
-  maxHitpoints: 3
+  maxHitpoints: 900
 --- !u!114 &5761873135633851045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,23 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29217de3dfbf794f8307fdee59f921d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
-  degreesToRotate: 60
-  startingAngle: -30
---- !u!114 &5225324656847370249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650869315322498487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0233d0fa137b0248a07577dfcab358f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.6
-  direction: {x: 0, y: 1}
+  speed: 60
+  degreesToRotate: 75
+  startingAngle: -37.5
 --- !u!114 &118243576082937440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,7 +332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6576349184704258837, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: shootingRate
-      value: 0.25
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6576349184704258837, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: projectileDamage
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6828227476333938969, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Layer

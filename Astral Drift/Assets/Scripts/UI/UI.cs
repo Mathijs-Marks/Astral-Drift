@@ -16,7 +16,6 @@ public class UI : MonoBehaviour
 
     private UnityEvent updateDamage;
 
-    [SerializeField] private PlayerHealth playerHealth;
     public int maxUpgrade;
     [HideInInspector] public int currentUpgrade;
 
@@ -39,7 +38,7 @@ public class UI : MonoBehaviour
         updateDamage = new UnityEvent();
         updateDamage.AddListener(UpdateHitpoints);
 
-        UpdateHitpoints();
+        this.hitpoints.text = "HP: " + GlobalReferenceManager.PlayerHealthScript.maxHitpoints + "/" + GlobalReferenceManager.PlayerHealthScript.maxHitpoints;
         score.text = "Score: 0";
         shootingRate.text = "Fire Rate: 0/" + maxUpgrade;
     } 

@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] private BaseGunBarrel[] weapons = new BaseGunBarrel[2];
 
     [SerializeField] private float playerSpeed;
+    [SerializeField] private float yOffset = 0.5f; // Use this value to put the player a bit higher
 
     private Vector3 targetPosition;
     private Vector3 direction;
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
         {
             targetPosition = new Vector3(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height), 0);
             targetPosition = Camera.main.ScreenToWorldPoint(targetPosition);
+            targetPosition.y += yOffset;
             targetPosition.z = 0;
         }
     }

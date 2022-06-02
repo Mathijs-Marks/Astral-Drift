@@ -6,7 +6,7 @@ public class Health : MonoBehaviour
 {
     private Death deathScript;
 
-    [SerializeField] protected int currentHitpoints;
+    protected int currentHitpoints;
     public int CurrentHitpoints { get { return currentHitpoints; } }
 
     public int maxHitpoints;
@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
         currentHitpoints -= damage;
         if (currentHitpoints <= 0)
         {
+            currentHitpoints = 0;
             OnHealthZero();
         }
     }

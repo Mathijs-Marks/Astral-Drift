@@ -12,14 +12,8 @@ public class PlayerHealth : Health
     }
     public override void TakeDamage(int damage)
     {
-        currentHitpoints -= damage;
-        GlobalReferenceManager.UIMenu.UpdateDamage.Invoke();
+        base.TakeDamage(damage);
 
-        // If hit points equals 0, invoke death.
-        if (currentHitpoints <= 0)
-        {
-            gameObject.SetActive(false);
-            GlobalReferenceManager.GameOverMenu.ScreenEvent.Invoke(GlobalReferenceManager.GameOverMenu.gameOverScreen);
-        }
+        GlobalReferenceManager.UIMenu.UpdateHitpoints();
     }
 }

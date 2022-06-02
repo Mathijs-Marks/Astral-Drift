@@ -225,8 +225,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 4251646817684571074}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &843533081724727824
 GameObject:
@@ -327,8 +329,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 2651426639678697431}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &876683797174229733
 GameObject:
@@ -460,8 +464,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 4315263133428327368}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &1027772751269065323
 GameObject:
@@ -593,8 +599,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 17231242877443772}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &1538923615105752218
 GameObject:
@@ -695,8 +703,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 5859938333648078160}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &1549060877636403817
 GameObject:
@@ -861,8 +871,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 436093539331725450}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &1931092244572323880
 GameObject:
@@ -1057,8 +1069,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 7606136294453246897}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &3392198054126262781
 GameObject:
@@ -1252,8 +1266,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 3392198054126262781}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &3802670880080596675
 GameObject:
@@ -1386,8 +1402,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 6904605648913258816}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &4207452160512719442
 GameObject:
@@ -1709,8 +1727,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 6274110264128121985}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &6274110264128121985
 GameObject:
@@ -1842,8 +1862,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 3601286649896789544}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &6388511080841939905
 GameObject:
@@ -2007,8 +2029,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 3575361530084794096}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &6855207788889807570
 GameObject:
@@ -2109,8 +2133,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 1027772751269065323}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &6904605648913258816
 GameObject:
@@ -2353,8 +2379,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 6388511080841939905}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &7606136294453246897
 GameObject:
@@ -2534,8 +2562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHitpoints: 3
-  maxHitpoints: 3
+  maxHitpoints: 600
 --- !u!114 &8552948871987064147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2711,8 +2738,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 876683797174229733}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &8588489352905019221
 GameObject:
@@ -2813,8 +2842,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
   gunMuzzle: {fileID: 1931092244572323880}
+  projectileSpeed: 2
+  projectileDamage: 30
   shootOnStart: 1
-  shootingRate: 2.5
+  shootingRate: 3.4
   allowedToShoot: 1
 --- !u!1 &9174556969487466953
 GameObject:

@@ -97,10 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8700e2c5f95a22946b0662fe4d20f286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  damage: 1
   rotatingLerpSpeedMultiplier: 0.15
-  homingStartTime: 0.15
+  homingStartTime: 0.075
   stopHomingDistance: 1.4
   maxFollowTime: 1.5
 --- !u!61 &-5330325729970394487
