@@ -3,16 +3,15 @@ Any team members contributing to the project, take heed of the following GIT wor
 
 ## Development
 ### Start working on a feature/bug
-When developing on a feature, bug, etc. One should create a branch off of the Development Branch.
-This branch will have the name of the team member working in it.
-If any wishes to keep features within their own branch, one can do so by branching off of their respective team member branch.
-When giving that branch a name, prefix your branch name with either feature or bug, depending on what you're working on, followed with the name of your branch.
-There the team member can work on the feature/bug until it is finished (don't forget to merge the finished feature back to the team member branch!).
+When developing on a feature, bug, etc. One should create a feature branch off of the Development Branch.
+When naming the branch, prefix your branch name with either Feature or Bug (**Case sensitive!!!**), depending on what you're working on, followed with a /, then the name of your branch.
+
+An example of a correct branc name looks like this: Feature/TheFeature
 
 ### Merging back to Development
 When the feature/bug is finished, notify your team members so that they can Peer review your work.
 This is done by creating a Pull request to the branch Develop so that another team member can do the Peer review.
-As soon as your work is reviewed, the reviewer will merge your work back to Development.
+As soon as your work is reviewed, the **reviewer** will merge your work back to Development.
 
 #### Pull requests: How to create them
 Creating a Pull request goes as follows:
@@ -54,5 +53,5 @@ For more information on Pull requests, see one of these pages:
 
 ## Releasing
 When a sufficient amount of features or bugfixes have been tested and are ready to be released, a Pull request is created to merge back to Release.
-Two team members will review all of the work that is being merged back to Release to ensure that any merge conflicts are fixed.
+Two team members will review all of the work that is being merged back to Release using a **Squash Merge**
 Then, the work can be merged. After merging, the reviewers should test the release product and fix any after-merge errors.
