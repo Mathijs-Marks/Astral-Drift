@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -121,7 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e1c9ec2a86a3a45ab0a66f62f1e883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   maxUpgrade: 10
   currentUpgrade: 0
   scoreValue: 0
@@ -153,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4a9aa0b79377d48988709d13f0ac37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameLost: 0
+  gameEnd: 0
   gameOverScreen: {fileID: 8273889924756461834}
   victoryScreen: {fileID: 269625399806367267}
 --- !u!1 &1548219102910152445
