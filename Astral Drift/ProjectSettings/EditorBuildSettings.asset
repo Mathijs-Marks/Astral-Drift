@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/GeneralAssets/Scenes/Mathijs/InputManager.unity
+    path: Assets/_GeneralAssets/Scenes/Mathijs/InputManager.unity
     guid: 271f307134dedc64abfbe82e28cfb1cd
-  - enabled: 1
-    path: Assets/GeneralAssets/Scenes/Main.unity
+  - enabled: 0
+    path: Assets/_GeneralAssets/Scenes/Main.unity
     guid: 1f12619e99399fb4d9e49ba3e81e8323
+  - enabled: 1
+    path: Assets/_GeneralAssets/Scenes/Release v0.1.unity
+    guid: 621d66e8568333049918d64249c3c652
   m_configObjects: {}

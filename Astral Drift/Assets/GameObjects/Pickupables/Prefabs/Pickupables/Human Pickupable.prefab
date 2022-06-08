@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a50cd4e6b055c94091d64cd0fb10038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  model: {fileID: 0}
+  model: {fileID: 919132149155446097, guid: 4345338ea3158f14eb1dde0dda1cebc3, type: 3}
   scoreIncrease: 10
   pickupTime: 3
   scaleWhenCollected: 0.4

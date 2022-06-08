@@ -134,6 +134,7 @@ MonoBehaviour:
   weapons:
   - {fileID: 4985254694876412075}
   - {fileID: 84777225388008387}
+  - {fileID: 1049742347764150748}
   playerSpeed: 20
   yOffset: 0.2
 --- !u!114 &6736147908785115002
@@ -407,6 +408,17 @@ PrefabInstance:
     - {fileID: 5249506735900629689, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
     - {fileID: 4204475673531390070, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+--- !u!114 &1049742347764150748 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6576349184704258837, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+  m_PrefabInstance: {fileID: 6184160987018465993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a46aa0fc9a21d4aac7a0ce1a9fe670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7533017138938818231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
