@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class HealthBarPlayer : MonoBehaviour
 {
-    public GameObject fullBar, mask;
+    [SerializeField] private GameObject fullBar, mask;
+    [Tooltip("Edit this value to the current size of the sprite. (in canvas this is the width and height)")]
+    [SerializeField] private float spriteSize = 686;
 
+    private int percentage;
     
-    public int percentage;
-    
-    public float spriteSize = 686;
     private float amount;
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        percentage = 50;
-       
+        GlobalReferenceManager.PlayerHealthScript.PlayerOnHitEvent.AddListener(UpdateHealthBar);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void UpdateHealthBar()
     {
-        amount = (100-percentage) * spriteSize / 100;
+        percentage = GlobalReferenceManager.PlayerHealthScript.CurrentHitpoints;
+
+        amount = (100 - percentage) * spriteSize / 100;
 
         fullBar.transform.localPosition = new Vector3(0, amount, 0);
         mask.transform.localPosition = new Vector3(0, -amount, 0);
