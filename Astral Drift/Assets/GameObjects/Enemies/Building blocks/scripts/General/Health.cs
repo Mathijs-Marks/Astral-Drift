@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
     public int CurrentHitpoints { get { return currentHitpoints; } }
 
     public int maxHitpoints;
-    private void Start()
+    protected virtual void Start()
     {
         deathScript = GetComponent<Death>();
 
