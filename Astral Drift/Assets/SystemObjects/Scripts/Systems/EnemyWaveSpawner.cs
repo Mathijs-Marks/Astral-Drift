@@ -5,9 +5,30 @@ public class EnemyWaveSpawner : MonoBehaviour
 {
     public void SpawnEnemyFormation(SpawnableEnemyFormation enemyFormation)
     {
+        float ScreenY = GlobalReferenceManager.MainCamera.orthographicSize * 2; //Screen X size
+        float aspectRatio = (float)Screen.width / (float)Screen.height;
+        float ScreenX = ScreenY * aspectRatio; //Screen Y size
+        float halfScreenX = ScreenX / 2;
+
         //This spawns an enemy section in any given enemy formation. Difference between switch cases is the placement of the enemy.
         Enumerators.EnemyFormationTypes formation;
-        int halfAmount = enemyFormation.Amount / 2;
+        float halfAmount = enemyFormation.Amount / 2;
+        float distBetweenEnemies = 1.5f;
+
+        Debug.Log(-halfScreenX);
+
+        Vector2 newStartPos = enemyFormation.EnemyPosition - new Vector2(distBetweenEnemies * halfAmount, 0);
+        if (newStartPos.x < -halfScreenX)
+        {
+            float diff = newStartPos.x + halfScreenX;
+            newStartPos.x += diff;
+        }
+        else if (newStartPos.x + (distBetweenEnemies * enemyFormation.Amount) > halfScreenX)
+        {
+            float diff = newStartPos.x - halfScreenX;
+            newStartPos.x -= diff;
+        }
+
         formation = enemyFormation.FormationType;
 
         //Check which formation to spawn 'Amount' amount of enemies in.
@@ -16,7 +37,7 @@ public class EnemyWaveSpawner : MonoBehaviour
             case Enumerators.EnemyFormationTypes.HorizontalLine:
                 for (int n = 0; n < enemyFormation.Amount; n++)
                 {
-                    Instantiate(enemyFormation.EnemyPrefab, enemyFormation.EnemyPosition + new Vector2(halfAmount * n, 0), Quaternion.identity);
+                    Instantiate(enemyFormation.EnemyPrefab, newStartPos + (new Vector2(distBetweenEnemies * n, 0)), Quaternion.identity);
                 }
                 break;
             case Enumerators.EnemyFormationTypes.VerticalLine:
@@ -39,7 +60,7 @@ public class EnemyWaveSpawner : MonoBehaviour
                 break;
             case Enumerators.EnemyFormationTypes.VFormation:
 
-                for (int n = -halfAmount; n < halfAmount + 1; n++)
+                for (int n = (int)-halfAmount; n < halfAmount + 1; n++)
                 {
                     Instantiate(enemyFormation.EnemyPrefab, enemyFormation.EnemyPosition + new Vector2(halfAmount + n, Mathf.Pow(n, 2)), Quaternion.identity);
                 }
