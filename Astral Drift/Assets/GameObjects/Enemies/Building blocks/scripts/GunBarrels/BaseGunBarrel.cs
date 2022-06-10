@@ -4,7 +4,7 @@ public class BaseGunBarrel : MonoBehaviour
 {
     [SerializeField] protected GameObject projectilePrefab;
     [SerializeField] protected GameObject gunMuzzle;
-
+    private SimplePool pool;
     [SerializeField] protected float projectileSpeed = 2;
     [SerializeField] protected int projectileDamage = 30;
 
@@ -14,19 +14,28 @@ public class BaseGunBarrel : MonoBehaviour
 
     [HideInInspector] public bool allowedToShoot = false;
 
-    protected void SpawnProjectile(GameObject Object)
+    private void Start()
     {
-        //Spawn a projectile
-        BaseBullet bulletScript = Instantiate(projectilePrefab, Object.transform.position, Object.transform.rotation).GetComponent<BaseBullet>();
+        pool = gameObject.GetComponent<SimplePool>();
+        pool.AddBulletVariables(projectileDamage, projectileSpeed);
+    }
 
-        bulletScript.InitializeBullet(projectileDamage, projectileSpeed);
+    protected void SpawnProjectile()
+    {
+        pool.SpawnFrompool(gunMuzzle.transform.position, gunMuzzle.transform.rotation);
+        //pool.AddBulletVariables(projectileDamage, projectileSpeed);
+
+        //Spawn a projectile
+    /*    BaseBullet bulletScript = Instantiate(projectilePrefab, Object.transform.position, Object.transform.rotation).GetComponent<BaseBullet>();
+
+        bulletScript.InitializeBullet(projectileDamage, projectileSpeed);*/
     }
 
     protected void Shoot()
     {
         if (allowedToShoot)
         {
-            SpawnProjectile(gunMuzzle);
+            SpawnProjectile();
         }
     }
 
