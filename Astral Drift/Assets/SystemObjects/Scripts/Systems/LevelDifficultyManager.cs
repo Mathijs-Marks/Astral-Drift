@@ -33,7 +33,7 @@ public class LevelDifficultyManager : MonoBehaviour
             enemyWaves.Add(enemyFormation = new SpawnableEnemyFormation());
 
             //Randomize the amount of enemies that will spawn
-            enemyFormation.Amount = Random.Range(1, 6);
+            enemyFormation.Amount = Random.Range(1, 4);
 
             //Randomize enemies and instantiate correct prefab per enemy
             ChooseEnemyType(enemyFormation);

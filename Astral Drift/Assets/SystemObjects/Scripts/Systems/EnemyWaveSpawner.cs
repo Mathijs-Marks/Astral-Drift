@@ -3,32 +3,37 @@ using System.Collections.Generic;
 
 public class EnemyWaveSpawner : MonoBehaviour
 {
+    //Screen resolution variables
+    float ScreenY, aspectRatio, ScreenX, halfScreenX;
+    //Basic enemy variables
+    float enemySize = 0.5f, distBetweenEnemies = 1.5f;
+
+    private void Start()
+    {
+        ScreenY = GlobalReferenceManager.MainCamera.orthographicSize * 2; //Screen X size
+        aspectRatio = (float)Screen.width / (float)Screen.height;
+        ScreenX = ScreenY * aspectRatio;
+        halfScreenX = ScreenX / 2;
+    }
+
     public void SpawnEnemyFormation(SpawnableEnemyFormation enemyFormation)
     {
-        float ScreenY = GlobalReferenceManager.MainCamera.orthographicSize * 2; //Screen X size
-        float aspectRatio = (float)Screen.width / (float)Screen.height;
-        float ScreenX = ScreenY * aspectRatio; //Screen Y size
-        float halfScreenX = ScreenX / 2;
-
-        //This spawns an enemy section in any given enemy formation. Difference between switch cases is the placement of the enemy.
-        Enumerators.EnemyFormationTypes formation;
+        //This spawns an enemy section in any given enemy formation. Difference between switch cases is the placement of the enemy. 
         float halfAmount = enemyFormation.Amount / 2;
-        float distBetweenEnemies = 1.5f;
-
-        Debug.Log(-halfScreenX);
 
         Vector2 newStartPos = enemyFormation.EnemyPosition - new Vector2(distBetweenEnemies * halfAmount, 0);
         if (newStartPos.x < -halfScreenX)
         {
-            float diff = newStartPos.x + halfScreenX;
-            newStartPos.x += diff;
+            float diff = -halfScreenX - newStartPos.x;
+            newStartPos.x += diff + enemySize;
         }
-        else if (newStartPos.x + (distBetweenEnemies * enemyFormation.Amount) > halfScreenX)
+        else if (newStartPos.x + (distBetweenEnemies * enemyFormation.Amount - 1) > halfScreenX)
         {
-            float diff = newStartPos.x - halfScreenX;
-            newStartPos.x -= diff;
+            float diff = newStartPos.x + ((distBetweenEnemies * enemyFormation.Amount - 1) - halfScreenX);
+            newStartPos.x -= diff + enemySize;
         }
 
+        Enumerators.EnemyFormationTypes formation;
         formation = enemyFormation.FormationType;
 
         //Check which formation to spawn 'Amount' amount of enemies in.
@@ -37,7 +42,7 @@ public class EnemyWaveSpawner : MonoBehaviour
             case Enumerators.EnemyFormationTypes.HorizontalLine:
                 for (int n = 0; n < enemyFormation.Amount; n++)
                 {
-                    Instantiate(enemyFormation.EnemyPrefab, newStartPos + (new Vector2(distBetweenEnemies * n, 0)), Quaternion.identity);
+                    Instantiate(enemyFormation.EnemyPrefab, newStartPos + new Vector2(distBetweenEnemies * n, 0), Quaternion.identity);
                 }
                 break;
             case Enumerators.EnemyFormationTypes.VerticalLine:
