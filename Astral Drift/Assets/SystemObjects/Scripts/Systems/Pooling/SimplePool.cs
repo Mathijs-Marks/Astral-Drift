@@ -5,7 +5,7 @@ public class SimplePool : MonoBehaviour
 {
     [SerializeField] private int poolSize = 20;
     private GameObject[] poolArray;
-    private StandardBullet[] bulletArray; //TODO: turn this pool into a BaseBullet pool.
+    private BaseBullet[] bulletArray;
 
     [SerializeField] private GameObject spawnItem;
 
@@ -14,12 +14,12 @@ public class SimplePool : MonoBehaviour
     void Awake()
     {
         poolArray = new GameObject[poolSize];
-        bulletArray = new StandardBullet[poolSize];
+        bulletArray = new BaseBullet[poolSize];
         for(int i = 0; i<poolSize; i++)
         {
             poolArray[i] = Instantiate(spawnItem);
             poolArray[i].SetActive(false);
-            bulletArray[i] = poolArray[i].GetComponent<StandardBullet>();
+            bulletArray[i] = poolArray[i].GetComponent<BaseBullet>();
         }
     }
     public void SpawnFrompool(Vector2 pos, Quaternion rotation)
@@ -43,7 +43,6 @@ public class SimplePool : MonoBehaviour
         for (int i = 0; i < poolSize; i++)
         {
             bulletArray[i].InitializeBullet(damage, speed);
-            //TODO: Check if bullets still work for enemy when resetting the game
         }
     }
 }

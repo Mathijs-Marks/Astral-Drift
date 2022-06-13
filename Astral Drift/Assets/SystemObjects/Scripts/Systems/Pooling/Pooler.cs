@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class Pooler : MonoBehaviour
 {
-    // this dictionary keeps all the pools separate and helps finding the right pool type to spawn from
-    public Dictionary<GlobalReferenceManager.PoolType, Queue<GameObject>> poolDictionary;
-    public int poolSize = 100;
+    //THIS SYSTEM IS AN EXAMPLE OF WHAT A COMPLEX POOLING SYSTEM COULD LOOK LIKE. THIS SYTEM IS NOT IN USE.
 
-    // create an object pool and call the function which populates it
-    public void AddPool(GlobalReferenceManager.PoolType poolType, GameObject poolObject)
+    //public Dictionary<GlobalReferenceManager.PoolType, Queue<GameObject>> poolDictionary;
+    //public int poolSize = 100;
+
+ /*   public void AddPool(GlobalReferenceManager.PoolType poolType, GameObject poolObject)
     {
         if (!poolDictionary.ContainsKey(poolType))
         {
             fillPool(poolType, poolObject);
         }
-    }
+    }*/
 
-    // populate a pool with the corresponding objects and set them to inactive
-    private void fillPool(GlobalReferenceManager.PoolType poolType, GameObject poolObject)
+/*    private void fillPool(GlobalReferenceManager.PoolType poolType, GameObject poolObject)
     {
         Queue<GameObject> objectPool = new Queue<GameObject>();
 
@@ -31,9 +30,8 @@ public class Pooler : MonoBehaviour
         }
 
         poolDictionary.Add(poolType, objectPool);
-    }
-    // returns one object from the corresponding pool type
-    public GameObject SpawnFromPool(GlobalReferenceManager.PoolType poolType, Vector3 spawnPoint, Quaternion rotation)
+    }*/
+/*    public GameObject SpawnFromPool(GlobalReferenceManager.PoolType poolType, Vector3 spawnPoint, Quaternion rotation)
     {
 
         GameObject objectToSpawn = poolDictionary[poolType].Dequeue();
@@ -45,5 +43,5 @@ public class Pooler : MonoBehaviour
         poolDictionary[poolType].Enqueue(objectToSpawn);
 
         return objectToSpawn;
-    }
+    }*/
 }
