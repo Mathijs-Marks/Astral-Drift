@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaserBarrel : MonoBehaviour
+public class LaserBarrel : BaseGunBarrel
 {
     [SerializeField] private LineRenderer aimingLaserRenderer;
 
