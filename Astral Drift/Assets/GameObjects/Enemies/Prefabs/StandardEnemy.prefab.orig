@@ -171,7 +171,11 @@ Transform:
   m_Children:
   - {fileID: 4770879656570661382}
   - {fileID: 3764743807964568067}
+<<<<<<< HEAD
+  - {fileID: 7953874588447526194}
+=======
   - {fileID: 8599637114011049276}
+>>>>>>> PoolingSystem
   m_Father: {fileID: 6866067656519768474}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: -180, z: 0}
@@ -196,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9dcdf798128cdf48ba529cba27f8412, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.191
+      value: 1.22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9dcdf798128cdf48ba529cba27f8412, type: 3}
       propertyPath: m_LocalPosition.z
@@ -270,7 +274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63ac5adece8a6394ba31338152bad36a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.021
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63ac5adece8a6394ba31338152bad36a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -447,7 +451,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
   m_PrefabInstance: {fileID: 7131238447780288251}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+--- !u!1001 &7632316823246383833
+=======
 --- !u!1001 &8129759396593515223
+>>>>>>> PoolingSystem
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -516,8 +524,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fbcf6a9aa78d084fb591a94ae953561, type: 3}
+<<<<<<< HEAD
+--- !u!4 &7953874588447526194 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9fbcf6a9aa78d084fb591a94ae953561, type: 3}
+  m_PrefabInstance: {fileID: 7632316823246383833}
+=======
 --- !u!4 &8599637114011049276 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9fbcf6a9aa78d084fb591a94ae953561, type: 3}
   m_PrefabInstance: {fileID: 8129759396593515223}
+>>>>>>> PoolingSystem
   m_PrefabAsset: {fileID: 0}

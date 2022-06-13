@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747947250174648591}
   - component: {fileID: 2200535917666199819}
+  - component: {fileID: 1240543722604930270}
   m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
@@ -84,6 +85,20 @@ MonoBehaviour:
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
+--- !u!114 &1240543722604930270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553774793842341277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120caa2d2abbedd4f8114b0c3a489281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 20
+  spawnItem: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
 --- !u!1 &707412237486006751
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2168687359374784278}
   - component: {fileID: 1711244854135357345}
+  - component: {fileID: 2651633168756261682}
   m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
@@ -167,6 +183,20 @@ MonoBehaviour:
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
+--- !u!114 &2651633168756261682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809652533241711369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120caa2d2abbedd4f8114b0c3a489281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 20
+  spawnItem: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
 --- !u!1 &1638186078305992463
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6957142725775005297}
   - component: {fileID: 7430486959061737587}
+  - component: {fileID: 8148504567837427027}
   m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
@@ -282,6 +313,20 @@ MonoBehaviour:
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
+--- !u!114 &8148504567837427027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950736064960229062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120caa2d2abbedd4f8114b0c3a489281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 20
+  spawnItem: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
 --- !u!1 &2064735977440879879
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2090944200986987435}
   - component: {fileID: 7177938541024945847}
+  - component: {fileID: 3371419082733899764}
   m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
@@ -492,6 +538,20 @@ MonoBehaviour:
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
+--- !u!114 &3371419082733899764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3030224190112276347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120caa2d2abbedd4f8114b0c3a489281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 20
+  spawnItem: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
 --- !u!1 &3496405587726370383
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8928199397880981553}
   - component: {fileID: 8893135026955890642}
+  - component: {fileID: 3029483842308809775}
   m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
@@ -575,6 +636,20 @@ MonoBehaviour:
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
+--- !u!114 &3029483842308809775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4065306257703860076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120caa2d2abbedd4f8114b0c3a489281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 20
+  spawnItem: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
 --- !u!1 &4203651987816818360
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 550440232056263225}
   - component: {fileID: 1545279772500587286}
+  - component: {fileID: 1422800955652519544}
   m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
@@ -659,6 +735,20 @@ MonoBehaviour:
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
+--- !u!114 &1422800955652519544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4216977009317338294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120caa2d2abbedd4f8114b0c3a489281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 20
+  spawnItem: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
 --- !u!1 &4438001430224240140
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +1053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7585800323069357040}
   - component: {fileID: 2954501089146045854}
+  - component: {fileID: 2130854090284618322}
   m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
@@ -1005,6 +1096,20 @@ MonoBehaviour:
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
+--- !u!114 &2130854090284618322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6544674424892206952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120caa2d2abbedd4f8114b0c3a489281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 20
+  spawnItem: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
 --- !u!1 &6655484005074759350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2426759166882029848}
   - component: {fileID: 211207083800053034}
+  - component: {fileID: 7612918052211603270}
   m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
@@ -1057,6 +1163,20 @@ MonoBehaviour:
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
+--- !u!114 &7612918052211603270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6655484005074759350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120caa2d2abbedd4f8114b0c3a489281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 20
+  spawnItem: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
 --- !u!1 &6756227072614053337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,6 +1296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6612629334122261800}
   - component: {fileID: 2788787175903208366}
+  - component: {fileID: 6036925425517247254}
   m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
@@ -1218,6 +1339,20 @@ MonoBehaviour:
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
+--- !u!114 &6036925425517247254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7147466832609374288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120caa2d2abbedd4f8114b0c3a489281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 20
+  spawnItem: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
 --- !u!1 &7865905415577777884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,6 +1363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4891147974557074356}
   - component: {fileID: 24421166662178564}
+  - component: {fileID: 3045177971529695470}
   m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
@@ -1270,6 +1406,20 @@ MonoBehaviour:
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
+--- !u!114 &3045177971529695470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7865905415577777884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120caa2d2abbedd4f8114b0c3a489281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 20
+  spawnItem: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
 --- !u!1 &7910332451048461237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,6 +1493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5948157929763627012}
   - component: {fileID: 4596772363294842325}
+  - component: {fileID: 3304128779250641742}
   m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
@@ -1385,6 +1536,20 @@ MonoBehaviour:
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
+--- !u!114 &3304128779250641742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014398060783304125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120caa2d2abbedd4f8114b0c3a489281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 20
+  spawnItem: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
 --- !u!1 &8459475825719484354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,6 +1667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5591632116310660423}
   - component: {fileID: 4888117706944439480}
+  - component: {fileID: 6203024583017628094}
   m_Layer: 7
   m_Name: GunBarrel
   m_TagString: Untagged
@@ -1544,6 +1710,20 @@ MonoBehaviour:
   shootOnStart: 1
   shootingRate: 2.5
   allowedToShoot: 1
+--- !u!114 &6203024583017628094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8851856254060709710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120caa2d2abbedd4f8114b0c3a489281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolSize: 20
+  spawnItem: {fileID: 5852864802511956268, guid: 1a9373079734c9946a46a79d76bcf931, type: 3}
 --- !u!1 &8892305313264631281
 GameObject:
   m_ObjectHideFlags: 0
