@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(SimplePool))]
 public class BaseGunBarrel : MonoBehaviour
 {
     [SerializeField] protected GameObject projectilePrefab;
@@ -14,7 +15,7 @@ public class BaseGunBarrel : MonoBehaviour
 
     [HideInInspector] public bool allowedToShoot = false;
 
-    private void Start()
+    protected virtual void Start()
     {
         pool = gameObject.GetComponent<SimplePool>();
         pool.AddBulletVariables(projectileDamage, projectileSpeed);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class SimplePool : MonoBehaviour
 {
-    [SerializeField] private int poolSize;
+    [SerializeField] private int poolSize = 20;
     private GameObject[] poolArray;
     private StandardBullet[] bulletArray; //TODO: turn this pool into a BaseBullet pool.
 
@@ -11,13 +11,14 @@ public class SimplePool : MonoBehaviour
 
     private int currentItemIndex = 0;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         poolArray = new GameObject[poolSize];
         bulletArray = new StandardBullet[poolSize];
         for(int i = 0; i<poolSize; i++)
         {
             poolArray[i] = Instantiate(spawnItem);
+            poolArray[i].SetActive(false);
             bulletArray[i] = poolArray[i].GetComponent<StandardBullet>();
         }
     }
