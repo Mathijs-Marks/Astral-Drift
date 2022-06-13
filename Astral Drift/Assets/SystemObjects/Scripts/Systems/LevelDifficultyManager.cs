@@ -28,19 +28,18 @@ public class LevelDifficultyManager : MonoBehaviour
     }
     private void GenerateEnemyWave()
     {
-        for (int i= 0; i < Random.Range(6,8); i++) {
+        for (int i= 0; i < Random.Range(1,4); i++) {
             SpawnableEnemyFormation enemyFormation = new SpawnableEnemyFormation();
             enemyWaves.Add(enemyFormation = new SpawnableEnemyFormation());
 
             //Randomize the amount of enemies that will spawn
-            enemyFormation.Amount = Random.Range(1, 6);
+            enemyFormation.Amount = Random.Range(1, 5);
 
             //Randomize enemies and instantiate correct prefab per enemy
             ChooseEnemyType(enemyFormation);
 
             //Set formation type of enemy formation
-            //enemyFormation.FormationType = Enumerators.GetRandomEnumValue<Enumerators.EnemyFormationTypes>();
-            enemyFormation.FormationType = Enumerators.EnemyFormationTypes.HorizontalLine;
+            enemyFormation.FormationType = Enumerators.GetRandomEnumValue<Enumerators.EnemyFormationTypes>();
 
             //Spawn formation above visible playing area with random offset
             float positionOffset = Random.Range(1, GlobalReferenceManager.MainCamera.orthographicSize/1.5f);

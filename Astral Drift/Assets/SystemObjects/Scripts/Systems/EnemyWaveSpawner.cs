@@ -3,33 +3,35 @@ using System.Collections.Generic;
 
 public class EnemyWaveSpawner : MonoBehaviour
 {
+    [SerializeField] private float distBetweenEnemies = 1.5f, outOfBoundsOffset;
+    private float halfScreenX;
+    private void Start()
+    {
+        halfScreenX = GlobalReferenceManager.ScreenCollider.sizeX / 2;
+    }
     public void SpawnEnemyFormation(SpawnableEnemyFormation enemyFormation)
     {
-        float ScreenY = GlobalReferenceManager.MainCamera.orthographicSize * 2; //Screen X size
-        float aspectRatio = (float)Screen.width / (float)Screen.height;
-        float ScreenX = ScreenY * aspectRatio; //Screen Y size
-        float halfScreenX = ScreenX / 2;
+        //TODO MAYBE?
+        // make wall check statements per formation
+        // remove v formation
 
         //This spawns an enemy section in any given enemy formation. Difference between switch cases is the placement of the enemy.
-        Enumerators.EnemyFormationTypes formation;
+        Enumerators.EnemyFormationTypes formation = enemyFormation.FormationType;
         float halfAmount = enemyFormation.Amount / 2;
-        float distBetweenEnemies = 1.5f;
-
-        Debug.Log(-halfScreenX);
-
-        Vector2 newStartPos = enemyFormation.EnemyPosition - new Vector2(distBetweenEnemies * halfAmount, 0);
-        if (newStartPos.x < -halfScreenX)
+        
+        Vector2 centerdStartPosition = enemyFormation.EnemyPosition - new Vector2(distBetweenEnemies * halfAmount, 0);
+        if (centerdStartPosition.x < -halfScreenX)
         {
-            float diff = newStartPos.x + halfScreenX;
-            newStartPos.x += diff;
+            float diff = centerdStartPosition.x + halfScreenX;
+            Debug.Log("Left wall collision: " + enemyFormation.Amount + " " + enemyFormation.EnemyPrefab.name + " Old pos: " + centerdStartPosition.x + " New pos:" + (centerdStartPosition.x - diff));
+            centerdStartPosition.x -= diff - outOfBoundsOffset;
         }
-        else if (newStartPos.x + (distBetweenEnemies * enemyFormation.Amount) > halfScreenX)
+        else if (centerdStartPosition.x + (distBetweenEnemies * enemyFormation.Amount - 1) > halfScreenX)
         {
-            float diff = newStartPos.x - halfScreenX;
-            newStartPos.x -= diff;
+            float diff = centerdStartPosition.x - halfScreenX;
+            Debug.Log("Right wall collision: " + enemyFormation.Amount + " " + enemyFormation.EnemyPrefab.name + " Old pos: " + (centerdStartPosition.x + (distBetweenEnemies * enemyFormation.Amount - 1)) + " New pos:" + (centerdStartPosition.x + diff));
+            centerdStartPosition.x += diff + outOfBoundsOffset;
         }
-
-        formation = enemyFormation.FormationType;
 
         //Check which formation to spawn 'Amount' amount of enemies in.
         switch (formation)
@@ -37,25 +39,25 @@ public class EnemyWaveSpawner : MonoBehaviour
             case Enumerators.EnemyFormationTypes.HorizontalLine:
                 for (int n = 0; n < enemyFormation.Amount; n++)
                 {
-                    Instantiate(enemyFormation.EnemyPrefab, newStartPos + (new Vector2(distBetweenEnemies * n, 0)), Quaternion.identity);
+                    Instantiate(enemyFormation.EnemyPrefab, centerdStartPosition + new Vector2(distBetweenEnemies * n, 0), Quaternion.identity);
                 }
                 break;
             case Enumerators.EnemyFormationTypes.VerticalLine:
                 for (int n = 0; n < enemyFormation.Amount; n++)
                 {
-                    Instantiate(enemyFormation.EnemyPrefab, enemyFormation.EnemyPosition + new Vector2(0, halfAmount * n), Quaternion.identity);
+                    Instantiate(enemyFormation.EnemyPrefab, centerdStartPosition + new Vector2(0, distBetweenEnemies * n), Quaternion.identity);
                 }
                 break;
             case Enumerators.EnemyFormationTypes.RightDiagonal:
                 for (int n = 0; n < enemyFormation.Amount; n++)
                 {
-                    Instantiate(enemyFormation.EnemyPrefab, enemyFormation.EnemyPosition + new Vector2(halfAmount + n, halfAmount * n), Quaternion.identity);
+                    Instantiate(enemyFormation.EnemyPrefab, centerdStartPosition + new Vector2(distBetweenEnemies * n, distBetweenEnemies * n), Quaternion.identity);
                 }
                 break;
             case Enumerators.EnemyFormationTypes.LeftDiagonal:
                 for (int n = 0; n < enemyFormation.Amount; n++)
                 {
-                    Instantiate(enemyFormation.EnemyPrefab, enemyFormation.EnemyPosition + new Vector2(halfAmount - n, halfAmount * n), Quaternion.identity);
+                    Instantiate(enemyFormation.EnemyPrefab, centerdStartPosition + new Vector2(distBetweenEnemies * n, distBetweenEnemies * n), Quaternion.identity);
                 }
                 break;
             case Enumerators.EnemyFormationTypes.VFormation:
