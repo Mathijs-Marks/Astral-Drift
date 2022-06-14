@@ -6,90 +6,69 @@ using UnityEngine;
 public class LevelDifficultyManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] enemyPrefabs;
-    [SerializeField] private List<SpawnableEnemyFormation> enemyWaves = new List<SpawnableEnemyFormation>();
+    [SerializeField] public List<EnemyData> enemyDataList = new List<EnemyData>();
+    [SerializeField] private int amountOfEnemies;
 
     private EnemyWaveSpawner spawner;
     private float difficultyLevel = 10;
+    private int LastSpawnedIndex;
     private Vector2 previousPos;
 
+    
     void Start()
     {
         spawner = GetComponent<EnemyWaveSpawner>();
-        GenerateEnemyWave();
+        GenerateEnemies();
     }
     private void FixedUpdate()
     {
         if(GlobalReferenceManager.MainCamera.transform.position.y > previousPos.y)
         {
-            GenerateEnemyWave();
+            GenerateEnemies();
         }
     }
-    private void GenerateEnemyWave()
+    private void GenerateEnemies()
     {
-        for (int i= 0; i < Random.Range(1,4); i++) {
-            SpawnableEnemyFormation enemyFormation = new SpawnableEnemyFormation();
-            enemyWaves.Add(enemyFormation = new SpawnableEnemyFormation());
-
-            //Randomize the amount of enemies that will spawn
-            enemyFormation.Amount = Random.Range(1, 5);
+        //Creating random amount of datasets for formations
+        amountOfEnemies = Random.Range(1, 7);
+        for (int i = 0; i < amountOfEnemies; i++) {
+            //This is part of the inspector view list. can be removed later!
+            EnemyData newEnemyData;
+            enemyDataList.Add(newEnemyData = new EnemyData());
 
             //Randomize enemies and instantiate correct prefab per enemy
-            ChooseEnemyType(enemyFormation);
+            newEnemyData.EnemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
 
-            //Set formation type of enemy formation
-            enemyFormation.FormationType = Enumerators.GetRandomEnumValue<Enumerators.EnemyFormationTypes>();
+            //Randomize this enemies position within the screen bounds
+            newEnemyData.EnemyPosition = randomisePosition();
 
-            //Spawn formation above visible playing area with random offset
-            float positionOffset = Random.Range(1, GlobalReferenceManager.MainCamera.orthographicSize/1.3f);
-            float withinScreenRange = (GlobalReferenceManager.ScreenCollider.sizeX / 2) - 2;
-            enemyFormation.EnemyPosition = new Vector2(Random.Range(-withinScreenRange, withinScreenRange), GlobalReferenceManager.MainCamera.orthographicSize + GlobalReferenceManager.MainCamera.transform.position.y + positionOffset);
+            OverlapCheck(enemyDataList[i], i);
 
-            spawner.SpawnEnemyFormation(enemyFormation);
+            //Activate spawner with generated data
+            spawner.SpawnEnemy(newEnemyData);
         }
-        previousPos = enemyWaves[enemyWaves.Count - 1].EnemyPosition;
+        previousPos = enemyDataList[enemyDataList.Count - 1].EnemyPosition;
+        enemyDataList.Clear();
     }
-
-    //Randomize enemies and instantiate correct prefab per enemy
-    private void ChooseEnemyType(SpawnableEnemyFormation enemySection)
+    private void OverlapCheck(EnemyData enemyData, int currentCount)
     {
-        //Get random value within the enumerator
-        Enumerators.EnemyTypes enemyType;
-        enemyType = Enumerators.GetRandomEnumValue<Enumerators.EnemyTypes>();
-
-        switch (enemyType)
-        {
-            case Enumerators.EnemyTypes.nonShooting:
-                enemySection.EnemyPrefab = enemyPrefabs[0];
-                break;
-            case Enumerators.EnemyTypes.stationary:
-                enemySection.EnemyPrefab = enemyPrefabs[1];
-                break;
-            case Enumerators.EnemyTypes.rotating:
-                enemySection.EnemyPrefab = enemyPrefabs[2];
-                break;
-            case Enumerators.EnemyTypes.shotgun:
-                enemySection.EnemyPrefab = enemyPrefabs[3];
-                break;
-            case Enumerators.EnemyTypes.laser:
-                enemySection.EnemyPrefab = enemyPrefabs[4];
-                break;
-            case Enumerators.EnemyTypes.waveShot:
-                enemySection.EnemyPrefab = enemyPrefabs[5];
-                break;
-            case Enumerators.EnemyTypes.gatling:
-                enemySection.EnemyPrefab = enemyPrefabs[6];
-                break;
-            case Enumerators.EnemyTypes.homing:
-                enemySection.EnemyPrefab = enemyPrefabs[7];
-                break;
-            case Enumerators.EnemyTypes.bloom:
-                enemySection.EnemyPrefab = enemyPrefabs[8];
-                break;
-            case Enumerators.EnemyTypes.superBloom:
-                enemySection.EnemyPrefab = enemyPrefabs[9];
-                break;
+        for (int i = 0; i < currentCount; i++) {
+            if (Mathf.Abs(enemyData.EnemyPosition.x - enemyDataList[i].EnemyPosition.x) < 1 && Mathf.Abs(enemyData.EnemyPosition.y - enemyDataList[i].EnemyPosition.y) < 1)
+            {
+                enemyData.EnemyPosition = randomisePosition();
+                OverlapCheck(enemyData, currentCount);
+            }
         }
     }
+
+    public Vector2 randomisePosition()
+    {
+        //Set spawn position above visible playing area with random offset
+        float positionOffset = Random.Range(1, GlobalReferenceManager.MainCamera.orthographicSize / 1.3f);
+        float withinScreenRange = (GlobalReferenceManager.ScreenCollider.sizeX / 2) - 1;
+        return new Vector2(Random.Range(-withinScreenRange, withinScreenRange), GlobalReferenceManager.MainCamera.orthographicSize + GlobalReferenceManager.MainCamera.transform.position.y + positionOffset);
+    }
+
     /*
      * Step 1:
      * Generate formations with 1 type of enemy. This formation has to have points.
