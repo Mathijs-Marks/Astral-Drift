@@ -10,13 +10,11 @@ public class LevelDifficultyManager : MonoBehaviour
 
     private EnemyWaveSpawner spawner;
     private float difficultyLevel = 10;
-    private float screenAspect;
     private Vector2 previousPos;
 
     void Start()
     {
         spawner = GetComponent<EnemyWaveSpawner>();
-        screenAspect = (float)Screen.width / (float)Screen.height;
         GenerateEnemyWave();
     }
     private void FixedUpdate()
@@ -42,8 +40,9 @@ public class LevelDifficultyManager : MonoBehaviour
             enemyFormation.FormationType = Enumerators.GetRandomEnumValue<Enumerators.EnemyFormationTypes>();
 
             //Spawn formation above visible playing area with random offset
-            float positionOffset = Random.Range(1, GlobalReferenceManager.MainCamera.orthographicSize/1.5f);
-            enemyFormation.EnemyPosition = new Vector2(Random.Range(-screenAspect * GlobalReferenceManager.MainCamera.orthographicSize, screenAspect * GlobalReferenceManager.MainCamera.orthographicSize), GlobalReferenceManager.MainCamera.orthographicSize + GlobalReferenceManager.MainCamera.transform.position.y + positionOffset);
+            float positionOffset = Random.Range(1, GlobalReferenceManager.MainCamera.orthographicSize/1.3f);
+            float withinScreenRange = (GlobalReferenceManager.ScreenCollider.sizeX / 2) - 2;
+            enemyFormation.EnemyPosition = new Vector2(Random.Range(-withinScreenRange, withinScreenRange), GlobalReferenceManager.MainCamera.orthographicSize + GlobalReferenceManager.MainCamera.transform.position.y + positionOffset);
 
             spawner.SpawnEnemyFormation(enemyFormation);
         }
