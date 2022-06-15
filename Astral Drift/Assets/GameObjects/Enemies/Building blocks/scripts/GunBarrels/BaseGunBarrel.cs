@@ -27,12 +27,6 @@ public class BaseGunBarrel : MonoBehaviour
     protected void SpawnProjectile()
     {
         pool.SpawnFrompool(gunMuzzle.transform.position, gunMuzzle.transform.rotation);
-        //pool.AddBulletVariables(projectileDamage, projectileSpeed);
-
-        //Spawn a projectile
-    /*    BaseBullet bulletScript = Instantiate(projectilePrefab, Object.transform.position, Object.transform.rotation).GetComponent<BaseBullet>();
-
-        bulletScript.InitializeBullet(projectileDamage, projectileSpeed);*/
     }
 
     protected void Shoot()
