@@ -135,8 +135,9 @@ MonoBehaviour:
   - {fileID: 4985254694876412075}
   - {fileID: 84777225388008387}
   - {fileID: 1049742347764150748}
-  playerSpeed: 20
+  playerSpeed: 10
   yOffset: 0.2
+  distanceToTarget: 0.02
 --- !u!114 &6736147908785115002
 MonoBehaviour:
   m_ObjectHideFlags: 0
