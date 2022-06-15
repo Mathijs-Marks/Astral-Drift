@@ -538,6 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a03a9f3910f157409c7768e73e63617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  positionRerollMaxTries: 3
 --- !u!114 &2031535738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,6 +564,7 @@ MonoBehaviour:
   - {fileID: 7627395005229641507, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
   enemyDataList: []
   amountOfEnemies: 0
+  lastTopIndex: 0
 --- !u!114 &2115095090 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8604941382570098746, guid: e7227dbed1c226a46b3666dab23d8418, type: 3}

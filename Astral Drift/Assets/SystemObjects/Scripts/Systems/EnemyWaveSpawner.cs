@@ -3,9 +3,36 @@ using System.Collections.Generic;
 
 public class EnemyWaveSpawner : MonoBehaviour
 {
+    [SerializeField] private int positionRerollMaxTries;
+    private LevelDifficultyManager difficultyManager;
+    private int usedTries;
+
+    private void Start()
+    {
+        difficultyManager = GetComponent<LevelDifficultyManager>();
+    }
     public void SpawnEnemy(EnemyData enemyData)
     {
-        Instantiate(enemyData.EnemyPrefab, enemyData.EnemyPosition, Quaternion.identity);
+        usedTries = 0;
+        GameObject enemy = Instantiate(enemyData.EnemyPrefab, enemyData.EnemyPosition, Quaternion.identity);
+        OverlapCheck(enemy);
+    }
+    private void OverlapCheck(GameObject enemy)
+    {
+        if (usedTries <= positionRerollMaxTries)
+        {
+            for (int i = difficultyManager.lastTopIndex; i < difficultyManager.enemyDataList.Count; i++)
+            {
+                if (Mathf.Abs(enemy.transform.position.x - difficultyManager.enemyDataList[i].EnemyPosition.x) < 0.5f && Mathf.Abs(enemy.transform.position.y - difficultyManager.enemyDataList[i].EnemyPosition.y) < 0.5f)
+                {
+                    Debug.Log("overlap occured and attempted to rectify, original position: " + enemy.transform.position);
+                    enemy.transform.position = difficultyManager.randomisePosition();
+                    Debug.Log("new pos: " + enemy.transform.position);
+                    OverlapCheck(enemy);
+                }
+            }
+            usedTries++;
+        }
     }
 }
 

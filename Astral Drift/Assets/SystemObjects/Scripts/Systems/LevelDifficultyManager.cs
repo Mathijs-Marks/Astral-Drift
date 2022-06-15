@@ -10,11 +10,11 @@ public class LevelDifficultyManager : MonoBehaviour
     [SerializeField] private int amountOfEnemies;
 
     private EnemyWaveSpawner spawner;
-    private float difficultyLevel = 10;
-    private int LastSpawnedIndex;
+    private float difficultyLevel = 10, screenEdgeOffset = 0.25f;
     private Vector2 previousPos;
 
-    
+    public int lastTopIndex = 0;
+
     void Start()
     {
         spawner = GetComponent<EnemyWaveSpawner>();
@@ -42,32 +42,19 @@ public class LevelDifficultyManager : MonoBehaviour
             //Randomize this enemies position within the screen bounds
             newEnemyData.EnemyPosition = randomisePosition();
 
-            //Check enemy position if its overlapping with another enemy
-            OverlapCheck(enemyDataList[i], amountOfEnemies);
-
             //Activate spawner with generated data
             spawner.SpawnEnemy(newEnemyData);
         }
+        lastTopIndex = enemyDataList.Count;
         previousPos = enemyDataList[enemyDataList.Count - 1].EnemyPosition;
-    }
-    private void OverlapCheck(EnemyData enemyData, int amountOfEnemies)
-    {
-        for (int i = enemyDataList.Count; i < enemyDataList.Count; i++) {
-            if (Mathf.Abs(enemyData.EnemyPosition.x - enemyDataList[i].EnemyPosition.x) < 1 && Mathf.Abs(enemyData.EnemyPosition.y - enemyDataList[i].EnemyPosition.y) < 1)
-            {
-                Debug.Log("Checked position" + i + " enemyDataList Count: " + enemyDataList.Count);
-                Debug.Log("enemyDataList.Count - amountOfEnemies = " + (enemyDataList.Count - amountOfEnemies));
-                enemyData.EnemyPosition = randomisePosition();
-                //OverlapCheck(enemyData, amountOfEnemies);
-            }
-        }
     }
     public Vector2 randomisePosition()
     {
         //Set spawn position above visible playing area with random offset
-        float positionOffset = Random.Range(1, GlobalReferenceManager.MainCamera.orthographicSize / 1.3f);
-        float withinScreenRange = (GlobalReferenceManager.ScreenCollider.sizeX / 2) - 1;
-        return new Vector2(Random.Range(-withinScreenRange, withinScreenRange), GlobalReferenceManager.MainCamera.orthographicSize + GlobalReferenceManager.MainCamera.transform.position.y + positionOffset);
+        float positionOffset = Random.Range(1, GlobalReferenceManager.MainCamera.orthographicSize);
+        float withinScreenRange = (GlobalReferenceManager.ScreenCollider.sizeX / 2) - screenEdgeOffset;
+        Vector2 newPos = new Vector2(Random.Range(-withinScreenRange, withinScreenRange), GlobalReferenceManager.MainCamera.orthographicSize + GlobalReferenceManager.MainCamera.transform.position.y + positionOffset);
+        return newPos;
     }
 
     /*
