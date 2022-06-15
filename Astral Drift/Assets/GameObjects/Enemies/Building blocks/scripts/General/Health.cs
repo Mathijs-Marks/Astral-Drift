@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D), typeof(Death))]
+[RequireComponent(typeof(Collider2D), typeof(Death))]
 public class Health : MonoBehaviour
 {
     private Death deathScript;

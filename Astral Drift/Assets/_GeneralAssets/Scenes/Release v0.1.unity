@@ -5381,6 +5381,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6736147908785115002, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
+      propertyPath: maxHitpoints
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7102300387541548473, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
       propertyPath: m_RootOrder
       value: 2
