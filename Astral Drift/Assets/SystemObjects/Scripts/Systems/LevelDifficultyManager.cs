@@ -30,7 +30,7 @@ public class LevelDifficultyManager : MonoBehaviour
     private void GenerateEnemies()
     {
         //Creating random amount of datasets for formations
-        amountOfEnemies = Random.Range(1, 7);
+        amountOfEnemies = Random.Range(2, 7);
         for (int i = 0; i < amountOfEnemies; i++) {
             //This is part of the inspector view list. can be removed later!
             EnemyData newEnemyData;
@@ -42,25 +42,26 @@ public class LevelDifficultyManager : MonoBehaviour
             //Randomize this enemies position within the screen bounds
             newEnemyData.EnemyPosition = randomisePosition();
 
-            OverlapCheck(enemyDataList[i], i);
+            //Check enemy position if its overlapping with another enemy
+            OverlapCheck(enemyDataList[i], amountOfEnemies);
 
             //Activate spawner with generated data
             spawner.SpawnEnemy(newEnemyData);
         }
         previousPos = enemyDataList[enemyDataList.Count - 1].EnemyPosition;
-        enemyDataList.Clear();
     }
-    private void OverlapCheck(EnemyData enemyData, int currentCount)
+    private void OverlapCheck(EnemyData enemyData, int amountOfEnemies)
     {
-        for (int i = 0; i < currentCount; i++) {
+        for (int i = enemyDataList.Count; i < enemyDataList.Count; i++) {
             if (Mathf.Abs(enemyData.EnemyPosition.x - enemyDataList[i].EnemyPosition.x) < 1 && Mathf.Abs(enemyData.EnemyPosition.y - enemyDataList[i].EnemyPosition.y) < 1)
             {
+                Debug.Log("Checked position" + i + " enemyDataList Count: " + enemyDataList.Count);
+                Debug.Log("enemyDataList.Count - amountOfEnemies = " + (enemyDataList.Count - amountOfEnemies));
                 enemyData.EnemyPosition = randomisePosition();
-                OverlapCheck(enemyData, currentCount);
+                //OverlapCheck(enemyData, amountOfEnemies);
             }
         }
     }
-
     public Vector2 randomisePosition()
     {
         //Set spawn position above visible playing area with random offset
