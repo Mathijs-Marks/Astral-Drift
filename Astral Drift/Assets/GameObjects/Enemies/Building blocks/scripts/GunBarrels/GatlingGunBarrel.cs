@@ -16,8 +16,6 @@ public class GatlingGunBarrel : BaseGunBarrel
     protected override void Start()
     {
         base.Start();
-        if (shootOnStart)
-            elapsedTime = shootingRate;
     }
     void FixedUpdate()
     {
