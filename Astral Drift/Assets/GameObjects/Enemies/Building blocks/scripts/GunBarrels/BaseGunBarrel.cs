@@ -9,8 +9,9 @@ public class BaseGunBarrel : MonoBehaviour
     [SerializeField] protected float projectileSpeed = 2;
     [SerializeField] protected int projectileDamage = 30;
 
-    [SerializeField] protected bool shootOnStart = false;
+    [Header("Shooting offset timer is the starting timer for this barrel")]
     [SerializeField] protected float shootingRate = 1;
+    [SerializeField] protected float shootingOffsetTimer = 0;
     protected float elapsedTime;
 
     [HideInInspector] public bool allowedToShoot = false;
@@ -19,6 +20,8 @@ public class BaseGunBarrel : MonoBehaviour
     {
         pool = gameObject.GetComponent<SimplePool>();
         pool.AddBulletVariables(projectileDamage, projectileSpeed);
+
+        elapsedTime = shootingOffsetTimer;
     }
 
     protected void SpawnProjectile()
