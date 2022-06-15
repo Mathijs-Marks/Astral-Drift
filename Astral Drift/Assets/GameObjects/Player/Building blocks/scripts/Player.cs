@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     private Vector3 direction;
 
     private bool mousePointer;
+    [SerializeField] private float distanceToTarget;
 
     private void Awake()
     {
@@ -47,7 +48,7 @@ public class Player : MonoBehaviour
         direction = targetPosition - transform.position;
 
         // Check if the player is close enough to the desired position
-        if (direction.magnitude > playerSpeed * Time.deltaTime)
+        if (direction.magnitude > playerSpeed * distanceToTarget)
         {
             direction.Normalize();
             transform.Translate(direction * playerSpeed * Time.deltaTime);
