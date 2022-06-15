@@ -348,6 +348,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GatlingEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
 --- !u!4 &264509651 stripped
@@ -503,6 +511,14 @@ PrefabInstance:
     - target: {fileID: 5338237895189720306, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
       propertyPath: m_Name
       value: GatlingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
