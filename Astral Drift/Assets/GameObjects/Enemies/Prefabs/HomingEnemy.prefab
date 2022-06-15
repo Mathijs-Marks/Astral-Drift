@@ -214,6 +214,10 @@ PrefabInstance:
       propertyPath: projectileDamage
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4233305627472340547, guid: 0da87ce8ca69d6541b048fe6f27e5bb3, type: 3}
+      propertyPath: spawnItem
+      value: 
+      objectReference: {fileID: 5852864802511956268, guid: 5a5ef802d86948f4abf5ee6996414cf5, type: 3}
     - target: {fileID: 4420329806666677374, guid: 0da87ce8ca69d6541b048fe6f27e5bb3, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -412,6 +416,10 @@ PrefabInstance:
       propertyPath: projectileDamage
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4233305627472340547, guid: 0da87ce8ca69d6541b048fe6f27e5bb3, type: 3}
+      propertyPath: spawnItem
+      value: 
+      objectReference: {fileID: 5852864802511956268, guid: 5a5ef802d86948f4abf5ee6996414cf5, type: 3}
     - target: {fileID: 4420329806666677374, guid: 0da87ce8ca69d6541b048fe6f27e5bb3, type: 3}
       propertyPath: m_RootOrder
       value: 1

@@ -125,9 +125,9 @@ MonoBehaviour:
   - {fileID: 4985254694876412075}
   - {fileID: 84777225388008387}
   - {fileID: 1049742347764150748}
-  playerSpeed: 20
-  yOffset: 1.25
---- !u!114 &6736147908785115002
+  playerSpeed: 10
+  yOffset: 0.2
+  distanceToTarget: 0.02
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,10 +167,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 3137198962006310131, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 4233305627472340547, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: spawnItem
+      value: 
+      objectReference: {fileID: 5852864802511956268, guid: 2626d5132647da94d87df4c39d7924ba, type: 3}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -298,10 +298,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 3137198962006310131, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 4233305627472340547, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: spawnItem
+      value: 
+      objectReference: {fileID: 5852864802511956268, guid: 2626d5132647da94d87df4c39d7924ba, type: 3}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -437,10 +437,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 3137198962006310131, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 4233305627472340547, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: spawnItem
+      value: 
+      objectReference: {fileID: 5852864802511956268, guid: 2626d5132647da94d87df4c39d7924ba, type: 3}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_RootOrder
       value: 1

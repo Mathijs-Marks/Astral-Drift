@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6866067656519768474}
-  - component: {fileID: 9116817070831327947}
+  - component: {fileID: 5301993166386794672}
   - component: {fileID: 836653288199848174}
   - component: {fileID: -1528887453464897849}
   - component: {fileID: 3412770142190712084}
@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 6866067656519768486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6981830762696071551}
@@ -69,8 +69,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &9116817070831327947
-CircleCollider2D:
+--- !u!61 &5301993166386794672
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -83,8 +83,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!50 &836653288199848174
 Rigidbody2D:
   serializedVersion: 4
@@ -161,7 +171,11 @@ Transform:
   m_Children:
   - {fileID: 4770879656570661382}
   - {fileID: 3764743807964568067}
+<<<<<<< HEAD
+  - {fileID: 7953874588447526194}
+=======
   - {fileID: 8599637114011049276}
+>>>>>>> PoolingSystem
   m_Father: {fileID: 6866067656519768474}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: -180, z: 0}
@@ -186,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9dcdf798128cdf48ba529cba27f8412, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.191
+      value: 1.22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9dcdf798128cdf48ba529cba27f8412, type: 3}
       propertyPath: m_LocalPosition.z
@@ -260,7 +274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63ac5adece8a6394ba31338152bad36a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.021
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63ac5adece8a6394ba31338152bad36a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -437,7 +451,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
   m_PrefabInstance: {fileID: 7131238447780288251}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+--- !u!1001 &7632316823246383833
+=======
 --- !u!1001 &8129759396593515223
+>>>>>>> PoolingSystem
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -506,8 +524,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fbcf6a9aa78d084fb591a94ae953561, type: 3}
+<<<<<<< HEAD
+--- !u!4 &7953874588447526194 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9fbcf6a9aa78d084fb591a94ae953561, type: 3}
+  m_PrefabInstance: {fileID: 7632316823246383833}
+=======
 --- !u!4 &8599637114011049276 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9fbcf6a9aa78d084fb591a94ae953561, type: 3}
   m_PrefabInstance: {fileID: 8129759396593515223}
+>>>>>>> PoolingSystem
   m_PrefabAsset: {fileID: 0}
