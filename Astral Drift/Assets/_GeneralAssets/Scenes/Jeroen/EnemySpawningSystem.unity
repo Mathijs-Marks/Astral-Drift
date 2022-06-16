@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a03a9f3910f157409c7768e73e63617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionRerollMaxTries: 3
+  positionMaxRerolls: 0
 --- !u!114 &2031535738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,8 +562,13 @@ MonoBehaviour:
   - {fileID: 5428553020699001188, guid: dd7d8728a8d60f141936d17000cc2d00, type: 3}
   - {fileID: 6756227072614053337, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
   - {fileID: 7627395005229641507, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
-  enemyDataList: []
+  difficultyList: 
   amountOfEnemies: 0
+  difficultyLevel: 14
+  minAmountPercent: 0.25
+  maxAmountPercent: 0.25
+  difficultyIncrease: 0.1
+  enemyDataList: []
   lastTopIndex: 0
 --- !u!114 &2115095090 stripped
 MonoBehaviour:

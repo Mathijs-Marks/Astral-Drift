@@ -8,7 +8,7 @@ public class LevelDifficultyManager : MonoBehaviour
     [SerializeField] private GameObject[] enemyPrefabs;
     [SerializeField] private List<int> difficultyList;
     [SerializeField] private int amountOfEnemies;
-    [SerializeField] private float difficultyLevel = 10;
+    [SerializeField] private float difficultyLevel = 10, minAmountPercent = 0.25f, maxAmountPercent = 0.8f, difficultyIncrease = 0.1f;
 
     private EnemyWaveSpawner spawner;
     private float screenEdgeOffset = 0.25f;
@@ -32,12 +32,12 @@ public class LevelDifficultyManager : MonoBehaviour
         {
             GenerateEnemies();
         }
-        difficultyLevel += 0.1f * Time.deltaTime;
+        difficultyLevel += difficultyIncrease * Time.deltaTime;
     }
     private void GenerateEnemies()
     {
         //Creating random amount of datasets for formations
-        amountOfEnemies = (int)Random.Range(difficultyLevel / 4, difficultyLevel * 0.8f);
+        amountOfEnemies = (int)Random.Range(difficultyLevel * minAmountPercent, difficultyLevel * maxAmountPercent);
         int processedDifficultyLevel = (int)difficultyLevel - amountOfEnemies;
         for (int i = 0; i < amountOfEnemies; i++) {
             EnemyData newEnemyData;
@@ -73,16 +73,4 @@ public class LevelDifficultyManager : MonoBehaviour
         Vector2 newPos = new Vector2(Random.Range(-withinScreenRange, withinScreenRange), GlobalReferenceManager.MainCamera.orthographicSize + GlobalReferenceManager.MainCamera.transform.position.y + positionOffset);
         return newPos;
     }
-
-    /*
-     * Step 1:
-     * Generate formations with 1 type of enemy. This formation has to have points.
-     * These points are based on the enemy type and their amount. E.G. a standard enemy has 2 points, for a Vformation with 5 enemies, this is worth 10 points.
-     * Question: Do these formations have to be made at the start of the level? Are they premade? Or do we generate these on the fly?
-     * Step 2: 
-     * Assemble different formations
-     * Problem: need to get access to movement scripts
-     * list of sections with formations inside. Every formation has points. Pick random
-     * for loop per enemy type formation amount (5)  new SpawnableEnemyFormation(difficulty, ) Voeg deze allemaal toe aan de lijst
-    */
 }

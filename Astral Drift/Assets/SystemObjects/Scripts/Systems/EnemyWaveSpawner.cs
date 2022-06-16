@@ -83,5 +83,3 @@ switch (formation)
                 }
                 break;
         }*/
-//Debug.Log("Left wall collision: " + enemyFormation.Amount + " " + enemyFormation.EnemyPrefab.name + " Old pos: " + newStartPos.x + " New pos:" + (newStartPos.x - diff));
-//Debug.Log("Right wall collision: " + enemyFormation.Amount + " " + enemyFormation.EnemyPrefab.name + " Old pos: " + (newStartPos.x + (distBetweenEnemies * enemyFormation.Amount - 1)) + " New pos:" + (newStartPos.x + diff));
