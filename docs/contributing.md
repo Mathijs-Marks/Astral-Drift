@@ -4,9 +4,9 @@ Any team members contributing to the project, take heed of the following GIT wor
 ## Development
 ### Start working on a feature/bug
 When developing on a feature, bug, etc. One should create a feature branch off of the Development Branch.
-When naming the branch, prefix your branch name with either Feature or Bug (**Case sensitive!!!**), depending on what you're working on, followed with a /, then the name of your branch.
+When naming the branch, prefix your branch name with either feature or bug (**Case sensitive!!!**), depending on what you're working on, followed with a /, then the name of your branch.
 
-An example of a correct branc name looks like this: Feature/TheFeature
+An example of a correct branc name looks like this: feature/theFeature
 
 ### Merging back to Development
 When the feature/bug is finished, notify your team members so that they can Peer review your work.
