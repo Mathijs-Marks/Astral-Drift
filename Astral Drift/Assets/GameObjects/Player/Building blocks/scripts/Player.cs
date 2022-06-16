@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float playerSpeed;
     [SerializeField] private float yOffset = 0.5f; // Use this value to put the player a bit higher
 
-    private Vector3 targetPosition;
+    public Vector3 targetPosition;
     private Vector3 direction;
 
     private bool mousePointer;

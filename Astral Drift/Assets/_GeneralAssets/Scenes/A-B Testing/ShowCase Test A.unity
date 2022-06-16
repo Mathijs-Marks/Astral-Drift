@@ -178,6 +178,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GatlingEnemy (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
 --- !u!1001 &14897024
@@ -249,6 +257,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 486115612}
     m_Modifications:
+    - target: {fileID: 14135706639987533, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 307917390872203395, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 794692088904123013, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 825221272045732753, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067756341536748529, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614898483676129092, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329078912359742409, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558924494814618493, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930341606076824195, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020657516471429130, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686268962259752733, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775083740269814712, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647107053467796206, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7627395005229641507, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
       propertyPath: m_Name
       value: Bloom Enemy (16 barrels)
@@ -296,6 +356,18 @@ PrefabInstance:
     - target: {fileID: 7711543384139086748, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177331478040907960, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838067556439668765, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204428325907627239, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
@@ -602,6 +674,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shotgun Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3484937035142819445, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879193945915887079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931588202697996081, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601521562162678461, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: speed
       value: 1.5
@@ -609,6 +697,10 @@ PrefabInstance:
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: xDistToMove
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669212050064185136, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
@@ -899,6 +991,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1308293522}
     m_Modifications:
+    - target: {fileID: 14135706639987533, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 307917390872203395, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 794692088904123013, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 825221272045732753, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067756341536748529, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614898483676129092, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329078912359742409, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558924494814618493, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930341606076824195, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020657516471429130, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686268962259752733, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775083740269814712, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647107053467796206, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7627395005229641507, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
       propertyPath: m_Name
       value: Bloom Enemy (16 barrels)
@@ -946,6 +1090,18 @@ PrefabInstance:
     - target: {fileID: 7711543384139086748, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177331478040907960, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838067556439668765, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204428325907627239, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
@@ -1021,6 +1177,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1100238604}
     m_Modifications:
+    - target: {fileID: 24421166662178564, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 211207083800053034, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545279772500587286, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711244854135357345, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200535917666199819, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2788787175903208366, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954501089146045854, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596772363294842325, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888117706944439480, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6756227072614053337, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
       propertyPath: m_Name
       value: Bloom Enemy (12 barrels) (1)
@@ -1068,6 +1260,18 @@ PrefabInstance:
     - target: {fileID: 6854448087937261926, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177938541024945847, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430486959061737587, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893135026955890642, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
@@ -1126,6 +1330,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GatlingEnemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
 --- !u!4 &425052074 stripped
@@ -1178,6 +1390,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1706262098}
     m_Modifications:
+    - target: {fileID: 24421166662178564, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 211207083800053034, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545279772500587286, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711244854135357345, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200535917666199819, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2788787175903208366, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954501089146045854, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596772363294842325, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888117706944439480, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6756227072614053337, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
       propertyPath: m_Name
       value: Bloom Enemy (12 barrels) (1)
@@ -1225,6 +1473,18 @@ PrefabInstance:
     - target: {fileID: 6854448087937261926, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7177938541024945847, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430486959061737587, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893135026955890642, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
@@ -1283,6 +1543,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shotgun Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3484937035142819445, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879193945915887079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931588202697996081, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601521562162678461, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: speed
       value: 1.5
@@ -1299,6 +1575,10 @@ PrefabInstance:
       propertyPath: xDistToMove
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6669212050064185136, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
 --- !u!1001 &497764868
@@ -1308,6 +1588,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1917092756}
     m_Modifications:
+    - target: {fileID: 3625470964409570804, guid: dd7d8728a8d60f141936d17000cc2d00, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5428553020699001176, guid: dd7d8728a8d60f141936d17000cc2d00, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1356,6 +1640,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HomingEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5649399462701707973, guid: dd7d8728a8d60f141936d17000cc2d00, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd7d8728a8d60f141936d17000cc2d00, type: 3}
 --- !u!1001 &517931936
@@ -1365,6 +1653,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 486115612}
     m_Modifications:
+    - target: {fileID: 14135706639987533, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 307917390872203395, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 794692088904123013, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 825221272045732753, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067756341536748529, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614898483676129092, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329078912359742409, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558924494814618493, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930341606076824195, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020657516471429130, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686268962259752733, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775083740269814712, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647107053467796206, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7627395005229641507, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
       propertyPath: m_Name
       value: Bloom Enemy (16 barrels) (1)
@@ -1412,6 +1752,18 @@ PrefabInstance:
     - target: {fileID: 7711543384139086748, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177331478040907960, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838067556439668765, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204428325907627239, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
@@ -1700,6 +2052,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5351249744881324389, guid: 8fa37dfa6eaea734699163becd3118f4, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fa37dfa6eaea734699163becd3118f4, type: 3}
 --- !u!1001 &675935841
@@ -1709,6 +2065,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1706262098}
     m_Modifications:
+    - target: {fileID: 24421166662178564, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 211207083800053034, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545279772500587286, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711244854135357345, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200535917666199819, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2788787175903208366, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954501089146045854, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596772363294842325, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888117706944439480, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6756227072614053337, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
       propertyPath: m_Name
       value: Bloom Enemy (12 barrels)
@@ -1757,6 +2149,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7177938541024945847, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430486959061737587, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893135026955890642, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
 --- !u!1001 &685696481
@@ -1766,6 +2170,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1257751502}
     m_Modifications:
+    - target: {fileID: 372794855853260146, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974909546020324380, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5428553020699001176, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1813,6 +2225,14 @@ PrefabInstance:
     - target: {fileID: 5428553020699001188, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
       propertyPath: m_Name
       value: RotatingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735004485575650610, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799372889425806587, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
@@ -1876,6 +2296,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shotgun Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3484937035142819445, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879193945915887079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931588202697996081, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601521562162678461, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: speed
       value: 1.5
@@ -1892,6 +2328,10 @@ PrefabInstance:
       propertyPath: xDistToMove
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6669212050064185136, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
 --- !u!1001 &708550987
@@ -1901,6 +2341,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1706262098}
     m_Modifications:
+    - target: {fileID: 14135706639987533, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 307917390872203395, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 794692088904123013, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 825221272045732753, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067756341536748529, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614898483676129092, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329078912359742409, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558924494814618493, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930341606076824195, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020657516471429130, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686268962259752733, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775083740269814712, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647107053467796206, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7627395005229641507, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
       propertyPath: m_Name
       value: Bloom Enemy (16 barrels) (1)
@@ -1948,6 +2440,18 @@ PrefabInstance:
     - target: {fileID: 7711543384139086748, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177331478040907960, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838067556439668765, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204428325907627239, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
@@ -2262,6 +2766,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GatlingEnemy (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
 --- !u!1 &898172255
@@ -2462,6 +2974,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shotgun Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3484937035142819445, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879193945915887079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931588202697996081, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601521562162678461, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: speed
       value: 1.5
@@ -2481,6 +3009,10 @@ PrefabInstance:
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: yDistToMove
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669212050064185136, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
@@ -2538,6 +3070,14 @@ PrefabInstance:
     - target: {fileID: 5338237895189720306, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
       propertyPath: m_Name
       value: GatlingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
@@ -2727,6 +3267,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shotgun Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3484937035142819445, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879193945915887079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931588202697996081, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601521562162678461, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: speed
       value: 1.5
@@ -2747,8 +3303,28 @@ PrefabInstance:
       propertyPath: yDistToMove
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6669212050064185136, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+--- !u!114 &1078986068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8853292920511482668, guid: 69a9088e927d2d54c864898143f10829, type: 3}
+  m_PrefabInstance: {fileID: 6233368479132000416}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7660a3a499146604eb4698fef3d715d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!224 &1078986073 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1548219102140828378, guid: 69a9088e927d2d54c864898143f10829, type: 3}
+  m_PrefabInstance: {fileID: 6233368479132000416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1100238603
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,6 +3470,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1706262098}
     m_Modifications:
+    - target: {fileID: 14135706639987533, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 307917390872203395, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 794692088904123013, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 825221272045732753, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3067756341536748529, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3614898483676129092, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329078912359742409, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558924494814618493, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930341606076824195, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020657516471429130, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686268962259752733, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5775083740269814712, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647107053467796206, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7627395005229641507, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
       propertyPath: m_Name
       value: Bloom Enemy (16 barrels)
@@ -2941,6 +3569,18 @@ PrefabInstance:
     - target: {fileID: 7711543384139086748, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177331478040907960, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838067556439668765, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204428325907627239, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
@@ -3149,6 +3789,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shotgun Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3484937035142819445, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879193945915887079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931588202697996081, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601521562162678461, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: speed
       value: 1.5
@@ -3160,6 +3816,10 @@ PrefabInstance:
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: xDistToMove
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669212050064185136, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
@@ -3180,6 +3840,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1257751502}
     m_Modifications:
+    - target: {fileID: 372794855853260146, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974909546020324380, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5244057508167056393, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
       propertyPath: moveClockwise
       value: 0
@@ -3231,6 +3899,14 @@ PrefabInstance:
     - target: {fileID: 5428553020699001188, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
       propertyPath: m_Name
       value: RotatingEnemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735004485575650610, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799372889425806587, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
@@ -3293,6 +3969,14 @@ PrefabInstance:
     - target: {fileID: 5338237895189720306, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
       propertyPath: m_Name
       value: GatlingEnemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
@@ -3540,6 +4224,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1257751502}
     m_Modifications:
+    - target: {fileID: 372794855853260146, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974909546020324380, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5428553020699001176, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3587,6 +4279,14 @@ PrefabInstance:
     - target: {fileID: 5428553020699001188, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
       propertyPath: m_Name
       value: RotatingEnemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735004485575650610, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799372889425806587, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
@@ -3645,6 +4345,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shotgun Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3484937035142819445, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879193945915887079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931588202697996081, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601521562162678461, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: speed
       value: 1.5
@@ -3652,6 +4368,10 @@ PrefabInstance:
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: xDistToMove
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669212050064185136, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
@@ -3672,6 +4392,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1100238604}
     m_Modifications:
+    - target: {fileID: 24421166662178564, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 211207083800053034, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545279772500587286, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711244854135357345, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200535917666199819, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2788787175903208366, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954501089146045854, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4596772363294842325, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888117706944439480, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6756227072614053337, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
       propertyPath: m_Name
       value: Bloom Enemy (12 barrels)
@@ -3720,6 +4476,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7177938541024945847, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7430486959061737587, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893135026955890642, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
 --- !u!4 &1612867042 stripped
@@ -3742,6 +4510,10 @@ PrefabInstance:
     - target: {fileID: 3689026895867147410, guid: 4854f316be8f43d40811b0a5907f2e28, type: 3}
       propertyPath: m_Name
       value: Collision Bounds Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689026895867147410, guid: 4854f316be8f43d40811b0a5907f2e28, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3689026895867147413, guid: 4854f316be8f43d40811b0a5907f2e28, type: 3}
       propertyPath: m_RootOrder
@@ -3867,6 +4639,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1308293522}
     m_Modifications:
+    - target: {fileID: 372794855853260146, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974909546020324380, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5428553020699001176, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3914,6 +4694,14 @@ PrefabInstance:
     - target: {fileID: 5428553020699001188, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
       propertyPath: m_Name
       value: RotatingEnemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735004485575650610, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799372889425806587, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
@@ -4031,6 +4819,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1917092756}
     m_Modifications:
+    - target: {fileID: 3625470964409570804, guid: dd7d8728a8d60f141936d17000cc2d00, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5428553020699001176, guid: dd7d8728a8d60f141936d17000cc2d00, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4078,6 +4870,10 @@ PrefabInstance:
     - target: {fileID: 5428553020699001188, guid: dd7d8728a8d60f141936d17000cc2d00, type: 3}
       propertyPath: m_Name
       value: HomingEnemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649399462701707973, guid: dd7d8728a8d60f141936d17000cc2d00, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd7d8728a8d60f141936d17000cc2d00, type: 3}
@@ -4269,6 +5065,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shotgun Enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3484937035142819445, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879193945915887079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931588202697996081, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601521562162678461, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: speed
       value: 1.5
@@ -4288,6 +5100,10 @@ PrefabInstance:
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: yDistToMove
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6669212050064185136, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
@@ -4350,6 +5166,14 @@ PrefabInstance:
     - target: {fileID: 5338237895189720306, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
       propertyPath: m_Name
       value: GatlingEnemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
@@ -4932,6 +5756,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1308293522}
     m_Modifications:
+    - target: {fileID: 372794855853260146, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974909546020324380, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5244057508167056393, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
       propertyPath: moveClockwise
       value: 0
@@ -4983,6 +5815,14 @@ PrefabInstance:
     - target: {fileID: 5428553020699001188, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
       propertyPath: m_Name
       value: RotatingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735004485575650610, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799372889425806587, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
@@ -5197,6 +6037,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shotgun Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3484937035142819445, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879193945915887079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931588202697996081, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601521562162678461, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6652864645261908079, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
       propertyPath: speed
       value: 1.5
@@ -5217,8 +6073,145 @@ PrefabInstance:
       propertyPath: yDistToMove
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6669212050064185136, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ef36f6a98099842901a40f574c2ee0, type: 3}
+--- !u!1 &2056411313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2056411314}
+  - component: {fileID: 2056411317}
+  - component: {fileID: 2056411316}
+  - component: {fileID: 2056411315}
+  m_Layer: 5
+  m_Name: PauseButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2056411314
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056411313}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1078986073}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 30, y: -30}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2056411315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056411313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2056411316}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1078986068}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2056411316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056411313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ccf4a4e07d509c444985351e7a63da81, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2056411317
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056411313}
+  m_CullTransparentMesh: 1
 --- !u!1001 &2071364634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5273,6 +6266,14 @@ PrefabInstance:
     - target: {fileID: 5338237895189720306, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
       propertyPath: m_Name
       value: GatlingEnemy (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268037538115227391, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944306574055007589, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
+      propertyPath: shootingOffsetTimer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9af94fd8cddb4aa4ea47b2bd22889b84, type: 3}
@@ -5497,11 +6498,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7102300387541548474, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 0.60470617
       objectReference: {fileID: 0}
     - target: {fileID: 7102300387541548474, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 0.9648628
+      objectReference: {fileID: 0}
+    - target: {fileID: 7102300387541548474, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0043922067
+      objectReference: {fileID: 0}
+    - target: {fileID: 7102300387541548474, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.026352718
       objectReference: {fileID: 0}
     - target: {fileID: 7102300387541548478, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
       propertyPath: m_Name
@@ -5510,6 +6519,10 @@ PrefabInstance:
     - target: {fileID: 7102300387541548479, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
       propertyPath: yOffset
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7102300387541548479, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
+      propertyPath: playerSpeed
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 8207602547501677605, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
       propertyPath: m_IsActive
@@ -6236,6 +7249,14 @@ PrefabInstance:
       propertyPath: m_MatchWidthOrHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1548219102140828377, guid: 69a9088e927d2d54c864898143f10829, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1219985540}
+    - target: {fileID: 1548219102140828377, guid: 69a9088e927d2d54c864898143f10829, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1548219102140828378, guid: 69a9088e927d2d54c864898143f10829, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6324,6 +7345,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gameplay UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1548219103132635201, guid: 69a9088e927d2d54c864898143f10829, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1548219103132635202, guid: 69a9088e927d2d54c864898143f10829, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -6331,6 +7356,10 @@ PrefabInstance:
     - target: {fileID: 1548219103132635202, guid: 69a9088e927d2d54c864898143f10829, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548219103566233786, guid: 69a9088e927d2d54c864898143f10829, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1548219103566233787, guid: 69a9088e927d2d54c864898143f10829, type: 3}
       propertyPath: m_LocalScale.x
@@ -6343,6 +7372,22 @@ PrefabInstance:
     - target: {fileID: 1548219103566233787, guid: 69a9088e927d2d54c864898143f10829, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8828405763270234041, guid: 69a9088e927d2d54c864898143f10829, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1078986068}
+    - target: {fileID: 8828405763270234041, guid: 69a9088e927d2d54c864898143f10829, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 8828405763270234043, guid: 69a9088e927d2d54c864898143f10829, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853292920511482668, guid: 69a9088e927d2d54c864898143f10829, type: 3}
+      propertyPath: pauseOnRelease
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a9088e927d2d54c864898143f10829, type: 3}
