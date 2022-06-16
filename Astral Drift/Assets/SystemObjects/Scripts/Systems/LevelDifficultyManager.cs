@@ -6,7 +6,7 @@ using UnityEngine;
 public class LevelDifficultyManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] enemyPrefabs;
-    [SerializeField] public List<EnemyData> enemyDataList = new List<EnemyData>();
+    [SerializeField] private List<int> difficultyList;
     [SerializeField] private int amountOfEnemies;
     [SerializeField] private float difficultyLevel = 10;
 
@@ -14,11 +14,16 @@ public class LevelDifficultyManager : MonoBehaviour
     private float screenEdgeOffset = 0.25f;
     private Vector2 previousPos;
 
+    public List<EnemyData> enemyDataList = new List<EnemyData>();
     public int lastTopIndex = 0;
 
     void Start()
     {
         spawner = GetComponent<EnemyWaveSpawner>();
+        foreach(GameObject enemyPrefab in enemyPrefabs)
+        {
+            difficultyList.Add(enemyPrefab.GetComponent<EnemyDifficulty>().enemyDifficulty);
+        }
         GenerateEnemies();
     }
     private void FixedUpdate()
@@ -41,7 +46,7 @@ public class LevelDifficultyManager : MonoBehaviour
             enemyDataList.Add(newEnemyData = new EnemyData());
 
             //Pick random number for enemy prefab and subtract it from diff, if it cant anymore just spawn what is left from diff
-            int random = Random.Range(0, processedDifficultyLevel + 1);
+            int random = Random.Range(0, enemyPrefabs.Length);
             if (processedDifficultyLevel > random) {
                 processedDifficultyLevel -= random;
                 newEnemyData.EnemyPrefab = enemyPrefabs[random];

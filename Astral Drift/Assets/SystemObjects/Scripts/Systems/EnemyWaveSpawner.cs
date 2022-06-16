@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class EnemyWaveSpawner : MonoBehaviour
 {
-    [SerializeField] private int positionRerollMaxTries;
+    [SerializeField] private int positionMaxRerolls;
     private LevelDifficultyManager difficultyManager;
     private int usedTries;
 
@@ -19,7 +19,7 @@ public class EnemyWaveSpawner : MonoBehaviour
     }
     private void OverlapCheck(GameObject enemy)
     {
-        if (usedTries <= positionRerollMaxTries)
+        if (usedTries <= positionMaxRerolls)
         {
             for (int i = difficultyManager.lastTopIndex; i < difficultyManager.enemyDataList.Count; i++)
             {
