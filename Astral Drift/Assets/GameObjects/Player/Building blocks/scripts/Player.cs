@@ -55,12 +55,12 @@ public class Player : MonoBehaviour
 
     private void GetInput()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             targetPosition = new Vector3(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height), 0);
             GetTargetPositionWorldSpace();
         }
-        if (Input.touches.Length > 0)
+        if (Input.touches.Length > 0 && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
         {
             targetPosition = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, 0);
             GetTargetPositionWorldSpace();
