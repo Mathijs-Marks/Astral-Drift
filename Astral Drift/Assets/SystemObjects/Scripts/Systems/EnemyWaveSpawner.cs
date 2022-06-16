@@ -25,9 +25,7 @@ public class EnemyWaveSpawner : MonoBehaviour
             {
                 if (Mathf.Abs(enemy.transform.position.x - difficultyManager.enemyDataList[i].EnemyPosition.x) < 0.5f && Mathf.Abs(enemy.transform.position.y - difficultyManager.enemyDataList[i].EnemyPosition.y) < 0.5f)
                 {
-                    Debug.Log("overlap occured and attempted to rectify, original position: " + enemy.transform.position);
                     enemy.transform.position = difficultyManager.randomisePosition();
-                    Debug.Log("new pos: " + enemy.transform.position);
                     OverlapCheck(enemy);
                 }
             }
