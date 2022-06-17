@@ -433,7 +433,7 @@ PrefabInstance:
       objectReference: {fileID: 1219985540}
     - target: {fileID: 8604941382570098746, guid: e7227dbed1c226a46b3666dab23d8418, type: 3}
       propertyPath: moveSpeed
-      value: 0.008
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8604941382570098746, guid: e7227dbed1c226a46b3666dab23d8418, type: 3}
       propertyPath: cameraMovement
@@ -564,9 +564,9 @@ MonoBehaviour:
   - {fileID: 7627395005229641507, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
   difficultyList: 
   amountOfEnemies: 0
-  difficultyLevel: 14
-  minAmountPercent: 0.25
-  maxAmountPercent: 0.25
+  difficultyLevel: 10
+  minAmountPercent: 0.8
+  maxAmountPercent: 1
   difficultyIncrease: 0.1
   enemyDataList: []
   lastTopIndex: 0

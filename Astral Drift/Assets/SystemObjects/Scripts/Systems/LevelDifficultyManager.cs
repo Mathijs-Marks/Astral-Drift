@@ -8,7 +8,7 @@ public class LevelDifficultyManager : MonoBehaviour
     [SerializeField] private GameObject[] enemyPrefabs;
     [SerializeField] private List<int> difficultyList;
     [SerializeField] private int amountOfEnemies;
-    [SerializeField] private float difficultyLevel = 10, minAmountPercent = 0.25f, maxAmountPercent = 0.8f, difficultyIncrease = 0.1f;
+    [SerializeField] private float difficultyLevel = 10, minAmountPercent = 0.8f, maxAmountPercent = 1f, difficultyIncrease = 0.1f;
 
     private EnemyWaveSpawner spawner;
     private float screenEdgeOffset = 0.25f;
@@ -37,23 +37,30 @@ public class LevelDifficultyManager : MonoBehaviour
     private void GenerateEnemies()
     {
         //Creating random amount of datasets for formations
-        amountOfEnemies = (int)Random.Range(difficultyLevel * minAmountPercent, difficultyLevel * maxAmountPercent);
-        int processedDifficultyLevel = (int)difficultyLevel - amountOfEnemies;
-        for (int i = 0; i < amountOfEnemies; i++) {
+        int spendableDifficultyLevel = (int)Random.Range(difficultyLevel * minAmountPercent, difficultyLevel * maxAmountPercent);
+        while (spendableDifficultyLevel > 0) {
             EnemyData newEnemyData;
-
-            //This is part of the inspector view list. can be removed later!
+            //This is part of the inspector view list.
             enemyDataList.Add(newEnemyData = new EnemyData());
 
             //Pick random number for enemy prefab and subtract it from diff, if it cant anymore just spawn what is left from diff
-            int random = Random.Range(0, enemyPrefabs.Length);
-            if (processedDifficultyLevel > random) {
-                processedDifficultyLevel -= random;
-                newEnemyData.EnemyPrefab = enemyPrefabs[random];
+            int randomEnemy = Random.Range(0, enemyPrefabs.Length);
+            if (spendableDifficultyLevel >= difficultyList[randomEnemy]) {
+                spendableDifficultyLevel -= difficultyList[randomEnemy];
+                newEnemyData.EnemyPrefab = enemyPrefabs[randomEnemy];
             } else
             {
-                newEnemyData.EnemyPrefab = enemyPrefabs[processedDifficultyLevel];
-                processedDifficultyLevel = 0;
+                int newMaxRandomEnemy = Random.Range(0, spendableDifficultyLevel + 1);
+                if (spendableDifficultyLevel >= difficultyList[newMaxRandomEnemy])
+                {
+                    spendableDifficultyLevel -= difficultyList[newMaxRandomEnemy];
+                    newEnemyData.EnemyPrefab = enemyPrefabs[newMaxRandomEnemy];
+                }
+                else
+                {
+                    spendableDifficultyLevel -= difficultyList[0];
+                    newEnemyData.EnemyPrefab = enemyPrefabs[0];
+                }
             }
 
             //Randomize this enemies position within the screen bounds
