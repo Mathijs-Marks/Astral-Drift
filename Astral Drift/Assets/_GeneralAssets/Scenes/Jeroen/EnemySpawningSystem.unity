@@ -538,7 +538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a03a9f3910f157409c7768e73e63617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positionMaxRerolls: 0
+  maxEnemyCollisionRange: 1
+  enemies: []
 --- !u!114 &2031535738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,7 +565,7 @@ MonoBehaviour:
   - {fileID: 7627395005229641507, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
   difficultyList: 
   amountOfEnemies: 0
-  difficultyLevel: 10
+  difficultyLevel: 14
   minAmountPercent: 0.8
   maxAmountPercent: 1
   difficultyIncrease: 0.1

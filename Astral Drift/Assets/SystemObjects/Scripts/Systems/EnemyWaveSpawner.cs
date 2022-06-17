@@ -3,53 +3,65 @@ using System.Collections.Generic;
 
 public class EnemyWaveSpawner : MonoBehaviour
 {
-    [SerializeField] private int positionMaxRerolls;
+    [SerializeField] private float maxEnemyCollisionRange;
+    [SerializeField] private List<GameObject> enemies;
     private LevelDifficultyManager difficultyManager;
-    private int usedTries;
 
     private void Start()
     {
         difficultyManager = GetComponent<LevelDifficultyManager>();
+        enemies = new List<GameObject>();
     }
     public void SpawnEnemy(EnemyData enemyData)
     {
-        usedTries = 0;
         GameObject enemy = Instantiate(enemyData.EnemyPrefab, enemyData.EnemyPosition, Quaternion.identity);
-        OverlapCheck(enemy);
+        enemies.Add(enemy);
     }
-    private void OverlapCheck(GameObject enemy)
+    public void OverlapCheck()
     {
-        if (usedTries <= positionMaxRerolls)
-        {
-            for (int i = difficultyManager.lastTopIndex; i < difficultyManager.enemyDataList.Count; i++)
+        for (int a = difficultyManager.lastTopIndex; a < difficultyManager.enemyDataList.Count; a++)
+        {   
+            for (int b = difficultyManager.lastTopIndex; b < difficultyManager.enemyDataList.Count; b++)
             {
-                if (Mathf.Abs(enemy.transform.position.x - difficultyManager.enemyDataList[i].EnemyPosition.x) < 0.5f && Mathf.Abs(enemy.transform.position.y - difficultyManager.enemyDataList[i].EnemyPosition.y) < 0.5f)
+
+                if (Mathf.Abs(enemies[a].transform.position.x - enemies[b].transform.position.x) < maxEnemyCollisionRange && Mathf.Abs(enemies[a].transform.position.y - enemies[b].transform.position.y) < maxEnemyCollisionRange)
                 {
-                    enemy.transform.position = difficultyManager.randomisePosition();
-                    OverlapCheck(enemy);
+                    Vector2 direction = (enemies[b].transform.position - enemies[a].transform.position).normalized;
+                    direction *= maxEnemyCollisionRange;
+                    enemies[a].transform.position -= new Vector3(direction.x, direction.y, 0);
+                    outOfBoundsCheck(enemies[a]);
                 }
             }
-            usedTries++;
         }
     }
-}
-
-/*private void outOfBoundsCheck()
-{
-    for (int i = 1; i < spawnedEnemies.Count; i++)
+    private void outOfBoundsCheck(GameObject enemy)
     {
-        bool isOutofBounds = spawnedEnemies[i].transform.position.x < -halfScreenX || spawnedEnemies[i].transform.position.x > halfScreenX;
+        float halfScreenX = GlobalReferenceManager.ScreenCollider.sizeX / 2;
 
-        if (isOutofBounds)
+        if (enemy.transform.position.x < -halfScreenX)
         {
-            float withinScreenRange = (GlobalReferenceManager.ScreenCollider.sizeX / 2) - 1;
-            Debug.Log(spawnedEnemies[i].name + " is out of bounds");
-            Vector2 newPos = new Vector2(Random.Range(-withinScreenRange, withinScreenRange), spawnedEnemies[Random.Range(0, )].transform.position.y + distBetweenEnemies);
-            spawnedEnemies[i].transform.position = newPos;
+            Debug.Log("Out of bounds: Left");
+            float distOutOfBounds = enemy.transform.position.x + halfScreenX;
+            Vector2 newPos = new Vector2((distOutOfBounds * -1) + enemy.transform.localScale.x / 2, 0);
+            enemy.transform.position += (Vector3)newPos;
+        }else if (enemy.transform.position.x > halfScreenX)
+        {
+            Debug.Log("Out of bounds: Right");
+            float distOutOfBounds = halfScreenX - enemy.transform.position.x;
+            Vector2 newPos = new Vector2(distOutOfBounds - enemy.transform.localScale.x / 2, 0);
+            enemy.transform.position += (Vector3)newPos;
         }
+
+        /*for (int a = difficultyManager.lastTopIndex; a < difficultyManager.enemyDataList.Count; a++)
+        {
+            if (Mathf.Abs(enemy.transform.position.x - enemies[a].transform.position.x) < maxEnemyCollisionRange && Mathf.Abs(enemy.transform.position.y - enemies[a].transform.position.y) < maxEnemyCollisionRange)
+            {
+            }
+        }*/
     }
 }
-    
+
+/*
 switch (formation)
         {
             case Enumerators.EnemyFormationTypes.HorizontalLine:

@@ -69,13 +69,14 @@ public class LevelDifficultyManager : MonoBehaviour
             //Activate spawner with generated data
             spawner.SpawnEnemy(newEnemyData);
         }
+        spawner.OverlapCheck();
         lastTopIndex = enemyDataList.Count;
         previousPos = enemyDataList[enemyDataList.Count - 1].EnemyPosition;
     }
     public Vector2 randomisePosition()
     {
         //Set spawn position above visible playing area with random offset
-        float positionOffset = Random.Range(1, GlobalReferenceManager.MainCamera.orthographicSize);
+        float positionOffset = Random.Range(1, GlobalReferenceManager.MainCamera.orthographicSize * 2);
         float withinScreenRange = (GlobalReferenceManager.ScreenCollider.sizeX / 2) - screenEdgeOffset;
         Vector2 newPos = new Vector2(Random.Range(-withinScreenRange, withinScreenRange), GlobalReferenceManager.MainCamera.orthographicSize + GlobalReferenceManager.MainCamera.transform.position.y + positionOffset);
         return newPos;
