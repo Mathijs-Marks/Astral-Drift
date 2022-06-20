@@ -6,16 +6,15 @@ using UnityEngine;
 public class LevelDifficultyManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] enemyPrefabs;
-    [SerializeField] private List<int> difficultyList;
-    [SerializeField] private int amountOfEnemies;
     [SerializeField] private float difficultyLevel = 10, minAmountPercent = 0.8f, maxAmountPercent = 1f, difficultyIncrease = 0.1f;
 
+    [HideInInspector] public int lastTopIndex = 0;
+    [HideInInspector] public List<EnemyData> enemyDataList = new List<EnemyData>();
+
+    private List<int> difficultyList;
     private EnemyWaveSpawner spawner;
     private float screenEdgeOffset = 0.25f;
     private Vector2 previousPos;
-
-    public List<EnemyData> enemyDataList = new List<EnemyData>();
-    public int lastTopIndex = 0;
 
     void Start()
     {
@@ -43,7 +42,10 @@ public class LevelDifficultyManager : MonoBehaviour
             //This is part of the inspector view list.
             enemyDataList.Add(newEnemyData = new EnemyData());
 
-            //Pick random number for enemy prefab and subtract it from diff, if it cant anymore just spawn what is left from diff
+            //Pick random number for enemy prefab
+            //subtract difficulty value of random enemy from spendableDifficultyLevel,
+            //If it cant subtract that amount pick a new random that IS within cost range
+            //If it doesnt have any points left just spawn the lowest cost enemies
             int randomEnemy = Random.Range(0, enemyPrefabs.Length);
             if (spendableDifficultyLevel >= difficultyList[randomEnemy]) {
                 spendableDifficultyLevel -= difficultyList[randomEnemy];
