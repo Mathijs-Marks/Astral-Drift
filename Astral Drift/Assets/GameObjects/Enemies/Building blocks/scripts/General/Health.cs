@@ -1,9 +1,12 @@
 
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider2D), typeof(Death))]
 public class Health : MonoBehaviour
 {
+    [SerializeField] private UnityEvent flashOnHit;
+
     private Death deathScript;
 
     protected int currentHitpoints;
@@ -20,6 +23,7 @@ public class Health : MonoBehaviour
     public void OnDamage(int damage)
     {
         TakeDamage(damage);
+        flashOnHit.Invoke();
     }
 
     public virtual void TakeDamage(int damage)
