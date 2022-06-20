@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class HealthBarPlayer : MonoBehaviour
+public class healthBarUI : MonoBehaviour
 {
+    [SerializeField] private Health healthScript;
+
     [SerializeField] private GameObject fullBar, mask;
     [Tooltip("Edit this value to the current size of the sprite. (in canvas this is the width and height)")]
     [SerializeField] private float spriteSize = 686;
@@ -11,14 +14,15 @@ public class HealthBarPlayer : MonoBehaviour
     private int percentage;
     
     private float amount;
+    
     private void Start()
     {
-        GlobalReferenceManager.PlayerHealthScript.PlayerOnHitEvent.AddListener(UpdateHealthBar);
+        healthScript.OnHitEvent.AddListener(UpdateHealthBar);
     }
 
     private void UpdateHealthBar()
     {
-        percentage = GlobalReferenceManager.PlayerHealthScript.CurrentHitpoints;
+        percentage = healthScript.CurrentHitpoints;
 
         amount = (100 - percentage) * spriteSize / 100;
 
