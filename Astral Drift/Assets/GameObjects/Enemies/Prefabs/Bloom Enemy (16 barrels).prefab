@@ -2640,6 +2640,7 @@ GameObject:
   - component: {fileID: 4403804402354669712}
   - component: {fileID: 7375867362177796314}
   - component: {fileID: 8552948871987064147}
+  - component: {fileID: 356358097961000041}
   m_Layer: 7
   m_Name: Bloom Enemy (16 barrels)
   m_TagString: Enemy
@@ -2775,6 +2776,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4deb963c2c2b2cb4695c1a2efa789f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &356358097961000041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7627395005229641507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d9a4cf18563064186890fbf235949d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDifficulty: 10
 --- !u!1 &7811188378410301548
 GameObject:
   m_ObjectHideFlags: 0

@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 5244057508167056393}
   - component: {fileID: 1154412521085783860}
   - component: {fileID: 3913568545375247859}
+  - component: {fileID: -3582335617859303048}
   m_Layer: 7
   m_Name: RotatingEnemy
   m_TagString: Enemy

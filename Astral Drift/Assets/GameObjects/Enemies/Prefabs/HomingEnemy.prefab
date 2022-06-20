@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 5244057508167056393}
   - component: {fileID: 1175291473141940176}
   - component: {fileID: 3913568545375247859}
+  - component: {fileID: 8252364682247751177}
   m_Layer: 7
   m_Name: HomingEnemy
   m_TagString: Enemy
@@ -147,6 +148,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4deb963c2c2b2cb4695c1a2efa789f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8252364682247751177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5428553020699001188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d9a4cf18563064186890fbf235949d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDifficulty: 8
 --- !u!1 &6050561914349563612
 GameObject:
   m_ObjectHideFlags: 0
