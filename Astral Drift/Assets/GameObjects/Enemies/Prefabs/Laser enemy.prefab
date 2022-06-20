@@ -253,6 +253,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6784118991386274683, guid: 7018f1408912b2a479af3883e525e033, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1042981995376777410, guid: 7018f1408912b2a479af3883e525e033, type: 3}
     - {fileID: 1317968105429259789, guid: 7018f1408912b2a479af3883e525e033, type: 3}
@@ -352,21 +356,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8429408112190898621}
     m_Modifications:
-    - target: {fileID: 837063946097492612, guid: 7018f1408912b2a479af3883e525e033, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 4715358983272762758, guid: 7018f1408912b2a479af3883e525e033, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4715358983272762758, guid: 7018f1408912b2a479af3883e525e033, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.10000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 4715358983272762758, guid: 7018f1408912b2a479af3883e525e033, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.40000015
       objectReference: {fileID: 0}
     - target: {fileID: 4715358983272762758, guid: 7018f1408912b2a479af3883e525e033, type: 3}
       propertyPath: m_LocalPosition.x
@@ -408,23 +400,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 40
       objectReference: {fileID: 0}
-    - target: {fileID: 6265907342931704467, guid: 7018f1408912b2a479af3883e525e033, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 6314584736950357259, guid: 7018f1408912b2a479af3883e525e033, type: 3}
       propertyPath: m_Name
       value: Laser Gun Barrel
       objectReference: {fileID: 0}
-    - target: {fileID: 6314584736950357259, guid: 7018f1408912b2a479af3883e525e033, type: 3}
+    - target: {fileID: 6784118991386274683, guid: 7018f1408912b2a479af3883e525e033, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1042981995376777410, guid: 7018f1408912b2a479af3883e525e033, type: 3}
-    - {fileID: 1088291162506464452, guid: 7018f1408912b2a479af3883e525e033, type: 3}
-    - {fileID: 1317968105429259789, guid: 7018f1408912b2a479af3883e525e033, type: 3}
-    - {fileID: 1673223142464151761, guid: 7018f1408912b2a479af3883e525e033, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7018f1408912b2a479af3883e525e033, type: 3}
 --- !u!4 &4169589730050881492 stripped
 Transform:

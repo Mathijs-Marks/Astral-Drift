@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    protected int damage;
+    [SerializeField] protected int damage;
     public int readDamage { get { return damage; } }
 }

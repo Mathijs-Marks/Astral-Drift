@@ -45,7 +45,10 @@ public class Health : MonoBehaviour
     {
         deathScript.DeathEvent.Invoke();
     }
-
+    protected void LaserCollision(int damage)
+    {
+        OnDamage(damage);
+    }
     protected void BulletCollision(int damage, GameObject bullet)
     {
         OnDamage(damage);
@@ -64,6 +67,8 @@ public class Health : MonoBehaviour
                 BulletCollision(standardBullet.readDamage, collision.gameObject);
             else if (collision.gameObject.TryGetComponent(out HomingBullet homingBullet))
                 BulletCollision(homingBullet.readDamage, collision.gameObject);
+            else if (collision.gameObject.TryGetComponent(out Laser laser))
+                LaserCollision(laser.readDamage);
         }
         else if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerBullet"))
         {
