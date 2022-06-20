@@ -18,8 +18,6 @@ public class FlashOnHit : MonoBehaviour
         timer = 0;
         material = GetComponent<Renderer>().material;
         modelTexture = (Texture2D)material.GetTexture("_MainTex");
-
-        Flash();
     }
 
     public void FixedUpdate()
