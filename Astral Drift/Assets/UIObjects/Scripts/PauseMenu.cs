@@ -8,10 +8,11 @@ public class PauseMenu : MonoBehaviour
 {
     public bool GamePaused
     {
-        get { return gamePaused;}
+        get { return gamePaused; }
         set { gamePaused = value; }
     }
-
+    [SerializeField] private bool pauseOnRelease;
+    private bool released;
     public static bool gamePaused;
     public GameObject pauseMenuUI;
 
@@ -25,16 +26,45 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GlobalReferenceManager.GameOverMenu.gameEnd)
+        if (pauseOnRelease)
         {
-            if (Input.GetMouseButtonUp(0) && !GamePaused)
+            if (!GlobalReferenceManager.GameOverMenu.gameEnd)
             {
-                Pause();
+                if (Input.GetMouseButtonUp(0) && !GamePaused)
+                {
+                    Pause();
+                }
+                else if (Input.GetMouseButtonDown(0) && GamePaused)
+                {
+                    Resume();
+                }
             }
-            else if (Input.GetMouseButtonDown(0) && GamePaused)
+        }
+        else
+        {
+            if (!GlobalReferenceManager.GameOverMenu.gameEnd)
             {
-                Resume();
+                if (!GamePaused)
+                {
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        Time.timeScale = 0.5f;
+                        released = true;
+                    }
+                    else if (Input.GetMouseButtonDown(0))
+                    {
+                        Time.timeScale = 1f;
+                        released = false;
+                    }
+                }
             }
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (released)
+        {
+            GlobalReferenceManager.PlayerScript.targetPosition += new Vector3(0, GlobalReferenceManager.background.moveSpeed, 0);
         }
     }
 

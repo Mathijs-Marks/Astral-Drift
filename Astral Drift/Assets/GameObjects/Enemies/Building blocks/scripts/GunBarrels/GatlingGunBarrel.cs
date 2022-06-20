@@ -13,10 +13,9 @@ public class GatlingGunBarrel : BaseGunBarrel
     [SerializeField] private UnityEvent isShootingEvent;
     [SerializeField] private UnityEvent isNotShootingEvent;
 
-    private void Start()
+    protected override void Start()
     {
-        if (shootOnStart)
-            elapsedTime = shootingRate;
+        base.Start();
     }
     void FixedUpdate()
     {

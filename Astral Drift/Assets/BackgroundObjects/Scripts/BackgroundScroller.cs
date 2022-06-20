@@ -29,7 +29,10 @@ public class BackgroundScroller : MonoBehaviour
 
     public float moveSpeed = 1;
     public static Vector2 viewerPosition;
-
+    private void Awake()
+    {
+        GlobalReferenceManager.background = this;
+    }
     void Start()
     {
         scrolledTiles = tileList.Length-1;
