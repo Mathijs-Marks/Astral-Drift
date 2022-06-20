@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Image))]
+//[RequireComponent(typeof(Image))]
 public class PlayerDamageIndicator : MonoBehaviour
 {
     [SerializeField] float alphaSpeed;
@@ -13,11 +13,12 @@ public class PlayerDamageIndicator : MonoBehaviour
         indicator = GetComponent<Image>();
         alphaSpeed /= 255;
         GlobalReferenceManager.PlayerHealthScript.PlayerOnHitEvent.AddListener(ShowIdicator);
+        indicator.color = new Color(indicator.color.r, indicator.color.g, indicator.color.b, 1);
     }
     private void ShowIdicator()
     {
-        FadeIn();
-        FadeOut();
+       // FadeIn();
+       // FadeOut();
     }
     private void FadeIn()
     {
