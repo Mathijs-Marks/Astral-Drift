@@ -82,8 +82,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 1947949542661096199}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 2.5
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &1240543722604930270
 MonoBehaviour:
@@ -180,8 +180,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 4438001430224240140}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 2.5
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &2651633168756261682
 MonoBehaviour:
@@ -310,8 +310,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 3496405587726370383}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 2.5
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &8148504567837427027
 MonoBehaviour:
@@ -535,8 +535,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 2064735977440879879}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 2.5
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &3371419082733899764
 MonoBehaviour:
@@ -633,8 +633,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 707412237486006751}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 2.5
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &3029483842308809775
 MonoBehaviour:
@@ -732,8 +732,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 5930741995625607878}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 2.5
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &1422800955652519544
 MonoBehaviour:
@@ -1093,8 +1093,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 5566895318892663029}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 2.5
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &2130854090284618322
 MonoBehaviour:
@@ -1160,8 +1160,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 7910332451048461237}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 2.5
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &7612918052211603270
 MonoBehaviour:
@@ -1273,6 +1273,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flashOnHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2665593299943467060}
+        m_TargetAssemblyTypeName: FlashOnHit, Assembly-CSharp
+        m_MethodName: Flash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   maxHitpoints: 600
 --- !u!114 &5097404033257876054
 MonoBehaviour:
@@ -1336,8 +1351,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 4957686180664661567}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 2.5
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &6036925425517247254
 MonoBehaviour:
@@ -1403,8 +1418,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 2350585168988792289}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 2.5
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &3045177971529695470
 MonoBehaviour:
@@ -1533,8 +1548,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 8655293613410350027}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 2.5
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &3304128779250641742
 MonoBehaviour:
@@ -1695,8 +1710,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 5586613820284242668}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 2.5
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &6203024583017628094
 MonoBehaviour:
@@ -1814,6 +1829,25 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8541830958518339076, guid: 38eb5df97b5f781499522faf896ed855, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38eb5df97b5f781499522faf896ed855, type: 3}
+--- !u!1 &8367561796127962789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3568770686382826839, guid: 38eb5df97b5f781499522faf896ed855, type: 3}
+  m_PrefabInstance: {fileID: 5015144221988541426}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2665593299943467060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8367561796127962789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35883d0e7c6a6140a79857fd7560e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashTexture: {fileID: 2800000, guid: ee24da3c9c95dbe42b5dc700c0d6fb04, type: 3}
+  flashTime: 0.05
 --- !u!4 &9175061361370491935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4237045759701991405, guid: 38eb5df97b5f781499522faf896ed855, type: 3}

@@ -161,6 +161,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flashOnHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1734691610298926846}
+        m_TargetAssemblyTypeName: FlashOnHit, Assembly-CSharp
+        m_MethodName: Flash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   maxHitpoints: 900
 --- !u!114 &3913568545375247859
 MonoBehaviour:
@@ -345,6 +360,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2a321525e6ec6e54e960d3abd18af0aa, type: 3}
   m_PrefabInstance: {fileID: 6946146824550320961}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7828595829828662800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a321525e6ec6e54e960d3abd18af0aa, type: 3}
+  m_PrefabInstance: {fileID: 6946146824550320961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1734691610298926846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7828595829828662800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35883d0e7c6a6140a79857fd7560e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashTexture: {fileID: 2800000, guid: ee24da3c9c95dbe42b5dc700c0d6fb04, type: 3}
+  flashTime: 0.05
 --- !u!1001 &8695617208990513746
 PrefabInstance:
   m_ObjectHideFlags: 0

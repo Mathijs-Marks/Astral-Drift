@@ -10,7 +10,7 @@ public class FlashOnHit : MonoBehaviour
     private Texture2D modelTexture;
     [SerializeField] private Texture2D flashTexture;
 
-    [SerializeField] private float flashTime = 0.1f;
+    [SerializeField] private float flashTime = 0.05f;
     private float timer;
 
     private void Start()
