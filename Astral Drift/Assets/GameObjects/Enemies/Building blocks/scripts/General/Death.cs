@@ -7,6 +7,8 @@ public class Death : MonoBehaviour
 {
     protected UnityEvent deathEvent;
 
+    [SerializeField] private GameObject explosionPrefab;
+
     public UnityEvent DeathEvent
     {
         get { return deathEvent; }
@@ -22,5 +24,10 @@ public class Death : MonoBehaviour
     protected virtual void KillObject()
     {
         gameObject.SetActive(false);
+
+        if (explosionPrefab != null)
+        {
+            Instantiate(explosionPrefab, transform.position, transform.rotation);
+        }
     }
 }

@@ -228,8 +228,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 4251646817684571074}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &1319954224125614653
 MonoBehaviour:
@@ -347,8 +347,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 2651426639678697431}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &1898981076074533891
 MonoBehaviour:
@@ -497,8 +497,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 4315263133428327368}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &6679387380707271108
 MonoBehaviour:
@@ -647,8 +647,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 17231242877443772}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &8101997516561451207
 MonoBehaviour:
@@ -766,8 +766,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 5859938333648078160}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &2429971109579957778
 MonoBehaviour:
@@ -949,8 +949,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 436093539331725450}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &8497897322393167335
 MonoBehaviour:
@@ -1162,8 +1162,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 7606136294453246897}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &1010687791591734498
 MonoBehaviour:
@@ -1374,8 +1374,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 3392198054126262781}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &6735460865259482356
 MonoBehaviour:
@@ -1525,8 +1525,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 6904605648913258816}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &2727574459384424167
 MonoBehaviour:
@@ -1865,8 +1865,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 6274110264128121985}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &8491490598512202769
 MonoBehaviour:
@@ -2015,8 +2015,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 3601286649896789544}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &6340454968101989690
 MonoBehaviour:
@@ -2197,8 +2197,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 3575361530084794096}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &4540589859233766615
 MonoBehaviour:
@@ -2316,8 +2316,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 1027772751269065323}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &487247570607152422
 MonoBehaviour:
@@ -2577,8 +2577,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 6388511080841939905}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &1696751689087915989
 MonoBehaviour:
@@ -2776,6 +2776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4deb963c2c2b2cb4695c1a2efa789f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
 --- !u!114 &356358097961000041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2955,8 +2956,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 876683797174229733}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &751739356486961999
 MonoBehaviour:
@@ -3074,8 +3075,8 @@ MonoBehaviour:
   gunMuzzle: {fileID: 1931092244572323880}
   projectileSpeed: 2
   projectileDamage: 30
-  shootOnStart: 1
   shootingRate: 3.4
+  shootingOffsetTimer: 0
   allowedToShoot: 1
 --- !u!114 &7803129929403355824
 MonoBehaviour:
