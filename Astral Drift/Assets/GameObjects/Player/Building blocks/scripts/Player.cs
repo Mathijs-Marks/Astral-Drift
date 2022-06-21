@@ -7,11 +7,14 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private BaseGunBarrel[] weapons = new BaseGunBarrel[2];
 
+    [SerializeField] private bool relativeControls = true;
+
     [SerializeField] private float playerSpeed;
     [SerializeField] private float yOffset = 0.5f; // Use this value to put the player a bit higher
 
     public Vector3 targetPosition;
     private Vector3 direction;
+    private Vector3 inputPositionToPlayer;
 
     private bool mousePointer;
     [SerializeField] private float distanceToTarget;
@@ -55,6 +58,12 @@ public class Player : MonoBehaviour
 
     private void GetInput()
     {
+        if (relativeControls && Input.GetMouseButtonDown(0)) // Note: GetMouseButtonDown also works on mobile.
+        {
+            inputPositionToPlayer = new Vector3(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height), 0);
+            inputPositionToPlayer = Camera.main.ScreenToWorldPoint(inputPositionToPlayer);
+            inputPositionToPlayer -= transform.position;
+        }
         if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             targetPosition = new Vector3(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height), 0);
@@ -69,7 +78,7 @@ public class Player : MonoBehaviour
 
     private void GetTargetPositionWorldSpace()
     {
-        targetPosition = Camera.main.ScreenToWorldPoint(targetPosition);
+        targetPosition = Camera.main.ScreenToWorldPoint(targetPosition) + -inputPositionToPlayer;
         targetPosition.y += yOffset;
         targetPosition.z = 0;
     }
