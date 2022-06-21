@@ -58,7 +58,14 @@ public class Health : MonoBehaviour
     {
         DoCollision(collision);
     }
-
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Laser"))
+        {
+            if (collision.gameObject.TryGetComponent(out Laser laser))
+                LaserCollision(laser.readDamage);
+        }
+    }
     protected virtual void DoCollision(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet")) //Bullet
@@ -67,8 +74,6 @@ public class Health : MonoBehaviour
                 BulletCollision(standardBullet.readDamage, collision.gameObject);
             else if (collision.gameObject.TryGetComponent(out HomingBullet homingBullet))
                 BulletCollision(homingBullet.readDamage, collision.gameObject);
-            else if (collision.gameObject.TryGetComponent(out Laser laser))
-                LaserCollision(laser.readDamage);
         }
         else if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerBullet"))
         {
