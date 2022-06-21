@@ -23,7 +23,7 @@ public class HealthBarUI : MonoBehaviour
         healthScript.OnHitEvent.AddListener(UpdateHealthBar);
     }
 
-    protected virtual void UpdateHealthBar()
+    private void UpdateHealthBar()
     {
         percentage = healthScript.CurrentHitpoints;
         if (percentage <= 0)
@@ -34,5 +34,6 @@ public class HealthBarUI : MonoBehaviour
         amount = (healthScript.maxHitpoints - percentage) * spriteSize / healthScript.maxHitpoints;
 
         fullBar.transform.localPosition = new Vector3(0, amount, 0);
+        mask.transform.localPosition = new Vector3(0, -amount, 0);
     }
 }

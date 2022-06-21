@@ -9,10 +9,4 @@ public class HealthBarUIPlayer : HealthBarUI
         healthScript = GlobalReferenceManager.PlayerHealthScript;
         base.Start();
     }
-
-    protected override void UpdateHealthBar()
-    {
-        base.UpdateHealthBar();
-        mask.transform.localPosition = new Vector3(0, -amount, 0);
-    }
 }
