@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     private bool mousePointer;
     [SerializeField] private float distanceToTarget;
 
+    private Vector2 clampSpace;
+
     private void Awake()
     {
         GlobalReferenceManager.PlayerScript = this;
@@ -28,6 +30,8 @@ public class Player : MonoBehaviour
     private void Start()
     {
         targetPosition = transform.position;
+
+        clampSpace = new Vector2(GlobalReferenceManager.ScreenCollider.sizeX, GlobalReferenceManager.ScreenCollider.sizeY);
     }
 
     // Controls
@@ -58,15 +62,22 @@ public class Player : MonoBehaviour
 
     private void GetInput()
     {
-        if (relativeControls && Input.GetMouseButtonDown(0)) // Note: GetMouseButtonDown also works on mobile.
+        if (Input.GetMouseButtonDown(0)) // Note: GetMouseButtonDown also works on mobile.
         {
-            inputPositionToPlayer = new Vector3(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height), 0);
-            inputPositionToPlayer = Camera.main.ScreenToWorldPoint(inputPositionToPlayer);
-            inputPositionToPlayer -= transform.position;
+            if (relativeControls)
+            {
+                inputPositionToPlayer = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+                inputPositionToPlayer = Camera.main.ScreenToWorldPoint(inputPositionToPlayer);
+                inputPositionToPlayer -= transform.position;
+            }
+            else
+            {
+                inputPositionToPlayer = Vector3.zero;
+            }
         }
         if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            targetPosition = new Vector3(Mathf.Clamp(Input.mousePosition.x, 0, Screen.width), Mathf.Clamp(Input.mousePosition.y, 0, Screen.height), 0);
+            targetPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
             GetTargetPositionWorldSpace();
         }
         if (Input.touches.Length > 0 && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
@@ -78,6 +89,7 @@ public class Player : MonoBehaviour
 
     private void GetTargetPositionWorldSpace()
     {
+
         targetPosition = Camera.main.ScreenToWorldPoint(targetPosition) + -inputPositionToPlayer;
         targetPosition.y += yOffset;
         targetPosition.z = 0;
