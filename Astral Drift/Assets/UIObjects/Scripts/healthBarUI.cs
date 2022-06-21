@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class HealthBarUI : MonoBehaviour
 {
+    [Header("You don't need to initialize healthScript if this script is HealthBarUIPlayer")]
     [SerializeField] protected Health healthScript;
 
     [SerializeField] protected GameObject fullBar, mask;

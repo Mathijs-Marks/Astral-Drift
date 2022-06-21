@@ -550,6 +550,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5338237895189720297}
     m_Modifications:
+    - target: {fileID: 5404142543479844630, guid: 4dfffbc696f96f347b6694743b11ecef, type: 3}
+      propertyPath: healthScript
+      value: 
+      objectReference: {fileID: 2291993834043744805}
     - target: {fileID: 7774151422794030422, guid: 4dfffbc696f96f347b6694743b11ecef, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0
