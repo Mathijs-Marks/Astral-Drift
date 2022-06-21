@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
         set { onHitEvent = value; }
     }
 
-    [SerializeField] private UnityEvent flashOnHit;
+    public UnityEvent flashOnHit;
 
     private Death deathScript;
 
