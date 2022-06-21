@@ -20,7 +20,12 @@ public class FlashOnHit : MonoBehaviour
         modelTexture = (Texture2D)material.GetTexture("_MainTex");
     }
 
-    public void FixedUpdate()
+    private void FixedUpdate()
+    {
+        TimerTickDown();
+    }
+
+    private void TimerTickDown()
     {
         if (timer > 0)
         {
