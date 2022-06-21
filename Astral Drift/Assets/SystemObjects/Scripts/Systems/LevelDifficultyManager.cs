@@ -18,6 +18,8 @@ public class LevelDifficultyManager : MonoBehaviour
 
     void Start()
     {
+        difficultyList = new List<int>();
+
         spawner = GetComponent<EnemyWaveSpawner>();
         foreach(GameObject enemyPrefab in enemyPrefabs)
         {
