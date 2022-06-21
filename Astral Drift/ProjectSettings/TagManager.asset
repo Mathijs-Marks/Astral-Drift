@@ -18,6 +18,7 @@ TagManager:
   - PlayerBullet
   - Pickups
   - Laser
+  - Camera
   - 
   - 
   - 
