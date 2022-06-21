@@ -8,6 +8,7 @@ public class Death : MonoBehaviour
     protected UnityEvent deathEvent;
 
     [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private GameObject pickupPrefab;
 
     public UnityEvent DeathEvent
     {
@@ -24,10 +25,20 @@ public class Death : MonoBehaviour
     protected virtual void KillObject()
     {
         gameObject.SetActive(false);
+        InstantiateObjects();
+        
+    }
 
+    protected virtual void InstantiateObjects()
+    {
         if (explosionPrefab != null)
         {
             Instantiate(explosionPrefab, transform.position, transform.rotation);
+        }
+
+        if (pickupPrefab != null)
+        {
+            Instantiate(pickupPrefab, transform.position, transform.rotation);
         }
     }
 }

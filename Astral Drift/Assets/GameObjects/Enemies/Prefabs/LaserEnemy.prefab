@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 1578745964444940686}
   - component: {fileID: 3854308679034877560}
   - component: {fileID: 5118070018916718327}
+  - component: {fileID: 6693842452238514861}
   m_Layer: 7
   m_Name: LaserEnemy
   m_TagString: Untagged
@@ -130,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
+  pickupPrefab: {fileID: 6528677247683499266, guid: 9862dd87389e02241b124712b177939d, type: 3}
 --- !u!114 &5118070018916718327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +145,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHitpoints: 900
+--- !u!114 &6693842452238514861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8801689317476964961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d9a4cf18563064186890fbf235949d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDifficulty: 8
 --- !u!1001 &237112453541534804
 PrefabInstance:
   m_ObjectHideFlags: 0
