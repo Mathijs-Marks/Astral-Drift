@@ -45,7 +45,10 @@ public class Health : MonoBehaviour
     {
         deathScript.DeathEvent.Invoke();
     }
-
+    protected void LaserCollision(int damage)
+    {
+        OnDamage(damage);
+    }
     protected void BulletCollision(int damage, GameObject bullet)
     {
         OnDamage(damage);
@@ -55,7 +58,14 @@ public class Health : MonoBehaviour
     {
         DoCollision(collision);
     }
-
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Laser"))
+        {
+            if (collision.gameObject.TryGetComponent(out Laser laser))
+                LaserCollision(laser.readDamage);
+        }
+    }
     protected virtual void DoCollision(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet")) //Bullet
