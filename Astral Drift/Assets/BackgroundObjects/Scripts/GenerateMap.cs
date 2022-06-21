@@ -53,7 +53,7 @@ public class GenerateMap : MonoBehaviour
         DisplayMap display = FindObjectOfType<DisplayMap>();
         if (drawMode == DrawMode.NoiseMap)
         {
-            display.DrawTexture(UnityEditor.AssetImporters.TextureGenerator.HeightMapTexture(mapData.heightMap));
+            display.DrawTexture(TextureGenerator.HeightMapTexture(mapData.heightMap));
         }
     /*    else if (drawMode == DrawMode.ColorMap)
         {
