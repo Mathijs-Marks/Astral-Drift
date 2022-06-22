@@ -13,4 +13,5 @@ public static class GlobalReferenceManager
     public static Camera MainCamera; //Reference to main Camera
     public static SetColliderSize ScreenCollider;
     public static BackgroundScroller background; //Reference to background
+    public static AudioManager AudioManagerRef;
 }
