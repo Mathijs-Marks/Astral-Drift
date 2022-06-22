@@ -4329,6 +4329,10 @@ PrefabInstance:
       propertyPath: spawnItem
       value: 
       objectReference: {fileID: 5852864802511956268, guid: dd310c97c45768e48a1bbf9f5b6b7684, type: 3}
+    - target: {fileID: 8272062397749759515, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: moveClockwise
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
 --- !u!1001 &1495927569
@@ -4740,6 +4744,10 @@ PrefabInstance:
       propertyPath: spawnItem
       value: 
       objectReference: {fileID: 5852864802511956268, guid: dd310c97c45768e48a1bbf9f5b6b7684, type: 3}
+    - target: {fileID: 8272062397749759515, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
+      propertyPath: moveClockwise
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07b25bd21d7b96248ab88bfdf04edbc2, type: 3}
 --- !u!4 &1673363211 stripped
@@ -5510,6 +5518,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flashOnHit:
+    m_PersistentCalls:
+      m_Calls: []
   maxHitpoints: 1400
 --- !u!50 &1961153588
 Rigidbody2D:
@@ -7025,6 +7036,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flashOnHit:
+    m_PersistentCalls:
+      m_Calls: []
   maxHitpoints: 1400
 --- !u!1001 &6233368479132000416
 PrefabInstance:
