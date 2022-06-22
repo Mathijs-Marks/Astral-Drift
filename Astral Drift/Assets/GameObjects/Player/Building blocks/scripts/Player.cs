@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
         }
 
         inputPositionToPlayer = new Vector3(
-            Mathf.Clamp(targetPosition.x + inputPositionToPlayer.x, -clampSpace.x, clampSpace.x),
+            Mathf.Clamp(targetPosition.x + inputPositionToPlayer.x, -clampSpace.x + Camera.main.transform.position.x, clampSpace.x + Camera.main.transform.position.x),
             Mathf.Clamp(targetPosition.y + inputPositionToPlayer.y, -clampSpace.y + Camera.main.transform.position.y, clampSpace.y + Camera.main.transform.position.y), 
             0) - targetPosition;
 
