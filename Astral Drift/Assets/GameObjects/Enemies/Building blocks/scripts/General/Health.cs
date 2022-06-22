@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     public int maxHitpoints;
 
     [Tooltip("How much damage the player will receive. Leave blank in player health")]
-    public int collisionDamageToPlayer = 10;
+    public int collisionDamageToPlayer = 15;
 
     protected virtual void Start()
     {

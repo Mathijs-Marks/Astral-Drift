@@ -8,7 +8,6 @@ public class PlayerHealth : Health
 {
     protected UnityEvent playerOnHitEvent;
 
-
     [SerializeField] private int collisionDamageToEnemy = 50;
     public UnityEvent PlayerOnHitEvent
     {
@@ -36,7 +35,11 @@ public class PlayerHealth : Health
         {
             //Get the enemy's health component and see how much damage it should receive and apply
             collision.gameObject.TryGetComponent(out Health enemyHealth);
-            enemyHealth.OnDamage(collisionDamageToEnemy);
+            if(enemyHealth.maxHitpoints <= collisionDamageToEnemy)
+                enemyHealth.OnDamage(collisionDamageToEnemy);
+            else
+                enemyHealth.OnDamage(enemyHealth.maxHitpoints / 2);
+
             OnDamage(enemyHealth.collisionDamageToPlayer);
         }
     }

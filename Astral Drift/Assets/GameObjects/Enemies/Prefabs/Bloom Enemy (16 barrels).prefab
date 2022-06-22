@@ -2764,6 +2764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHitpoints: 600
+  collisionDamageToPlayer: 15
 --- !u!114 &8552948871987064147
 MonoBehaviour:
   m_ObjectHideFlags: 0
