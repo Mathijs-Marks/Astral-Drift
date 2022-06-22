@@ -10,6 +10,10 @@ public class Health : MonoBehaviour
     public int CurrentHitpoints { get { return currentHitpoints; } }
 
     public int maxHitpoints;
+
+    [Tooltip("How much damage the player will receive. Leave blank in player health")]
+    public int collisionDamageToPlayer = 10;
+
     protected virtual void Start()
     {
         deathScript = GetComponent<Death>();
@@ -66,7 +70,7 @@ public class Health : MonoBehaviour
                 LaserCollision(laser.readDamage);
         }
     }
-    protected virtual void DoCollision(Collider2D collision)
+    public virtual void DoCollision(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet")) //Bullet
         {
