@@ -37,6 +37,18 @@ public class HealthBarUIEnemy : HealthBarUI
         }
     }
 
+    protected override void UpdateHealthBar()
+    {
+        base.UpdateHealthBar();
+
+        if (healthScript.CurrentHitpoints <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+
+        mask.transform.localScale = new Vector3(mask.transform.localScale.x, (float)healthScript.CurrentHitpoints / healthScript.maxHitpoints, mask.transform.localScale.z);
+    }
+
     private void EnableSelf()
     {
         gameObject.SetActive(true);
