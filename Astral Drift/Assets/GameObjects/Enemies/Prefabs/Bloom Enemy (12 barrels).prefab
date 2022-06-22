@@ -1190,6 +1190,7 @@ GameObject:
   - component: {fileID: 650338192769307242}
   - component: {fileID: 5928808215667397152}
   - component: {fileID: 5097404033257876054}
+  - component: {fileID: -6497463218132941372}
   m_Layer: 7
   m_Name: Bloom Enemy (12 barrels)
   m_TagString: Enemy
@@ -1225,7 +1226,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1290,6 +1291,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   maxHitpoints: 600
+  collisionDamageToPlayer: 15
 --- !u!114 &5097404033257876054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,6 +1304,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4deb963c2c2b2cb4695c1a2efa789f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
+--- !u!114 &-6497463218132941372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6756227072614053337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d9a4cf18563064186890fbf235949d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDifficulty: 8
 --- !u!1 &7147466832609374288
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,10 @@ public class Health : MonoBehaviour
     public int CurrentHitpoints { get { return currentHitpoints; } }
 
     public int maxHitpoints;
+
+    [Tooltip("How much damage the player will receive. Leave blank in player health")]
+    public int collisionDamageToPlayer = 15;
+
     protected virtual void Start()
     {
         OnHitEvent = new UnityEvent();
@@ -60,7 +64,10 @@ public class Health : MonoBehaviour
     {
         deathScript.DeathEvent.Invoke();
     }
-
+    protected void LaserCollision(int damage)
+    {
+        OnDamage(damage);
+    }
     protected void BulletCollision(int damage, GameObject bullet)
     {
         OnDamage(damage);
@@ -70,8 +77,15 @@ public class Health : MonoBehaviour
     {
         DoCollision(collision);
     }
-
-    protected virtual void DoCollision(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Laser"))
+        {
+            if (collision.gameObject.TryGetComponent(out Laser laser))
+                LaserCollision(laser.readDamage);
+        }
+    }
+    public virtual void DoCollision(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet")) //Bullet
         {
