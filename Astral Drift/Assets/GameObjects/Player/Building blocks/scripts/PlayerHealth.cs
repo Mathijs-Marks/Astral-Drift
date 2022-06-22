@@ -16,6 +16,7 @@ public class PlayerHealth : Health
     }
     private void Awake()
     {
+        PlayerOnHitEvent = new UnityEvent();
         GlobalReferenceManager.PlayerHealthScript = this;
     }
     public override void TakeDamage(int damage)
