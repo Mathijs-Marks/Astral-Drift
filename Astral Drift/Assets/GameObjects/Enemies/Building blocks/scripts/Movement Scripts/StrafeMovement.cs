@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StrafeMovement : MovementBehaviours
+public class StrafeMovement : TravelingMovementBehaviours
 {
     [SerializeField] private float xDistToMove = 1, yDistToMove = 0;
     [Tooltip("Choose between 1 and -1 to determine the direction")]
-    [SerializeField] private Vector2 direction = new Vector2(1, 0);
     private Vector3 startingPos;
     
     private void Start()
@@ -28,5 +27,6 @@ public class StrafeMovement : MovementBehaviours
         if (yDistToMove > 0)
             if (transform.position.y > startingPos.y + (yDistToMove / 2) || transform.position.y < startingPos.y - (yDistToMove / 2))
                 direction.y *= -1;
+        OutOfBoundsCheck();
     }
 }

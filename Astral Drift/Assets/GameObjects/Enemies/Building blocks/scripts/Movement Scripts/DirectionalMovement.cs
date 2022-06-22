@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DirectionalMovement : MovementBehaviours
+public class DirectionalMovement : TravelingMovementBehaviours
 {
-    [SerializeField] private Vector2 direction = new Vector2(1, 0);
-
     void FixedUpdate()
     {
         DoDirectionalMovement();
+        OutOfBoundsCheck();
     }
     private void DoDirectionalMovement()
     {
