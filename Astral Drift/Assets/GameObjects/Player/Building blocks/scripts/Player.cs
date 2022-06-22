@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
         targetPosition = transform.position;
 
         clampSpace = new Vector2(GlobalReferenceManager.ScreenCollider.sizeX, GlobalReferenceManager.ScreenCollider.sizeY);
+        clampSpace /= 2;
     }
 
     // Controls
@@ -69,10 +70,7 @@ public class Player : MonoBehaviour
                 inputPositionToPlayer = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
                 inputPositionToPlayer = Camera.main.ScreenToWorldPoint(inputPositionToPlayer);
                 inputPositionToPlayer -= transform.position;
-            }
-            else
-            {
-                inputPositionToPlayer = Vector3.zero;
+                inputPositionToPlayer = -inputPositionToPlayer;
             }
         }
         if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
@@ -85,13 +83,29 @@ public class Player : MonoBehaviour
             targetPosition = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, 0);
             GetTargetPositionWorldSpace();
         }
+        if (Input.GetMouseButtonUp(0))
+        {
+            targetPosition = transform.position;
+        }
     }
 
     private void GetTargetPositionWorldSpace()
     {
+        targetPosition = Camera.main.ScreenToWorldPoint(targetPosition);
 
-        targetPosition = Camera.main.ScreenToWorldPoint(targetPosition) + -inputPositionToPlayer;
-        targetPosition.y += yOffset;
+        if (!relativeControls)
+        {
+            targetPosition.y += yOffset;
+            inputPositionToPlayer = Vector3.zero;
+        }
+
+        inputPositionToPlayer = new Vector3(
+            Mathf.Clamp(targetPosition.x + inputPositionToPlayer.x, -clampSpace.x, clampSpace.x),
+            Mathf.Clamp(targetPosition.y + inputPositionToPlayer.y, -clampSpace.y + Camera.main.transform.position.y, clampSpace.y + Camera.main.transform.position.y), 
+            0) - targetPosition;
+
+        targetPosition += inputPositionToPlayer;
+
         targetPosition.z = 0;
     }
 
