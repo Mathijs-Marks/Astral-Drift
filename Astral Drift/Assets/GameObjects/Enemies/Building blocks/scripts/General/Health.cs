@@ -1,20 +1,9 @@
 
 using UnityEngine;
-using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider2D), typeof(Death))]
 public class Health : MonoBehaviour
 {
-    private UnityEvent onHitEvent;
-
-    public UnityEvent OnHitEvent
-    {
-        get { return onHitEvent; }
-        set { onHitEvent = value; }
-    }
-
-    public UnityEvent flashOnHit;
-
     private Death deathScript;
 
     protected int currentHitpoints;
@@ -27,8 +16,6 @@ public class Health : MonoBehaviour
 
     protected virtual void Start()
     {
-        OnHitEvent = new UnityEvent();
-
         deathScript = GetComponent<Death>();
 
         currentHitpoints = maxHitpoints;
@@ -37,8 +24,6 @@ public class Health : MonoBehaviour
     public void OnDamage(int damage)
     {
         TakeDamage(damage);
-        flashOnHit.Invoke();
-        OnHitEvent.Invoke();
     }
 
     public virtual void TakeDamage(int damage)
