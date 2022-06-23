@@ -29,5 +29,6 @@ public class Death : MonoBehaviour
         {
             Instantiate(explosionPrefab, transform.position, transform.rotation);
         }
+        GlobalReferenceManager.AudioManagerRef.PlaySound("Explosion");
     }
 }
