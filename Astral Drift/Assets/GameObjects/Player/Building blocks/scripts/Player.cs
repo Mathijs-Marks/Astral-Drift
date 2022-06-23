@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class Player : MonoBehaviour
 {
     [SerializeField] private BaseGunBarrel[] weapons = new BaseGunBarrel[2];
@@ -30,8 +29,8 @@ public class Player : MonoBehaviour
     private void Start()
     {
         targetPosition = transform.position;
-
-        clampSpace = new Vector2(GlobalReferenceManager.ScreenCollider.sizeX, GlobalReferenceManager.ScreenCollider.sizeY);
+        BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
+        clampSpace = new Vector2(GlobalReferenceManager.ScreenCollider.sizeX - boxCollider.size.x, GlobalReferenceManager.ScreenCollider.sizeY - boxCollider.size.y);
         clampSpace /= 2;
     }
 
