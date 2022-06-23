@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     {
         targetPosition = transform.position;
         BoxCollider2D boxCollider = GetComponent<BoxCollider2D>();
-        clampSpace = new Vector2(GlobalReferenceManager.ScreenCollider.sizeX - boxCollider.size.x, GlobalReferenceManager.ScreenCollider.sizeY - boxCollider.size.y);
+        clampSpace = new Vector2(GlobalReferenceManager.ScreenCollider.sizeX - boxCollider.size.x, GlobalReferenceManager.ScreenCollider.sizeY - boxCollider.size.y - yOffset);
         clampSpace /= 2;
     }
 
