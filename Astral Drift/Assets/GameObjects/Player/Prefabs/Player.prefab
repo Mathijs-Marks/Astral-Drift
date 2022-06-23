@@ -151,7 +151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a632c84da2ede0046a2e9ffc3014fccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 5000
+  maxHitpoints: 100
+  collisionDamageToPlayer: 0
+  collisionDamageToEnemy: 60
 --- !u!114 &7161086265409351163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a929322bd538a44acfdf639b39dfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
 --- !u!1001 &2192351448854879166
 PrefabInstance:
   m_ObjectHideFlags: 0

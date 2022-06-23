@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class StrafeMovement : MovementBehaviours
+public class StrafeMovement : TravelingMovementBehaviours
 {
     [SerializeField] private float xDistToMove = 1, yDistToMove = 0;
     [Tooltip("Choose between 1 and -1 to determine the direction")]
-    [SerializeField] private Vector2 direction = new Vector2(1, 0);
     private Vector3 startingPos;
     
     private void Start()
@@ -16,12 +13,15 @@ public class StrafeMovement : MovementBehaviours
     }
     void FixedUpdate()
     {
-        if (xDistToMove > 0 || yDistToMove > 0)
-            transform.position += (Vector3)direction * speed * Time.deltaTime;
-
+        DoDirectionalMovement();
+        InvertMovement();
+        OutOfBoundsCheck();
+    }
+    private void InvertMovement()
+    {
         //Invert X direction
-        if(xDistToMove > 0)
-            if(transform.position.x > startingPos.x + (xDistToMove / 2) || transform.position.x < startingPos.x - (xDistToMove / 2))
+        if (xDistToMove > 0)
+            if (transform.position.x > startingPos.x + (xDistToMove / 2) || transform.position.x < startingPos.x - (xDistToMove / 2))
                 direction.x *= -1;
 
         //Invert Y direction
