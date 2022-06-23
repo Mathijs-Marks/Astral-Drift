@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StrafeMovement : TravelingMovementBehaviours
@@ -15,18 +13,20 @@ public class StrafeMovement : TravelingMovementBehaviours
     }
     void FixedUpdate()
     {
-        if (xDistToMove > 0 || yDistToMove > 0)
-            transform.position += (Vector3)direction * speed * Time.deltaTime;
-
+        DoDirectionalMovement();
+        InvertMovement();
+        OutOfBoundsCheck();
+    }
+    private void InvertMovement()
+    {
         //Invert X direction
-        if(xDistToMove > 0)
-            if(transform.position.x > startingPos.x + (xDistToMove / 2) || transform.position.x < startingPos.x - (xDistToMove / 2))
+        if (xDistToMove > 0)
+            if (transform.position.x > startingPos.x + (xDistToMove / 2) || transform.position.x < startingPos.x - (xDistToMove / 2))
                 direction.x *= -1;
 
         //Invert Y direction
         if (yDistToMove > 0)
             if (transform.position.y > startingPos.y + (yDistToMove / 2) || transform.position.y < startingPos.y - (yDistToMove / 2))
                 direction.y *= -1;
-        OutOfBoundsCheck();
     }
 }

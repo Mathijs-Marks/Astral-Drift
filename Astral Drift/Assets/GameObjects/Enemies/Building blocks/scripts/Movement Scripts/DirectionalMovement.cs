@@ -9,9 +9,4 @@ public class DirectionalMovement : TravelingMovementBehaviours
         DoDirectionalMovement();
         OutOfBoundsCheck();
     }
-    private void DoDirectionalMovement()
-    {
-        Vector2 Offset = direction * speed * Time.deltaTime;
-        transform.position += (Vector3)Offset;
-    }
 }
