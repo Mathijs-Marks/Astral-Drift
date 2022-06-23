@@ -1,17 +1,34 @@
 
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider2D), typeof(Death))]
 public class Health : MonoBehaviour
 {
+    private UnityEvent onHitEvent;
+
+    public UnityEvent OnHitEvent
+    {
+        get { return onHitEvent; }
+        set { onHitEvent = value; }
+    }
+
+    public UnityEvent flashOnHit;
+
     private Death deathScript;
 
     protected int currentHitpoints;
     public int CurrentHitpoints { get { return currentHitpoints; } }
 
     public int maxHitpoints;
+
+    [Tooltip("How much damage the player will receive. Leave blank in player health")]
+    public int collisionDamageToPlayer = 15;
+
     protected virtual void Start()
     {
+        OnHitEvent = new UnityEvent();
+
         deathScript = GetComponent<Death>();
 
         currentHitpoints = maxHitpoints;
@@ -20,6 +37,8 @@ public class Health : MonoBehaviour
     public void OnDamage(int damage)
     {
         TakeDamage(damage);
+        flashOnHit.Invoke();
+        OnHitEvent.Invoke();
     }
 
     public virtual void TakeDamage(int damage)
@@ -66,7 +85,7 @@ public class Health : MonoBehaviour
                 LaserCollision(laser.readDamage);
         }
     }
-    protected virtual void DoCollision(Collider2D collision)
+    public virtual void DoCollision(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet")) //Bullet
         {
