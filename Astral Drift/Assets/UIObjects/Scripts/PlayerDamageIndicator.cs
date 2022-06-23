@@ -12,7 +12,7 @@ public class PlayerDamageIndicator : MonoBehaviour
     {
         indicator = GetComponent<Image>();
         alphaSpeed /= 255;
-        GlobalReferenceManager.PlayerHealthScript.PlayerOnHitEvent.AddListener(ShowIdicator);
+        GlobalReferenceManager.PlayerHealthScript.OnHitEvent.AddListener(ShowIdicator);
         indicator.color = new Color(indicator.color.r, indicator.color.g, indicator.color.b, 1);
     }
     private void ShowIdicator()
