@@ -6,7 +6,7 @@ using System.Threading;
 
 public class GenerateMap : MonoBehaviour
 {
-    public enum DrawMode { NoiseMap, /*ColorMap,*/ Mesh };
+    public enum DrawMode { NoiseMap, Mesh };
     public DrawMode drawMode;
 
     public TerrainData terrainData;
@@ -23,7 +23,6 @@ public class GenerateMap : MonoBehaviour
 
     public bool autoUpdate;
 
-    //public TerrainType[] regions;
 
     Queue<MapThreadInfo<MapData>> mapDataThreadInfoQueue = new Queue<MapThreadInfo<MapData>>();
     Queue<MapThreadInfo<MeshData>> meshDataThreadInfoQueue = new Queue<MapThreadInfo<MeshData>>();
@@ -55,10 +54,6 @@ public class GenerateMap : MonoBehaviour
         {
             display.DrawTexture(TextureGenerator.HeightMapTexture(mapData.heightMap));
         }
-    /*    else if (drawMode == DrawMode.ColorMap)
-        {
-            display.DrawTexture(TextureGenerator.ColorMapTexture(mapData.colourMap, mapChunkSize, mapChunkSize));//mapChunkSize, mapChunkSize = mapWidth, mapHeight
-        }*/
         else if (drawMode == DrawMode.Mesh)
         {
             display.DrawMesh(GenerateMesh.GenerateTerrainMesh(mapData.heightMap, terrainData.meshHeightMultiplier, terrainData.meshHeightCurve, editorPreviewLOD)/*, TextureGenerator.ColorMapTexture(mapData.colourMap, mapChunkSize, mapChunkSize)*/);//mapChunkSize, mapChunkSize = mapWidth, mapHeight
@@ -81,14 +76,14 @@ public class GenerateMap : MonoBehaviour
         mapDataThreadInfoQueue.Enqueue(new MapThreadInfo<MapData>(callback, mapData));
         }
     }
-    public void RequestMeshData(MapData mapData, int lod/*commented*/, Action<MeshData> callback)
+    public void RequestMeshData(MapData mapData, int lod, Action<MeshData> callback)
     {
         ThreadStart threadStart = delegate {
-            MeshDataThread(mapData, lod/*commented*/, callback);
+            MeshDataThread(mapData, lod, callback);
         };
         new Thread(threadStart).Start();
     }
-    void MeshDataThread(MapData mapData, int lod/*commented*/,Action<MeshData> callback)
+    void MeshDataThread(MapData mapData, int lod,Action<MeshData> callback)
     {
         MeshData meshData = GenerateMesh.GenerateTerrainMesh(mapData.heightMap, terrainData.meshHeightMultiplier, terrainData.meshHeightCurve, lod /*Changed from levelOfDetail*/);
         lock (meshDataThreadInfoQueue)
@@ -121,27 +116,14 @@ public class GenerateMap : MonoBehaviour
        
         float[,] noiseMap = Noise.GenerateNoiseMap(mapChunkSize +2, mapChunkSize +2, noiseData.seed, noiseData.noiseScale, noiseData.octaves, noiseData.persistance, noiseData.lacunarity, center + noiseData.offset, noiseData.normalizeMode); //mapChunkSize, mapChunkSize = mapWidth, mapHeight
 
-        //Color[] colorMap = new Color[mapChunkSize * mapChunkSize]; //mapChunkSize, mapChunkSize = mapWidth, mapHeight
         for (int y = 0; y<mapChunkSize; y++) //mapChunkSize = mapheight
         {
             for(int x = 0; x<mapChunkSize; x++) //mapChunkSize = mapwidth
             {
                 float currentHeight = noiseMap[x, y];
-                /*for(int i=0; i < regions.Length; i++)
-                {
-                    if(currentHeight >= regions[i].height)
-                    {
-                    colorMap[y * mapChunkSize + x] = regions[i].color; //mapChunkSize = mapwidth
-                    }
-                    else
-                    {
-                        break;
-                    }
-
-                }*/
             }
         }
-        return new MapData(noiseMap/*, colorMap*/);
+        return new MapData(noiseMap);
     }
 
     private void OnValidate()
@@ -174,21 +156,12 @@ public class GenerateMap : MonoBehaviour
         }
     }
 }
-/*[Serializable]
-public struct TerrainType
-{
-    public string name;
-    public float height;
-    public Color color;
-}*/
 public struct MapData
 {
     public readonly float[,] heightMap;
-    //public readonly Color[] colourMap;
 
-    public MapData(float[,] heightMap/*, Color[] colourMap*/)
+    public MapData(float[,] heightMap)
     {
         this.heightMap = heightMap;
-        //this.colourMap = colourMap;
    }
 }

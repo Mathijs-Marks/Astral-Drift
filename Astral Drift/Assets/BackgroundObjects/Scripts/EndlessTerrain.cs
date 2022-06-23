@@ -7,8 +7,8 @@ public class EndlessTerrain : MonoBehaviour
 
     const float viewerMoveThresholdForChunkUpdate = 25f;
     const float sqrViewerMoveThresholdForChunkUpdate = viewerMoveThresholdForChunkUpdate * viewerMoveThresholdForChunkUpdate;
-    public static float maxViewDst; //Changed to static & no longer 450, used to be const
-    public LODInfo[] detailLevels; //commented
+    public static float maxViewDst; 
+    public LODInfo[] detailLevels;
     public Transform viewer;
     public Material mapMaterial;
 
@@ -62,7 +62,7 @@ public class EndlessTerrain : MonoBehaviour
                 }
                 else
                 {
-                    terrainChunkDictionary.Add(viewedChunkCoor, new TerrainChunk(viewedChunkCoor, chunkSize, detailLevels/*commented*/, transform, mapMaterial));
+                    terrainChunkDictionary.Add(viewedChunkCoor, new TerrainChunk(viewedChunkCoor, chunkSize, detailLevels, transform, mapMaterial));
                 }
 
             }
@@ -78,13 +78,12 @@ public class EndlessTerrain : MonoBehaviour
         MeshRenderer meshRenderer;
         MeshFilter meshFilter;
 
-        //commented
         LODInfo[] detailLevels;
         LODMesh[] lodMeshes;
         MapData mapData;
         bool mapDataReceived;
         int previousLODIndex = -1;
-        public TerrainChunk(Vector2 coord, int size, LODInfo[] detailLevels,/*commented*/ Transform parent, Material material)
+        public TerrainChunk(Vector2 coord, int size, LODInfo[] detailLevels, Transform parent, Material material)
         {
             this.detailLevels = detailLevels;
             position = coord * size;
@@ -112,13 +111,10 @@ public class EndlessTerrain : MonoBehaviour
         }
         void OnMapDataReceived(MapData mapData)
         {
-            this.mapData = mapData; //commented
+            this.mapData = mapData; 
             mapDataReceived = true;
-            /*
-                        Texture2D texture = TextureGenerator.ColorMapTexture(mapData.colourMap, GenerateMap.mapChunkSize, GenerateMap.mapChunkSize);
-                        meshRenderer.material.mainTexture = texture;*/
 
-            UpdateChunk(); //commented till here
+            UpdateChunk();
         }
         public void UpdateChunk()
         {

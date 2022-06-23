@@ -69,7 +69,7 @@ public static float[,] GenerateNoiseMap(int mapWidth, int mapHeight, int seed, f
             {
                 if(normalizeMode == NormalizeMode.Local)
                 {
-                noiseMap[x, y] = Mathf.InverseLerp(minNoiseHeight, maxNoiseHeight, noiseMap[x, y]);//preffered if not using an endless terrain system
+                noiseMap[x, y] = Mathf.InverseLerp(minNoiseHeight, maxNoiseHeight, noiseMap[x, y]);
                 } else if(normalizeMode == NormalizeMode.Global)
                 {
                     float normalizedHeight = (noiseMap[x,y] +1)/ (2f * maxPossibleHeight/2f);

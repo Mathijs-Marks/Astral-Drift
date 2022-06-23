@@ -9,7 +9,6 @@ public static class GenerateMesh
         int meshSimplificationIncrement = (levelOfDetail == 0) ? 1 : levelOfDetail * 2;
 
         int borderedSize = heightMap.GetLength(0);
-        // int borderedSize = heightMap.GetLength(1); //Width and depth are currently the same size
         int meshSize = borderedSize - 2 * meshSimplificationIncrement;
         int unsimplifiedMeshSize = borderedSize - 2;
         float topLeftX = (unsimplifiedMeshSize - 1) / 2f;
@@ -57,7 +56,6 @@ public static class GenerateMesh
                     int b = vertexIndicesMap[x + meshSimplificationIncrement, y];
                     int c = vertexIndicesMap[x, y + meshSimplificationIncrement];
                     int d = vertexIndicesMap[x + meshSimplificationIncrement, y + meshSimplificationIncrement];
-                    //meshData.AddQuad(vertexIndex, vertexIndex+1, vertexIndex+width+1, vertexIndex+width+2);
                     meshData.AddTriangle(a, d, c);
                     meshData.AddTriangle(d, a, b);
                 }
@@ -99,15 +97,6 @@ public class MeshData
             uvs[vertexIndex] = uv;
         }
     }
-    /*public void AddQuad(int v00, int v10, int v01,int v11)
-    {
-        triangles[i] = v00;
-        triangles[i + 1] = triangles[i + 4] = v01;
-        triangles[i + 2] = triangles[i + 3] = v10;
-        triangles[i + 5] = v11;
-
-        i += 6;
-    }*/
     public void AddTriangle(int a, int b, int c)
     {
         if (a < 0 || b < 0 || c < 0)
