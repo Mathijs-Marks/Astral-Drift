@@ -8,6 +8,8 @@ public class Death : MonoBehaviour
     protected UnityEvent deathEvent;
 
     [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private float healthDropChance = 0.1f;
+    [SerializeField] private GameObject healthDrop;
 
     public UnityEvent DeathEvent
     {
@@ -25,10 +27,19 @@ public class Death : MonoBehaviour
     {
         gameObject.SetActive(false);
 
+        if (gameObject.layer != LayerMask.NameToLayer("Player") && GlobalReferenceManager.PlayerHealthScript.canSpawnHealthPickups)
+        {
+            float healthSpawn = Random.Range(0f, 1f);
+            if (healthSpawn < healthDropChance)
+                Instantiate(healthDrop, transform.position, Quaternion.identity);
+        }
+
         if (explosionPrefab != null)
         {
             Instantiate(explosionPrefab, transform.position, transform.rotation);
         }
-        GlobalReferenceManager.AudioManagerRef.PlaySound("Explosion");
+
+        if(GlobalReferenceManager.AudioManagerRef != null)
+            GlobalReferenceManager.AudioManagerRef.PlaySound("Explosion");
     }
 }

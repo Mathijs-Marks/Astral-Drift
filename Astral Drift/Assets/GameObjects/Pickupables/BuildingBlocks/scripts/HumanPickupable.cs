@@ -37,7 +37,7 @@ public class HumanPickupable : Pickupable
         }
     }
 
-    protected override void PickUp(Collider2D collision)
+    public override void OnPickUp(Collider2D collision)
     {
         // Do not call for base as that will remove the pickupable on collision
 

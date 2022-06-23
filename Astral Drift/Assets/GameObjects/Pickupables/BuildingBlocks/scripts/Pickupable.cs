@@ -8,11 +8,11 @@ public class Pickupable : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            PickUp(collision);
+            OnPickUp(collision);
         }
     }
 
-    protected virtual void PickUp(Collider2D collision)
+    public virtual void OnPickUp(Collider2D collision)
     {
         gameObject.SetActive(false);
     }

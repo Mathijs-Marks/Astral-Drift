@@ -14,6 +14,7 @@ public class HealthBarPlayer : MonoBehaviour
     private void Start()
     {
         GlobalReferenceManager.PlayerHealthScript.PlayerOnHitEvent.AddListener(UpdateHealthBar);
+        GlobalReferenceManager.PlayerHealthScript.PlayerOnHealEvent.AddListener(UpdateHealthBar);
     }
 
     private void UpdateHealthBar()

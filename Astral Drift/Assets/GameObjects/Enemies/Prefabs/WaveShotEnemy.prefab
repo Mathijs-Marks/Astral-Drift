@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
+  healthDropChance: 0.125
+  healthDrop: {fileID: 6528677247683499266, guid: aaf0cb2533f617344869e3a89d10728c, type: 3}
 --- !u!114 &4825978857204249837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,7 +348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6576349184704258837, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: shootingRate
-      value: 572.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6576349184704258837, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: projectileDamage

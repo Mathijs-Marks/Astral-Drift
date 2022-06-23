@@ -35,7 +35,7 @@ public class Health : MonoBehaviour
             OnHealthZero();
         }
     }
-    public void Heal(int health)
+    public virtual void Heal(int health)
     {
         currentHitpoints += health;
 
@@ -86,7 +86,8 @@ public class Health : MonoBehaviour
         }
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Pickup"))
         {
-            //get/do pickup stuff
+            if (collision.gameObject.TryGetComponent(out Pickupable pickupable))
+                pickupable.OnPickUp(collision);
         }
     }
 }
