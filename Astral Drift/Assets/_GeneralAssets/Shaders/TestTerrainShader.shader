@@ -61,7 +61,7 @@ Shader "Custom/TestTerrainShader"
 
 		void surf(Input IN, inout SurfaceOutputStandard o)
 		{
-			float heightPercent = inverseLerp(minHeight, maxHeight, IN.worldPos.y);
+			float heightPercent = inverseLerp(minHeight, maxHeight, IN.worldPos.z);
 			float3 blendAxes = abs(IN.worldNormal);
 			for (int i = 0; i < layerCount; i++) {
 				float drawStrength = inverseLerp(-baseBlends[i]/2,baseBlends[i]/2,heightPercent - baseStartHeights[i]);

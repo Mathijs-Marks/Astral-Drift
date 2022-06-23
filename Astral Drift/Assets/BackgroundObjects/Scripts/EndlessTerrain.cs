@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EndlessTerrain : MonoBehaviour
 {
-    
+
     const float viewerMoveThresholdForChunkUpdate = 25f;
     const float sqrViewerMoveThresholdForChunkUpdate = viewerMoveThresholdForChunkUpdate * viewerMoveThresholdForChunkUpdate;
     public static float maxViewDst; //Changed to static & no longer 450, used to be const
@@ -32,7 +32,7 @@ public class EndlessTerrain : MonoBehaviour
     }
     private void Update()
     {
-        viewerPosition = new Vector2(viewer.position.x, viewer.position.z) / mapGenerator.terrainData.uniformScale;
+        viewerPosition = new Vector2(viewer.position.x, viewer.position.y) / mapGenerator.terrainData.uniformScale;
 
         if ((viewerPositionOld = viewerPosition).sqrMagnitude > sqrViewerMoveThresholdForChunkUpdate)
         {
@@ -90,7 +90,7 @@ public class EndlessTerrain : MonoBehaviour
             position = coord * size;
             bounds = new Bounds(position, Vector2.one * size);
 
-            Vector3 positionV3 = new Vector3(position.x, 0, position.y);
+            Vector3 positionV3 = new Vector3(position.x, -position.y, 0);
 
             meshObject = new GameObject("Terrain Chunk");
             meshRenderer = meshObject.AddComponent<MeshRenderer>();
@@ -99,6 +99,7 @@ public class EndlessTerrain : MonoBehaviour
 
             meshObject.transform.position = positionV3 * mapGenerator.terrainData.uniformScale;
             meshObject.transform.parent = parent;
+            meshObject.transform.rotation = Quaternion.Euler(90, 0, 0);
             meshObject.transform.localScale = Vector3.one * mapGenerator.terrainData.uniformScale;
             SetVisible(false);
 
@@ -113,9 +114,9 @@ public class EndlessTerrain : MonoBehaviour
         {
             this.mapData = mapData; //commented
             mapDataReceived = true;
-/*
-            Texture2D texture = TextureGenerator.ColorMapTexture(mapData.colourMap, GenerateMap.mapChunkSize, GenerateMap.mapChunkSize);
-            meshRenderer.material.mainTexture = texture;*/
+            /*
+                        Texture2D texture = TextureGenerator.ColorMapTexture(mapData.colourMap, GenerateMap.mapChunkSize, GenerateMap.mapChunkSize);
+                        meshRenderer.material.mainTexture = texture;*/
 
             UpdateChunk(); //commented till here
         }
@@ -190,7 +191,7 @@ public class EndlessTerrain : MonoBehaviour
         public void RequestMesh(MapData mapData)
         {
             hasRequestedMesh = true;
-            mapGenerator.RequestMeshData(mapData, lod/*commented*/, OnMeshDataReceived);
+            mapGenerator.RequestMeshData(mapData, lod, OnMeshDataReceived);
         }
     }
     [System.Serializable]

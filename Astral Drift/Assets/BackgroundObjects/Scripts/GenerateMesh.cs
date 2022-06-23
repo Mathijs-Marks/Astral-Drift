@@ -23,40 +23,40 @@ public static class GenerateMesh
         int meshVertexIndex = 0;
         int borderVertexIndex = -1;
 
-        for (int z = 0; z < borderedSize; z += meshSimplificationIncrement)
+        for (int y = 0; y < borderedSize; y += meshSimplificationIncrement)
         {
             for (int x = 0; x < borderedSize; x += meshSimplificationIncrement)
             {
-                bool isBorderVertex = z == 0 || z == borderedSize - 1 || x == 0 || x == borderedSize - 1;
+                bool isBorderVertex = y == 0 || y == borderedSize - 1 || x == 0 || x == borderedSize - 1;
 
                 if (isBorderVertex)
                 {
-                    vertexIndicesMap[x, z] = borderVertexIndex;
+                    vertexIndicesMap[x, y] = borderVertexIndex;
                     borderVertexIndex--;
                 }
                 else
                 {
-                    vertexIndicesMap[x, z] = meshVertexIndex;
+                    vertexIndicesMap[x, y] = meshVertexIndex;
                     meshVertexIndex++;
                 }
             }
         }
-        for (int z = 0; z < borderedSize; z += meshSimplificationIncrement)
+        for (int y = 0; y < borderedSize; y += meshSimplificationIncrement)
         {
             for (int x = 0; x < borderedSize; x += meshSimplificationIncrement)
             {
-                int vertexIndex = vertexIndicesMap[x, z];
-                Vector2 percent = new Vector2((x - meshSimplificationIncrement) / (float)meshSize, (z - meshSimplificationIncrement) / (float)meshSize);
-                float height = heightCurve.Evaluate(heightMap[x, z]) * heightMultiplier;
+                int vertexIndex = vertexIndicesMap[x, y];
+                Vector2 percent = new Vector2((x - meshSimplificationIncrement) / (float)meshSize, (y - meshSimplificationIncrement) / (float)meshSize);
+                float height = heightCurve.Evaluate(heightMap[x, y]) * heightMultiplier;
                 Vector3 vertexPosition = new Vector3(topLeftX - percent.x * unsimplifiedMeshSize, height, topLeftZ + percent.y * unsimplifiedMeshSize);
 
                 meshData.AddVertex(vertexPosition, percent, vertexIndex);
-                if (x < borderedSize - 1 & z < borderedSize - 1)
+                if (x < borderedSize - 1 & y < borderedSize - 1)
                 {
-                    int a = vertexIndicesMap[x, z];
-                    int b = vertexIndicesMap[x + meshSimplificationIncrement, z];
-                    int c = vertexIndicesMap[x, z + meshSimplificationIncrement];
-                    int d = vertexIndicesMap[x + meshSimplificationIncrement, z + meshSimplificationIncrement];
+                    int a = vertexIndicesMap[x, y];
+                    int b = vertexIndicesMap[x + meshSimplificationIncrement, y];
+                    int c = vertexIndicesMap[x, y + meshSimplificationIncrement];
+                    int d = vertexIndicesMap[x + meshSimplificationIncrement, y + meshSimplificationIncrement];
                     //meshData.AddQuad(vertexIndex, vertexIndex+1, vertexIndex+width+1, vertexIndex+width+2);
                     meshData.AddTriangle(a, d, c);
                     meshData.AddTriangle(d, a, b);
