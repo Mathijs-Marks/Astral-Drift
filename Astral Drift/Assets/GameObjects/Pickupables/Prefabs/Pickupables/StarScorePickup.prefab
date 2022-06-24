@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6528677247683499277}
   - component: {fileID: 233060992262687671}
   m_Layer: 10
-  m_Name: Score Object
+  m_Name: StarScorePickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -26,15 +26,13 @@ public class UI : MonoBehaviour
         instance = this;
         scoreValue = 0;
         currentUpgrade = 0;
-
-        score.text = "Score: 0";
         shootingRate.text = "Fire Rate: 0/" + maxUpgrade;
     }
 
     public void AddScore(int score)
     {
         scoreValue += score;
-        this.score.text = "Score: " + scoreValue;
+        this.score.text = scoreValue.ToString();
     }
 
     public void ShootingSpeedUpgrade()

@@ -46,6 +46,7 @@ protected virtual void InstantiateObjects()
 
         if (pickupPrefab != null)
         {
+            //Debug.Log("Dropped a star by: " + gameObject.name);
             Instantiate(pickupPrefab, transform.position, transform.rotation);
         }
 

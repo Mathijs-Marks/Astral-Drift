@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Pickupable : MonoBehaviour
 {
     [SerializeField] protected GameObject particlePrefab;
@@ -30,8 +31,8 @@ public class Pickupable : MonoBehaviour
         gameObject.SetActive(false);
         if (particlePrefab != null)
         {
-            Instantiate(particlePrefab, transform.position, transform.rotation);
-            Destroy(particlePrefab, particleDestroyTimer);
+            GameObject newPickup = Instantiate(particlePrefab, transform.position, transform.rotation);
+            Destroy(newPickup, particleDestroyTimer);
         }
     }
 }

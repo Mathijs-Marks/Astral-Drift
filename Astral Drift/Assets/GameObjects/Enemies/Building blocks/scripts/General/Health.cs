@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
 
     private Death deathScript;
 
+    protected bool isDead;
     protected int currentHitpoints;
     public int CurrentHitpoints { get { return currentHitpoints; } }
 
@@ -40,14 +41,17 @@ public class Health : MonoBehaviour
         flashOnHit.Invoke();
         OnHitEvent.Invoke();
     }
-
     public virtual void TakeDamage(int damage)
     {
         currentHitpoints -= damage;
         if (currentHitpoints <= 0)
         {
-            currentHitpoints = 0;
-            OnHealthZero();
+            if (!isDead)
+            {
+                currentHitpoints = 0;
+                isDead = true;
+                OnHealthZero();
+            }
         }
     }
     public virtual void Heal(int health)
