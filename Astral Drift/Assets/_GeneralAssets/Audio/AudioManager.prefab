@@ -52,8 +52,8 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Explosion
-    clip: {fileID: 8300000, guid: bb35e320459486d4498d78dfa051bcdd, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: f9dc8d9847657423fa659c4a60acf0c6, type: 3}
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -70,14 +70,14 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: PlayerShoot
-    clip: {fileID: 8300000, guid: 177aa984ad76cc84fad4d04f4a9c35d7, type: 3}
-    volume: 0.5
-    pitch: 1
+    clip: {fileID: 8300000, guid: de812cfb519929c4aad9d296f655c81d, type: 3}
+    volume: 0.1
+    pitch: 2
     loop: 0
     source: {fileID: 0}
   - name: EnemyShoot
-    clip: {fileID: 8300000, guid: 2b7018853d3cad44b8f49add7b9c4b15, type: 3}
-    volume: 1
-    pitch: 1
+    clip: {fileID: 8300000, guid: 9afd6cc7134a3428cb7606e918101f8f, type: 3}
+    volume: 0.15
+    pitch: 2
     loop: 0
     source: {fileID: 0}
