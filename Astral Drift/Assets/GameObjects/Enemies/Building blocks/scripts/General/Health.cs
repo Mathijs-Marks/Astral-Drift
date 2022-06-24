@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
     [Tooltip("How much damage the player will receive. Leave blank in player health")]
     public int collisionDamageToPlayer = 15;
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         OnHitEvent = new UnityEvent();
 

@@ -16,7 +16,7 @@ public class LevelDifficultyManager : MonoBehaviour
     private float screenEdgeOffset = 0.25f;
     private Vector2 previousPos;
 
-    void Start()
+    void Awake()
     {
         difficultyList = new List<int>();
 

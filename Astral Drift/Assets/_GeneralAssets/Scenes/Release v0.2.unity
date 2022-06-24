@@ -301,6 +301,7 @@ MonoBehaviour:
   projectileDamage: 8
   shootingRate: 2
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
   bulletBurstAmount: 3
   gatlingShootingRate: 0.1
@@ -376,6 +377,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1001 &14897024
 PrefabInstance:
@@ -1095,6 +1097,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &83423925
 GameObject:
@@ -2023,6 +2026,7 @@ MonoBehaviour:
   projectileDamage: 8
   shootingRate: 2
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
   bulletBurstAmount: 3
   gatlingShootingRate: 0.1
@@ -2898,6 +2902,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &187986701
 GameObject:
@@ -2997,6 +3002,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &202967849
 GameObject:
@@ -3215,6 +3221,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &225993994
 GameObject:
@@ -3480,6 +3487,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1001 &248289816
 PrefabInstance:
@@ -3829,6 +3837,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &272286935
 GameObject:
@@ -4883,6 +4892,7 @@ MonoBehaviour:
   projectileDamage: 8
   shootingRate: 2
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
   bulletBurstAmount: 3
   gatlingShootingRate: 0.1
@@ -4958,6 +4968,7 @@ MonoBehaviour:
   projectileDamage: 8
   shootingRate: 2
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
   bulletBurstAmount: 3
   gatlingShootingRate: 0.1
@@ -6090,6 +6101,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &436727083
 GameObject:
@@ -6571,6 +6583,7 @@ MonoBehaviour:
   projectileDamage: 8
   shootingRate: 2
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
   bulletBurstAmount: 3
   gatlingShootingRate: 0.1
@@ -7008,6 +7021,7 @@ MonoBehaviour:
   projectileDamage: 8
   shootingRate: 2
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
   bulletBurstAmount: 3
   gatlingShootingRate: 0.1
@@ -7459,6 +7473,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1001 &540584395
 PrefabInstance:
@@ -7793,6 +7808,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &577996782
 GameObject:
@@ -7860,6 +7876,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &581588931
 GameObject:
@@ -7927,6 +7944,7 @@ MonoBehaviour:
   projectileDamage: 8
   shootingRate: 2
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
   bulletBurstAmount: 3
   gatlingShootingRate: 0.1
@@ -8002,6 +8020,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!4 &589223176
 Transform:
@@ -8283,6 +8302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 4280213139387683587, guid: 40699dc7fead65b47925e3583921647d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4280213139387683596, guid: 40699dc7fead65b47925e3583921647d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -8327,6 +8350,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4280213139387683598, guid: 40699dc7fead65b47925e3583921647d, type: 3}
+      propertyPath: enemyPrefabs.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280213139387683598, guid: 40699dc7fead65b47925e3583921647d, type: 3}
+      propertyPath: enemyPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 6756227072614053337, guid: 609d5e6018e982c47a30947f36e47c84, type: 3}
+    - target: {fileID: 4280213139387683598, guid: 40699dc7fead65b47925e3583921647d, type: 3}
+      propertyPath: enemyPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 7627395005229641507, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
+    - target: {fileID: 4280213139387683598, guid: 40699dc7fead65b47925e3583921647d, type: 3}
+      propertyPath: enemyPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 5428553020699001188, guid: dd7d8728a8d60f141936d17000cc2d00, type: 3}
+    - target: {fileID: 4280213139387683598, guid: 40699dc7fead65b47925e3583921647d, type: 3}
+      propertyPath: enemyPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 4353874001829095674, guid: 614cf321fe22b114d8518232422be5e9, type: 3}
+    - target: {fileID: 4280213139387683598, guid: 40699dc7fead65b47925e3583921647d, type: 3}
+      propertyPath: enemyPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 4217161333385065934, guid: 8a7b28a9782ff4f42a7d37485915a586, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40699dc7fead65b47925e3583921647d, type: 3}
 --- !u!1 &629944156
@@ -9370,6 +9417,7 @@ MonoBehaviour:
   projectileDamage: 8
   shootingRate: 2
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
   bulletBurstAmount: 3
   gatlingShootingRate: 0.1
@@ -10471,6 +10519,7 @@ MonoBehaviour:
   projectileDamage: 15
   shootingRate: 572.25
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &885222206
 GameObject:
@@ -10585,6 +10634,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &898172255
 GameObject:
@@ -11373,6 +11423,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &998783465
 GameObject:
@@ -11854,6 +11905,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1069194970
 GameObject:
@@ -12084,6 +12136,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1001 &1077646525
 PrefabInstance:
@@ -12700,6 +12753,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1149996979
 GameObject:
@@ -12985,6 +13039,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1160030334
 GameObject:
@@ -13479,6 +13534,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1211445124
 GameObject:
@@ -13709,6 +13765,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1229880397
 GameObject:
@@ -14011,6 +14068,63 @@ Transform:
   m_Father: {fileID: 541570700}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1292192313
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 254341447910930789, guid: 414b91ea46e123d4bafbe32809d7eb60, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691800177098066879, guid: 414b91ea46e123d4bafbe32809d7eb60, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691800177098066879, guid: 414b91ea46e123d4bafbe32809d7eb60, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.111592
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691800177098066879, guid: 414b91ea46e123d4bafbe32809d7eb60, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15490545
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691800177098066879, guid: 414b91ea46e123d4bafbe32809d7eb60, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.90881157
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691800177098066879, guid: 414b91ea46e123d4bafbe32809d7eb60, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691800177098066879, guid: 414b91ea46e123d4bafbe32809d7eb60, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691800177098066879, guid: 414b91ea46e123d4bafbe32809d7eb60, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691800177098066879, guid: 414b91ea46e123d4bafbe32809d7eb60, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691800177098066879, guid: 414b91ea46e123d4bafbe32809d7eb60, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691800177098066879, guid: 414b91ea46e123d4bafbe32809d7eb60, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691800177098066879, guid: 414b91ea46e123d4bafbe32809d7eb60, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 414b91ea46e123d4bafbe32809d7eb60, type: 3}
 --- !u!1 &1298319858
 GameObject:
   m_ObjectHideFlags: 0
@@ -14323,6 +14437,7 @@ MonoBehaviour:
   projectileDamage: 8
   shootingRate: 2
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
   bulletBurstAmount: 3
   gatlingShootingRate: 0.1
@@ -14558,6 +14673,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1344582934
 GameObject:
@@ -16174,6 +16290,7 @@ MonoBehaviour:
   projectileDamage: 8
   shootingRate: 2
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
   bulletBurstAmount: 3
   gatlingShootingRate: 0.1
@@ -16780,6 +16897,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1543327862
 GameObject:
@@ -16960,6 +17078,7 @@ MonoBehaviour:
   projectileDamage: 15
   shootingRate: 572.25
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1561144165
 GameObject:
@@ -17277,6 +17396,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1569750803
 GameObject:
@@ -17379,6 +17499,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1001 &1583721091
 PrefabInstance:
@@ -17826,6 +17947,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1605136508
 GameObject:
@@ -17893,6 +18015,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1607683188
 GameObject:
@@ -19074,6 +19197,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1706262097
 GameObject:
@@ -19451,6 +19575,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1755278851
 GameObject:
@@ -20125,6 +20250,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1826586943
 GameObject:
@@ -20348,6 +20474,7 @@ MonoBehaviour:
   projectileDamage: 8
   shootingRate: 2
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
   bulletBurstAmount: 3
   gatlingShootingRate: 0.1
@@ -21393,6 +21520,7 @@ MonoBehaviour:
   projectileDamage: 8
   shootingRate: 2
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
   bulletBurstAmount: 3
   gatlingShootingRate: 0.1
@@ -21769,9 +21897,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  direction: {x: 4.3, y: 0.01}
   xDistToMove: 2
   yDistToMove: 4.3
-  direction: {x: 4.3, y: 0.01}
 --- !u!114 &1961153583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22008,6 +22136,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &1976949230
 GameObject:
@@ -23057,6 +23186,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &2098373188
 GameObject:
@@ -23208,6 +23338,7 @@ MonoBehaviour:
   projectileDamage: 20
   shootingRate: 1
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!1 &2100746017
 GameObject:
@@ -24502,9 +24633,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  direction: {x: 4.3, y: 0.01}
   xDistToMove: 2
   yDistToMove: 4.3
-  direction: {x: 4.3, y: 0.01}
 --- !u!114 &6740554538860113438
 MonoBehaviour:
   m_ObjectHideFlags: 0

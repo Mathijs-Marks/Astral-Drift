@@ -7,7 +7,7 @@ public class EnemyWaveSpawner : MonoBehaviour
     [SerializeField] private List<GameObject> enemies;
     private LevelDifficultyManager difficultyManager;
 
-    private void Start()
+    private void Awake()
     {
         difficultyManager = GetComponent<LevelDifficultyManager>();
         enemies = new List<GameObject>();
