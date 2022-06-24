@@ -52,6 +52,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 1.4583333
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &3784108814146403073
 MonoBehaviour:
@@ -119,6 +120,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 1.875
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &5376790823503752025
 MonoBehaviour:
@@ -218,6 +220,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 2.0833333
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &5550132805620138233
 MonoBehaviour:
@@ -380,6 +383,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 1.25
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &3553688256483443113
 MonoBehaviour:
@@ -420,7 +424,7 @@ Transform:
   m_GameObject: {fileID: 2189416871797401426}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.021, y: 0.021, z: 0.021}
+  m_LocalScale: {x: 0.0252, y: 0.0252, z: 0.0252}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3980121237925368652}
@@ -773,7 +777,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.04006803}
+  m_Offset: {x: -0.003410101, y: -0.021311998}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -784,7 +788,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6173385, y: 0.47548127}
+  m_Size: {x: 0.8785157, y: 0.4823017}
   m_EdgeRadius: 0
 --- !u!50 &7945152928846058109
 Rigidbody2D:
@@ -903,6 +907,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0.41666675
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &1072465808407361361
 MonoBehaviour:
@@ -970,6 +975,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 2.2916667
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &8851541234791879237
 MonoBehaviour:
@@ -1132,6 +1138,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &5299895159733325795
 MonoBehaviour:
@@ -1325,6 +1332,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0.83333325
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &8429155979092129391
 MonoBehaviour:
@@ -1392,6 +1400,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 1.0416667
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &5570476490140574776
 MonoBehaviour:
@@ -1459,6 +1468,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0.20833334
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &8535419341780378825
 MonoBehaviour:
@@ -1558,6 +1568,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0.625
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &4866371442439619365
 MonoBehaviour:
@@ -1750,6 +1761,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 1.6666667
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &1608313798945228100
 MonoBehaviour:
@@ -1863,12 +1875,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8620334370675010893, guid: fd0b2303c019dd947a5a9cca020b3582, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620334370675010893, guid: fd0b2303c019dd947a5a9cca020b3582, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8620334370675010893, guid: fd0b2303c019dd947a5a9cca020b3582, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 8620334370675010893, guid: fd0b2303c019dd947a5a9cca020b3582, type: 3}
       propertyPath: m_LocalPosition.z

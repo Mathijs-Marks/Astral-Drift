@@ -84,6 +84,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &1240543722604930270
 MonoBehaviour:
@@ -182,6 +183,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &2651633168756261682
 MonoBehaviour:
@@ -312,6 +314,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &8148504567837427027
 MonoBehaviour:
@@ -537,6 +540,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &3371419082733899764
 MonoBehaviour:
@@ -635,6 +639,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &3029483842308809775
 MonoBehaviour:
@@ -734,6 +739,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &1422800955652519544
 MonoBehaviour:
@@ -1095,6 +1101,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &2130854090284618322
 MonoBehaviour:
@@ -1162,6 +1169,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &7612918052211603270
 MonoBehaviour:
@@ -1229,7 +1237,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.034542084}
+  m_Offset: {x: 0, y: -0.018295646}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1240,7 +1248,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6399056, y: 0.48449516}
+  m_Size: {x: 0.83207333, y: 0.46128535}
   m_EdgeRadius: 0
 --- !u!50 &650338192769307242
 Rigidbody2D:
@@ -1371,6 +1379,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &6036925425517247254
 MonoBehaviour:
@@ -1438,6 +1447,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &3045177971529695470
 MonoBehaviour:
@@ -1568,6 +1578,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &3304128779250641742
 MonoBehaviour:
@@ -1671,7 +1682,7 @@ Transform:
   m_GameObject: {fileID: 8729931358037567301}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.024, y: 0.024, z: 0.024}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9175061361370491935}
@@ -1730,6 +1741,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &6203024583017628094
 MonoBehaviour:
@@ -1891,12 +1903,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8620334370675010893, guid: fd0b2303c019dd947a5a9cca020b3582, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620334370675010893, guid: fd0b2303c019dd947a5a9cca020b3582, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8620334370675010893, guid: fd0b2303c019dd947a5a9cca020b3582, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8620334370675010893, guid: fd0b2303c019dd947a5a9cca020b3582, type: 3}
       propertyPath: m_LocalPosition.z
