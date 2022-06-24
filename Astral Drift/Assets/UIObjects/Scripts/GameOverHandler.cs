@@ -43,7 +43,7 @@ public class GameOverHandler : MonoBehaviour
         gameEnd = true;
 
         Time.timeScale = 0;
-        GlobalReferenceManager.PauseMenu.GamePaused = true;
+        GlobalReferenceManager.StateHandler.GamePaused = true;
     }
 
     public void ResetScene()

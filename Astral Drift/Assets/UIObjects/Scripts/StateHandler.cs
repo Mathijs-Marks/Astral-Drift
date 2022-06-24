@@ -4,13 +4,21 @@ using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PauseMenu : MonoBehaviour
+public class StateHandler : MonoBehaviour
 {
     public bool GamePaused
     {
         get { return gamePaused; }
         set { gamePaused = value; }
     }
+
+    public bool GameStarted
+    {
+        get { return gameStarted; }
+        set { gameStarted = value; }
+    }
+
+    private bool gameStarted;
     [SerializeField] private bool pauseOnRelease;
     private bool released;
     public static bool gamePaused;
@@ -18,9 +26,11 @@ public class PauseMenu : MonoBehaviour
 
     void Awake()
     {
-        GlobalReferenceManager.PauseMenu = this;
-        GamePaused = true;
-        Pause();
+        GlobalReferenceManager.StateHandler = this;
+        Time.timeScale = 0;
+        GameStarted = false;
+        GamePaused = false;
+        //Pause();
     }
 
     // Update is called once per frame
@@ -60,6 +70,12 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
+
+    public void StartGame()
+    {
+        Time.timeScale = 1;
+    }
+
     private void FixedUpdate()
     {
         if (released)
