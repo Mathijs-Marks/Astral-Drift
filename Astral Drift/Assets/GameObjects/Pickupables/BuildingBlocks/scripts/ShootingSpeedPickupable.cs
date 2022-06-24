@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootingSpeedPickupable : Pickupable
 {
-    [SerializeField] private float shootingSpeedUpgradeAmount;
+    [SerializeField] private float shootingSpeedUpgradePercentage;
 
     public override void OnPickUp(Collider2D collision)
     {
@@ -14,7 +14,7 @@ public class ShootingSpeedPickupable : Pickupable
         {
             UI.instance.ShootingSpeedUpgrade();
 
-            collision.GetComponent<Player>().InscreaseShootingSpeed(shootingSpeedUpgradeAmount);
+            collision.GetComponent<Player>().InscreaseShootingSpeed(shootingSpeedUpgradePercentage);
         }
     }
 }

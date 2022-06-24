@@ -112,7 +112,8 @@ public class Player : MonoBehaviour
     {
         for (int i = 0; i < weapons.Length; i++)
         {
-            weapons[i].IncreaseShootingSpeed(amount);
+            float shootingSpeedChange = weapons[i].ShootingRate * amount;
+            weapons[i].IncreaseShootingSpeed(shootingSpeedChange);
         }
     }
 }
