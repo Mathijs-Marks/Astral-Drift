@@ -8,8 +8,9 @@ public class PlayerHealth : Health
 {
     [SerializeField] private int collisionDamageToEnemy = 50;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         GlobalReferenceManager.PlayerHealthScript = this;
     }
 
