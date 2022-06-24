@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea81456640142b84d99ecba7031a52a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 7985991704735193165, guid: 579fa47d1030e2a418addff8671496b4, type: 3}
+  maxDistance: 3
+  particleDestroyTimer: 1
   addedHealthPoints: 20
 --- !u!23 &7282559392141812210
 MeshRenderer:

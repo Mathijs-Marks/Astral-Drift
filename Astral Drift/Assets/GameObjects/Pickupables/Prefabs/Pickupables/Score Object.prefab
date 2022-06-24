@@ -125,9 +125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c69393958902ba34fab01e452dc54135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 7985991704735193165, guid: 1447eb6065480be43b07e339217caf71, type: 3}
+  maxDistance: 3
+  particleDestroyTimer: 1
   scoreIncrease: 10
-  starParticle: {fileID: 7985991704735193165, guid: 1447eb6065480be43b07e339217caf71, type: 3}
-  starAnimationTimer: 1
 --- !u!50 &233060992262687671
 Rigidbody2D:
   serializedVersion: 4

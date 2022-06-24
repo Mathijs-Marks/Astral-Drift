@@ -9,6 +9,7 @@ public class HealthBarUIPlayer : HealthBarUI
     protected override void Start()
     {
         healthScript = GlobalReferenceManager.PlayerHealthScript;
+        GlobalReferenceManager.PlayerHealthScript.PlayerOnHealEvent.AddListener(UpdateHealthBar);
         base.Start();
     }
 

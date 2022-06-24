@@ -27,11 +27,14 @@ public class PlayerHealth : Health
 
         playerOnHealEvent.Invoke();
     }
+    public override void OnDamage(int damage)
+    {
+        base.OnDamage(damage);
 
         if (!canSpawnHealthPickups)
             if (GlobalReferenceManager.PlayerHealthScript.currentHitpoints < GlobalReferenceManager.PlayerHealthScript.maxHitpoints / 2)
                 canSpawnHealthPickups = true;
-
+    }
     public override void DoCollision(Collider2D collision)
     {
         base.DoCollision(collision);

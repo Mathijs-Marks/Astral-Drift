@@ -52,6 +52,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 1.4583333
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &3784108814146403073
 MonoBehaviour:
@@ -119,6 +120,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 1.875
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &5376790823503752025
 MonoBehaviour:
@@ -218,6 +220,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 2.0833333
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &5550132805620138233
 MonoBehaviour:
@@ -380,6 +383,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 1.25
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &3553688256483443113
 MonoBehaviour:
@@ -837,7 +841,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
+  healthDropChance: 0.2
   pickupPrefab: {fileID: 6528677247683499266, guid: 9862dd87389e02241b124712b177939d, type: 3}
+  healthDrop: {fileID: 6528677247683499266, guid: aaf0cb2533f617344869e3a89d10728c, type: 3}
 --- !u!114 &4154842286850863463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,6 +909,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0.41666675
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &1072465808407361361
 MonoBehaviour:
@@ -970,6 +977,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 2.2916667
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &8851541234791879237
 MonoBehaviour:
@@ -1132,6 +1140,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &5299895159733325795
 MonoBehaviour:
@@ -1325,6 +1334,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0.83333325
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &8429155979092129391
 MonoBehaviour:
@@ -1392,6 +1402,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 1.0416667
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &5570476490140574776
 MonoBehaviour:
@@ -1459,6 +1470,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0.20833334
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &8535419341780378825
 MonoBehaviour:
@@ -1558,6 +1570,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0.625
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &4866371442439619365
 MonoBehaviour:
@@ -1750,6 +1763,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 1.6666667
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &1608313798945228100
 MonoBehaviour:

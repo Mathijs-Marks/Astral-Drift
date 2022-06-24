@@ -34,7 +34,7 @@ public class Health : MonoBehaviour
         currentHitpoints = maxHitpoints;
     }
 
-    public void OnDamage(int damage)
+    public virtual void OnDamage(int damage)
     {
         TakeDamage(damage);
         flashOnHit.Invoke();

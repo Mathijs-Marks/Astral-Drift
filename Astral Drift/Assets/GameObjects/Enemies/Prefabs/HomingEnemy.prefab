@@ -166,7 +166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
+  healthDropChance: 0.15
   pickupPrefab: {fileID: 6528677247683499266, guid: 9862dd87389e02241b124712b177939d, type: 3}
+  healthDrop: {fileID: 6528677247683499266, guid: aaf0cb2533f617344869e3a89d10728c, type: 3}
 --- !u!114 &8252364682247751177
 MonoBehaviour:
   m_ObjectHideFlags: 0

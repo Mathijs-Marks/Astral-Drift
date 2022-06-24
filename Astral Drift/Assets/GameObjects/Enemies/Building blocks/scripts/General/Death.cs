@@ -32,7 +32,7 @@ public class Death : MonoBehaviour
     }
 protected virtual void InstantiateObjects()
     {
-if (gameObject.layer != LayerMask.NameToLayer("Player") && GlobalReferenceManager.PlayerHealthScript.canSpawnHealthPickups)
+        if (gameObject.layer != LayerMask.NameToLayer("Player") && GlobalReferenceManager.PlayerHealthScript.canSpawnHealthPickups)
         {
             float healthSpawn = Random.Range(0f, 1f);
             if (healthSpawn < healthDropChance)
