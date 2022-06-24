@@ -1,37 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//[RequireComponent(typeof(Image))]
+[RequireComponent(typeof(Image))]
 public class PlayerDamageIndicator : MonoBehaviour
 {
-    [SerializeField] float alphaSpeed;
+    [SerializeField] private float fadingSpeed = 1.5f;
     private Image indicator;
+    private float alpha;
+
     private void Start()
     {
         indicator = GetComponent<Image>();
-        alphaSpeed /= 255;
-        GlobalReferenceManager.PlayerHealthScript.OnHitEvent.AddListener(ShowIdicator);
-        indicator.color = new Color(indicator.color.r, indicator.color.g, indicator.color.b, 1);
+        GlobalReferenceManager.PlayerHealthScript.OnHitEvent.AddListener(ActivateDamageIndicator);
     }
-    private void ShowIdicator()
+    private void FixedUpdate()
     {
-       // FadeIn();
-       // FadeOut();
+        FadeIndicator();
     }
-    private void FadeIn()
+    //Slowly fade damage indicator over time
+    private void FadeIndicator()
     {
-        for (float i = 0; i < 1; i += alphaSpeed)
+        if (alpha > 0)
         {
-            indicator.color = new Color(indicator.color.r, indicator.color.g, indicator.color.b, i);
+            alpha -= Time.deltaTime * fadingSpeed;
+            indicator.color = new Color(1, 1, 1, alpha);
         }
     }
-    private void FadeOut()
+    //Make damage indicator completely visible
+    private void ActivateDamageIndicator()
     {
-        for (float i = 1; i > 0; i -= alphaSpeed)
-        {
-            indicator.color = new Color(indicator.color.r, indicator.color.g, indicator.color.b, i);
-        }
+        alpha = 1;
     }
 }
