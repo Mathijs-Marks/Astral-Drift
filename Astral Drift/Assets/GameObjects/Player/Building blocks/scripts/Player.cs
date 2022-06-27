@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
     [SerializeField] private BaseGunBarrel[] weapons = new BaseGunBarrel[2];
 
     [SerializeField] private bool relativeControls = true;
-
     [SerializeField] private float playerSpeed;
     [SerializeField] private float yOffset = 0.5f; // Use this value to put the player a bit higher
 
@@ -19,7 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float distanceToTarget;
 
     private Vector2 clampSpace;
-
+    
     private void Awake()
     {
         GlobalReferenceManager.PlayerScript = this;
@@ -112,7 +111,8 @@ public class Player : MonoBehaviour
     {
         for (int i = 0; i < weapons.Length; i++)
         {
-            weapons[i].IncreaseShootingSpeed(amount);
+            float shootingSpeedChange = weapons[i].ShootingRate * amount;
+            weapons[i].IncreaseShootingSpeed(shootingSpeedChange);
         }
     }
 }

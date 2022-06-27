@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307590606424641928}
   m_LocalRotation: {x: -0, y: -0, z: -0.86602545, w: 0.5}
-  m_LocalPosition: {x: 0.75, y: -0.38, z: 0}
+  m_LocalPosition: {x: 0.3, y: -0.12, z: 0}
   m_LocalScale: {x: 0.100000046, y: 0.39999998, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553774793842341277}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.62, y: 0.09, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -84,6 +84,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &1240543722604930270
 MonoBehaviour:
@@ -182,6 +183,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &2651633168756261682
 MonoBehaviour:
@@ -221,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638186078305992463}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: -0.000000059604645}
-  m_LocalPosition: {x: 0, y: -0.85, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
   m_LocalScale: {x: 0.10000005, y: 0.40000004, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -312,6 +314,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &8148504567837427027
 MonoBehaviour:
@@ -413,7 +416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2362000377929256994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.85, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 0.100000046, y: 0.4, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -445,7 +448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2425341814218604832}
   m_LocalRotation: {x: -0, y: -0, z: -0.9659258, w: 0.2588191}
-  m_LocalPosition: {x: 0.38, y: -0.75, z: 0}
+  m_LocalPosition: {x: 0.1, y: -0.26, z: 0}
   m_LocalScale: {x: 0.09999999, y: 0.39999995, z: 0.099999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -477,7 +480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2997873381780650432}
   m_LocalRotation: {x: -0, y: -0, z: -0.8660254, w: -0.50000006}
-  m_LocalPosition: {x: -0.75, y: -0.38, z: 0}
+  m_LocalPosition: {x: -0.26, y: -0.1, z: 0}
   m_LocalScale: {x: 0.09999997, y: 0.39999995, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -537,6 +540,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &3371419082733899764
 MonoBehaviour:
@@ -609,7 +613,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4065306257703860076}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.79, y: 0.01, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -635,6 +639,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &3029483842308809775
 MonoBehaviour:
@@ -674,7 +679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4203651987816818360}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071067, w: 0.7071068}
-  m_LocalPosition: {x: 0.85, y: 0, z: 0}
+  m_LocalPosition: {x: 0.4, y: 0, z: 0}
   m_LocalScale: {x: 0.100000046, y: 0.40000004, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -734,6 +739,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &1422800955652519544
 MonoBehaviour:
@@ -835,7 +841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5107590743045013455}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071069, w: -0.7071067}
-  m_LocalPosition: {x: -0.85, y: 0, z: 0}
+  m_LocalPosition: {x: -0.4, y: 0, z: 0}
   m_LocalScale: {x: 0.10000004, y: 0.4, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -867,7 +873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5243028138914525305}
   m_LocalRotation: {x: -0, y: -0, z: -0.9659258, w: -0.25881916}
-  m_LocalPosition: {x: -0.38, y: -0.75, z: 0}
+  m_LocalPosition: {x: -0.12, y: -0.3, z: 0}
   m_LocalScale: {x: 0.10000005, y: 0.40000004, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -899,7 +905,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5253795214606795156}
   m_LocalRotation: {x: -0, y: -0, z: -0.5000001, w: -0.8660254}
-  m_LocalPosition: {x: -0.75, y: 0.38, z: 0}
+  m_LocalPosition: {x: -0.3, y: 0.12, z: 0}
   m_LocalScale: {x: 0.10000005, y: 0.39999998, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -984,7 +990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4542434114039317121
 Transform:
   m_ObjectHideFlags: 0
@@ -1095,6 +1101,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &2130854090284618322
 MonoBehaviour:
@@ -1162,6 +1169,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &7612918052211603270
 MonoBehaviour:
@@ -1229,7 +1237,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.034542084}
+  m_Offset: {x: 0, y: -0.018295646}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1240,7 +1248,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6399056, y: 0.48449516}
+  m_Size: {x: 0.83207333, y: 0.46128535}
   m_EdgeRadius: 0
 --- !u!50 &650338192769307242
 Rigidbody2D:
@@ -1305,7 +1313,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 6528677247683499266, guid: 9862dd87389e02241b124712b177939d, type: 3}
+  healthDropChance: 0.15
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 6528677247683499266, guid: 9862dd87389e02241b124712b177939d, type: 3}
+  healthDrop: {fileID: 6528677247683499266, guid: aaf0cb2533f617344869e3a89d10728c, type: 3}
+  fireratePrefab: {fileID: 2645341301619796168, guid: dfad4f96b653ada49ae659c0a9d32a43, type: 3}
 --- !u!114 &-6497463218132941372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1345,7 +1358,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7147466832609374288}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.81, y: 0.04, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1371,6 +1384,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &6036925425517247254
 MonoBehaviour:
@@ -1438,6 +1452,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &3045177971529695470
 MonoBehaviour:
@@ -1508,7 +1523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7945384014273935085}
   m_LocalRotation: {x: -0, y: -0, z: -0.2588191, w: 0.9659258}
-  m_LocalPosition: {x: 0.38, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0.12, y: 0.3, z: 0}
   m_LocalScale: {x: 0.10000005, y: 0.4, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1568,6 +1583,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &3304128779250641742
 MonoBehaviour:
@@ -1607,7 +1623,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8459475825719484354}
   m_LocalRotation: {x: -0, y: -0, z: -0.5, w: 0.8660254}
-  m_LocalPosition: {x: 0.75, y: 0.38, z: 0}
+  m_LocalPosition: {x: 0.26, y: 0.1, z: 0}
   m_LocalScale: {x: 0.09999999, y: 0.39999995, z: 0.099999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1671,7 +1687,7 @@ Transform:
   m_GameObject: {fileID: 8729931358037567301}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.024, y: 0.024, z: 0.024}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9175061361370491935}
@@ -1730,6 +1746,7 @@ MonoBehaviour:
   projectileDamage: 30
   shootingRate: 2.5
   shootingOffsetTimer: 0
+  shootSound: EnemyShoot
   allowedToShoot: 1
 --- !u!114 &6203024583017628094
 MonoBehaviour:
@@ -1769,7 +1786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8892305313264631281}
   m_LocalRotation: {x: -0, y: -0, z: -0.2588192, w: -0.9659258}
-  m_LocalPosition: {x: -0.38, y: 0.75, z: 0}
+  m_LocalPosition: {x: -0.1, y: 0.26, z: 0}
   m_LocalScale: {x: 0.09999998, y: 0.39999992, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1891,12 +1908,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8620334370675010893, guid: fd0b2303c019dd947a5a9cca020b3582, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620334370675010893, guid: fd0b2303c019dd947a5a9cca020b3582, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8620334370675010893, guid: fd0b2303c019dd947a5a9cca020b3582, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8620334370675010893, guid: fd0b2303c019dd947a5a9cca020b3582, type: 3}
       propertyPath: m_LocalPosition.z

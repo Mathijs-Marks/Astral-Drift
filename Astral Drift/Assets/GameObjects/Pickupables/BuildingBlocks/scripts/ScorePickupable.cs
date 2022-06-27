@@ -10,8 +10,10 @@ public class ScorePickupable : Pickupable
     [SerializeField] private GameObject starParticle;
     [SerializeField] private float starAnimationTimer = 1f;
 
+    public override void OnPickUp(Collider2D collision)
     private void Start()
     {
+        base.OnPickUp(collision);
         rigidbody = GetComponent<Rigidbody2D>();
         randomDirectionX = Random.Range(-3, 3);
         randomDirectionY = Random.Range(-3, 3);

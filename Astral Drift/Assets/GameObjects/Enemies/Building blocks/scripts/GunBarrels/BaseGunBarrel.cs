@@ -18,6 +18,14 @@ public class BaseGunBarrel : MonoBehaviour
 
     [HideInInspector] public bool allowedToShoot = false;
 
+    [HideInInspector] 
+    public float ShootingRate
+    {
+        get { return shootingRate; }
+        set { shootingRate = value; }
+    }
+
+
     protected virtual void Start()
     {
         pool = gameObject.GetComponent<SimplePool>();
