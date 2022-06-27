@@ -171,6 +171,7 @@ MonoBehaviour:
   maxHitpoints: 100
   collisionDamageToPlayer: 0
   collisionDamageToEnemy: 60
+  canSpawnHealthPickups: 0
 --- !u!114 &7161086265409351163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
 --- !u!61 &5684774986553634510
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -211,6 +211,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.05771184, y: 0.32461244}
   m_EdgeRadius: 0
+  healthDropChance: 0
+  healthDrop: {fileID: 6528677247683499266, guid: aaf0cb2533f617344869e3a89d10728c, type: 3}
 --- !u!1001 &2192351448854879166
 PrefabInstance:
   m_ObjectHideFlags: 0
