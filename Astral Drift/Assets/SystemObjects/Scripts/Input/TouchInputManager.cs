@@ -26,7 +26,7 @@ public class TouchInputManager : MonoBehaviour
     {
         touchPointer = EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId);
 
-        if (GlobalReferenceManager.PauseMenu.GamePaused == false)
+        if (GlobalReferenceManager.StateHandler.GamePaused == false)
         {
             // If the touchCount is greater than zero, that means we are touching the screen.
             // Check if the touch is not over another game object.

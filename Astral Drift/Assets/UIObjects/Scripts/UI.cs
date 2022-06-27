@@ -14,7 +14,9 @@ public class UI : MonoBehaviour
     [HideInInspector] public int scoreValue;
 
     [SerializeField] private FirerateUI firerateScript;
-    public TextMeshProUGUI score;
+    public TextMeshProUGUI normalScore;
+    public TextMeshProUGUI endGameScore;
+    public TextMeshProUGUI victoryScore;
     public TextMeshProUGUI shootingRate;
 
     private void Awake()
@@ -33,9 +35,12 @@ public class UI : MonoBehaviour
     public void AddScore(int score)
     {
         scoreValue += score;
-        this.score.text = scoreValue.ToString();
+        UpdateScore(normalScore);
     }
-
+    public void UpdateScore(TextMeshProUGUI target)
+    {
+        target.text = scoreValue.ToString();
+    }
     public void ShootingSpeedUpgrade()
     {
         currentUpgrade++;
