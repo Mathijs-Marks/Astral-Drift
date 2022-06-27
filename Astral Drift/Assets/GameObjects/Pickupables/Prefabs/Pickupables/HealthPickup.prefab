@@ -51,6 +51,7 @@ MonoBehaviour:
   particlePrefab: {fileID: 7985991704735193165, guid: 579fa47d1030e2a418addff8671496b4, type: 3}
   maxDistance: 3
   particleDestroyTimer: 1
+  pickUpAudioName: HealthPickup
   addedHealthPoints: 20
 --- !u!23 &7282559392141812210
 MeshRenderer:

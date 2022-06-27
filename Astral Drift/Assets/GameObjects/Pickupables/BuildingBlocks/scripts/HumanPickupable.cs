@@ -47,6 +47,9 @@ public class HumanPickupable : Pickupable
         UI.instance.AddScore(scoreIncrease);
         gameObject.SetActive(false);
 
+        if (GlobalReferenceManager.AudioManagerRef != null)
+            GlobalReferenceManager.AudioManagerRef.PlaySound(pickUpAudioName);
+
         if (particlePrefab != null)
         {
             GameObject newPickup = Instantiate(particlePrefab, transform.position, transform.rotation);

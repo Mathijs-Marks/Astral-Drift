@@ -8,6 +8,7 @@ public class Pickupable : MonoBehaviour
     [SerializeField] protected GameObject particlePrefab;
     [SerializeField] private float maxDistance = 3;
     [SerializeField] protected float particleDestroyTimer = 1;
+    [SerializeField] protected string pickUpAudioName;
     private Rigidbody2D rb;
     private Vector2 randomDirection;
     
@@ -29,6 +30,10 @@ public class Pickupable : MonoBehaviour
     public virtual void OnPickUp(Collider2D collision)
     {
         gameObject.SetActive(false);
+
+        if (GlobalReferenceManager.AudioManagerRef != null)
+            GlobalReferenceManager.AudioManagerRef.PlaySound(pickUpAudioName);
+
         if (particlePrefab != null)
         {
             GameObject newPickup = Instantiate(particlePrefab, transform.position, transform.rotation);

@@ -76,6 +76,7 @@ MonoBehaviour:
   particlePrefab: {fileID: 7985991704735193165, guid: 308407db4b7621a41bb05ef29b6715ec, type: 3}
   maxDistance: 3
   particleDestroyTimer: 1
+  pickUpAudioName: HumanPickup
   model: {fileID: 2976742866244130249}
   scoreIncrease: 80
   scaleDecrease: 0.1
