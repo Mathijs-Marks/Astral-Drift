@@ -13,6 +13,13 @@ public class HandleCollissions : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        collision.gameObject.SetActive(false);
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Pickups"))
+        {
+            Destroy(collision.gameObject);
+        }
+        else
+        {
+            collision.gameObject.SetActive(false);
+        }
     }
 }

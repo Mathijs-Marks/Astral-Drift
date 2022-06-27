@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
 
     private Death deathScript;
 
+    protected bool isDead;
     protected int currentHitpoints;
     public int CurrentHitpoints { get { return currentHitpoints; } }
 
@@ -34,23 +35,26 @@ public class Health : MonoBehaviour
         currentHitpoints = maxHitpoints;
     }
 
-    public void OnDamage(int damage)
+    public virtual void OnDamage(int damage)
     {
         TakeDamage(damage);
         flashOnHit.Invoke();
         OnHitEvent.Invoke();
     }
-
     public virtual void TakeDamage(int damage)
     {
         currentHitpoints -= damage;
         if (currentHitpoints <= 0)
         {
-            currentHitpoints = 0;
-            OnHealthZero();
+            if (!isDead)
+            {
+                currentHitpoints = 0;
+                isDead = true;
+                OnHealthZero();
+            }
         }
     }
-    public void Heal(int health)
+    public virtual void Heal(int health)
     {
         currentHitpoints += health;
 
@@ -101,7 +105,8 @@ public class Health : MonoBehaviour
         }
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Pickup"))
         {
-            //get/do pickup stuff
+            if (collision.gameObject.TryGetComponent(out Pickupable pickupable))
+                pickupable.OnPickUp(collision);
         }
     }
 }
