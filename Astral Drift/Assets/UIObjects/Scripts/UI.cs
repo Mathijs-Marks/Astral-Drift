@@ -16,6 +16,7 @@ public class UI : MonoBehaviour
     [SerializeField] private FirerateUI firerateScript;
     public TextMeshProUGUI normalScore;
     public TextMeshProUGUI endGameScore;
+    public TextMeshProUGUI victoryScore;
     public TextMeshProUGUI shootingRate;
 
     private void Awake()
