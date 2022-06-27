@@ -38,7 +38,7 @@ public class StateHandler : MonoBehaviour
     {
         if (pauseOnRelease)
         {
-            if (!GlobalReferenceManager.GameOverMenu.gameEnd)
+            if (!GlobalReferenceManager.GameOverMenu.gameEnd && GameStarted)
             {
                 if (Input.GetMouseButtonUp(0) && !GamePaused)
                 {
@@ -73,6 +73,7 @@ public class StateHandler : MonoBehaviour
 
     public void StartGame()
     {
+        gameStarted = true;
         Time.timeScale = 1;
     }
 

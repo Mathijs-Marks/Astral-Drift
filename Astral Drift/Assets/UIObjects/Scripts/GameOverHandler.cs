@@ -41,7 +41,7 @@ public class GameOverHandler : MonoBehaviour
     {
         screen.SetActive(true);
         gameEnd = true;
-
+        UI.instance.UpdateScore(GlobalReferenceManager.UIMenu.endGameScore);
         Time.timeScale = 0;
         GlobalReferenceManager.StateHandler.GamePaused = true;
     }
