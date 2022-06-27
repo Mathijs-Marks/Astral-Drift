@@ -6,10 +6,9 @@ public class ScorePickupable : Pickupable
 {
     [SerializeField] private int scoreIncrease = 1;
 
-    protected override void PickUp(Collider2D collision)
+    public override void OnPickUp(Collider2D collision)
     {
-        base.PickUp(collision);
-
+        base.OnPickUp(collision);
         UI.instance.AddScore(scoreIncrease);
     }
 }

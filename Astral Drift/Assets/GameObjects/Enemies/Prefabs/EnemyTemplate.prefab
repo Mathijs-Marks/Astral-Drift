@@ -128,7 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e79b91ab965c46f479854171f2491304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHitpoints: 0
   maxHitpoints: 0
 --- !u!114 &3218143718832635698
 MonoBehaviour:
@@ -156,6 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4deb963c2c2b2cb4695c1a2efa789f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
+  pickupPrefab: {fileID: 6528677247683499266, guid: 9862dd87389e02241b124712b177939d, type: 3}
 --- !u!1001 &1225146189603091056
 PrefabInstance:
   m_ObjectHideFlags: 0
