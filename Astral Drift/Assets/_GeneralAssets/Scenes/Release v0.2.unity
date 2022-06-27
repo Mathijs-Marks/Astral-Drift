@@ -9377,75 +9377,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29576b3526eb2174a8c674e5a91a1a8c, type: 3}
---- !u!1001 &713367327
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7030399337930416808, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416808, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416808, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416808, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416808, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416808, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416808, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416808, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416808, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416808, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416808, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416819, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_Name
-      value: Human Pickupable
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416821, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_Size.x
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416821, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_Size.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7030399337930416821, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.05
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
 --- !u!4 &731130287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5619767730024494294, guid: 83a4f6b53405253489ac5dfd7b18e562, type: 3}
@@ -24901,22 +24832,6 @@ PrefabInstance:
     - target: {fileID: 5589042620065145078, guid: 1b3369eff1a66f64f839a12b21d850c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8532976729181746158, guid: 1b3369eff1a66f64f839a12b21d850c1, type: 3}
-      propertyPath: maxSpawnTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8532976729181746158, guid: 1b3369eff1a66f64f839a12b21d850c1, type: 3}
-      propertyPath: minSpawnTime
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8532976729181746158, guid: 1b3369eff1a66f64f839a12b21d850c1, type: 3}
-      propertyPath: humanPickupable
-      value: 
-      objectReference: {fileID: 7030399337930416819, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
-    - target: {fileID: 8532976729181746158, guid: 1b3369eff1a66f64f839a12b21d850c1, type: 3}
-      propertyPath: maxAmountHumans
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8603101611348739940, guid: 1b3369eff1a66f64f839a12b21d850c1, type: 3}
       propertyPath: m_Name
