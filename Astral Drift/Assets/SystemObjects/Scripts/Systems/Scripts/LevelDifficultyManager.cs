@@ -31,7 +31,7 @@ public class LevelDifficultyManager : MonoBehaviour
     {
         if(GlobalReferenceManager.MainCamera.transform.position.y > previousPos.y)
         {
-            GenerateEnemies();
+            GenerateEnemies();  
         }
         difficultyLevel += difficultyIncrease * Time.deltaTime;
     }

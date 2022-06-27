@@ -35,7 +35,7 @@ public class Death : MonoBehaviour
 protected virtual void InstantiateObjects()
     {
         //Drops a random amount of stars
-        int amountOfStars = Random.Range(0, maxDroppableAmountStars);
+        int amountOfStars = Random.Range(1, maxDroppableAmountStars);
         if (starPrefab != null)
         {
             for (int i = 0; i < amountOfStars; i++)

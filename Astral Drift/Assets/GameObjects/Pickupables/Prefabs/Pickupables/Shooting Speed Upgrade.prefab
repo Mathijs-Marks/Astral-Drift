@@ -76,6 +76,7 @@ MonoBehaviour:
   particlePrefab: {fileID: 7985991704735193165, guid: 308407db4b7621a41bb05ef29b6715ec, type: 3}
   maxDistance: 0.1
   particleDestroyTimer: 1
+  pickUpAudioName: ShootingPickup
   shootingSpeedUpgradePercentage: 0.1
 --- !u!50 &1221719431350345765
 Rigidbody2D:

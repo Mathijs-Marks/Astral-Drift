@@ -128,6 +128,7 @@ MonoBehaviour:
   particlePrefab: {fileID: 7985991704735193165, guid: 1447eb6065480be43b07e339217caf71, type: 3}
   maxDistance: 3
   particleDestroyTimer: 1
+  pickUpAudioName: ScorePickup
   scoreIncrease: 10
 --- !u!50 &233060992262687671
 Rigidbody2D:

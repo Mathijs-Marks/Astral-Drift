@@ -8,29 +8,20 @@ public class HumanPickupable : Pickupable
     [SerializeField] private GameObject model;
 
     [SerializeField] private int scoreIncrease = 10;
-    [SerializeField] private float pickupTime;
-    [SerializeField] [Range(0, 1)] private float scaleWhenCollected; // This is a percentage value, thus ranging from 0 to 1
+    [SerializeField] [Range(0, 1)] private float scaleDecrease; // This is a percentage value, thus ranging from 0 to 1
 
     private Vector3 originalScale;
-    private float timer;
     private bool beingPickedUp;
-
     private void Start()
     {
-        // Invert scaleWhenCollected to make it work properly in FixedUpdate.
-        scaleWhenCollected = 1 - scaleWhenCollected;
         originalScale = model.transform.localScale;
     }
-
-    // Timers
-    private void FixedUpdate()
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (beingPickedUp)
         {
-            timer += Time.deltaTime;
-            model.transform.localScale = originalScale * (1 - (timer * scaleWhenCollected) / pickupTime);
-
-            if (timer > pickupTime)
+            model.transform.localScale -= new Vector3(scaleDecrease, scaleDecrease, scaleDecrease) * Time.deltaTime;
+            if (model.transform.localScale.x <= scaleDecrease * 2)
             {
                 ConfirmPickUp();
             }
@@ -46,9 +37,7 @@ public class HumanPickupable : Pickupable
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        // Reset timer and scale.
         beingPickedUp = false;
-        timer = 0;
         model.transform.localScale = originalScale;
     }
 
@@ -57,5 +46,17 @@ public class HumanPickupable : Pickupable
     {
         UI.instance.AddScore(scoreIncrease);
         gameObject.SetActive(false);
+
+        if (GlobalReferenceManager.AudioManagerRef != null)
+            GlobalReferenceManager.AudioManagerRef.PlaySound(pickUpAudioName);
+
+        if (particlePrefab != null)
+        {
+            GameObject newPickup = Instantiate(particlePrefab, transform.position, transform.rotation);
+            Destroy(newPickup, particleDestroyTimer);
+        }
+
+        //This may be used for statisics or extra info to players. THIS IS NOT YET VISIBLE IN-GAME
+        GlobalReferenceManager.HumanSpawnerRef.currentPickedUpHumans++;
     }
 }
