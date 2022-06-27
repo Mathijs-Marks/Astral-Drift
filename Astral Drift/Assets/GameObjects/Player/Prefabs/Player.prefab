@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 7102300387541548479}
   - component: {fileID: 6736147908785115002}
   - component: {fileID: 7161086265409351163}
+  - component: {fileID: 5684774986553634510}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -85,7 +86,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.19364731}
+  m_Offset: {x: 0.0011604652, y: -0.22149834}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -96,7 +97,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.53345907, y: 0.39273533}
+  m_Size: {x: 0.48471975, y: 0.3045404}
   m_EdgeRadius: 0
 --- !u!50 &2431798443636024101
 Rigidbody2D:
@@ -184,6 +185,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
+--- !u!61 &5684774986553634510
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7102300387541548478}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000000014901161, y: 0.09167632}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05771184, y: 0.32461244}
+  m_EdgeRadius: 0
   healthDropChance: 0
   healthDrop: {fileID: 6528677247683499266, guid: aaf0cb2533f617344869e3a89d10728c, type: 3}
 --- !u!1001 &2192351448854879166
@@ -219,11 +246,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.127
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.155
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -277,6 +304,10 @@ PrefabInstance:
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 5852864802511956268, guid: 2626d5132647da94d87df4c39d7924ba, type: 3}
+    - target: {fileID: 6740703080104766225, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6828227476333938969, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -366,11 +397,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.127
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.155
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -424,6 +455,10 @@ PrefabInstance:
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 5852864802511956268, guid: 2626d5132647da94d87df4c39d7924ba, type: 3}
+    - target: {fileID: 6740703080104766225, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6828227476333938969, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -607,7 +642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 0.065
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -661,6 +696,10 @@ PrefabInstance:
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 5852864802511956268, guid: 2626d5132647da94d87df4c39d7924ba, type: 3}
+    - target: {fileID: 6740703080104766225, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6828227476333938969, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Layer
       value: 6
