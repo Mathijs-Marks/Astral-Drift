@@ -22,7 +22,7 @@ public class RotateToPlayer : MovementBehaviours
         if (isRotating)
         {
             //Rotating
-            Vector3 direction = playerTarget.transform.position - transform.position;
+            Vector3 direction = transform.position - playerTarget.transform.position;
             Quaternion rotation = Quaternion.LookRotation(-direction, Vector3.forward);
             rotation.x = transform.rotation.x;
             rotation.y = transform.rotation.y;
