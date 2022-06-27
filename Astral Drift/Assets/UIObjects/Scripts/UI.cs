@@ -13,6 +13,7 @@ public class UI : MonoBehaviour
 
     [HideInInspector] public int scoreValue;
 
+    [SerializeField] private FirerateUI firerateScript;
     public TextMeshProUGUI score;
     public TextMeshProUGUI shootingRate;
 
@@ -26,21 +27,19 @@ public class UI : MonoBehaviour
         instance = this;
         scoreValue = 0;
         currentUpgrade = 0;
-
-        score.text = "Score: 0";
         shootingRate.text = "Fire Rate: 0/" + maxUpgrade;
     }
 
     public void AddScore(int score)
     {
         scoreValue += score;
-        this.score.text = "Score: " + scoreValue;
+        this.score.text = scoreValue.ToString();
     }
 
     public void ShootingSpeedUpgrade()
     {
         currentUpgrade++;
 
-        shootingRate.text = "Fire Rate: " + currentUpgrade + "/" + maxUpgrade;
+        firerateScript.UpdateFirerateBar();
     }
 }

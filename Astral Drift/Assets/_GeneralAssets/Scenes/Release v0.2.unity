@@ -925,7 +925,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &70945380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1660,7 +1665,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &114399881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1878,7 +1888,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &131576381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4230,7 +4245,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &288239146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4536,7 +4556,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &303421026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11327,7 +11352,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &973968960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12932,7 +12962,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &1153607227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13267,7 +13302,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &1188693584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14338,7 +14378,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &1308041503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15101,7 +15146,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &1395524555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15514,7 +15564,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3271550880909598884, guid: a1368d584054f484ba87816d2844d9ab, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3271550880909598884, guid: a1368d584054f484ba87816d2844d9ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15767,7 +15817,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &1446717032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16613,7 +16668,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &1486132405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17882,7 +17942,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &1599720586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19146,7 +19211,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &1700287808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20416,7 +20486,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &1826586947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20767,7 +20842,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &1841446921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21988,7 +22068,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 0}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!114 &1961153587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23660,6 +23745,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 84777225388008387, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
+      propertyPath: shootingRate
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049742347764150748, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
+      propertyPath: shootingRate
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985254694876412075, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
+      propertyPath: shootingRate
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7102300387541548473, guid: d22e1c35e3150554e82f5422b858e205, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -24254,7 +24351,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 0}
-  pickupPrefab: {fileID: 0}
+  healthDropChance: 0.1
+  firerateUpgradeChance: 0.1
+  maxDroppableAmountStars: 5
+  starPrefab: {fileID: 0}
+  healthDrop: {fileID: 0}
+  fireratePrefab: {fileID: 0}
 --- !u!4 &4169589731323597242
 Transform:
   m_ObjectHideFlags: 0
@@ -24502,10 +24604,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1548219102140828377, guid: 69a9088e927d2d54c864898143f10829, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1219985540}
     - target: {fileID: 1548219102140828378, guid: 69a9088e927d2d54c864898143f10829, type: 3}
       propertyPath: m_Pivot.x
       value: 0
