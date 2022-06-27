@@ -76,8 +76,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6208859892176465805}
+  - component: {fileID: 7347262715232966098}
   m_Layer: 0
-  m_Name: RotatingEnemy 1
+  m_Name: RotatingEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,6 +101,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7347262715232966098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091318123306923851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d9a4cf18563064186890fbf235949d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDifficulty: 6
 --- !u!1 &5961181734455050463
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +128,6 @@ GameObject:
   - component: {fileID: 5622990992433390004}
   - component: {fileID: 3318776831349583398}
   - component: {fileID: 1438478067973660909}
-  - component: {fileID: 3905782980550755826}
   m_Layer: 7
   m_Name: RotatingEnemy
   m_TagString: Enemy
@@ -248,19 +261,6 @@ MonoBehaviour:
   starPrefab: {fileID: 6528677247683499266, guid: 9862dd87389e02241b124712b177939d, type: 3}
   healthDrop: {fileID: 6528677247683499266, guid: aaf0cb2533f617344869e3a89d10728c, type: 3}
   fireratePrefab: {fileID: 2645341301619796168, guid: dfad4f96b653ada49ae659c0a9d32a43, type: 3}
---- !u!114 &3905782980550755826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5961181734455050463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d9a4cf18563064186890fbf235949d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyDifficulty: 6
 --- !u!1001 &1390589019495286189
 PrefabInstance:
   m_ObjectHideFlags: 0
