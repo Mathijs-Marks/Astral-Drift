@@ -81,3 +81,15 @@ MonoBehaviour:
     pitch: 2
     loop: 0
     source: {fileID: 0}
+  - name: ShootingPickup
+    clip: {fileID: 8300000, guid: 4ddcb7da0dc215e4195e6700a343e94b, type: 3}
+    volume: 0.15
+    pitch: 2
+    loop: 0
+    source: {fileID: 0}
+  - name: HumanPickup
+    clip: {fileID: 8300000, guid: 3bd484e3e2879a54e95e5973ffb307f7, type: 3}
+    volume: 0.15
+    pitch: 2
+    loop: 0
+    source: {fileID: 0}
