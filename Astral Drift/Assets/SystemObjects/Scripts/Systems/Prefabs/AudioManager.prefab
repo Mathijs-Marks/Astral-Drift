@@ -47,37 +47,37 @@ MonoBehaviour:
   sounds:
   - name: EnemyCollision
     clip: {fileID: 8300000, guid: 7cbdf6dbbfd9d4448b1d11d0287fecd2, type: 3}
-    volume: 1
-    pitch: 1
+    volume: 0.2
+    pitch: 0.2
     loop: 0
     source: {fileID: 0}
   - name: Explosion
-    clip: {fileID: 8300000, guid: bb35e320459486d4498d78dfa051bcdd, type: 3}
-    volume: 0.2
+    clip: {fileID: 8300000, guid: f9dc8d9847657423fa659c4a60acf0c6, type: 3}
+    volume: 0.3
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: StarPickup
-    clip: {fileID: 8300000, guid: d8e9949d90e0e204386f51cac1acba74, type: 3}
-    volume: 1
-    pitch: 1
+    clip: {fileID: 8300000, guid: f9b77bced840243acb99e252976b0e43, type: 3}
+    volume: 0.1
+    pitch: 3
     loop: 0
     source: {fileID: 0}
   - name: HealthPickup
-    clip: {fileID: 8300000, guid: 769e00d84d7b8314cbb5ddce5855bcbb, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: bf7a3161fe44c42469f08762346ed300, type: 3}
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: PlayerShoot
-    clip: {fileID: 8300000, guid: 177aa984ad76cc84fad4d04f4a9c35d7, type: 3}
-    volume: 0.5
-    pitch: 1
+    clip: {fileID: 8300000, guid: de812cfb519929c4aad9d296f655c81d, type: 3}
+    volume: 0.1
+    pitch: 2
     loop: 0
     source: {fileID: 0}
   - name: EnemyShoot
-    clip: {fileID: 8300000, guid: 2b7018853d3cad44b8f49add7b9c4b15, type: 3}
-    volume: 1
-    pitch: 1
+    clip: {fileID: 8300000, guid: 9afd6cc7134a3428cb7606e918101f8f, type: 3}
+    volume: 0.15
+    pitch: 2
     loop: 0
     source: {fileID: 0}

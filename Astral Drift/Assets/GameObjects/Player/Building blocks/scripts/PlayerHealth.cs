@@ -50,6 +50,8 @@ public class PlayerHealth : Health
                 enemyHealth.OnDamage(enemyHealth.maxHitpoints / 2);
 
             OnDamage(enemyHealth.collisionDamageToPlayer);
+
+            GlobalReferenceManager.AudioManagerRef.PlaySound("EnemyCollision");
         }
     }
 }
