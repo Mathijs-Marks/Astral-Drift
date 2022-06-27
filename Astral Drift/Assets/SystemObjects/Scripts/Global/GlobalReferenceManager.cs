@@ -14,4 +14,5 @@ public static class GlobalReferenceManager
     public static SetColliderSize ScreenCollider;
     public static BackgroundScroller background; //Reference to background
     public static AudioManager AudioManagerRef;
+    public static HumanSpawner HumanSpawnerRef;
 }

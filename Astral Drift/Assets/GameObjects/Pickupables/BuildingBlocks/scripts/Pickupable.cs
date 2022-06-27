@@ -7,7 +7,7 @@ public class Pickupable : MonoBehaviour
 {
     [SerializeField] protected GameObject particlePrefab;
     [SerializeField] private float maxDistance = 3;
-    [SerializeField] private float particleDestroyTimer = 1;
+    [SerializeField] protected float particleDestroyTimer = 1;
     private Rigidbody2D rb;
     private Vector2 randomDirection;
     
