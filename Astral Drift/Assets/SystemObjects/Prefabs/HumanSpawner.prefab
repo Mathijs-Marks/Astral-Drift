@@ -44,3 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1feae06525b2048aa726319e92e6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxAmountHumans: 10
+  currentPickedUpHumans: 0
+  humanPickupable: {fileID: 7030399337930416819, guid: 43f96918914883a4b8faa82448a510a2, type: 3}
+  maxSpawnTime: 5
+  minSpawnTime: 15
