@@ -15,9 +15,12 @@ EditorBuildSettings:
     path: Assets/_GeneralAssets/Scenes/Main.unity
     guid: 1f12619e99399fb4d9e49ba3e81e8323
   - enabled: 0
-    path: Assets/_GeneralAssets/Scenes/Release v0.2.unity
+    path: Assets/_GeneralAssets/Scenes/ProceduralBackGround.unity
     guid: 621d66e8568333049918d64249c3c652
-  - enabled: 1
+  - enabled: 0
     path: Assets/_GeneralAssets/Scenes/Showcases/Player.unity
     guid: 4e084f03488b7114292db8e2cdc90d0c
+  - enabled: 1
+    path: Assets/_GeneralAssets/Scenes/Release v0.3.unity
+    guid: 2d75b220a2121514083944b53439adbf
   m_configObjects: {}

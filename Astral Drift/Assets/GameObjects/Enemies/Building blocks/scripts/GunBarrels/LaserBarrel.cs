@@ -4,52 +4,75 @@ using UnityEngine;
 
 public class LaserBarrel : MonoBehaviour
 {
-    [SerializeField] private LineRenderer aimingLaserRenderer;
+  [SerializeField] private GameObject laserPointer;
+  [SerializeField] private GameObject laser;
 
-    [SerializeField] private string collisionTag;
-    [SerializeField] private float laserLifespan;
-    [SerializeField] private float laserLength;
+    private float totalTime;
+    private float timeBeforeReset;
+    private float shootTimer;
 
-    [SerializeField]
-    private GameObject laserPrefab;
-    [SerializeField]
-    private GameObject gunMuzzle;
-    private GameObject spawnedLaser;
+    private int state = 0;
 
-    [SerializeField]
-    private float secondsBeforeFiringAgain = 1;
-    [SerializeField]
-    private float laserWidth = 0.1f;
-    [SerializeField] private float laserAimingWidth;
+    [SerializeField] private float cooldownTime;
+    [SerializeField] private float AimingTime;
+    [SerializeField] private float ShootingTime;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        StartCoroutine(SpawnObject());
-
-        aimingLaserRenderer.startWidth = laserAimingWidth;
-        aimingLaserRenderer.SetPosition(1, new Vector3(0, 0, 1) * laserLength);
+        totalTime = cooldownTime + AimingTime + ShootingTime;
+        timeBeforeReset = AimingTime + ShootingTime;
     }
-
-    void SpawnLaser(GameObject Object)
+    private void LaserAimAndShoot()
     {
-        //Spawn a laser
-        spawnedLaser = (GameObject)Instantiate(laserPrefab, gunMuzzle.transform);
-        spawnedLaser.GetComponent<Laser>().Instantiate(collisionTag, gunMuzzle.transform.position, new Vector3(0, 0, 1), laserLength, 1, laserLifespan, laserWidth);
-    }
-
-    IEnumerator SpawnObject()
-    {
-        while (true)
+      if(timeBeforeReset <= AimingTime + ShootingTime)
         {
-            yield return new WaitForSeconds(secondsBeforeFiringAgain);
-            SpawnLaser(gunMuzzle);
+            laserPointer.SetActive(true);
+        }
+      else if(timeBeforeReset <= ShootingTime)
+        {
+            laserPointer.SetActive(false);
+            laser.SetActive(true);
+        }
+      else if( timeBeforeReset <= 0)
+        {
+            laser.SetActive(false);
+            timeBeforeReset = totalTime;
+        }
+        timeBeforeReset = timeBeforeReset - Time.fixedDeltaTime;
+    }
+    private void FixedUpdate()
+    {
+        shootTimer -= Time.fixedDeltaTime;
+        if (shootTimer < 0)
+        {
+            ChangeState();
+        }
+    }
+    void ChangeState()
+    {
+        if (state == 2)
+        {
+            state = 0;
+        }
+        else
+        {
+        state++;
         }
 
-    }
-
-    public void IncreaseShootingSpeed(float amount)
-    {
-        secondsBeforeFiringAgain -= amount;
+        switch(state){
+            case 0:
+                laserPointer.SetActive(true);
+                shootTimer = AimingTime;
+                break;
+                    case 1:
+                laserPointer.SetActive(false);
+                laser.SetActive(true);
+                shootTimer = ShootingTime;
+                break;
+            case 2:
+                laser.SetActive(false);
+                shootTimer = cooldownTime;
+                break;
+        }
     }
 }

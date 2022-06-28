@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -41,9 +42,9 @@ public class GameOverHandler : MonoBehaviour
     {
         screen.SetActive(true);
         gameEnd = true;
-
+        UI.instance.UpdateScore(GlobalReferenceManager.UIMenu.endGameScore);
         Time.timeScale = 0;
-        GlobalReferenceManager.PauseMenu.GamePaused = true;
+        GlobalReferenceManager.StateHandler.GamePaused = true;
     }
 
     public void ResetScene()

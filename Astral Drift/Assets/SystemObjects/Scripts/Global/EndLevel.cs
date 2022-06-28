@@ -9,6 +9,7 @@ public class EndLevel : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player")) // Collision
         {
             GlobalReferenceManager.GameOverMenu.ScreenEvent.Invoke(GlobalReferenceManager.GameOverMenu.victoryScreen);
+            UI.instance.UpdateScore(GlobalReferenceManager.UIMenu.victoryScore);
         }
     }
 }

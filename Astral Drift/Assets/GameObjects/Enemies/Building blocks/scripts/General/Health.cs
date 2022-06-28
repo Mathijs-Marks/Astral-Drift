@@ -1,37 +1,60 @@
 
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider2D), typeof(Death))]
 public class Health : MonoBehaviour
 {
+    private UnityEvent onHitEvent;
+
+    public UnityEvent OnHitEvent
+    {
+        get { return onHitEvent; }
+        set { onHitEvent = value; }
+    }
+
+    public UnityEvent flashOnHit;
+
     private Death deathScript;
 
+    protected bool isDead;
     protected int currentHitpoints;
     public int CurrentHitpoints { get { return currentHitpoints; } }
 
     public int maxHitpoints;
-    protected virtual void Start()
+
+    [Tooltip("How much damage the player will receive. Leave blank in player health")]
+    public int collisionDamageToPlayer = 15;
+
+    protected virtual void Awake()
     {
+        OnHitEvent = new UnityEvent();
+
         deathScript = GetComponent<Death>();
 
         currentHitpoints = maxHitpoints;
     }
 
-    public void OnDamage(int damage)
+    public virtual void OnDamage(int damage)
     {
         TakeDamage(damage);
+        flashOnHit.Invoke();
+        OnHitEvent.Invoke();
     }
-
     public virtual void TakeDamage(int damage)
     {
         currentHitpoints -= damage;
         if (currentHitpoints <= 0)
         {
-            currentHitpoints = 0;
-            OnHealthZero();
+            if (!isDead)
+            {
+                currentHitpoints = 0;
+                isDead = true;
+                OnHealthZero();
+            }
         }
     }
-    public void Heal(int health)
+    public virtual void Heal(int health)
     {
         currentHitpoints += health;
 
@@ -45,7 +68,10 @@ public class Health : MonoBehaviour
     {
         deathScript.DeathEvent.Invoke();
     }
-
+    protected void LaserCollision(int damage)
+    {
+        OnDamage(damage);
+    }
     protected void BulletCollision(int damage, GameObject bullet)
     {
         OnDamage(damage);
@@ -55,8 +81,15 @@ public class Health : MonoBehaviour
     {
         DoCollision(collision);
     }
-
-    protected virtual void DoCollision(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Laser"))
+        {
+            if (collision.gameObject.TryGetComponent(out Laser laser))
+                LaserCollision(laser.readDamage);
+        }
+    }
+    public virtual void DoCollision(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet")) //Bullet
         {
@@ -72,7 +105,8 @@ public class Health : MonoBehaviour
         }
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Pickup"))
         {
-            //get/do pickup stuff
+            if (collision.gameObject.TryGetComponent(out Pickupable pickupable))
+                pickupable.OnPickUp(collision);
         }
     }
 }

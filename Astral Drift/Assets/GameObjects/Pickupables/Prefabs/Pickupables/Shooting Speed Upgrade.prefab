@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2645341301619796179}
   - component: {fileID: 2645341301619796174}
   - component: {fileID: 2645341301619796175}
+  - component: {fileID: 1221719431350345765}
   m_Layer: 10
   m_Name: Shooting Speed Upgrade
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2645341301619796168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -72,7 +73,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43234580f41e8f641ae65eaac1ff829d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingSpeedUpgradeAmount: 0.1
+  particlePrefab: {fileID: 7985991704735193165, guid: 308407db4b7621a41bb05ef29b6715ec, type: 3}
+  maxDistance: 0.1
+  particleDestroyTimer: 1
+  pickUpAudioName: ShootingPickup
+  shootingSpeedUpgradePercentage: 0.1
+--- !u!50 &1221719431350345765
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2645341301619796168}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 2
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &591074956147980116
 PrefabInstance:
   m_ObjectHideFlags: 0

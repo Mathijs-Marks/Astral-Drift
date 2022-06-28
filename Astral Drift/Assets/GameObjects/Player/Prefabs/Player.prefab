@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 7102300387541548479}
   - component: {fileID: 6736147908785115002}
   - component: {fileID: 7161086265409351163}
+  - component: {fileID: 5684774986553634510}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -65,7 +66,7 @@ Transform:
   m_GameObject: {fileID: 7102300387541548478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7060931559624898206}
@@ -85,7 +86,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0011604652, y: -0.22149834}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -96,7 +97,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.48471975, y: 0.3045404}
   m_EdgeRadius: 0
 --- !u!50 &2431798443636024101
 Rigidbody2D:
@@ -135,8 +136,10 @@ MonoBehaviour:
   - {fileID: 4985254694876412075}
   - {fileID: 84777225388008387}
   - {fileID: 1049742347764150748}
+  relativeControls: 1
   playerSpeed: 12.5
   yOffset: 0.2
+  targetPosition: {x: 0, y: 0, z: 0}
   distanceToTarget: 0.02
 --- !u!114 &6736147908785115002
 MonoBehaviour:
@@ -150,7 +153,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a632c84da2ede0046a2e9ffc3014fccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 5000
+  flashOnHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6251866820733795762}
+        m_TargetAssemblyTypeName: FlashOnHit, Assembly-CSharp
+        m_MethodName: Flash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  maxHitpoints: 100
+  collisionDamageToPlayer: 0
+  collisionDamageToEnemy: 60
+  canSpawnHealthPickups: 0
 --- !u!114 &7161086265409351163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +184,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a929322bd538a44acfdf639b39dfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8635222504206841948, guid: c8fe0713aa3f8a041990c4e44d85c709, type: 3}
+--- !u!61 &5684774986553634510
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7102300387541548478}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000000014901161, y: 0.09167632}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.05771184, y: 0.32461244}
+  m_EdgeRadius: 0
+  healthDropChance: 0
+  healthDrop: {fileID: 6528677247683499266, guid: aaf0cb2533f617344869e3a89d10728c, type: 3}
 --- !u!1001 &2192351448854879166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -191,12 +241,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.15
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.083
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -235,6 +289,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6576349184704258837, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: shootSound
+      value: PlayerShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6576349184704258837, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: shootingRate
       value: 0.2
       objectReference: {fileID: 0}
@@ -246,6 +304,10 @@ PrefabInstance:
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 5852864802511956268, guid: 2626d5132647da94d87df4c39d7924ba, type: 3}
+    - target: {fileID: 6740703080104766225, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6828227476333938969, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -327,19 +389,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.40000004
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.10000001
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.15
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.082999885
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -378,6 +440,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6576349184704258837, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: shootSound
+      value: PlayerShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6576349184704258837, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: shootingRate
       value: 0.2
       objectReference: {fileID: 0}
@@ -389,6 +455,10 @@ PrefabInstance:
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 5852864802511956268, guid: 2626d5132647da94d87df4c39d7924ba, type: 3}
+    - target: {fileID: 6740703080104766225, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6828227476333938969, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -454,15 +524,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7064678698491398669, guid: 42bc8c314e6102e499c4848dec31a5ec, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.022
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7064678698491398669, guid: 42bc8c314e6102e499c4848dec31a5ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.04
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7064678698491398669, guid: 42bc8c314e6102e499c4848dec31a5ec, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.028
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 7064678698491398669, guid: 42bc8c314e6102e499c4848dec31a5ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -508,13 +578,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: 7.4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4947330741167562140, guid: 42bc8c314e6102e499c4848dec31a5ec, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 42bc8c314e6102e499c4848dec31a5ec, type: 3}
 --- !u!4 &3778671064533552033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7064678698491398669, guid: 42bc8c314e6102e499c4848dec31a5ec, type: 3}
   m_PrefabInstance: {fileID: 6231379382846914988}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4556334389132366107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7584369034610151607, guid: 42bc8c314e6102e499c4848dec31a5ec, type: 3}
+  m_PrefabInstance: {fileID: 6231379382846914988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6251866820733795762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4556334389132366107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b00c8fa246a8047a7ff78d291f5c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashTexture: {fileID: 2800000, guid: 8bc5c86df2cb79247970e45eefd880e2, type: 3}
+  flashTime: 0.05
 --- !u!1001 &6516377511938588886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -543,12 +633,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.083000004
+      value: 0.065
       objectReference: {fileID: 0}
     - target: {fileID: 4420329806666677374, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -587,6 +681,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6576349184704258837, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: shootSound
+      value: PlayerShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6576349184704258837, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: shootingRate
       value: 0.2
       objectReference: {fileID: 0}
@@ -598,6 +696,10 @@ PrefabInstance:
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 5852864802511956268, guid: 2626d5132647da94d87df4c39d7924ba, type: 3}
+    - target: {fileID: 6740703080104766225, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6828227476333938969, guid: 728c9d51b68af8f4f800c66c4d1b010f, type: 3}
       propertyPath: m_Layer
       value: 6

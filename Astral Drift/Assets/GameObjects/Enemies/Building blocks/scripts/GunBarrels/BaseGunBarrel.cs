@@ -14,7 +14,17 @@ public class BaseGunBarrel : MonoBehaviour
     [SerializeField] protected float shootingOffsetTimer = 0;
     protected float elapsedTime;
 
+    [SerializeField] private string shootSound = "EnemyShoot";
+
     [HideInInspector] public bool allowedToShoot = false;
+
+    [HideInInspector] 
+    public float ShootingRate
+    {
+        get { return shootingRate; }
+        set { shootingRate = value; }
+    }
+
 
     protected virtual void Start()
     {
@@ -27,6 +37,7 @@ public class BaseGunBarrel : MonoBehaviour
     protected void SpawnProjectile()
     {
         pool.SpawnFrompool(gunMuzzle.transform.position, gunMuzzle.transform.rotation);
+        GlobalReferenceManager.AudioManagerRef.PlaySound(shootSound);
     }
 
     protected void Shoot()

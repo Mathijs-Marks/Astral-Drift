@@ -1,15 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScorePickupable : Pickupable
 {
     [SerializeField] private int scoreIncrease = 1;
+    [SerializeField] private float starAnimationTimer = 1f;
 
-    protected override void PickUp(Collider2D collision)
+    public override void OnPickUp(Collider2D collision)
     {
-        base.PickUp(collision);
+        base.OnPickUp(collision);
 
+        GlobalReferenceManager.AudioManagerRef.PlaySound("StarPickup");
+
+        GameObject starPrefab = Instantiate(particlePrefab, transform.position, transform.rotation);
+        Destroy(starPrefab, starAnimationTimer);
         UI.instance.AddScore(scoreIncrease);
     }
 }
