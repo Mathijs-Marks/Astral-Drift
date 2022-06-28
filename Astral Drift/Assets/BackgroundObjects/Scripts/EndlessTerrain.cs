@@ -47,6 +47,15 @@ public class EndlessTerrain : MonoBehaviour
     }
     private void Update()
     {
+        if (viewer == null)
+        {
+            viewer = GlobalReferenceManager.MainCamera.transform;
+            viewerPositionOld = viewerPosition;
+            viewerPosition = new Vector2(viewer.position.x, viewer.position.y) / mapGenerator.terrainData.uniformScale;
+
+            UpdateVisibilityChunks();
+        }
+
         viewerPosition = new Vector2(viewer.position.x, viewer.position.y) / mapGenerator.terrainData.uniformScale;
 
         if ((viewerPositionOld = viewerPosition).sqrMagnitude > sqrViewerMoveThresholdForChunkUpdate)

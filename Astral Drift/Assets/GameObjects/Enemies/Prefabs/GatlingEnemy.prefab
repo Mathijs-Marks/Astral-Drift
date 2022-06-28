@@ -102,7 +102,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  maxHitpoints: 900
+  maxHitpoints: 650
   collisionDamageToPlayer: 15
 --- !u!114 &5614932599721218927
 MonoBehaviour:
