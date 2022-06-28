@@ -56,7 +56,7 @@ public class GenerateMap : MonoBehaviour
         }
         else if (drawMode == DrawMode.Mesh)
         {
-            display.DrawMesh(GenerateMesh.GenerateTerrainMesh(mapData.heightMap, terrainData.meshHeightMultiplier, terrainData.meshHeightCurve, editorPreviewLOD)/*, TextureGenerator.ColorMapTexture(mapData.colourMap, mapChunkSize, mapChunkSize)*/);//mapChunkSize, mapChunkSize = mapWidth, mapHeight
+            display.DrawMesh(GenerateMesh.GenerateTerrainMesh(mapData.heightMap, terrainData.meshHeightMultiplier, terrainData.meshHeightCurve, editorPreviewLOD));//mapChunkSize, mapChunkSize = mapWidth, mapHeight
         }
     }
     public void RequestMapData(Vector2 center, Action<MapData> callback)

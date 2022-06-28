@@ -13,7 +13,7 @@ public class HealthBarPlayer : MonoBehaviour
     private float amount;
     private void Start()
     {
-        GlobalReferenceManager.PlayerHealthScript.PlayerOnHitEvent.AddListener(UpdateHealthBar);
+        GlobalReferenceManager.PlayerHealthScript.OnHitEvent.AddListener(UpdateHealthBar);
     }
 
     private void UpdateHealthBar()
