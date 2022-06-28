@@ -7,6 +7,6 @@ public class MoveViewer : MonoBehaviour
     public float speed;
     void FixedUpdate()
     {
-        this.transform.position += Vector3.forward * speed;
+        this.transform.position += Vector3.up * speed;
     }
 }
