@@ -21,12 +21,14 @@ public class Pickupable : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // TODO: Make this layer based
         if (collision.tag == "Player")
         {
             OnPickUp(collision);
         }
     }
 
+    // Expand on pick up by inheriting and overriding this function (Don't forget base.OnPuckUp())
     public virtual void OnPickUp(Collider2D collision)
     {
         gameObject.SetActive(false);
