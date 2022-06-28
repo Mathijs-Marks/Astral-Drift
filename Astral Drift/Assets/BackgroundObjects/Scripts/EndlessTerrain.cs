@@ -7,7 +7,8 @@ public class EndlessTerrain : MonoBehaviour
 
     const float viewerMoveThresholdForChunkUpdate = 25f;
     const float sqrViewerMoveThresholdForChunkUpdate = viewerMoveThresholdForChunkUpdate * viewerMoveThresholdForChunkUpdate;
-    public static float maxViewDst; 
+    public static float maxViewDst;
+    [SerializeField] private float backgroundZPosition;
     public LODInfo[] detailLevels;
     public Transform viewer;
     public Material mapMaterial;
@@ -62,7 +63,7 @@ public class EndlessTerrain : MonoBehaviour
                 }
                 else
                 {
-                    terrainChunkDictionary.Add(viewedChunkCoor, new TerrainChunk(viewedChunkCoor, chunkSize, detailLevels, transform, mapMaterial));
+                    terrainChunkDictionary.Add(viewedChunkCoor, new TerrainChunk(viewedChunkCoor, chunkSize, detailLevels, transform, mapMaterial, backgroundZPosition));
                 }
 
             }
@@ -83,13 +84,13 @@ public class EndlessTerrain : MonoBehaviour
         MapData mapData;
         bool mapDataReceived;
         int previousLODIndex = -1;
-        public TerrainChunk(Vector2 coord, int size, LODInfo[] detailLevels, Transform parent, Material material)
+        public TerrainChunk(Vector2 coord, int size, LODInfo[] detailLevels, Transform parent, Material material, float zLocation)
         {
             this.detailLevels = detailLevels;
             position = coord * size;
             bounds = new Bounds(position, Vector2.one * size);
 
-            Vector3 positionV3 = new Vector3(position.x, -position.y, 0);
+            Vector3 positionV3 = new Vector3(position.x, position.y, zLocation);
 
             meshObject = new GameObject("Terrain Chunk");
             meshRenderer = meshObject.AddComponent<MeshRenderer>();
@@ -98,7 +99,7 @@ public class EndlessTerrain : MonoBehaviour
 
             meshObject.transform.position = positionV3 * mapGenerator.terrainData.uniformScale;
             meshObject.transform.parent = parent;
-            meshObject.transform.rotation = Quaternion.Euler(90, 0, 0);
+            meshObject.transform.rotation = Quaternion.Euler(-90, 0, 0);
             meshObject.transform.localScale = Vector3.one * mapGenerator.terrainData.uniformScale;
             SetVisible(false);
 

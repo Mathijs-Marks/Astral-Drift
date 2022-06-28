@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class movementTest : MonoBehaviour
 {
-    [SerializeField] private BackgroundScroller background;
+    //[SerializeField] private BackgroundScroller background;
     private void Awake()
     {
         if(GlobalReferenceManager.MainCamera == null)
@@ -14,9 +14,9 @@ public class movementTest : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (background.cameraMovement)
+       /* if (background.cameraMovement)
         {
             transform.position += Vector3.up * background.moveSpeed;
-        }
+        }*/
     }
 }
