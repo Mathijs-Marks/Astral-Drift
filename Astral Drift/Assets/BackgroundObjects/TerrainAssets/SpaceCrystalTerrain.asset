@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SpaceCrystalTerrain
   m_EditorClassIdentifier: 
   autoUpdate: 1
-  uniformScale: 0.25
+  uniformScale: 0.1
   meshHeightMultiplier: 7.71
   meshHeightCurve:
     serializedVersion: 2
