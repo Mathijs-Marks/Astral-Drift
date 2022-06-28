@@ -5,7 +5,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Collider2D), typeof(Death))]
 public class Health : MonoBehaviour
 {
-    private UnityEvent onHitEvent;
+    private UnityEvent onHitEvent; // On hit events with bullets
 
     public UnityEvent OnHitEvent
     {
@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
         set { onHitEvent = value; }
     }
 
-    public UnityEvent flashOnHit;
+    public UnityEvent flashOnHit; // Flash effect when damaged. This value needs to get the Flash function from the flash on hit script
 
     private Death deathScript;
 
@@ -37,13 +37,17 @@ public class Health : MonoBehaviour
 
     public virtual void OnDamage(int damage)
     {
+        // When damaged, apply int damage value, apply a flash effect and call more on hit events (Update UI for example)
         TakeDamage(damage);
         flashOnHit.Invoke();
         OnHitEvent.Invoke();
     }
     public virtual void TakeDamage(int damage)
     {
+        // Substract health
         currentHitpoints -= damage;
+
+        // When health is zero, call on health zero
         if (currentHitpoints <= 0)
         {
             if (!isDead)
@@ -66,6 +70,7 @@ public class Health : MonoBehaviour
 
     private void OnHealthZero()
     {
+        // Invoke death event from a death script attached to the player
         deathScript.DeathEvent.Invoke();
     }
     protected void LaserCollision(int damage)

@@ -12,6 +12,7 @@ public class BaseBullet : MonoBehaviour
         speed = tempSpeed;
     }
 
+    // Move towards the direction the bullet is rotated towards
     protected virtual void Move()
     {
         transform.Translate(Vector3.up * speed * Time.deltaTime);
