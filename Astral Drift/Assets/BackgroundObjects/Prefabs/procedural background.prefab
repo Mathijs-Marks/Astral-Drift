@@ -64,6 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b70f013d743d1047ab806bfb7a8b45f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backgroundZPosition: 10
   detailLevels:
   - lod: 0
     visibleDistanceThreshold: 150

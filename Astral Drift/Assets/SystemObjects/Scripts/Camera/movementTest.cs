@@ -13,7 +13,4 @@ public class movementTest : MonoBehaviour
             GlobalReferenceManager.MainCamera = GetComponent<Camera>();
         }
     }
-    void FixedUpdate()
-    {
-    }
 }

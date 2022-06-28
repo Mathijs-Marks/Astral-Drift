@@ -22,6 +22,20 @@ public class EndlessTerrain : MonoBehaviour
     Dictionary<Vector2, TerrainChunk> terrainChunkDictionary = new Dictionary<Vector2, TerrainChunk>();
     static List<TerrainChunk> terrainChunkVisibleLastUpdate = new List<TerrainChunk>();
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+
+        //Set the global reference and destroy the current object if one already exists
+        if (GlobalReferenceManager.EndlessBackground == null)
+            GlobalReferenceManager.EndlessBackground = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
+
     private void Start()
     {
         mapGenerator = FindObjectOfType<GenerateMap>();

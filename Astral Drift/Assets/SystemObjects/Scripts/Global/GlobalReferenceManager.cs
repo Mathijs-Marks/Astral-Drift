@@ -15,4 +15,5 @@ public static class GlobalReferenceManager
     public static BackgroundScroller background; //Reference to background
     public static AudioManager AudioManagerRef;
     public static HumanSpawner HumanSpawnerRef;
+    public static EndlessTerrain EndlessBackground;
 }
