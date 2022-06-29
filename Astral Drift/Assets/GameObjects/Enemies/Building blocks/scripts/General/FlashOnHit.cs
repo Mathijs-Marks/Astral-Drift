@@ -35,7 +35,7 @@ public class FlashOnHit : MonoBehaviour
 
             if (timer <= 0)
             {
-                // Apply texture
+                // Apply old texture
                 material.SetTexture("_MainTex", modelTexture);
             }
         }

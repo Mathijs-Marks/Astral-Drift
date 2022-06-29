@@ -6,7 +6,8 @@ public class EndLevel : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Player")) // Collision
+        // If the player collides with this object, invoke a pop up screen event in game over menu from global reference manager
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             GlobalReferenceManager.GameOverMenu.ScreenEvent.Invoke(GlobalReferenceManager.GameOverMenu.victoryScreen);
             UI.instance.UpdateScore(GlobalReferenceManager.UIMenu.victoryScore);
