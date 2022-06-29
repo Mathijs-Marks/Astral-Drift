@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 276974211724047433}
   - component: {fileID: 35672927691191058}
   m_Layer: 0
-  m_Name: Background Tile
+  m_Name: (delete)Background Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
