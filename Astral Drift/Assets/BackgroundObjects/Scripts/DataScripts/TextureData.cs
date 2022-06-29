@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+
+//<Summary>
+//This script allows the user to create an asset that saves multiple texture values necessary for creating the background
+//<Summary>
+
 [CreateAssetMenu]
 public class TextureData : UpdatableData
 {
@@ -11,6 +16,10 @@ public class TextureData : UpdatableData
 
     float savedMinHeight;
     float savedMaxHeight;
+
+    //<Summary>
+    //This part is used to send all of the Texture data to the shader
+    //<Summary>
 public void ApplyToMaterial(Material material)
     {
         material.SetInt("layerCount", layers.Length);

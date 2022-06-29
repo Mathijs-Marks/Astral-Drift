@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//<Summary>
+//The noisemap is being altered here. Currently all that is being used is perlin noise but it might be fun to create more types of noise maps.
+//The noisemap makes use of an offset, seed, octaves, persistence, scale and lacunarity
+//<Summary>
 public static class Noise
 {
     public enum NormalizeMode { Local, Global};

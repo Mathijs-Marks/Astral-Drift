@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//<Summary>
+//This generator creates multiple meshes and stores them in a dictionary, allowing them to be reused on later moments.
+//It uses a viewer to check which mesh needs to be loaded
+//<Summary>
 public class EndlessTerrain : MonoBehaviour
 {
 
@@ -93,6 +96,9 @@ public class EndlessTerrain : MonoBehaviour
 
         }
     }
+    //<Summary>
+    //This is the Cunck that is being spawned by the endless terrain. It also sets the right rotation and scale for the objects.
+    //<Summary>
     public class TerrainChunk
     {
         GameObject meshObject;
@@ -189,7 +195,11 @@ public class EndlessTerrain : MonoBehaviour
             return meshObject.activeSelf;
         }
     }
-    class LODMesh //Not really necessary
+    //<Summary>
+    //This part of the script is used to decrease the Level of Detail in the meshes.
+    //TODO: Take out the LOD meshes of the background scripts
+    //<Summary>
+    class LODMesh
     {
         public Mesh mesh;
         public bool hasRequestedMesh;

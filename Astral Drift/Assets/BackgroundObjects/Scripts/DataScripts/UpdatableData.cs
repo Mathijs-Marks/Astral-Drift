@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//<Summary>
+//This script is used to update the mesh of the terrain outside of the playmode, thus allowing for easier customisation
+//<Summary>
 
 public class UpdatableData : ScriptableObject
 {

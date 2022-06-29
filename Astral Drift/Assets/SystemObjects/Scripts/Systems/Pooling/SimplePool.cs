@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+//<Summary>
+//This is a simple object pooler. It is mostly used for bullets. Simply add the item you want to instaniate and add it to the object that has to instantiate said item.
+//</Summary>
+
 public class SimplePool : MonoBehaviour
 {
     [SerializeField] private int poolSize = 20;

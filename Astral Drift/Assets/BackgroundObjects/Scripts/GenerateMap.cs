@@ -4,6 +4,12 @@ using UnityEngine;
 using System;
 using System.Threading;
 
+//<Summary>
+//This is where the noise data and Mesh data are being requested
+//Since creating this data is quite intensive and doesn't need to run all of the time we put this part on a side thread,
+//causing the background to preform better.
+//<Summary>
+
 public class GenerateMap : MonoBehaviour
 {
     public enum DrawMode { NoiseMap, Mesh };

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//<Summary>
+//This script contains functions used to draw meshes and textures outside of playmode.
+//<Summary>
 public class DisplayMap : MonoBehaviour
 {
     public Renderer textureRender;
