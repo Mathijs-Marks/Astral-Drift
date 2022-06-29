@@ -18,7 +18,8 @@ public class HealthBarUI : MonoBehaviour
 
     protected virtual void UpdateHealthBar()
     {
-        // This function is used for inheritance
-        // TODO: Health Bar UI Enemy likely needs to be reworked to work in the canvas
+        // This function is used for inheritance.
+        // TODO: Health Bar UI Enemy likely needs to be reworked to work in the canvas.
+        // When it does, both Health Bar UI Enemy and Health Bar UI Player can use this function for updating health.
     }
 }
