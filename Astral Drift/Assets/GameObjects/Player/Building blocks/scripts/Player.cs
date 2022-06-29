@@ -73,6 +73,8 @@ public class Player : MonoBehaviour
             if (relativeControls)
             {
                 // Get initial position of the input and translate it to world point
+                // Input position to player will be a vector from the input to the player. This vector gets a value from a touch input and
+                // stays the same. This vector is used for relative controls.
                 inputPositionToPlayer = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
                 inputPositionToPlayer = Camera.main.ScreenToWorldPoint(inputPositionToPlayer);
                 inputPositionToPlayer -= transform.position;
@@ -103,7 +105,7 @@ public class Player : MonoBehaviour
         // Translate target position to world point
         targetPosition = Camera.main.ScreenToWorldPoint(targetPosition);
 
-        // If we aren't using relative controls, add an offset
+        // If we aren't using relative controls, add an offset and reset input position to player
         if (!relativeControls)
         {
             targetPosition.y += yOffset;
@@ -116,7 +118,8 @@ public class Player : MonoBehaviour
             Mathf.Clamp(targetPosition.y + inputPositionToPlayer.y, -clampSpace.y + Camera.main.transform.position.y, clampSpace.y + Camera.main.transform.position.y), 
             0) - targetPosition;
 
-        // If we're using relative controls, add a vector from the finger to the target of the first input (otherwise input position to player is zero)
+        // If we're using relative controls, add a vector from the finger to the initial input (otherwise input position to player is zero)
+        // This is done to imitate the movement of the finger input rather than moving straight towards the finger input
         targetPosition += inputPositionToPlayer;
 
         targetPosition.z = 0; // Reset z
