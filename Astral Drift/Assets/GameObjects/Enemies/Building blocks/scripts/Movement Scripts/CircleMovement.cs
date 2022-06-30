@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CircleMovement : MovementBehaviours
 {
-    [SerializeField] private float radius = 1;
+    [SerializeField] private float radius = 1; //Radius of circle to move in
     private float passedTime = 0, angle, radiusDivider = 25;
 
     void FixedUpdate()

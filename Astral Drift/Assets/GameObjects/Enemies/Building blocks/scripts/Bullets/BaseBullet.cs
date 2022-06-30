@@ -6,6 +6,7 @@ public class BaseBullet : MonoBehaviour
     protected int damage;
     public int readDamage { get { return damage; } }
 
+    //Makes a bullet with provided data
     public void InitializeBullet(int tempDamage, float tempSpeed)
     {
         damage = tempDamage;

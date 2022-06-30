@@ -10,9 +10,9 @@ public class Death : MonoBehaviour
     [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private float healthDropChance = 0.1f, firerateUpgradeChance = 0.1f;
     [SerializeField] private int maxDroppableAmountStars = 5;
-    [SerializeField] private GameObject starPrefab;
-    [SerializeField] private GameObject healthDrop;
-    [SerializeField] private GameObject fireratePrefab;
+    [SerializeField] private GameObject starPrefab; //Star/Score pickup prefab
+    [SerializeField] private GameObject healthDrop; //Health pickup prefab
+    [SerializeField] private GameObject fireratePrefab; //Firerate powerup pickup prefab
 
     public UnityEvent DeathEvent
     {
@@ -30,7 +30,6 @@ public class Death : MonoBehaviour
     {
         gameObject.SetActive(false);
         InstantiateObjects();
-        
     }
     protected virtual void InstantiateObjects()
     {
@@ -44,6 +43,7 @@ public class Death : MonoBehaviour
             }
         }
 
+        //Choose between health drop or firerate drop
         int randomPickup = PickupPicker();
         if (randomPickup == 0) {
             //Have a chance to drop health pickup
@@ -76,6 +76,7 @@ public class Death : MonoBehaviour
     }
     private int PickupPicker()
     {
+        //If we can spawn more firerate powerups choose between firerate or health, otherwise just pick health. 0 = firerate, 1 = health
         if (UI.instance.currentUpgrade < UI.instance.maxUpgrade)
         {
             return Random.Range(0, 2);

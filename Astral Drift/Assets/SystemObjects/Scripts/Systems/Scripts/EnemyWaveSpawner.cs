@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class EnemyWaveSpawner : MonoBehaviour
 {
-    [SerializeField] private float maxEnemyCollisionRange;
+    [SerializeField] private float maxEnemyCollisionRange; //Max dist between enemies
     [SerializeField] private List<GameObject> enemies;
     private LevelDifficultyManager difficultyManager;
 
@@ -14,6 +14,7 @@ public class EnemyWaveSpawner : MonoBehaviour
     }
     public void SpawnEnemy(EnemyData enemyData)
     {
+        //This spawns an enemy with the given enemy data information.
         GameObject enemy = Instantiate(enemyData.EnemyPrefab, enemyData.EnemyPosition, Quaternion.identity);
         enemies.Add(enemy);
     }

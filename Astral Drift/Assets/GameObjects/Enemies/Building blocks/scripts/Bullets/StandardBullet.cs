@@ -6,6 +6,7 @@ public class StandardBullet : BaseBullet
 {
     private void FixedUpdate()
     {
+        //Move
         Move();
     }
 }

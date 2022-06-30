@@ -20,7 +20,7 @@ public class HomingBullet : BaseBullet
     private bool shouldBeHoming;
 
     private float currentFollowTime;
-    [SerializeField] private float maxFollowTime = 2f;
+    [SerializeField] private float maxFollowTime = 2f; //Max time how long the bullet should be following the player
 
     // Start is called before the first frame update
     void Start()

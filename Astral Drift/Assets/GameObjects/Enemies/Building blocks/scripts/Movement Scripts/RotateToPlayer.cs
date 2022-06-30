@@ -6,10 +6,6 @@ public class RotateToPlayer : MovementBehaviours
 {
     private GameObject playerTarget;
     private bool isRotating = true;
-    
-    // This code may be removed later, ask SDM
-    //[Header("Rotating speed: 0 means no rotation, 1 means instant rotation.")]
-    //[SerializeField] [Range(0, 1)] private float rotatingSpeed = 1;
 
     private void Start()
     {
@@ -21,7 +17,7 @@ public class RotateToPlayer : MovementBehaviours
     {
         if (isRotating)
         {
-            //Rotating
+            //Rotate towards player
             Vector3 direction = transform.position - playerTarget.transform.position;
             Quaternion rotation = Quaternion.LookRotation(-direction, Vector3.forward);
             rotation.x = transform.rotation.x;

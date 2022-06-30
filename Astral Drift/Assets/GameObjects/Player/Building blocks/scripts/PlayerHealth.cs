@@ -31,6 +31,7 @@ public class PlayerHealth : Health
     {
         base.OnDamage(damage);
 
+        //Once currenthitpoints have reached half max hitpoints once, healthdrops can spawn.
         if (!canSpawnHealthPickups)
             if (GlobalReferenceManager.PlayerHealthScript.currentHitpoints < GlobalReferenceManager.PlayerHealthScript.maxHitpoints / 2)
                 canSpawnHealthPickups = true;

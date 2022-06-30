@@ -17,6 +17,7 @@ public class PingPongRotate : MovementBehaviours
     }
     private void DoPingPongRotate()
     {
+        //Inverts rotation once angle has been reached
         if (degreesToRotate > 0) {
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, Mathf.PingPong(Time.time * speed, degreesToRotate) + startingAngle);
         } 

@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class StrafeMovement : TravelingMovementBehaviours
 {
-    [SerializeField] private float xDistToMove = 1, yDistToMove = 0;
     [Tooltip("Choose between 1 and -1 to determine the direction")]
+    [SerializeField] private float xDistToMove = 1, yDistToMove = 0;
     private Vector3 startingPos;
     
     private void Start()
@@ -14,10 +14,10 @@ public class StrafeMovement : TravelingMovementBehaviours
     void FixedUpdate()
     {
         DoDirectionalMovement();
-        InvertMovement();
+        InvertMovementCheck();
         OutOfBoundsCheck();
     }
-    private void InvertMovement()
+    private void InvertMovementCheck()
     {
         //Invert X direction
         if (xDistToMove > 0)

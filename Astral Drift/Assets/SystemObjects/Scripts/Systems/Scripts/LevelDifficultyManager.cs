@@ -5,8 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof (EnemyWaveSpawner))]
 public class LevelDifficultyManager : MonoBehaviour
 {
-    [SerializeField] private GameObject[] enemyPrefabs;
-    [SerializeField] private float difficultyLevel = 10, minAmountPercent = 0.8f, maxAmountPercent = 1f, difficultyIncrease = 0.1f;
+    [SerializeField] private GameObject[] enemyPrefabs; //List of enemy prefabs that spawn in this level
+    [SerializeField] private float difficultyLevel = 10; //Current level of difficulty
+    [SerializeField] private float minAmountPercent = 0.8f; //Min percentage amount of enemeies of the difficulty level that can spawn per wave
+    [SerializeField] private float maxAmountPercent = 1f; //Max percentage amount of enemeies of the difficulty level that can spawn per wave
+    [SerializeField] private float difficultyIncrease = 0.1f; //How much the difficulty increases over time
 
     // The system works per wave, so for each enemy wave, the system needs to know the last upper index (top index) of the previous wave.
     [HideInInspector] public int lastTopIndex = 0;
@@ -22,14 +25,19 @@ public class LevelDifficultyManager : MonoBehaviour
         difficultyList = new List<int>();
 
         spawner = GetComponent<EnemyWaveSpawner>();
+
+        //Grab all difficulty values from enemy list
         foreach(GameObject enemyPrefab in enemyPrefabs)
         {
             difficultyList.Add(enemyPrefab.GetComponent<EnemyDifficulty>().enemyDifficulty);
         }
+
+        //Start process
         GenerateEnemies();
     }
     private void FixedUpdate()
     {
+        //If the cam position has reached the last position of the last spawned enemy then spawn a new wave
         if(GlobalReferenceManager.MainCamera.transform.position.y > previousPos.y)
         {
             GenerateEnemies();  
