@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOverHandler : MonoBehaviour
 {
+    // Event used to show game over or victory screen. Requires UI object that needs to be enabled as parameter
     public UnityEvent<GameObject> ScreenEvent
     {
         get { return screenEvent; }
@@ -37,14 +38,16 @@ public class GameOverHandler : MonoBehaviour
         gameEnd = false;
     }
 
-    // Enable the game over screen
+    // Enable a UI screen with a parameter
     public void EndGame(GameObject screen)
     {
-        screen.SetActive(true);
-        gameEnd = true;
-        UI.instance.UpdateScore(GlobalReferenceManager.UIMenu.endGameScore);
-        Time.timeScale = 0;
-        GlobalReferenceManager.StateHandler.GamePaused = true;
+        screen.SetActive(true); // Enable screen
+        gameEnd = true; // Stop game from unpauzing
+        
+        UI.instance.UpdateScore(GlobalReferenceManager.UIMenu.endGameScore); // Update score
+        Time.timeScale = 0; // Stop the game from running in the background
+
+        GlobalReferenceManager.StateHandler.GamePaused = true; // Game is now pauzed
     }
 
     public void ResetScene()

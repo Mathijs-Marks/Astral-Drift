@@ -18,6 +18,7 @@ public class HumanPickupable : Pickupable
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
+        // Pick up this object and scale it down in size
         if (beingPickedUp)
         {
             model.transform.localScale -= new Vector3(scaleDecrease, scaleDecrease, scaleDecrease) * Time.deltaTime;
@@ -37,6 +38,7 @@ public class HumanPickupable : Pickupable
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        // Stop trying to pick up this object
         beingPickedUp = false;
         model.transform.localScale = originalScale;
     }

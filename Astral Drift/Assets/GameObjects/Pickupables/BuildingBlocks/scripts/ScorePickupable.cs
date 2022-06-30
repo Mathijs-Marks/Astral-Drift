@@ -9,10 +9,6 @@ public class ScorePickupable : Pickupable
     {
         base.OnPickUp(collision);
 
-        GlobalReferenceManager.AudioManagerRef.PlaySound("StarPickup");
-
-        GameObject starPrefab = Instantiate(particlePrefab, transform.position, transform.rotation);
-        Destroy(starPrefab, starAnimationTimer);
         UI.instance.AddScore(scoreIncrease);
     }
 }

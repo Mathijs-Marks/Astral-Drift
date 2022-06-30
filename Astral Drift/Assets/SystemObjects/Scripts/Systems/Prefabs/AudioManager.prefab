@@ -57,7 +57,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: StarPickup
+  - name: ScorePickup
     clip: {fileID: 8300000, guid: f9b77bced840243acb99e252976b0e43, type: 3}
     volume: 0.1
     pitch: 3

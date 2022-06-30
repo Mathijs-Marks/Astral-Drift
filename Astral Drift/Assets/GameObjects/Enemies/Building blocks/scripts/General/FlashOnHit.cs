@@ -7,8 +7,8 @@ public class FlashOnHit : MonoBehaviour
 {
     private Material material;
 
-    private Texture2D modelTexture;
-    [SerializeField] private Texture2D flashTexture;
+    private Texture2D modelTexture; // Normal texture to return to when flashing
+    [SerializeField] private Texture2D flashTexture; // Flash texture used to get this effect
 
     [SerializeField] private float flashTime = 0.05f;
     private float timer;
@@ -22,22 +22,26 @@ public class FlashOnHit : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Only flash for a few seconds. When time is expired, apply the normal texture back again
         TimerTickDown();
     }
 
     private void TimerTickDown()
     {
+        // Check timer values
         if (timer > 0)
         {
             timer -= Time.deltaTime;
 
             if (timer <= 0)
             {
+                // Apply old texture
                 material.SetTexture("_MainTex", modelTexture);
             }
         }
     }
 
+    // Flash with a texture
     public void Flash()
     {
         material.SetTexture("_MainTex", flashTexture);

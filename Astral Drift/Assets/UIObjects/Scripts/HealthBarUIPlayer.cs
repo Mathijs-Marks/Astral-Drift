@@ -19,7 +19,9 @@ public class HealthBarUIPlayer : HealthBarUI
 
         amount = (healthScript.maxHitpoints - healthScript.CurrentHitpoints) * spriteSize / healthScript.maxHitpoints;
 
-        // TODO: This code may need to be reworked in the future if there is ever a reason to use multiple objects with this script in the canvas.
+        // TODO: This code needs to be reworked in the future if there is ever a reason to use multiple objects with this script in the canvas.
+        // There is a bug whenever a mask is positioned over another health bar, it starts masking the health bar it isn't attached to.
+        // Scaling with masking likely needs to be used to fix this issue
         fullBar.transform.localPosition = new Vector3(0, amount, 0);
         mask.transform.localPosition = new Vector3(0, -amount, 0);
     }

@@ -8,6 +8,7 @@ public class PlayerDeath : Death
     {
         base.KillObject();
 
+        // Initialize health in global reference manager
         GlobalReferenceManager.GameOverMenu.ScreenEvent.Invoke(GlobalReferenceManager.GameOverMenu.gameOverScreen);
     }
 }
