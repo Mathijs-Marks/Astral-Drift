@@ -1,5 +1,8 @@
 using UnityEngine;
 
+//<Summary
+//This is where the meshes are being generated. It checks the height of the noisemap and places a vertex on that height.
+//<Summary>
 public static class GenerateMesh
 {
     public static MeshData GenerateTerrainMesh(float[,] heightMap, float heightMultiplier, AnimationCurve _heightCurve, int levelOfDetail)

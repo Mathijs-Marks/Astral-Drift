@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+//<Summary>
+//This script allows the user to create an asset that saves multiple Terrain values necessary for creating the background
+//<Summary>
+
 [CreateAssetMenu]
 public class TerrainData : UpdatableData
 {
