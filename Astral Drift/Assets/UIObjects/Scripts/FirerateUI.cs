@@ -6,10 +6,10 @@ public class FirerateUI : MonoBehaviour
     [Tooltip("Edit this value to the current size of the sprite. (in canvas this is the width and height)")]
     [SerializeField] private float spriteSize = 172;
 
-    //This the the size of each block in pixels
-    private float blockSize = 34.5f;
+    private float blockSize = 34.5f; //This the the size of each block in pixels
     private float offset;
 
+    //Moves the mask one block size sideways so it looks like a new block is added
     public void UpdateFirerateBar()
     {
         offset = -spriteSize + (blockSize * UI.instance.currentUpgrade);

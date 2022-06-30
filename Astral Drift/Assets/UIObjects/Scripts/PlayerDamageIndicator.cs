@@ -4,20 +4,23 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class PlayerDamageIndicator : MonoBehaviour
 {
-    [SerializeField] private float fadingSpeed = 1.5f;
+    [SerializeField] private float fadingSpeed = 1.5f; //Speed at which to fade the indicator
     private Image indicator;
     private float alpha;
 
     private void Start()
     {
         indicator = GetComponent<Image>();
+
+        //Activate indicator on player hit
         GlobalReferenceManager.PlayerHealthScript.OnHitEvent.AddListener(ActivateDamageIndicator);
     }
     private void FixedUpdate()
     {
+        //Slowly fade damage indicator over time
         FadeIndicator();
     }
-    //Slowly fade damage indicator over time
+
     private void FadeIndicator()
     {
         if (alpha > 0)
