@@ -8,6 +8,7 @@ public class LevelDifficultyManager : MonoBehaviour
     [SerializeField] private GameObject[] enemyPrefabs;
     [SerializeField] private float difficultyLevel = 10, minAmountPercent = 0.8f, maxAmountPercent = 1f, difficultyIncrease = 0.1f;
 
+    // The system works per wave, so for each enemy wave, the system needs to know the last upper index (top index) of the previous wave.
     [HideInInspector] public int lastTopIndex = 0;
     [HideInInspector] public List<EnemyData> enemyDataList = new List<EnemyData>();
 

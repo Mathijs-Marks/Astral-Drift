@@ -32,7 +32,7 @@ public class Death : MonoBehaviour
         InstantiateObjects();
         
     }
-protected virtual void InstantiateObjects()
+    protected virtual void InstantiateObjects()
     {
         //Drops a random amount of stars
         int amountOfStars = Random.Range(1, maxDroppableAmountStars);

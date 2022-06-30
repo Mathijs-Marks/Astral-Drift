@@ -11,6 +11,7 @@ public class HomingBullet : BaseBullet
     private Quaternion lookRotation;
     private float lerpTime;
 
+    // value that increments from 0 to 0.5, after that the bullets start homing towards the player.
     private float currentHomingStartTimer;
     //For this duration the bullet will travel forwards, afterwards it will start homing
     [SerializeField] private float homingStartTime = 0.5f;
@@ -29,7 +30,7 @@ public class HomingBullet : BaseBullet
         shouldBeHoming = true;
     }
 
-    //Override fixedupdate to change the direction of the projectile
+    //fixedupdate to change the direction of the projectile
     protected void FixedUpdate()
     {
         if (currentHomingStartTimer < homingStartTime)
@@ -58,7 +59,7 @@ public class HomingBullet : BaseBullet
                 lookRotation.x = 0;
                 lookRotation.y = 0;
 
-                //When following for more than maxfollowtime, sotp followinng
+                //When following for more than maxfollowtime
                 if (currentFollowTime < maxFollowTime && shouldBeHoming)
                 {
                     //Stop rotating once the missile has been close once
@@ -81,6 +82,7 @@ public class HomingBullet : BaseBullet
                     }
                     else
                     {
+                        // stop following
                         shouldBeHoming = false;
                     }
                 }

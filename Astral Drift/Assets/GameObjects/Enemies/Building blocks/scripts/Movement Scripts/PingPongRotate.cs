@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// See: https://docs.unity3d.com/ScriptReference/Mathf.PingPong.html
+/// </summary>
 public class PingPongRotate : MovementBehaviours
 {
     [SerializeField] private float degreesToRotate = 90;
