@@ -81,7 +81,7 @@ public class StateHandler : MonoBehaviour
     {
         if (released)
         {
-            GlobalReferenceManager.PlayerScript.targetPosition += new Vector3(0, GlobalReferenceManager.background.moveSpeed, 0);
+            GlobalReferenceManager.PlayerScript.targetPosition += new Vector3(0, GlobalReferenceManager.cameraScript.speed, 0);
         }
     }
 

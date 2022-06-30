@@ -12,7 +12,7 @@ public static class GlobalReferenceManager
     public static UI UIMenu; // Reference to UI script.
     public static Camera MainCamera; //Reference to main Camera
     public static SetColliderSize ScreenCollider;
-    public static BackgroundScroller background; //Reference to background
+    public static BasicCameraScript cameraScript; //Reference to background
     public static AudioManager AudioManagerRef;
     public static HumanSpawner HumanSpawnerRef;
     public static EndlessTerrain EndlessBackground;
