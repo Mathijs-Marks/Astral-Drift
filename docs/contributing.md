@@ -1,10 +1,12 @@
 # Contributing to Astral Drift
 Any team members contributing to the project, take heed of the following GIT workflow practices:
 
+If it's not already obvious: make sure everyone in the team is using the **same** GIT program.
+
 ## Development
 ### Start working on a feature/bug
 When developing on a feature, bug, etc. One should create a feature branch off of the Development Branch.
-When naming the branch, prefix your branch name with either feature or bug (**Case sensitive!!!**), depending on what you're working on, followed with a /, then the name of your branch.
+When naming the branch, the convention for naming branches is **everything lowercase**, but camelCasing is allowed.
 
 An example of a correct branc name looks like this: feature/theFeature
 
