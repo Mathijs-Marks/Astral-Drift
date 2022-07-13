@@ -1,6 +1,8 @@
 # Contributing to Astral Drift
 Any team members contributing to the project, take heed of the following GIT workflow practices:
 
+(NOTE! for the next project team: I've deleted the existing branch protection rules for the Release and Development branch. Before starting off, you'll need to determine how you wish to protect your branches.)
+
 If it's not already obvious: make sure everyone in the team is using the **same** GIT program.
 
 ## Development
