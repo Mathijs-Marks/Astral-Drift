@@ -1,8 +1,9 @@
 # Astral-Drift
-![ad](https://github.com/Mathijs-Marks/Astral-Drift/assets/57790446/e6c66c8e-b11b-4cec-9363-fa43f2c9d2ba)
-![AstralDriftQRFront](https://github.com/Mathijs-Marks/Astral-Drift/assets/57790446/e134708d-7c94-41c8-a0b4-f1c8f34adf60)
-
 Welcome to Astral Drift!
+
+Astral Drift is about controlling a space ship shooting down enemies and avoiding their attack patterns.
+![ad](https://github.com/Mathijs-Marks/Astral-Drift/assets/57790446/b37d3061-0ab2-4c1a-be47-508c9bbbf33e)
+![AstralDriftQRFront](https://github.com/Mathijs-Marks/Astral-Drift/assets/57790446/d1e1b1cd-30a7-4f01-a7a4-3cf222a4c621)
 
 ## Contributing
 Any team members contributing to the project, take heed of the following GIT workflow practices:
