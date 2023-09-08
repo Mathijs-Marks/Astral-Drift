@@ -1,4 +1,6 @@
 # Astral-Drift
+![ad](https://github.com/Mathijs-Marks/Astral-Drift/assets/57790446/e6c66c8e-b11b-4cec-9363-fa43f2c9d2ba)
+![AstralDriftQRFront](https://github.com/Mathijs-Marks/Astral-Drift/assets/57790446/e134708d-7c94-41c8-a0b4-f1c8f34adf60)
 
 Welcome to Astral Drift!
 
